@@ -11,7 +11,7 @@ PATH = 'content'
 TIMEZONE = 'Pacific/Honolulu'
 
 DEFAULT_LANG = 'en'
- 
+
 
 FEED_ALL_ATOM = 'feeds/all.atom.xml'
 FEED_ALL_RSS = 'feeds/all.rss.xml'
@@ -37,3 +37,4 @@ DEFAULT_PAGINATION = 10
 
 # Uncomment following line if you want document-relative URLs when developing
 #RELATIVE_URLS = True
+THEME = 'themes/nest'
