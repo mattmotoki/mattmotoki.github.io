@@ -81,36 +81,20 @@
 <p>Cell Addition is a strategy-based board game.  Current A.I. opponents implement a deterministic strategy that is greedy with respect to an approximate value function.  A.I. opponents are completely deterministic and so games are reproducible.  </p>
 <h2>How to Play</h2>
 <p>Player take turns placing their cells. A player's cells divide when they connect with each other; vertical, horizontal and diagonal connections are allowed.  </p>
-<p><img alt="alt text" src="cell-logo.png" title="Cell Division"></p>
-<p>```{r, out.width = "100px", echo=FALSE}
-knitr::include_graphics("medium_size_logo.png")</p>
-<div class="highlight"><pre><span></span>Your score is equal to the total number of cell that you have on the board.  The game ends when the board is full and the winner is the player with the most cells. 
-
-## Features
-In the current implementation of the game, there are three fixed-difficulty ai opponents.  The R implementation also has an adaptive opponent that plays differently depending on how much it is winning/losing by.
-
-The current implementation has three square grid board configuratios. The R implementation has board configurations that are more flexible.  In the break and flask layouts, gravity applies to moves played (cells fall to the lowest open row).
-
-
-
-# Implementation
-
-## R 
-Cell Division was originally written using R Shiny which converts R code into HTML, CSS and Javascript. The code for the original game is available [here](https://github.com/mattmotoki/Games.ai/tree/master/Cell%20Division) and can be played [here](https://mmotoki.shinyapps.io/cell_division/).  R Shiny is geared more towards interactive data analytics and is not well-suited for this type of game.  
-
-
-## HTML, CSS and Javascript
-The current implementation of the game is writen in plain HTML, CSS and Javascript.  The code is available [here](https://github.com/mattmotoki/mattmotoki.github.io) and can be played  [here](https://mattmotoki.github.io/).  This implementation lacks a few features of the R implementation, but overall it is a better implementation. 
-
-
-# Technical Stuff
-## Creating The Cells
-The visuals in this R implementation are limited; e.g.,
-```{r, out.width = &quot;500px&quot;, echo=FALSE}
-knitr::include_graphics(&quot;petri4.png&quot;)
-</pre></div>
-
-
+<p><img alt="alt text" src="./images/cell-division-screenshot.png" title="Cell Division - Screenshot"></p>
+<p>Your score is equal to the total number of cell that you have on the board.  The game ends when the board is full and the winner is the player with the most cells. </p>
+<h2>Features</h2>
+<p>In the current implementation of the game, there are three fixed-difficulty ai opponents.  The R implementation also has an adaptive opponent that plays differently depending on how much it is winning/losing by.</p>
+<p>The current implementation has three square grid board configuratios. The R implementation has board configurations that are more flexible.  In the break and flask layouts, gravity applies to moves played (cells fall to the lowest open row).</p>
+<h1>Implementation</h1>
+<h2>R</h2>
+<p>Cell Division was originally written using R Shiny which converts R code into HTML, CSS and Javascript. The code for the original game is available <a href="https://github.com/mattmotoki/Games.ai/tree/master/Cell%20Division">here</a> and can be played <a href="https://mmotoki.shinyapps.io/cell_division/">here</a>.  R Shiny is geared more towards interactive data analytics and is not well-suited for this type of game.  </p>
+<h2>HTML, CSS and Javascript</h2>
+<p>The current implementation of the game is writen in plain HTML, CSS and Javascript.  The code is available <a href="https://github.com/mattmotoki/mattmotoki.github.io">here</a> and can be played  <a href="https://mattmotoki.github.io/">here</a>.  This implementation lacks a few features of the R implementation, but overall it is a better implementation. </p>
+<h1>Technical Stuff</h1>
+<h2>Creating The Cells</h2>
+<p>The visuals in this R implementation are limited; e.g.,</p>
+<p><img alt="alt text" src="./images/petri4.png" title="Cell Division - Petri Dish Board"></p>
 <p>Cartoon-like cells look better than overlaid squares and lines.  This section describes the process of creating cell images from scratch using base R graphics.  The images can then be loaded and displayed as buttons in the game. </p>
 <h3>Defining the Outline</h3>
 <p>Cells are drawn as layered polygons in base R.  Before calling the <code>polygon</code> functiona new plot needs to be created.  The <code>blank_plot</code> function creates a new empty plot and draws lines to highlight the edges of the cell which we will be at 0 and 1 in both directions. </p>
@@ -124,7 +108,7 @@ knitr::include_graphics(&quot;petri4.png&quot;)
 </pre></div>
 
 
-<p>The natural way to define the outline of a cell is in terms of its $x$ and $y$ coordinates.  Alternatively, the outline can be parameterized by an angle $\theta\in[0,\, 2\pi]$ and a radius $r$ and then mapped back to the $xy$-plane using the formulas
+<p>The natural way to define the outline of a cell is in terms of its (x) and (y) coordinates.  Alternatively, the outline can be parameterized by an angle (\theta\in[0,\, 2\pi])  and a radius $r$ and then mapped back to the $xy$-plane using the formulas
 $$
 x = r\cdot \cos(\theta)
 \qquad
@@ -170,45 +154,50 @@ side_triangular_cell <span class="o">&lt;-</span> <span class="kr">function</spa
 </pre></div>
 
 
-<p>Multiple cells can be drawn with translations, rotations and reflections of the original outline. For example,
-```{r, fig.width=4, fig.height=4, fig.align='center' }</p>
-<h1>create outlines</h1>
-<p>side_tri_outline &lt;- side_triangular_cell(0.1, 0.3, 10)
-side_tri_x &lt;- side_tri_outline[, 1]+0.5
-side_tri_y &lt;- side_tri_outline[, 2]+0.5</p>
-<p>sm_tri_outline &lt;- triangular_cell(0.3, 0.2, 10)
-sm_tri_x &lt;- 0.5<em>(sm_tri_outline[, 1]+0.5)
-sm_tri_y &lt;- 0.5</em>(sm_tri_outline[, 2]+0.5)</p>
-<h1>plot cells and show points</h1>
-<p>blank_plot()
-abline(h=c(0,1), v=c(0,1))
-cellgreen &lt;- c(34/255,250/255,34/255)
-poly_and_points &lt;- function(x, y) {
-  polygon(x, y, col=rgb(cellgreen[1], cellgreen[2], cellgreen[3]))
-  points(x, y)
-}</p>
-<p>poly_and_points(sm_tri_x+0.5, 1-sm_tri_y) # top right
-poly_and_points(sm_tri_x+0.5, sm_tri_y)   # bot right
-poly_and_points(0.5-sm_tri_x, 1-sm_tri_y) # top left
-poly_and_points(0.5-sm_tri_x, sm_tri_y)   # bot left
-poly_and_points(side_tri_y, 1-side_tri_x) # bottom 
-poly_and_points(side_tri_y, side_tri_x)   # top</p>
-<div class="highlight"><pre><span></span><span class="c1">### Shading About the Centroid</span>
-There are two types of shading used to create the cells.  Both types of shading are implemented by overlaying a sequence of polygons centered about the center of mass with either decreasing<span class="o">/</span>increasing size and decreasing<span class="o">/</span>increasing transparency. 
+<p>Here's the output. </p>
+<p><img src="./images/cell-outline.png" alt="Basic Cell Shape" width="200px"/></p>
+<p>Multiple cells can be drawn with translations, rotations and reflections of the original outline. For example,</p>
+<div class="highlight"><pre><span></span><span class="c1"># create outlines</span>
+side_tri_outline <span class="o">&lt;-</span> side_triangular_cell<span class="p">(</span><span class="m">0.1</span><span class="p">,</span> <span class="m">0.3</span><span class="p">,</span> <span class="m">10</span><span class="p">)</span>
+side_tri_x <span class="o">&lt;-</span> side_tri_outline<span class="p">[,</span> <span class="m">1</span><span class="p">]</span><span class="m">+0.5</span>
+side_tri_y <span class="o">&lt;-</span> side_tri_outline<span class="p">[,</span> <span class="m">2</span><span class="p">]</span><span class="m">+0.5</span>
 
-The centroid of a polygon is 
-<span class="o">$$</span>
-\begin<span class="p">{</span><span class="kp">split</span><span class="p">}</span>
-C_x <span class="o">&amp;=</span> \frac<span class="p">{</span><span class="m">1</span><span class="p">}{</span><span class="m">6</span>A<span class="p">}</span> \sum_<span class="p">{</span>i<span class="o">=</span><span class="m">0</span><span class="p">}</span><span class="o">^</span><span class="p">{</span>n<span class="m">-1</span><span class="p">}</span> <span class="p">(</span>x_i <span class="o">+</span> x_<span class="p">{</span>i<span class="m">+1</span><span class="p">})</span> <span class="p">(</span>x_i \cdot  y_<span class="p">{</span>i<span class="m">+1</span><span class="p">}</span> <span class="o">-</span> x_<span class="p">{</span>i<span class="m">+1</span><span class="p">}</span> \cdot y_i<span class="p">)</span>\\
-C_y <span class="o">&amp;=</span> \frac<span class="p">{</span><span class="m">1</span><span class="p">}{</span><span class="m">6</span>A<span class="p">}</span> \sum_<span class="p">{</span>i<span class="o">=</span><span class="m">0</span><span class="p">}</span><span class="o">^</span><span class="p">{</span>n<span class="m">-1</span><span class="p">}</span> <span class="p">(</span>y_i <span class="o">+</span> y_<span class="p">{</span>i<span class="m">+1</span><span class="p">})</span> <span class="p">(</span>x_i \cdot  y_<span class="p">{</span>i<span class="m">+1</span><span class="p">}</span> <span class="o">-</span> x_<span class="p">{</span>i<span class="m">+1</span><span class="p">}</span> \cdot y_i<span class="p">)</span>\\
-\end<span class="p">{</span><span class="kp">split</span><span class="p">}</span>
-<span class="o">$$</span>
+sm_tri_outline <span class="o">&lt;-</span> triangular_cell<span class="p">(</span><span class="m">0.3</span><span class="p">,</span> <span class="m">0.2</span><span class="p">,</span> <span class="m">10</span><span class="p">)</span>
+sm_tri_x <span class="o">&lt;-</span> <span class="m">0.5</span><span class="o">*</span><span class="p">(</span>sm_tri_outline<span class="p">[,</span> <span class="m">1</span><span class="p">]</span><span class="m">+0.5</span><span class="p">)</span>
+sm_tri_y <span class="o">&lt;-</span> <span class="m">0.5</span><span class="o">*</span><span class="p">(</span>sm_tri_outline<span class="p">[,</span> <span class="m">2</span><span class="p">]</span><span class="m">+0.5</span><span class="p">)</span>
+
+<span class="c1"># plot cells and show points</span>
+blank_plot<span class="p">()</span>
+abline<span class="p">(</span>h<span class="o">=</span><span class="kt">c</span><span class="p">(</span><span class="m">0</span><span class="p">,</span><span class="m">1</span><span class="p">),</span> v<span class="o">=</span><span class="kt">c</span><span class="p">(</span><span class="m">0</span><span class="p">,</span><span class="m">1</span><span class="p">))</span>
+cellgreen <span class="o">&lt;-</span> <span class="kt">c</span><span class="p">(</span><span class="m">34</span><span class="o">/</span><span class="m">255</span><span class="p">,</span><span class="m">250</span><span class="o">/</span><span class="m">255</span><span class="p">,</span><span class="m">34</span><span class="o">/</span><span class="m">255</span><span class="p">)</span>
+poly_and_points <span class="o">&lt;-</span> <span class="kr">function</span><span class="p">(</span>x<span class="p">,</span> y<span class="p">)</span> <span class="p">{</span>
+  polygon<span class="p">(</span>x<span class="p">,</span> y<span class="p">,</span> col<span class="o">=</span>rgb<span class="p">(</span>cellgreen<span class="p">[</span><span class="m">1</span><span class="p">],</span> cellgreen<span class="p">[</span><span class="m">2</span><span class="p">],</span> cellgreen<span class="p">[</span><span class="m">3</span><span class="p">]))</span>
+  points<span class="p">(</span>x<span class="p">,</span> y<span class="p">)</span>
+<span class="p">}</span>
+
+poly_and_points<span class="p">(</span>sm_tri_x<span class="m">+0.5</span><span class="p">,</span> <span class="m">1</span><span class="o">-</span>sm_tri_y<span class="p">)</span> <span class="c1"># top right</span>
+poly_and_points<span class="p">(</span>sm_tri_x<span class="m">+0.5</span><span class="p">,</span> sm_tri_y<span class="p">)</span>   <span class="c1"># bot right</span>
+poly_and_points<span class="p">(</span><span class="m">0.5</span><span class="o">-</span>sm_tri_x<span class="p">,</span> <span class="m">1</span><span class="o">-</span>sm_tri_y<span class="p">)</span> <span class="c1"># top left</span>
+poly_and_points<span class="p">(</span><span class="m">0.5</span><span class="o">-</span>sm_tri_x<span class="p">,</span> sm_tri_y<span class="p">)</span>   <span class="c1"># bot left</span>
+poly_and_points<span class="p">(</span>side_tri_y<span class="p">,</span> <span class="m">1</span><span class="o">-</span>side_tri_x<span class="p">)</span> <span class="c1"># bottom </span>
+poly_and_points<span class="p">(</span>side_tri_y<span class="p">,</span> side_tri_x<span class="p">)</span>   <span class="c1"># top</span>
+</pre></div>
+
+
+<h3>Shading About the Centroid</h3>
+<p>There are two types of shading used to create the cells.  Both types of shading are implemented by overlaying a sequence of polygons centered about the center of mass with either decreasing/increasing size and decreasing/increasing transparency. </p>
+<p>The centroid of a polygon is 
+$$
+\begin{split}
+C_x &amp;= \frac{1}{6A} \sum_{i=0}^{n-1} (x_i + x_{i+1}) (x_i \cdot  y_{i+1} - x_{i+1} \cdot y_i)\
+C_y &amp;= \frac{1}{6A} \sum_{i=0}^{n-1} (y_i + y_{i+1}) (x_i \cdot  y_{i+1} - x_{i+1} \cdot y_i)\
+\end{split}
+$$
 where 
-<span class="o">$$</span>
-A <span class="o">=</span> \frac<span class="p">{</span><span class="m">1</span><span class="p">}{</span><span class="m">2</span><span class="p">}</span> \sum_<span class="p">{</span>i<span class="o">=</span><span class="m">0</span><span class="p">}</span><span class="o">^</span><span class="p">{</span>n<span class="m">-1</span><span class="p">}</span> <span class="p">(</span>x_i \cdot  y_<span class="p">{</span>i<span class="m">+1</span><span class="p">}</span> <span class="o">-</span> x_<span class="p">{</span>i<span class="m">+1</span><span class="p">}</span> \cdot y_i<span class="p">)</span><span class="m">.</span>
-<span class="o">$$</span>
-<span class="sb">``</span>`<span class="p">{</span>r<span class="p">}</span>
-circularShift <span class="o">&lt;-</span> <span class="kr">function</span><span class="p">(</span>x<span class="p">,</span>shift<span class="o">=</span><span class="m">0</span><span class="p">)</span> <span class="p">{</span>
+$$
+A = \frac{1}{2} \sum_{i=0}^{n-1} (x_i \cdot  y_{i+1} - x_{i+1} \cdot y_i).
+$$</p>
+<div class="highlight"><pre><span></span>circularShift <span class="o">&lt;-</span> <span class="kr">function</span><span class="p">(</span>x<span class="p">,</span>shift<span class="o">=</span><span class="m">0</span><span class="p">)</span> <span class="p">{</span>
   N <span class="o">&lt;-</span> <span class="kp">length</span><span class="p">(</span>x<span class="p">)</span>
   K <span class="o">&lt;-</span> shift <span class="o">%%</span> N
   <span class="kr">if</span><span class="p">(</span>K <span class="o">==</span> <span class="m">0</span><span class="p">)</span> x <span class="kr">else</span> <span class="kt">c</span><span class="p">(</span>x<span class="p">[(</span>N<span class="o">-</span>K<span class="m">+1</span><span class="p">)</span><span class="o">:</span>N<span class="p">],</span>x<span class="p">[</span><span class="m">1</span><span class="o">:</span><span class="p">(</span>N<span class="o">-</span>K<span class="p">)])</span>
@@ -224,44 +213,49 @@ centroidCalc <span class="o">&lt;-</span> <span class="kr">function</span><span 
 
 
 <p>The shading for the outline of the cell uses a decreasing sequence of polygon size and transparency.  On the other hand, the shading that creates depth in the middle of the cell uses an increasing sequence of polygon size and transparency.</p>
-<p>```{r, fig.width=4, fig.height=4, fig.align='center' }
-library(png)</p>
-<h1>plot a single cell with shadow and dimple</h1>
-<p>plot_cell &lt;- function(x, y, color) {
-  centroid &lt;- centroidCalc(x, y)</p>
-<p># add shadow
-  n_layers &lt;- 100
-  shrink &lt;- seq(1, 0,length=n_layers)
-  alpha &lt;- seq(0.1, 1, length=n_layers)
-  polygon(x, y, col="black", border=NA)
-  for (k in 1:n_layers) {
-    polygon(shrink[k]<em>(x-centroid[1])+centroid[1],
-            shrink[k]</em>(y-centroid[2])+centroid[2],
-            col=rgb(color[1], color[2], color[3], alpha[k]),
-            border=NA) 
-  }</p>
-<p># add dimple
-  n_layers &lt;- 25
-  shrink &lt;- seq(0.25, 0.85, length=n_layers)^2
-  alpha &lt;- seq(0.01, 0.05, length=n_layers)
-  color &lt;- 0.5<em>color
-  for (k in 1:n_layers) {
-    polygon(shrink[k]</em>(x-centroid[1])+centroid[1],
-            shrink[k]*(y-centroid[2])+centroid[2],
-            col=rgb(color[1], color[2], color[3], alpha[k]),
-            border=NA)
-  }
-}</p>
-<h1>plot cells</h1>
-<p>blank_plot()
-abline(h=c(0,1), v=c(0,1))</p>
-<p>plot_cell(sm_tri_x+0.5, 1-sm_tri_y, color=cellgreen) # top right
-plot_cell(sm_tri_x+0.5, sm_tri_y, color=cellgreen)   # bot right
-plot_cell(0.5-sm_tri_x, 1-sm_tri_y, color=cellgreen) # top left
-plot_cell(0.5-sm_tri_x, sm_tri_y, color=cellgreen)   # bot left
-plot_cell(side_tri_y, 1-side_tri_x, color=cellgreen) # bottom
-plot_cell(side_tri_y, side_tri_x, color=cellgreen)   # top
-```</p>
+<div class="highlight"><pre><span></span><span class="kn">library</span><span class="p">(</span>png<span class="p">)</span>
+<span class="c1"># plot a single cell with shadow and dimple</span>
+plot_cell <span class="o">&lt;-</span> <span class="kr">function</span><span class="p">(</span>x<span class="p">,</span> y<span class="p">,</span> color<span class="p">)</span> <span class="p">{</span>
+  centroid <span class="o">&lt;-</span> centroidCalc<span class="p">(</span>x<span class="p">,</span> y<span class="p">)</span>
+
+  <span class="c1"># add shadow</span>
+  n_layers <span class="o">&lt;-</span> <span class="m">100</span>
+  shrink <span class="o">&lt;-</span> <span class="kp">seq</span><span class="p">(</span><span class="m">1</span><span class="p">,</span> <span class="m">0</span><span class="p">,</span>length<span class="o">=</span>n_layers<span class="p">)</span>
+  alpha <span class="o">&lt;-</span> <span class="kp">seq</span><span class="p">(</span><span class="m">0.1</span><span class="p">,</span> <span class="m">1</span><span class="p">,</span> length<span class="o">=</span>n_layers<span class="p">)</span>
+  polygon<span class="p">(</span>x<span class="p">,</span> y<span class="p">,</span> col<span class="o">=</span><span class="s">&quot;black&quot;</span><span class="p">,</span> border<span class="o">=</span><span class="kc">NA</span><span class="p">)</span>
+  <span class="kr">for</span> <span class="p">(</span>k <span class="kr">in</span> <span class="m">1</span><span class="o">:</span>n_layers<span class="p">)</span> <span class="p">{</span>
+    polygon<span class="p">(</span>shrink<span class="p">[</span>k<span class="p">]</span><span class="o">*</span><span class="p">(</span>x<span class="o">-</span>centroid<span class="p">[</span><span class="m">1</span><span class="p">])</span><span class="o">+</span>centroid<span class="p">[</span><span class="m">1</span><span class="p">],</span>
+            shrink<span class="p">[</span>k<span class="p">]</span><span class="o">*</span><span class="p">(</span>y<span class="o">-</span>centroid<span class="p">[</span><span class="m">2</span><span class="p">])</span><span class="o">+</span>centroid<span class="p">[</span><span class="m">2</span><span class="p">],</span>
+            col<span class="o">=</span>rgb<span class="p">(</span>color<span class="p">[</span><span class="m">1</span><span class="p">],</span> color<span class="p">[</span><span class="m">2</span><span class="p">],</span> color<span class="p">[</span><span class="m">3</span><span class="p">],</span> alpha<span class="p">[</span>k<span class="p">]),</span>
+            border<span class="o">=</span><span class="kc">NA</span><span class="p">)</span> 
+  <span class="p">}</span>
+
+  <span class="c1"># add dimple</span>
+  n_layers <span class="o">&lt;-</span> <span class="m">25</span>
+  shrink <span class="o">&lt;-</span> <span class="kp">seq</span><span class="p">(</span><span class="m">0.25</span><span class="p">,</span> <span class="m">0.85</span><span class="p">,</span> length<span class="o">=</span>n_layers<span class="p">)</span><span class="o">^</span><span class="m">2</span>
+  alpha <span class="o">&lt;-</span> <span class="kp">seq</span><span class="p">(</span><span class="m">0.01</span><span class="p">,</span> <span class="m">0.05</span><span class="p">,</span> length<span class="o">=</span>n_layers<span class="p">)</span>
+  color <span class="o">&lt;-</span> <span class="m">0.5</span><span class="o">*</span>color
+  <span class="kr">for</span> <span class="p">(</span>k <span class="kr">in</span> <span class="m">1</span><span class="o">:</span>n_layers<span class="p">)</span> <span class="p">{</span>
+    polygon<span class="p">(</span>shrink<span class="p">[</span>k<span class="p">]</span><span class="o">*</span><span class="p">(</span>x<span class="o">-</span>centroid<span class="p">[</span><span class="m">1</span><span class="p">])</span><span class="o">+</span>centroid<span class="p">[</span><span class="m">1</span><span class="p">],</span>
+            shrink<span class="p">[</span>k<span class="p">]</span><span class="o">*</span><span class="p">(</span>y<span class="o">-</span>centroid<span class="p">[</span><span class="m">2</span><span class="p">])</span><span class="o">+</span>centroid<span class="p">[</span><span class="m">2</span><span class="p">],</span>
+            col<span class="o">=</span>rgb<span class="p">(</span>color<span class="p">[</span><span class="m">1</span><span class="p">],</span> color<span class="p">[</span><span class="m">2</span><span class="p">],</span> color<span class="p">[</span><span class="m">3</span><span class="p">],</span> alpha<span class="p">[</span>k<span class="p">]),</span>
+            border<span class="o">=</span><span class="kc">NA</span><span class="p">)</span>
+  <span class="p">}</span>
+<span class="p">}</span>
+
+<span class="c1"># plot cells</span>
+blank_plot<span class="p">()</span>
+abline<span class="p">(</span>h<span class="o">=</span><span class="kt">c</span><span class="p">(</span><span class="m">0</span><span class="p">,</span><span class="m">1</span><span class="p">),</span> v<span class="o">=</span><span class="kt">c</span><span class="p">(</span><span class="m">0</span><span class="p">,</span><span class="m">1</span><span class="p">))</span>
+
+plot_cell<span class="p">(</span>sm_tri_x<span class="m">+0.5</span><span class="p">,</span> <span class="m">1</span><span class="o">-</span>sm_tri_y<span class="p">,</span> color<span class="o">=</span>cellgreen<span class="p">)</span> <span class="c1"># top right</span>
+plot_cell<span class="p">(</span>sm_tri_x<span class="m">+0.5</span><span class="p">,</span> sm_tri_y<span class="p">,</span> color<span class="o">=</span>cellgreen<span class="p">)</span>   <span class="c1"># bot right</span>
+plot_cell<span class="p">(</span><span class="m">0.5</span><span class="o">-</span>sm_tri_x<span class="p">,</span> <span class="m">1</span><span class="o">-</span>sm_tri_y<span class="p">,</span> color<span class="o">=</span>cellgreen<span class="p">)</span> <span class="c1"># top left</span>
+plot_cell<span class="p">(</span><span class="m">0.5</span><span class="o">-</span>sm_tri_x<span class="p">,</span> sm_tri_y<span class="p">,</span> color<span class="o">=</span>cellgreen<span class="p">)</span>   <span class="c1"># bot left</span>
+plot_cell<span class="p">(</span>side_tri_y<span class="p">,</span> <span class="m">1</span><span class="o">-</span>side_tri_x<span class="p">,</span> color<span class="o">=</span>cellgreen<span class="p">)</span> <span class="c1"># bottom</span>
+plot_cell<span class="p">(</span>side_tri_y<span class="p">,</span> side_tri_x<span class="p">,</span> color<span class="o">=</span>cellgreen<span class="p">)</span>   <span class="c1"># top</span>
+</pre></div>
+
+
 <h2>A.I. Opponent</h2>
 <p>All oppponents are greedy with respect to some approximation of the value of a move.  The quality of the approximation determines the difficulty of the opponent.  Since the objective is to maximize your score, it makes sense to approximate the long term benefit of a move with its immediate increase in score.  It turn's out that the increase in score can be decomposed in the a function of the following four variables: </p>
 <ul>
@@ -406,8 +400,8 @@ Hence, if you beat the ai, then its skill goes up by the score difference; if yo
                     <div class="col-xs-4 col-sm-3 col-md-3 col-lg-3">
                         <div class="footer-title"></div>
                         <ul class="list-unstyled">
-                            <li><a href="#" target="_blank">You can add links in your config file</a></li>
-                            <li><a href="#" target="_blank">Another social link</a></li>
+                            <li><a href="https://www.kaggle.com/mmotoki" target="_blank">Kaggle</a></li>
+                            <li><a href="https://codepen.io/mmotoki/" target="_blank">CodePen</a></li>
                         </ul>
                     </div>
                     <div class="col-xs-4 col-sm-3 col-md-3 col-lg-3">
@@ -415,7 +409,6 @@ Hence, if you beat the ai, then its skill goes up by the score difference; if yo
                         <ul class="list-unstyled">
                             <li><a href="http://getpelican.com/" target="_blank">Pelican</a></li>
                             <li><a href="http://python.org/" target="_blank">Python.org</a></li>
-                            <li><a href="#" target="_blank">You can modify those links in your config file</a></li>
                         </ul>
                     </div> 
                     <div class="col-xs-12 col-sm-3 col-md-3 col-lg-3">
