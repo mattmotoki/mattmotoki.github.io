@@ -12,6 +12,9 @@ TIMEZONE = 'Pacific/Honolulu'
 
 DEFAULT_LANG = 'en'
 
+NEST_HEADER_LOGO = 'images/cell-icon.png'
+NEST_HEADER_IMAGES = 'bg0.png'
+
 
 FEED_ALL_ATOM = 'feeds/all.atom.xml'
 FEED_ALL_RSS = 'feeds/all.rss.xml'
