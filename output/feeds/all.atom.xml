@@ -1,39 +1,23 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom"><title>Matt Motoki</title><link href="/" rel="alternate"></link><link href="/feeds/all.atom.xml" rel="self"></link><id>/</id><updated>2017-11-28T12:30:00-10:00</updated><entry><title>Cell Division</title><link href="/cell-division.html" rel="alternate"></link><published>2017-11-26T10:01:00-10:00</published><updated>2017-11-27T12:30:00-10:00</updated><author><name>Matt Motoki</name></author><id>tag:None,2017-11-26:/cell-division.html</id><summary type="html">&lt;p&gt;My game&lt;/p&gt;</summary><content type="html">&lt;p&gt;&lt;a href="https://mattmotoki.github.io/cell-division/"&gt;Play Cell Division here&lt;/a&gt;&lt;/p&gt;
 &lt;h1&gt;Introduction&lt;/h1&gt;
-&lt;p&gt;Cell Addition is a strategy-based board game.  All A.I. opponents implement a deterministic strategy that is greedy with respect to an approximate value function.  Games against a fixed difficulty A.I. opponent are reproducible.  &lt;/p&gt;
+&lt;p&gt;Cell Addition is a strategy-based board game.  Current A.I. opponents implement a deterministic strategy that is greedy with respect to an approximate value function.  A.I. opponents are completely deterministic and so games are reproducible.  &lt;/p&gt;
 &lt;h2&gt;How to Play&lt;/h2&gt;
 &lt;p&gt;Player take turns placing their cells. A player's cells divide when they connect with each other; vertical, horizontal and diagonal connections are allowed.  &lt;/p&gt;
-&lt;p&gt;&lt;img alt="alt text" src="cell-division/cell-logo.png" title="Cell Division"&gt;&lt;/p&gt;
-&lt;p&gt;```{r, out.width = "100px", echo=FALSE}
-knitr::include_graphics("medium_size_logo.png")&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;Your score is equal to the total number of cell that you have on the board.  The game ends when the board is full and the winner is the player with the most cells. 
-
-## Features
-In the current implementation of the game, there are three fixed-difficulty ai opponents.  The R implementation also has an adaptive opponent that plays differently depending on how much it is winning/losing by.
-
-The current implementation has three square grid board configuratios. The R implementation has board configurations that are more flexible.  In the break and flask layouts, gravity applies to moves played (cells fall to the lowest open row).
-
-
-
-# Implementation
-
-## R 
-Cell Division was originally written using R Shiny which converts R code into HTML, CSS and Javascript. The code for the original game is available [here](https://github.com/mattmotoki/Games.ai/tree/master/Cell%20Division) and can be played [here](https://mmotoki.shinyapps.io/cell_division/).  R Shiny is geared more towards interactive data analytics and is not well-suited for this type of game.  
-
-
-## HTML, CSS and Javascript
-The current implementation of the game is writen in plain HTML, CSS and Javascript.  The code is available [here](https://github.com/mattmotoki/mattmotoki.github.io) and can be played  [here](https://mattmotoki.github.io/).  This implementation lacks a few features of the R implementation, but overall it is a better implementation. 
-
-
-# Technical Stuff
-## Creating The Cells
-The visuals in this R implementation are limited; e.g.,
-```{r, out.width = &amp;quot;500px&amp;quot;, echo=FALSE}
-knitr::include_graphics(&amp;quot;petri4.png&amp;quot;)
-&lt;/pre&gt;&lt;/div&gt;
-
-
+&lt;p&gt;&lt;img alt="alt text" src="./images/cell-division-screenshot.png" title="Cell Division - Screenshot"&gt;&lt;/p&gt;
+&lt;p&gt;Your score is equal to the total number of cell that you have on the board.  The game ends when the board is full and the winner is the player with the most cells. &lt;/p&gt;
+&lt;h2&gt;Features&lt;/h2&gt;
+&lt;p&gt;In the current implementation of the game, there are three fixed-difficulty ai opponents.  The R implementation also has an adaptive opponent that plays differently depending on how much it is winning/losing by.&lt;/p&gt;
+&lt;p&gt;The current implementation has three square grid board configuratios. The R implementation has board configurations that are more flexible.  In the break and flask layouts, gravity applies to moves played (cells fall to the lowest open row).&lt;/p&gt;
+&lt;h1&gt;Implementation&lt;/h1&gt;
+&lt;h2&gt;R&lt;/h2&gt;
+&lt;p&gt;Cell Division was originally written using R Shiny which converts R code into HTML, CSS and Javascript. The code for the original game is available &lt;a href="https://github.com/mattmotoki/Games.ai/tree/master/Cell%20Division"&gt;here&lt;/a&gt; and can be played &lt;a href="https://mmotoki.shinyapps.io/cell_division/"&gt;here&lt;/a&gt;.  R Shiny is geared more towards interactive data analytics and is not well-suited for this type of game.  &lt;/p&gt;
+&lt;h2&gt;HTML, CSS and Javascript&lt;/h2&gt;
+&lt;p&gt;The current implementation of the game is writen in plain HTML, CSS and Javascript.  The code is available &lt;a href="https://github.com/mattmotoki/mattmotoki.github.io"&gt;here&lt;/a&gt; and can be played  &lt;a href="https://mattmotoki.github.io/"&gt;here&lt;/a&gt;.  This implementation lacks a few features of the R implementation, but overall it is a better implementation. &lt;/p&gt;
+&lt;h1&gt;Technical Stuff&lt;/h1&gt;
+&lt;h2&gt;Creating The Cells&lt;/h2&gt;
+&lt;p&gt;The visuals in this R implementation are limited; e.g.,&lt;/p&gt;
+&lt;p&gt;&lt;img alt="alt text" src="./images/petri4.png" title="Cell Division - Petri Dish Board"&gt;&lt;/p&gt;
 &lt;p&gt;Cartoon-like cells look better than overlaid squares and lines.  This section describes the process of creating cell images from scratch using base R graphics.  The images can then be loaded and displayed as buttons in the game. &lt;/p&gt;
 &lt;h3&gt;Defining the Outline&lt;/h3&gt;
 &lt;p&gt;Cells are drawn as layered polygons in base R.  Before calling the &lt;code&gt;polygon&lt;/code&gt; functiona new plot needs to be created.  The &lt;code&gt;blank_plot&lt;/code&gt; function creates a new empty plot and draws lines to highlight the edges of the cell which we will be at 0 and 1 in both directions. &lt;/p&gt;
@@ -47,7 +31,7 @@ knitr::include_graphics(&amp;quot;petri4.png&amp;quot;)
 &lt;/pre&gt;&lt;/div&gt;
 
 
-&lt;p&gt;The natural way to define the outline of a cell is in terms of its $x$ and $y$ coordinates.  Alternatively, the outline can be parameterized by an angle $\theta\in[0,\, 2\pi]$ and a radius $r$ and then mapped back to the $xy$-plane using the formulas
+&lt;p&gt;The natural way to define the outline of a cell is in terms of its (x) and (y) coordinates.  Alternatively, the outline can be parameterized by an angle (\theta\in[0,\, 2\pi])  and a radius $r$ and then mapped back to the $xy$-plane using the formulas
 $$
 x = r\cdot \cos(\theta)
 \qquad
@@ -93,45 +77,50 @@ side_triangular_cell &lt;span class="o"&gt;&amp;lt;-&lt;/span&gt; &lt;span class
 &lt;/pre&gt;&lt;/div&gt;
 
 
-&lt;p&gt;Multiple cells can be drawn with translations, rotations and reflections of the original outline. For example,
-```{r, fig.width=4, fig.height=4, fig.align='center' }&lt;/p&gt;
-&lt;h1&gt;create outlines&lt;/h1&gt;
-&lt;p&gt;side_tri_outline &amp;lt;- side_triangular_cell(0.1, 0.3, 10)
-side_tri_x &amp;lt;- side_tri_outline[, 1]+0.5
-side_tri_y &amp;lt;- side_tri_outline[, 2]+0.5&lt;/p&gt;
-&lt;p&gt;sm_tri_outline &amp;lt;- triangular_cell(0.3, 0.2, 10)
-sm_tri_x &amp;lt;- 0.5&lt;em&gt;(sm_tri_outline[, 1]+0.5)
-sm_tri_y &amp;lt;- 0.5&lt;/em&gt;(sm_tri_outline[, 2]+0.5)&lt;/p&gt;
-&lt;h1&gt;plot cells and show points&lt;/h1&gt;
-&lt;p&gt;blank_plot()
-abline(h=c(0,1), v=c(0,1))
-cellgreen &amp;lt;- c(34/255,250/255,34/255)
-poly_and_points &amp;lt;- function(x, y) {
-  polygon(x, y, col=rgb(cellgreen[1], cellgreen[2], cellgreen[3]))
-  points(x, y)
-}&lt;/p&gt;
-&lt;p&gt;poly_and_points(sm_tri_x+0.5, 1-sm_tri_y) # top right
-poly_and_points(sm_tri_x+0.5, sm_tri_y)   # bot right
-poly_and_points(0.5-sm_tri_x, 1-sm_tri_y) # top left
-poly_and_points(0.5-sm_tri_x, sm_tri_y)   # bot left
-poly_and_points(side_tri_y, 1-side_tri_x) # bottom 
-poly_and_points(side_tri_y, side_tri_x)   # top&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="c1"&gt;### Shading About the Centroid&lt;/span&gt;
-There are two types of shading used to create the cells.  Both types of shading are implemented by overlaying a sequence of polygons centered about the center of mass with either decreasing&lt;span class="o"&gt;/&lt;/span&gt;increasing size and decreasing&lt;span class="o"&gt;/&lt;/span&gt;increasing transparency. 
+&lt;p&gt;Here's the output. &lt;/p&gt;
+&lt;p&gt;&lt;img src="./images/cell-outline.png" alt="Basic Cell Shape" width="200px"/&gt;&lt;/p&gt;
+&lt;p&gt;Multiple cells can be drawn with translations, rotations and reflections of the original outline. For example,&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="c1"&gt;# create outlines&lt;/span&gt;
+side_tri_outline &lt;span class="o"&gt;&amp;lt;-&lt;/span&gt; side_triangular_cell&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="m"&gt;0.1&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="m"&gt;0.3&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="m"&gt;10&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+side_tri_x &lt;span class="o"&gt;&amp;lt;-&lt;/span&gt; side_tri_outline&lt;span class="p"&gt;[,&lt;/span&gt; &lt;span class="m"&gt;1&lt;/span&gt;&lt;span class="p"&gt;]&lt;/span&gt;&lt;span class="m"&gt;+0.5&lt;/span&gt;
+side_tri_y &lt;span class="o"&gt;&amp;lt;-&lt;/span&gt; side_tri_outline&lt;span class="p"&gt;[,&lt;/span&gt; &lt;span class="m"&gt;2&lt;/span&gt;&lt;span class="p"&gt;]&lt;/span&gt;&lt;span class="m"&gt;+0.5&lt;/span&gt;
 
-The centroid of a polygon is 
-&lt;span class="o"&gt;$$&lt;/span&gt;
-\begin&lt;span class="p"&gt;{&lt;/span&gt;&lt;span class="kp"&gt;split&lt;/span&gt;&lt;span class="p"&gt;}&lt;/span&gt;
-C_x &lt;span class="o"&gt;&amp;amp;=&lt;/span&gt; \frac&lt;span class="p"&gt;{&lt;/span&gt;&lt;span class="m"&gt;1&lt;/span&gt;&lt;span class="p"&gt;}{&lt;/span&gt;&lt;span class="m"&gt;6&lt;/span&gt;A&lt;span class="p"&gt;}&lt;/span&gt; \sum_&lt;span class="p"&gt;{&lt;/span&gt;i&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="m"&gt;0&lt;/span&gt;&lt;span class="p"&gt;}&lt;/span&gt;&lt;span class="o"&gt;^&lt;/span&gt;&lt;span class="p"&gt;{&lt;/span&gt;n&lt;span class="m"&gt;-1&lt;/span&gt;&lt;span class="p"&gt;}&lt;/span&gt; &lt;span class="p"&gt;(&lt;/span&gt;x_i &lt;span class="o"&gt;+&lt;/span&gt; x_&lt;span class="p"&gt;{&lt;/span&gt;i&lt;span class="m"&gt;+1&lt;/span&gt;&lt;span class="p"&gt;})&lt;/span&gt; &lt;span class="p"&gt;(&lt;/span&gt;x_i \cdot  y_&lt;span class="p"&gt;{&lt;/span&gt;i&lt;span class="m"&gt;+1&lt;/span&gt;&lt;span class="p"&gt;}&lt;/span&gt; &lt;span class="o"&gt;-&lt;/span&gt; x_&lt;span class="p"&gt;{&lt;/span&gt;i&lt;span class="m"&gt;+1&lt;/span&gt;&lt;span class="p"&gt;}&lt;/span&gt; \cdot y_i&lt;span class="p"&gt;)&lt;/span&gt;\\
-C_y &lt;span class="o"&gt;&amp;amp;=&lt;/span&gt; \frac&lt;span class="p"&gt;{&lt;/span&gt;&lt;span class="m"&gt;1&lt;/span&gt;&lt;span class="p"&gt;}{&lt;/span&gt;&lt;span class="m"&gt;6&lt;/span&gt;A&lt;span class="p"&gt;}&lt;/span&gt; \sum_&lt;span class="p"&gt;{&lt;/span&gt;i&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="m"&gt;0&lt;/span&gt;&lt;span class="p"&gt;}&lt;/span&gt;&lt;span class="o"&gt;^&lt;/span&gt;&lt;span class="p"&gt;{&lt;/span&gt;n&lt;span class="m"&gt;-1&lt;/span&gt;&lt;span class="p"&gt;}&lt;/span&gt; &lt;span class="p"&gt;(&lt;/span&gt;y_i &lt;span class="o"&gt;+&lt;/span&gt; y_&lt;span class="p"&gt;{&lt;/span&gt;i&lt;span class="m"&gt;+1&lt;/span&gt;&lt;span class="p"&gt;})&lt;/span&gt; &lt;span class="p"&gt;(&lt;/span&gt;x_i \cdot  y_&lt;span class="p"&gt;{&lt;/span&gt;i&lt;span class="m"&gt;+1&lt;/span&gt;&lt;span class="p"&gt;}&lt;/span&gt; &lt;span class="o"&gt;-&lt;/span&gt; x_&lt;span class="p"&gt;{&lt;/span&gt;i&lt;span class="m"&gt;+1&lt;/span&gt;&lt;span class="p"&gt;}&lt;/span&gt; \cdot y_i&lt;span class="p"&gt;)&lt;/span&gt;\\
-\end&lt;span class="p"&gt;{&lt;/span&gt;&lt;span class="kp"&gt;split&lt;/span&gt;&lt;span class="p"&gt;}&lt;/span&gt;
-&lt;span class="o"&gt;$$&lt;/span&gt;
+sm_tri_outline &lt;span class="o"&gt;&amp;lt;-&lt;/span&gt; triangular_cell&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="m"&gt;0.3&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="m"&gt;0.2&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="m"&gt;10&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+sm_tri_x &lt;span class="o"&gt;&amp;lt;-&lt;/span&gt; &lt;span class="m"&gt;0.5&lt;/span&gt;&lt;span class="o"&gt;*&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;sm_tri_outline&lt;span class="p"&gt;[,&lt;/span&gt; &lt;span class="m"&gt;1&lt;/span&gt;&lt;span class="p"&gt;]&lt;/span&gt;&lt;span class="m"&gt;+0.5&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+sm_tri_y &lt;span class="o"&gt;&amp;lt;-&lt;/span&gt; &lt;span class="m"&gt;0.5&lt;/span&gt;&lt;span class="o"&gt;*&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;sm_tri_outline&lt;span class="p"&gt;[,&lt;/span&gt; &lt;span class="m"&gt;2&lt;/span&gt;&lt;span class="p"&gt;]&lt;/span&gt;&lt;span class="m"&gt;+0.5&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+
+&lt;span class="c1"&gt;# plot cells and show points&lt;/span&gt;
+blank_plot&lt;span class="p"&gt;()&lt;/span&gt;
+abline&lt;span class="p"&gt;(&lt;/span&gt;h&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="kt"&gt;c&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="m"&gt;0&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="m"&gt;1&lt;/span&gt;&lt;span class="p"&gt;),&lt;/span&gt; v&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="kt"&gt;c&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="m"&gt;0&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="m"&gt;1&lt;/span&gt;&lt;span class="p"&gt;))&lt;/span&gt;
+cellgreen &lt;span class="o"&gt;&amp;lt;-&lt;/span&gt; &lt;span class="kt"&gt;c&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="m"&gt;34&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="m"&gt;255&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="m"&gt;250&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="m"&gt;255&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="m"&gt;34&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="m"&gt;255&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+poly_and_points &lt;span class="o"&gt;&amp;lt;-&lt;/span&gt; &lt;span class="kr"&gt;function&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;x&lt;span class="p"&gt;,&lt;/span&gt; y&lt;span class="p"&gt;)&lt;/span&gt; &lt;span class="p"&gt;{&lt;/span&gt;
+  polygon&lt;span class="p"&gt;(&lt;/span&gt;x&lt;span class="p"&gt;,&lt;/span&gt; y&lt;span class="p"&gt;,&lt;/span&gt; col&lt;span class="o"&gt;=&lt;/span&gt;rgb&lt;span class="p"&gt;(&lt;/span&gt;cellgreen&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="m"&gt;1&lt;/span&gt;&lt;span class="p"&gt;],&lt;/span&gt; cellgreen&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="m"&gt;2&lt;/span&gt;&lt;span class="p"&gt;],&lt;/span&gt; cellgreen&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="m"&gt;3&lt;/span&gt;&lt;span class="p"&gt;]))&lt;/span&gt;
+  points&lt;span class="p"&gt;(&lt;/span&gt;x&lt;span class="p"&gt;,&lt;/span&gt; y&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;span class="p"&gt;}&lt;/span&gt;
+
+poly_and_points&lt;span class="p"&gt;(&lt;/span&gt;sm_tri_x&lt;span class="m"&gt;+0.5&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="m"&gt;1&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;sm_tri_y&lt;span class="p"&gt;)&lt;/span&gt; &lt;span class="c1"&gt;# top right&lt;/span&gt;
+poly_and_points&lt;span class="p"&gt;(&lt;/span&gt;sm_tri_x&lt;span class="m"&gt;+0.5&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; sm_tri_y&lt;span class="p"&gt;)&lt;/span&gt;   &lt;span class="c1"&gt;# bot right&lt;/span&gt;
+poly_and_points&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="m"&gt;0.5&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;sm_tri_x&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="m"&gt;1&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;sm_tri_y&lt;span class="p"&gt;)&lt;/span&gt; &lt;span class="c1"&gt;# top left&lt;/span&gt;
+poly_and_points&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="m"&gt;0.5&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;sm_tri_x&lt;span class="p"&gt;,&lt;/span&gt; sm_tri_y&lt;span class="p"&gt;)&lt;/span&gt;   &lt;span class="c1"&gt;# bot left&lt;/span&gt;
+poly_and_points&lt;span class="p"&gt;(&lt;/span&gt;side_tri_y&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="m"&gt;1&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;side_tri_x&lt;span class="p"&gt;)&lt;/span&gt; &lt;span class="c1"&gt;# bottom &lt;/span&gt;
+poly_and_points&lt;span class="p"&gt;(&lt;/span&gt;side_tri_y&lt;span class="p"&gt;,&lt;/span&gt; side_tri_x&lt;span class="p"&gt;)&lt;/span&gt;   &lt;span class="c1"&gt;# top&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;h3&gt;Shading About the Centroid&lt;/h3&gt;
+&lt;p&gt;There are two types of shading used to create the cells.  Both types of shading are implemented by overlaying a sequence of polygons centered about the center of mass with either decreasing/increasing size and decreasing/increasing transparency. &lt;/p&gt;
+&lt;p&gt;The centroid of a polygon is 
+$$
+\begin{split}
+C_x &amp;amp;= \frac{1}{6A} \sum_{i=0}^{n-1} (x_i + x_{i+1}) (x_i \cdot  y_{i+1} - x_{i+1} \cdot y_i)\
+C_y &amp;amp;= \frac{1}{6A} \sum_{i=0}^{n-1} (y_i + y_{i+1}) (x_i \cdot  y_{i+1} - x_{i+1} \cdot y_i)\
+\end{split}
+$$
 where 
-&lt;span class="o"&gt;$$&lt;/span&gt;
-A &lt;span class="o"&gt;=&lt;/span&gt; \frac&lt;span class="p"&gt;{&lt;/span&gt;&lt;span class="m"&gt;1&lt;/span&gt;&lt;span class="p"&gt;}{&lt;/span&gt;&lt;span class="m"&gt;2&lt;/span&gt;&lt;span class="p"&gt;}&lt;/span&gt; \sum_&lt;span class="p"&gt;{&lt;/span&gt;i&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="m"&gt;0&lt;/span&gt;&lt;span class="p"&gt;}&lt;/span&gt;&lt;span class="o"&gt;^&lt;/span&gt;&lt;span class="p"&gt;{&lt;/span&gt;n&lt;span class="m"&gt;-1&lt;/span&gt;&lt;span class="p"&gt;}&lt;/span&gt; &lt;span class="p"&gt;(&lt;/span&gt;x_i \cdot  y_&lt;span class="p"&gt;{&lt;/span&gt;i&lt;span class="m"&gt;+1&lt;/span&gt;&lt;span class="p"&gt;}&lt;/span&gt; &lt;span class="o"&gt;-&lt;/span&gt; x_&lt;span class="p"&gt;{&lt;/span&gt;i&lt;span class="m"&gt;+1&lt;/span&gt;&lt;span class="p"&gt;}&lt;/span&gt; \cdot y_i&lt;span class="p"&gt;)&lt;/span&gt;&lt;span class="m"&gt;.&lt;/span&gt;
-&lt;span class="o"&gt;$$&lt;/span&gt;
-&lt;span class="sb"&gt;``&lt;/span&gt;`&lt;span class="p"&gt;{&lt;/span&gt;r&lt;span class="p"&gt;}&lt;/span&gt;
-circularShift &lt;span class="o"&gt;&amp;lt;-&lt;/span&gt; &lt;span class="kr"&gt;function&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;x&lt;span class="p"&gt;,&lt;/span&gt;shift&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="m"&gt;0&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt; &lt;span class="p"&gt;{&lt;/span&gt;
+$$
+A = \frac{1}{2} \sum_{i=0}^{n-1} (x_i \cdot  y_{i+1} - x_{i+1} \cdot y_i).
+$$&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;circularShift &lt;span class="o"&gt;&amp;lt;-&lt;/span&gt; &lt;span class="kr"&gt;function&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;x&lt;span class="p"&gt;,&lt;/span&gt;shift&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="m"&gt;0&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt; &lt;span class="p"&gt;{&lt;/span&gt;
   N &lt;span class="o"&gt;&amp;lt;-&lt;/span&gt; &lt;span class="kp"&gt;length&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;x&lt;span class="p"&gt;)&lt;/span&gt;
   K &lt;span class="o"&gt;&amp;lt;-&lt;/span&gt; shift &lt;span class="o"&gt;%%&lt;/span&gt; N
   &lt;span class="kr"&gt;if&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;K &lt;span class="o"&gt;==&lt;/span&gt; &lt;span class="m"&gt;0&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt; x &lt;span class="kr"&gt;else&lt;/span&gt; &lt;span class="kt"&gt;c&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;x&lt;span class="p"&gt;[(&lt;/span&gt;N&lt;span class="o"&gt;-&lt;/span&gt;K&lt;span class="m"&gt;+1&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt;N&lt;span class="p"&gt;],&lt;/span&gt;x&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="m"&gt;1&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;N&lt;span class="o"&gt;-&lt;/span&gt;K&lt;span class="p"&gt;)])&lt;/span&gt;
@@ -147,44 +136,49 @@ centroidCalc &lt;span class="o"&gt;&amp;lt;-&lt;/span&gt; &lt;span class="kr"&gt
 
 
 &lt;p&gt;The shading for the outline of the cell uses a decreasing sequence of polygon size and transparency.  On the other hand, the shading that creates depth in the middle of the cell uses an increasing sequence of polygon size and transparency.&lt;/p&gt;
-&lt;p&gt;```{r, fig.width=4, fig.height=4, fig.align='center' }
-library(png)&lt;/p&gt;
-&lt;h1&gt;plot a single cell with shadow and dimple&lt;/h1&gt;
-&lt;p&gt;plot_cell &amp;lt;- function(x, y, color) {
-  centroid &amp;lt;- centroidCalc(x, y)&lt;/p&gt;
-&lt;p&gt;# add shadow
-  n_layers &amp;lt;- 100
-  shrink &amp;lt;- seq(1, 0,length=n_layers)
-  alpha &amp;lt;- seq(0.1, 1, length=n_layers)
-  polygon(x, y, col="black", border=NA)
-  for (k in 1:n_layers) {
-    polygon(shrink[k]&lt;em&gt;(x-centroid[1])+centroid[1],
-            shrink[k]&lt;/em&gt;(y-centroid[2])+centroid[2],
-            col=rgb(color[1], color[2], color[3], alpha[k]),
-            border=NA) 
-  }&lt;/p&gt;
-&lt;p&gt;# add dimple
-  n_layers &amp;lt;- 25
-  shrink &amp;lt;- seq(0.25, 0.85, length=n_layers)^2
-  alpha &amp;lt;- seq(0.01, 0.05, length=n_layers)
-  color &amp;lt;- 0.5&lt;em&gt;color
-  for (k in 1:n_layers) {
-    polygon(shrink[k]&lt;/em&gt;(x-centroid[1])+centroid[1],
-            shrink[k]*(y-centroid[2])+centroid[2],
-            col=rgb(color[1], color[2], color[3], alpha[k]),
-            border=NA)
-  }
-}&lt;/p&gt;
-&lt;h1&gt;plot cells&lt;/h1&gt;
-&lt;p&gt;blank_plot()
-abline(h=c(0,1), v=c(0,1))&lt;/p&gt;
-&lt;p&gt;plot_cell(sm_tri_x+0.5, 1-sm_tri_y, color=cellgreen) # top right
-plot_cell(sm_tri_x+0.5, sm_tri_y, color=cellgreen)   # bot right
-plot_cell(0.5-sm_tri_x, 1-sm_tri_y, color=cellgreen) # top left
-plot_cell(0.5-sm_tri_x, sm_tri_y, color=cellgreen)   # bot left
-plot_cell(side_tri_y, 1-side_tri_x, color=cellgreen) # bottom
-plot_cell(side_tri_y, side_tri_x, color=cellgreen)   # top
-```&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="kn"&gt;library&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;png&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;span class="c1"&gt;# plot a single cell with shadow and dimple&lt;/span&gt;
+plot_cell &lt;span class="o"&gt;&amp;lt;-&lt;/span&gt; &lt;span class="kr"&gt;function&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;x&lt;span class="p"&gt;,&lt;/span&gt; y&lt;span class="p"&gt;,&lt;/span&gt; color&lt;span class="p"&gt;)&lt;/span&gt; &lt;span class="p"&gt;{&lt;/span&gt;
+  centroid &lt;span class="o"&gt;&amp;lt;-&lt;/span&gt; centroidCalc&lt;span class="p"&gt;(&lt;/span&gt;x&lt;span class="p"&gt;,&lt;/span&gt; y&lt;span class="p"&gt;)&lt;/span&gt;
+
+  &lt;span class="c1"&gt;# add shadow&lt;/span&gt;
+  n_layers &lt;span class="o"&gt;&amp;lt;-&lt;/span&gt; &lt;span class="m"&gt;100&lt;/span&gt;
+  shrink &lt;span class="o"&gt;&amp;lt;-&lt;/span&gt; &lt;span class="kp"&gt;seq&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="m"&gt;1&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="m"&gt;0&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;length&lt;span class="o"&gt;=&lt;/span&gt;n_layers&lt;span class="p"&gt;)&lt;/span&gt;
+  alpha &lt;span class="o"&gt;&amp;lt;-&lt;/span&gt; &lt;span class="kp"&gt;seq&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="m"&gt;0.1&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="m"&gt;1&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; length&lt;span class="o"&gt;=&lt;/span&gt;n_layers&lt;span class="p"&gt;)&lt;/span&gt;
+  polygon&lt;span class="p"&gt;(&lt;/span&gt;x&lt;span class="p"&gt;,&lt;/span&gt; y&lt;span class="p"&gt;,&lt;/span&gt; col&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s"&gt;&amp;quot;black&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; border&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="kc"&gt;NA&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+  &lt;span class="kr"&gt;for&lt;/span&gt; &lt;span class="p"&gt;(&lt;/span&gt;k &lt;span class="kr"&gt;in&lt;/span&gt; &lt;span class="m"&gt;1&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt;n_layers&lt;span class="p"&gt;)&lt;/span&gt; &lt;span class="p"&gt;{&lt;/span&gt;
+    polygon&lt;span class="p"&gt;(&lt;/span&gt;shrink&lt;span class="p"&gt;[&lt;/span&gt;k&lt;span class="p"&gt;]&lt;/span&gt;&lt;span class="o"&gt;*&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;x&lt;span class="o"&gt;-&lt;/span&gt;centroid&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="m"&gt;1&lt;/span&gt;&lt;span class="p"&gt;])&lt;/span&gt;&lt;span class="o"&gt;+&lt;/span&gt;centroid&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="m"&gt;1&lt;/span&gt;&lt;span class="p"&gt;],&lt;/span&gt;
+            shrink&lt;span class="p"&gt;[&lt;/span&gt;k&lt;span class="p"&gt;]&lt;/span&gt;&lt;span class="o"&gt;*&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;y&lt;span class="o"&gt;-&lt;/span&gt;centroid&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="m"&gt;2&lt;/span&gt;&lt;span class="p"&gt;])&lt;/span&gt;&lt;span class="o"&gt;+&lt;/span&gt;centroid&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="m"&gt;2&lt;/span&gt;&lt;span class="p"&gt;],&lt;/span&gt;
+            col&lt;span class="o"&gt;=&lt;/span&gt;rgb&lt;span class="p"&gt;(&lt;/span&gt;color&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="m"&gt;1&lt;/span&gt;&lt;span class="p"&gt;],&lt;/span&gt; color&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="m"&gt;2&lt;/span&gt;&lt;span class="p"&gt;],&lt;/span&gt; color&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="m"&gt;3&lt;/span&gt;&lt;span class="p"&gt;],&lt;/span&gt; alpha&lt;span class="p"&gt;[&lt;/span&gt;k&lt;span class="p"&gt;]),&lt;/span&gt;
+            border&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="kc"&gt;NA&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt; 
+  &lt;span class="p"&gt;}&lt;/span&gt;
+
+  &lt;span class="c1"&gt;# add dimple&lt;/span&gt;
+  n_layers &lt;span class="o"&gt;&amp;lt;-&lt;/span&gt; &lt;span class="m"&gt;25&lt;/span&gt;
+  shrink &lt;span class="o"&gt;&amp;lt;-&lt;/span&gt; &lt;span class="kp"&gt;seq&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="m"&gt;0.25&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="m"&gt;0.85&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; length&lt;span class="o"&gt;=&lt;/span&gt;n_layers&lt;span class="p"&gt;)&lt;/span&gt;&lt;span class="o"&gt;^&lt;/span&gt;&lt;span class="m"&gt;2&lt;/span&gt;
+  alpha &lt;span class="o"&gt;&amp;lt;-&lt;/span&gt; &lt;span class="kp"&gt;seq&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="m"&gt;0.01&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="m"&gt;0.05&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; length&lt;span class="o"&gt;=&lt;/span&gt;n_layers&lt;span class="p"&gt;)&lt;/span&gt;
+  color &lt;span class="o"&gt;&amp;lt;-&lt;/span&gt; &lt;span class="m"&gt;0.5&lt;/span&gt;&lt;span class="o"&gt;*&lt;/span&gt;color
+  &lt;span class="kr"&gt;for&lt;/span&gt; &lt;span class="p"&gt;(&lt;/span&gt;k &lt;span class="kr"&gt;in&lt;/span&gt; &lt;span class="m"&gt;1&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt;n_layers&lt;span class="p"&gt;)&lt;/span&gt; &lt;span class="p"&gt;{&lt;/span&gt;
+    polygon&lt;span class="p"&gt;(&lt;/span&gt;shrink&lt;span class="p"&gt;[&lt;/span&gt;k&lt;span class="p"&gt;]&lt;/span&gt;&lt;span class="o"&gt;*&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;x&lt;span class="o"&gt;-&lt;/span&gt;centroid&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="m"&gt;1&lt;/span&gt;&lt;span class="p"&gt;])&lt;/span&gt;&lt;span class="o"&gt;+&lt;/span&gt;centroid&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="m"&gt;1&lt;/span&gt;&lt;span class="p"&gt;],&lt;/span&gt;
+            shrink&lt;span class="p"&gt;[&lt;/span&gt;k&lt;span class="p"&gt;]&lt;/span&gt;&lt;span class="o"&gt;*&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;y&lt;span class="o"&gt;-&lt;/span&gt;centroid&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="m"&gt;2&lt;/span&gt;&lt;span class="p"&gt;])&lt;/span&gt;&lt;span class="o"&gt;+&lt;/span&gt;centroid&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="m"&gt;2&lt;/span&gt;&lt;span class="p"&gt;],&lt;/span&gt;
+            col&lt;span class="o"&gt;=&lt;/span&gt;rgb&lt;span class="p"&gt;(&lt;/span&gt;color&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="m"&gt;1&lt;/span&gt;&lt;span class="p"&gt;],&lt;/span&gt; color&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="m"&gt;2&lt;/span&gt;&lt;span class="p"&gt;],&lt;/span&gt; color&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="m"&gt;3&lt;/span&gt;&lt;span class="p"&gt;],&lt;/span&gt; alpha&lt;span class="p"&gt;[&lt;/span&gt;k&lt;span class="p"&gt;]),&lt;/span&gt;
+            border&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="kc"&gt;NA&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+  &lt;span class="p"&gt;}&lt;/span&gt;
+&lt;span class="p"&gt;}&lt;/span&gt;
+
+&lt;span class="c1"&gt;# plot cells&lt;/span&gt;
+blank_plot&lt;span class="p"&gt;()&lt;/span&gt;
+abline&lt;span class="p"&gt;(&lt;/span&gt;h&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="kt"&gt;c&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="m"&gt;0&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="m"&gt;1&lt;/span&gt;&lt;span class="p"&gt;),&lt;/span&gt; v&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="kt"&gt;c&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="m"&gt;0&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="m"&gt;1&lt;/span&gt;&lt;span class="p"&gt;))&lt;/span&gt;
+
+plot_cell&lt;span class="p"&gt;(&lt;/span&gt;sm_tri_x&lt;span class="m"&gt;+0.5&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="m"&gt;1&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;sm_tri_y&lt;span class="p"&gt;,&lt;/span&gt; color&lt;span class="o"&gt;=&lt;/span&gt;cellgreen&lt;span class="p"&gt;)&lt;/span&gt; &lt;span class="c1"&gt;# top right&lt;/span&gt;
+plot_cell&lt;span class="p"&gt;(&lt;/span&gt;sm_tri_x&lt;span class="m"&gt;+0.5&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; sm_tri_y&lt;span class="p"&gt;,&lt;/span&gt; color&lt;span class="o"&gt;=&lt;/span&gt;cellgreen&lt;span class="p"&gt;)&lt;/span&gt;   &lt;span class="c1"&gt;# bot right&lt;/span&gt;
+plot_cell&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="m"&gt;0.5&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;sm_tri_x&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="m"&gt;1&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;sm_tri_y&lt;span class="p"&gt;,&lt;/span&gt; color&lt;span class="o"&gt;=&lt;/span&gt;cellgreen&lt;span class="p"&gt;)&lt;/span&gt; &lt;span class="c1"&gt;# top left&lt;/span&gt;
+plot_cell&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="m"&gt;0.5&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;sm_tri_x&lt;span class="p"&gt;,&lt;/span&gt; sm_tri_y&lt;span class="p"&gt;,&lt;/span&gt; color&lt;span class="o"&gt;=&lt;/span&gt;cellgreen&lt;span class="p"&gt;)&lt;/span&gt;   &lt;span class="c1"&gt;# bot left&lt;/span&gt;
+plot_cell&lt;span class="p"&gt;(&lt;/span&gt;side_tri_y&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="m"&gt;1&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;side_tri_x&lt;span class="p"&gt;,&lt;/span&gt; color&lt;span class="o"&gt;=&lt;/span&gt;cellgreen&lt;span class="p"&gt;)&lt;/span&gt; &lt;span class="c1"&gt;# bottom&lt;/span&gt;
+plot_cell&lt;span class="p"&gt;(&lt;/span&gt;side_tri_y&lt;span class="p"&gt;,&lt;/span&gt; side_tri_x&lt;span class="p"&gt;,&lt;/span&gt; color&lt;span class="o"&gt;=&lt;/span&gt;cellgreen&lt;span class="p"&gt;)&lt;/span&gt;   &lt;span class="c1"&gt;# top&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
 &lt;h2&gt;A.I. Opponent&lt;/h2&gt;
 &lt;p&gt;All oppponents are greedy with respect to some approximation of the value of a move.  The quality of the approximation determines the difficulty of the opponent.  Since the objective is to maximize your score, it makes sense to approximate the long term benefit of a move with its immediate increase in score.  It turn's out that the increase in score can be decomposed in the a function of the following four variables: &lt;/p&gt;
 &lt;ul&gt;
@@ -308,4 +302,4 @@ Hence, if you beat the ai, then its skill goes up by the score difference; if yo
 &lt;li&gt;
 &lt;p&gt;&lt;strong&gt;Custom Board Builder&lt;/strong&gt;: Create a GUI that allows the user to click on a grid to define the feasible positions of thier custom board.  Boards can naturally be stored as a binary matrix, thus it would be easy to let the user save and upload thier board.  &lt;/p&gt;
 &lt;/li&gt;
-&lt;/ul&gt;</content><category term="Artificial Intelligence"></category><category term="Games"></category></entry><entry><title>Reflection: Tackling the Challenges of Big Data</title><link href="/tackling-the-challenges-of-big-data-reflection.html" rel="alternate"></link><published>2017-11-26T10:01:00-10:00</published><updated>2017-11-28T12:30:00-10:00</updated><author><name>Matt Motoki</name></author><id>tag:None,2017-11-26:/tackling-the-challenges-of-big-data-reflection.html</id><summary type="html">&lt;p&gt;A reflection on "Tackling the Challenges of Big Data" taught by MIT Professional Education.&lt;/p&gt;</summary><content type="html">&lt;p&gt;Three years ago, I enrolled in "Tackling the Challenges of Big Data".&lt;/p&gt;</content><category term="Online Courses"></category></entry></feed>
+&lt;/ul&gt;</content><category term="Artificial Intelligence"></category><category term="Games"></category></entry><entry><title>My Jouney</title><link href="/my-journey.html" rel="alternate"></link><published>2017-11-26T10:01:00-10:00</published><updated>2017-11-27T12:30:00-10:00</updated><author><name>Matt Motoki</name></author><id>tag:None,2017-11-26:/my-journey.html</id><summary type="html">&lt;p&gt;Not the Shortest Path&lt;/p&gt;</summary><content type="html"></content><category term="Bio"></category></entry><entry><title>Reflection: Tackling the Challenges of Big Data</title><link href="/tackling-the-challenges-of-big-data-reflection.html" rel="alternate"></link><published>2017-11-26T10:01:00-10:00</published><updated>2017-11-28T12:30:00-10:00</updated><author><name>Matt Motoki</name></author><id>tag:None,2017-11-26:/tackling-the-challenges-of-big-data-reflection.html</id><summary type="html">&lt;p&gt;A reflection on "Tackling the Challenges of Big Data" taught by MIT Professional Education.&lt;/p&gt;</summary><content type="html">&lt;p&gt;Three years ago, I enrolled in "Tackling the Challenges of Big Data".&lt;/p&gt;</content><category term="Online Courses"></category></entry></feed>

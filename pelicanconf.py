@@ -12,7 +12,6 @@ TIMEZONE = 'Pacific/Honolulu'
 
 DEFAULT_LANG = 'en'
 
-NEST_HEADER_LOGO = ''
 NEST_HEADER_IMAGES = 'bg0.png'
 
 
@@ -28,13 +27,11 @@ AUTHOR_FEED_ATOM = None
 
 # Blogroll
 LINKS = (('Pelican', 'http://getpelican.com/'),
-         ('Python.org', 'http://python.org/'),
-         ('Jinja2', 'http://jinja.pocoo.org/'),
-         ('You can modify those links in your config file', '#'),)
+         ('Python.org', 'http://python.org/'),)
 
 # Social widget
-SOCIAL = (('You can add links in your config file', '#'),
-          ('Another social link', '#'),)
+SOCIAL = (('Kaggle', 'https://www.kaggle.com/mmotoki'),
+          ('CodePen', 'https://codepen.io/mmotoki/'),)
 
 DEFAULT_PAGINATION = 10
 

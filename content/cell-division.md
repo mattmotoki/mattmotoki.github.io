@@ -12,20 +12,14 @@ Summary: My game
 [Play Cell Division here](https://mattmotoki.github.io/cell-division/)
 
 
-
 # Introduction 
-Cell Addition is a strategy-based board game.  All A.I. opponents implement a deterministic strategy that is greedy with respect to an approximate value function.  Games against a fixed difficulty A.I. opponent are reproducible.  
+Cell Addition is a strategy-based board game.  Current A.I. opponents implement a deterministic strategy that is greedy with respect to an approximate value function.  A.I. opponents are completely deterministic and so games are reproducible.  
 
 ## How to Play
 Player take turns placing their cells. A player's cells divide when they connect with each other; vertical, horizontal and diagonal connections are allowed.  
 
-![alt text](cell-division/cell-logo.png "Cell Division")
+![alt text](./images/cell-division-screenshot.png "Cell Division - Screenshot")
 
-
-
-```{r, out.width = "100px", echo=FALSE}
-knitr::include_graphics("medium_size_logo.png")
-```
 
 Your score is equal to the total number of cell that you have on the board.  The game ends when the board is full and the winner is the player with the most cells. 
 
@@ -49,9 +43,9 @@ The current implementation of the game is writen in plain HTML, CSS and Javascri
 # Technical Stuff
 ## Creating The Cells
 The visuals in this R implementation are limited; e.g.,
-```{r, out.width = "500px", echo=FALSE}
-knitr::include_graphics("petri4.png")
-```
+
+![alt text](./images/petri4.png "Cell Division - Petri Dish Board")
+
 
 Cartoon-like cells look better than overlaid squares and lines.  This section describes the process of creating cell images from scratch using base R graphics.  The images can then be loaded and displayed as buttons in the game. 
 
@@ -67,7 +61,7 @@ blank_plot <- function() {
   )
 }
 ```
-The natural way to define the outline of a cell is in terms of its $x$ and $y$ coordinates.  Alternatively, the outline can be parameterized by an angle $\theta\in[0,\, 2\pi]$ and a radius $r$ and then mapped back to the $xy$-plane using the formulas
+The natural way to define the outline of a cell is in terms of its \(x\) and \(y\) coordinates.  Alternatively, the outline can be parameterized by an angle \(\theta\in[0,\, 2\pi]\)  and a radius $r$ and then mapped back to the $xy$-plane using the formulas
 $$
 x = r\cdot \cos(\theta)
 \qquad
@@ -113,9 +107,17 @@ side_triangular_cell <- function(r, r2, n_pnts) {
   )
 }
 ```
+Here's the output. 
+
+<img src="./images/cell-outline.png" alt="Basic Cell Shape" width="200px"/>
+
 
 Multiple cells can be drawn with translations, rotations and reflections of the original outline. For example,
-```{r, fig.width=4, fig.height=4, fig.align='center' }
+
+
+
+
+```{r}
 # create outlines
 side_tri_outline <- side_triangular_cell(0.1, 0.3, 10)
 side_tri_x <- side_tri_outline[, 1]+0.5
@@ -174,7 +176,7 @@ centroidCalc <- function(x, y) {
 
 The shading for the outline of the cell uses a decreasing sequence of polygon size and transparency.  On the other hand, the shading that creates depth in the middle of the cell uses an increasing sequence of polygon size and transparency.
 
-```{r, fig.width=4, fig.height=4, fig.align='center' }
+```{r}
 library(png)
 # plot a single cell with shadow and dimple
 plot_cell <- function(x, y, color) {
