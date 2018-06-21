@@ -1,10 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
-<rss version="2.0"><channel><title>Matt Motoki - Matt Motoki</title><link>/</link><description></description><lastBuildDate>Mon, 27 Nov 2017 12:30:00 -1000</lastBuildDate><item><title>Cell Division</title><link>/cell-division.html</link><description>&lt;p&gt;&lt;a href="https://mattmotoki.github.io/cell-division/"&gt;Play Cell Division here&lt;/a&gt;&lt;/p&gt;
+<rss version="2.0"><channel><title>Matt Motoki - Matt Motoki</title><link>/</link><description></description><lastBuildDate>Tue, 28 Nov 2017 12:30:00 -1000</lastBuildDate><item><title>Cell Division</title><link>/cell-division.html</link><description>&lt;p&gt;&lt;a href="https://mattmotoki.github.io/cell-division/"&gt;Play Cell Division here&lt;/a&gt;&lt;/p&gt;
 &lt;h1&gt;Introduction&lt;/h1&gt;
 &lt;p&gt;Cell Addition is a strategy-based board game.  All A.I. opponents implement a deterministic strategy that is greedy with respect to an approximate value function.  Games against a fixed difficulty A.I. opponent are reproducible.  &lt;/p&gt;
 &lt;h2&gt;How to Play&lt;/h2&gt;
-&lt;p&gt;Player take turns placing their cells. A player's cells divide when they connect with each other; vertical, horizontal and diagonal connections are allowed.&lt;br&gt;
-```{r, out.width = "100px", echo=FALSE}
+&lt;p&gt;Player take turns placing their cells. A player's cells divide when they connect with each other; vertical, horizontal and diagonal connections are allowed.  &lt;/p&gt;
+&lt;p&gt;&lt;img alt="alt text" src="cell-division/cell-logo.png" title="Cell Division"&gt;&lt;/p&gt;
+&lt;p&gt;```{r, out.width = "100px", echo=FALSE}
 knitr::include_graphics("medium_size_logo.png")&lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;Your score is equal to the total number of cell that you have on the board.  The game ends when the board is full and the winner is the player with the most cells. 
 
@@ -307,5 +308,4 @@ Hence, if you beat the ai, then its skill goes up by the score difference; if yo
 &lt;li&gt;
 &lt;p&gt;&lt;strong&gt;Custom Board Builder&lt;/strong&gt;: Create a GUI that allows the user to click on a grid to define the feasible positions of thier custom board.  Boards can naturally be stored as a binary matrix, thus it would be easy to let the user save and upload thier board.  &lt;/p&gt;
 &lt;/li&gt;
-&lt;/ul&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Matt Motoki</dc:creator><pubDate>Sun, 26 Nov 2017 10:01:00 -1000</pubDate><guid isPermaLink="false">tag:None,2017-11-26:/cell-division.html</guid><category>AI</category><category>games</category></item><item><title>Tackling the Challenges of Big Data A Reflection</title><link>/tackling-the-challenges-of-big-data-reflection.html</link><description>&lt;p&gt;Three years ago, I enrolled in "Tackling the Challenges of Big Data".&lt;/p&gt;
-&lt;p&gt;sfdddfgdgdfgs&lt;/p&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Matt Motoki</dc:creator><pubDate>Sun, 26 Nov 2017 10:01:00 -1000</pubDate><guid isPermaLink="false">tag:None,2017-11-26:/tackling-the-challenges-of-big-data-reflection.html</guid><category>first</category><category>misc</category></item></channel></rss>
+&lt;/ul&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Matt Motoki</dc:creator><pubDate>Sun, 26 Nov 2017 10:01:00 -1000</pubDate><guid isPermaLink="false">tag:None,2017-11-26:/cell-division.html</guid><category>Artificial Intelligence</category><category>Games</category></item><item><title>Reflection: Tackling the Challenges of Big Data</title><link>/tackling-the-challenges-of-big-data-reflection.html</link><description>&lt;p&gt;Three years ago, I enrolled in "Tackling the Challenges of Big Data".&lt;/p&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Matt Motoki</dc:creator><pubDate>Sun, 26 Nov 2017 10:01:00 -1000</pubDate><guid isPermaLink="false">tag:None,2017-11-26:/tackling-the-challenges-of-big-data-reflection.html</guid><category>Online Courses</category></item></channel></rss>

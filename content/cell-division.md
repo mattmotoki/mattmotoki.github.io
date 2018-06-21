@@ -2,7 +2,7 @@ Title:Cell Division
 Date: 2017-11-26 10:01
 Modified: 2017-11-27 12:30
 Category: misc
-Tags: AI, games
+Tags: Artificial Intelligence, Games
 Slug: cell-division
 Authors: Matt Motoki
 Illustration: tcobd.png
@@ -13,12 +13,16 @@ Summary: My game
 
 
 
-
 # Introduction 
 Cell Addition is a strategy-based board game.  All A.I. opponents implement a deterministic strategy that is greedy with respect to an approximate value function.  Games against a fixed difficulty A.I. opponent are reproducible.  
 
 ## How to Play
 Player take turns placing their cells. A player's cells divide when they connect with each other; vertical, horizontal and diagonal connections are allowed.  
+
+![alt text](cell-division/cell-logo.png "Cell Division")
+
+
+
 ```{r, out.width = "100px", echo=FALSE}
 knitr::include_graphics("medium_size_logo.png")
 ```
