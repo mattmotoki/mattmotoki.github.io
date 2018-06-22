@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>Matt Motoki</title><link href="/" rel="alternate"></link><link href="/feeds/all.atom.xml" rel="self"></link><id>/</id><updated>2017-11-28T12:30:00-10:00</updated><entry><title>Cell Division</title><link href="/cell-division.html" rel="alternate"></link><published>2017-11-26T10:01:00-10:00</published><updated>2017-11-27T12:30:00-10:00</updated><author><name>Matt Motoki</name></author><id>tag:None,2017-11-26:/cell-division.html</id><summary type="html">&lt;p&gt;My game&lt;/p&gt;</summary><content type="html">&lt;p&gt;&lt;a href="https://mattmotoki.github.io/cell-division/"&gt;Play Cell Division here&lt;/a&gt;&lt;/p&gt;
+<feed xmlns="http://www.w3.org/2005/Atom"><title>Matt Motoki</title><link href="/" rel="alternate"></link><link href="/feeds/all.atom.xml" rel="self"></link><id>/</id><updated>2017-11-28T12:30:00-10:00</updated><entry><title>Bayesian Target Encoding</title><link href="/bayesian-target-encoding.html" rel="alternate"></link><published>2017-11-26T10:01:00-10:00</published><updated>2017-11-28T12:30:00-10:00</updated><author><name>Matt Motoki</name></author><id>tag:None,2017-11-26:/bayesian-target-encoding.html</id><summary type="html">&lt;p&gt;Bayesian target encoding is feature engineering technique used to encode categorical variables for supervised learning.&lt;/p&gt;</summary><content type="html">&lt;h1&gt;Problem Formlation&lt;/h1&gt;
+&lt;h1&gt;Solution&lt;/h1&gt;</content><category term="Feature Engineering"></category><category term="Bayesian Statistics"></category></entry><entry><title>Cell Division</title><link href="/cell-division.html" rel="alternate"></link><published>2017-11-26T10:01:00-10:00</published><updated>2017-11-27T12:30:00-10:00</updated><author><name>Matt Motoki</name></author><id>tag:None,2017-11-26:/cell-division.html</id><summary type="html">&lt;p&gt;My game&lt;/p&gt;</summary><content type="html">&lt;p&gt;&lt;a href="https://mattmotoki.github.io/cell-division/"&gt;Play Cell Division here&lt;/a&gt;&lt;/p&gt;
 &lt;h1&gt;Introduction&lt;/h1&gt;
 &lt;p&gt;Cell Addition is a strategy-based board game.  Current A.I. opponents implement a deterministic strategy that is greedy with respect to an approximate value function.  A.I. opponents are completely deterministic and so games are reproducible.  &lt;/p&gt;
 &lt;h2&gt;How to Play&lt;/h2&gt;
@@ -302,4 +303,43 @@ Hence, if you beat the ai, then its skill goes up by the score difference; if yo
 &lt;li&gt;
 &lt;p&gt;&lt;strong&gt;Custom Board Builder&lt;/strong&gt;: Create a GUI that allows the user to click on a grid to define the feasible positions of thier custom board.  Boards can naturally be stored as a binary matrix, thus it would be easy to let the user save and upload thier board.  &lt;/p&gt;
 &lt;/li&gt;
-&lt;/ul&gt;</content><category term="Artificial Intelligence"></category><category term="Games"></category></entry><entry><title>My Jouney</title><link href="/my-journey.html" rel="alternate"></link><published>2017-11-26T10:01:00-10:00</published><updated>2017-11-27T12:30:00-10:00</updated><author><name>Matt Motoki</name></author><id>tag:None,2017-11-26:/my-journey.html</id><summary type="html">&lt;p&gt;Not the Shortest Path&lt;/p&gt;</summary><content type="html"></content><category term="Bio"></category></entry><entry><title>Reflection: Tackling the Challenges of Big Data</title><link href="/tackling-the-challenges-of-big-data-reflection.html" rel="alternate"></link><published>2017-11-26T10:01:00-10:00</published><updated>2017-11-28T12:30:00-10:00</updated><author><name>Matt Motoki</name></author><id>tag:None,2017-11-26:/tackling-the-challenges-of-big-data-reflection.html</id><summary type="html">&lt;p&gt;A reflection on "Tackling the Challenges of Big Data" taught by MIT Professional Education.&lt;/p&gt;</summary><content type="html">&lt;p&gt;Three years ago, I enrolled in "Tackling the Challenges of Big Data".&lt;/p&gt;</content><category term="Online Courses"></category></entry></feed>
+&lt;/ul&gt;</content><category term="Artificial Intelligence"></category><category term="Games"></category></entry><entry><title>Decision Matrix</title><link href="/decision-matrix.html" rel="alternate"></link><published>2017-11-26T10:01:00-10:00</published><updated>2017-11-28T12:30:00-10:00</updated><author><name>Matt Motoki</name></author><id>tag:None,2017-11-26:/decision-matrix.html</id><summary type="html">&lt;p&gt;Decision Matrix - A tool for calculated decision making.&lt;/p&gt;</summary><content type="html">&lt;p&gt;If you are like me then you have a million things that you want to do but no clear order in which to do them.  In this post, I will introduce the Decision Matrix which is a tool that breaks down a persons utility funciton into a linear combination of features.   I relate the decision matrix to Utility theory and show how we formulate the problem of finding the optimal schedule as a linear program. 
+I then show how I use it to prioritize my day.&lt;/p&gt;
+&lt;p&gt;We seek to maximize the expected utility of our schedule subject to the constraint that all tasks must be done on time (this constraint can be relaxed by introducing a penalty for late tasks). &lt;/p&gt;
+&lt;p&gt;Every action we take has a consequece, it has a benefit, it takes some time and sometimes it has a deadline associated with.  When we are faced with the problem of choosing which action to take&lt;/p&gt;
+&lt;p&gt;Utility theory says that every rational being can be reduced to an agent who is maximizing the expected value of some utility function.  The decision matrix aims to break an agent's utility into a linear combination of variables.  We provide a greedy approach to scheduling task.  The optimal schedule can be found via linear programming.    &lt;/p&gt;
+&lt;h1&gt;Problem Formlation&lt;/h1&gt;
+&lt;h1&gt;Solution&lt;/h1&gt;
+&lt;h1&gt;Case Study&lt;/h1&gt;
+&lt;h1&gt;Extensions - Soft Deadlines&lt;/h1&gt;
+&lt;h1&gt;Extensions - Nonlinear Objective Function&lt;/h1&gt;</content><category term="misc"></category></entry><entry><title>My Jouney</title><link href="/my-journey.html" rel="alternate"></link><published>2017-11-26T10:01:00-10:00</published><updated>2017-11-27T12:30:00-10:00</updated><author><name>Matt Motoki</name></author><id>tag:None,2017-11-26:/my-journey.html</id><summary type="html">&lt;p&gt;Not the Shortest Path&lt;/p&gt;</summary><content type="html">&lt;h1&gt;&lt;/h1&gt;
+&lt;p&gt;I always loved math.&lt;/p&gt;
+&lt;p&gt;Took a detour. &lt;/p&gt;
+&lt;p&gt;Returned 5 years after high school with a passion. &lt;/p&gt;
+&lt;p&gt;Found that pure math and physics was not really what I enjoyed. I actually enjoy empolying math as a tool to solve real-world problems.  That is what engineering is, &lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Engineering is the application of mathematics, physics, and computer science to solve 
+real-world  problems. &lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;I switched majors to Electrical Engineering which is very mathematical and has a large intersection with computer science.  &lt;/p&gt;
+&lt;p&gt;I was intrigued by control theory, signal processing and optimization.  I enjoyed how the solutions to were always deeply rooted in mathematical theory yet the main focus was always to do something useful.  &lt;/p&gt;
+&lt;p&gt;This is were I got my first taste of computers extending human abilities--in EE we make computers and devices do cool things, but behind the scenes there is always a smart human setting things up and ensuring that things don't go crazy.  &lt;/p&gt;
+&lt;p&gt;. &lt;/p&gt;</content><category term="Bio"></category></entry><entry><title>Reflection: Tackling the Challenges of Big Data</title><link href="/tackling-the-challenges-of-big-data-reflection.html" rel="alternate"></link><published>2017-11-26T10:01:00-10:00</published><updated>2017-11-28T12:30:00-10:00</updated><author><name>Matt Motoki</name></author><id>tag:None,2017-11-26:/tackling-the-challenges-of-big-data-reflection.html</id><summary type="html">&lt;p&gt;A reflection on "Tackling the Challenges of Big Data" taught by MIT Professional Education.&lt;/p&gt;</summary><content type="html">&lt;p&gt;Three years ago, I enrolled in "Tackling the Challenges of Big Data".&lt;/p&gt;</content><category term="Online Courses"></category></entry><entry><title>Towards Safer AI</title><link href="/towards-safer-ai.html" rel="alternate"></link><published>2017-11-26T10:01:00-10:00</published><updated>2017-11-27T12:30:00-10:00</updated><author><name>Matt Motoki</name></author><id>tag:None,2017-11-26:/towards-safer-ai.html</id><summary type="html">&lt;p&gt;Safer AI&lt;/p&gt;</summary><content type="html">&lt;p&gt;&amp;lt;&amp;lt;&amp;lt;&amp;lt;&amp;lt;&amp;lt;&amp;lt; HEAD
+Use of simulation to test AI systems. In EE we can tell if a system will be stable using theory or by simulating the system on a computer. Simple error metrics used to evaluate performance in modern AI and ML algorithms may not account for the larger implications of the predictions
+=======
+d&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;blockquote&gt;
+&lt;blockquote&gt;
+&lt;blockquote&gt;
+&lt;blockquote&gt;
+&lt;blockquote&gt;
+&lt;blockquote&gt;
+&lt;p&gt;develop&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;/blockquote&gt;
+&lt;/blockquote&gt;
+&lt;/blockquote&gt;
+&lt;/blockquote&gt;
+&lt;/blockquote&gt;
+&lt;/blockquote&gt;</content><category term="Artificial Intelligence"></category></entry></feed>
