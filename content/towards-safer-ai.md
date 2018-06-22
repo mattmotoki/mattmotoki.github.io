@@ -9,4 +9,8 @@ Illustration: tcobd.png
 Summary: Safer AI
 
 
+<<<<<<< HEAD
 Use of simulation to test AI systems. In EE we can tell if a system will be stable using theory or by simulating the system on a computer. Simple error metrics used to evaluate performance in modern AI and ML algorithms may not account for the larger implications of the predictions
+=======
+d
+>>>>>>> develop
