@@ -10,6 +10,6 @@ Summary: Bayesian target encoding is feature engineering technique used to encod
 
 
 # Problem Formlation
-
+$y = mx + b$
 # Solution 
 
