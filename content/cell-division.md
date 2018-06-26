@@ -5,7 +5,7 @@ Category: misc
 Tags: Artificial Intelligence, Games
 Slug: cell-division
 Authors: Matt Motoki
-Illustration: tcobd.png
+Illustration: cell-division-code-v2.png
 Summary: My game
 
 
@@ -13,15 +13,17 @@ Summary: My game
 
 
 # Introduction 
-Cell Addition is a strategy-based board game.  Current A.I. opponents implement a deterministic strategy that is greedy with respect to an approximate value function.  A.I. opponents are completely deterministic and so games are reproducible.  
+Cell Addition is a strategy-based board game. Player take turns placing their cells. A player's cells divide when they connect with each other; vertical, horizontal and diagonal connections are allowed.  Your score is equal to the total number of cell that you have on the board.  The game ends when the board is full and the winner is the player with the most cells. 
+
+
+The current A.I. opponents implement a greedy strategy with a strong base heuristic.  A.I. opponents are designed to be completely deterministic so that games are reproducible.  
+
 
 ## How to Play
-Player take turns placing their cells. A player's cells divide when they connect with each other; vertical, horizontal and diagonal connections are allowed.  
 
 ![alt text](./images/cell-division-screenshot.png "Cell Division - Screenshot")
 
 
-Your score is equal to the total number of cell that you have on the board.  The game ends when the board is full and the winner is the player with the most cells. 
 
 ## Features
 In the current implementation of the game, there are three fixed-difficulty ai opponents.  The R implementation also has an adaptive opponent that plays differently depending on how much it is winning/losing by.

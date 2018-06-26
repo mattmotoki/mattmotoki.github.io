@@ -4,7 +4,7 @@
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <meta name="description" content="Play Cell Division here Introduction Cell Addition is a strategy-based board game. Current A.I. opponents implement a deterministic strategy that is greedy with respect to an approximate value...">
+        <meta name="description" content="Play Cell Division here Introduction Cell Addition is a strategy-based board game. Player take turns placing their cells. A player&#39;s cells divide when they connect with each other; vertical,...">
         <meta name="keywords" content="Artificial Intelligence, Games">
         <link rel="icon" href="/favicon.ico">
 
@@ -35,7 +35,7 @@
     <body>
 
         <!-- Header -->
-    <div class="header-container" style="background: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url('/images/tcobd.png'); background-position: center; background-size: cover;">
+    <div class="header-container" style="background: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url('/images/cell-division-code-v2.png'); background-position: center; background-size: cover;">
 
             <!-- Static navbar -->
             <div class="container">
@@ -77,11 +77,10 @@
     <div class="container content">
         <p><a href="https://mattmotoki.github.io/cell-division/">Play Cell Division here</a></p>
 <h1>Introduction</h1>
-<p>Cell Addition is a strategy-based board game.  Current A.I. opponents implement a deterministic strategy that is greedy with respect to an approximate value function.  A.I. opponents are completely deterministic and so games are reproducible.  </p>
+<p>Cell Addition is a strategy-based board game. Player take turns placing their cells. A player's cells divide when they connect with each other; vertical, horizontal and diagonal connections are allowed.  Your score is equal to the total number of cell that you have on the board.  The game ends when the board is full and the winner is the player with the most cells. </p>
+<p>The current A.I. opponents implement a greedy strategy with a strong base heuristic.  A.I. opponents are designed to be completely deterministic so that games are reproducible.  </p>
 <h2>How to Play</h2>
-<p>Player take turns placing their cells. A player's cells divide when they connect with each other; vertical, horizontal and diagonal connections are allowed.  </p>
 <p><img alt="alt text" src="./images/cell-division-screenshot.png" title="Cell Division - Screenshot"></p>
-<p>Your score is equal to the total number of cell that you have on the board.  The game ends when the board is full and the winner is the player with the most cells. </p>
 <h2>Features</h2>
 <p>In the current implementation of the game, there are three fixed-difficulty ai opponents.  The R implementation also has an adaptive opponent that plays differently depending on how much it is winning/losing by.</p>
 <p>The current implementation has three square grid board configuratios. The R implementation has board configurations that are more flexible.  In the break and flask layouts, gravity applies to moves played (cells fall to the lowest open row).</p>
