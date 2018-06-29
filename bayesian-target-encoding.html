@@ -4,11 +4,11 @@
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <meta name="description" content=" Misc">
-        <meta name="keywords" content="">
+        <meta name="description" content="Problem Formlation \(y = mx + b\) Solution if (!document.getElementById(&#39;mathjaxscript_pelican_#%@#$@#&#39;)) { var align = &#34;center&#34;, indent = &#34;0em&#34;, linebreak = &#34;false&#34;; if (false) { align = (screen.width">
+        <meta name="keywords" content="Bayesian Statistics, Feature Engineering">
         <link rel="icon" href="/favicon.ico">
 
-        <title> Misc - Matt Motoki</title>
+        <title>Bayesian Target Encoding - Matt Motoki</title>
 
         <!-- Stylesheets -->
         <link href="/theme/css/bootstrap.min.css" rel="stylesheet">
@@ -36,7 +36,7 @@
     <body>
 
         <!-- Header -->
-    <div class="header-container" style="background: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url('/images/bg0.png'); background-position: center; background-size: cover;">
+    <div class="header-container" style="background: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url('/images/tcobd.png'); background-position: center; background-size: cover;">
 
             <!-- Static navbar -->
             <div class="container">
@@ -51,17 +51,23 @@
             <!-- /Static navbar -->
 
             <!-- Header -->
+    <!-- Header -->
     <div class="container header-wrapper">
         <div class="row">
               <div class="col-lg-12">
                   <div class="header-content">
-                      <h1 class="header-title text-uppercase"> : Misc</h1>
+                      <h1 class="header-title">Bayesian Target Encoding</h1>
+                      <p class="header-date"> <a href="/author/matt-motoki.html">Matt Motoki</a>, Sun 26 November 2017,  Tue 28 November 2017,  <a href="/category/misc.html">Misc</a></p>
                       <div class="header-underline"></div>
-                      <p class="header-subtitle header-subtitle-homepage"> "Misc"</p>
+                      <div class="clearfix"></div>
+                      <p class="pull-right header-tags">
+                          <span class="glyphicon glyphicon-tags mr5" aria-hidden="true"></span>
+<a href="/tag/bayesian-statistics.html">Bayesian Statistics</a>, <a href="/tag/feature-engineering.html">Feature Engineering</a>                      </p>
                   </div>
               </div>
         </div>
     </div>
+    <!-- /Header -->
             <!-- /Header -->
 
         </div>
@@ -69,26 +75,68 @@
 
 
         <!-- Content -->
-    <div class="archive-container">
-        <div class="container content archive">
-            <h2><a href="/category/misc.html">Misc</a></h2>
-            <dl class="dl-horizontal">
-            	<dt>Sun 26 November 2017</dt>
-            	<dd><a href="/bayesian-target-encoding.html">Bayesian Target Encoding</a></dd>
-            	<dt>Sun 26 November 2017</dt>
-            	<dd><a href="/cell-division.html">Cell Division</a></dd>
-            	<dt>Sun 26 November 2017</dt>
-            	<dd><a href="/decision-matrix.html">Decision Matrix</a></dd>
-            	<dt>Sun 26 November 2017</dt>
-            	<dd><a href="/ethical-ai.html">Ethical AI</a></dd>
-            	<dt>Sun 26 November 2017</dt>
-            	<dd><a href="/my-journey.html">My Jouney</a></dd>
-            	<dt>Sun 26 November 2017</dt>
-            	<dd><a href="/realistic-reinforcement-learning.html">Realistic Reinforcement Learning</a></dd>
-            	<dt>Sun 26 November 2017</dt>
-            	<dd><a href="/towards-safer-ai.html">Towards Safer AI</a></dd>
-            </dl>
-        </div>
+    <div class="container content">
+        <h1>Problem Formlation</h1>
+<p><span class="math">\(y = mx + b\)</span></p>
+<h1>Solution</h1>
+<script type="text/javascript">if (!document.getElementById('mathjaxscript_pelican_#%@#$@#')) {
+    var align = "center",
+        indent = "0em",
+        linebreak = "false";
+
+    if (false) {
+        align = (screen.width < 768) ? "left" : align;
+        indent = (screen.width < 768) ? "0em" : indent;
+        linebreak = (screen.width < 768) ? 'true' : linebreak;
+    }
+
+    var mathjaxscript = document.createElement('script');
+    mathjaxscript.id = 'mathjaxscript_pelican_#%@#$@#';
+    mathjaxscript.type = 'text/javascript';
+    mathjaxscript.src = 'https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.3/latest.js?config=TeX-AMS-MML_HTMLorMML';
+    mathjaxscript[(window.opera ? "innerHTML" : "text")] =
+        "MathJax.Hub.Config({" +
+        "    config: ['MMLorHTML.js']," +
+        "    TeX: { extensions: ['AMSmath.js','AMSsymbols.js','noErrors.js','noUndefined.js'], equationNumbers: { autoNumber: 'AMS' } }," +
+        "    jax: ['input/TeX','input/MathML','output/HTML-CSS']," +
+        "    extensions: ['tex2jax.js','mml2jax.js','MathMenu.js','MathZoom.js']," +
+        "    displayAlign: '"+ align +"'," +
+        "    displayIndent: '"+ indent +"'," +
+        "    showMathMenu: true," +
+        "    messageStyle: 'normal'," +
+        "    tex2jax: { " +
+        "        inlineMath: [ ['\\\\(','\\\\)'] ], " +
+        "        displayMath: [ ['$$','$$'] ]," +
+        "        processEscapes: true," +
+        "        preview: 'TeX'," +
+        "    }, " +
+        "    'HTML-CSS': { " +
+        "        styles: { '.MathJax_Display, .MathJax .mo, .MathJax .mi, .MathJax .mn': {color: 'inherit ! important'} }," +
+        "        linebreaks: { automatic: "+ linebreak +", width: '90% container' }," +
+        "    }, " +
+        "}); " +
+        "if ('default' !== 'default') {" +
+            "MathJax.Hub.Register.StartupHook('HTML-CSS Jax Ready',function () {" +
+                "var VARIANT = MathJax.OutputJax['HTML-CSS'].FONTDATA.VARIANT;" +
+                "VARIANT['normal'].fonts.unshift('MathJax_default');" +
+                "VARIANT['bold'].fonts.unshift('MathJax_default-bold');" +
+                "VARIANT['italic'].fonts.unshift('MathJax_default-italic');" +
+                "VARIANT['-tex-mathit'].fonts.unshift('MathJax_default-italic');" +
+            "});" +
+            "MathJax.Hub.Register.StartupHook('SVG Jax Ready',function () {" +
+                "var VARIANT = MathJax.OutputJax.SVG.FONTDATA.VARIANT;" +
+                "VARIANT['normal'].fonts.unshift('MathJax_default');" +
+                "VARIANT['bold'].fonts.unshift('MathJax_default-bold');" +
+                "VARIANT['italic'].fonts.unshift('MathJax_default-italic');" +
+                "VARIANT['-tex-mathit'].fonts.unshift('MathJax_default-italic');" +
+            "});" +
+        "}";
+    (document.body || document.getElementsByTagName('head')[0]).appendChild(mathjaxscript);
+}
+</script>
+
+
+        
     </div>
         <!-- /Content --> 
 

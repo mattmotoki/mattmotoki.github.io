@@ -1,11 +1,67 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>Matt Motoki - misc</title><link href="/" rel="alternate"></link><link href="/feeds/misc.atom.xml" rel="self"></link><id>/</id><updated>2017-11-27T12:30:00-10:00</updated><entry><title>Cell Division</title><link href="/cell-division.html" rel="alternate"></link><published>2017-11-26T10:01:00-10:00</published><updated>2017-11-27T12:30:00-10:00</updated><author><name>Matt Motoki</name></author><id>tag:None,2017-11-26:/cell-division.html</id><summary type="html">&lt;p&gt;My game&lt;/p&gt;</summary><content type="html">&lt;p&gt;&lt;a href="https://mattmotoki.github.io/cell-division/"&gt;Play Cell Division here&lt;/a&gt;&lt;/p&gt;
+<feed xmlns="http://www.w3.org/2005/Atom"><title>Matt Motoki - misc</title><link href="/" rel="alternate"></link><link href="/feeds/misc.atom.xml" rel="self"></link><id>/</id><updated>2017-11-28T12:30:00-10:00</updated><entry><title>Bayesian Target Encoding</title><link href="/bayesian-target-encoding.html" rel="alternate"></link><published>2017-11-26T10:01:00-10:00</published><updated>2017-11-28T12:30:00-10:00</updated><author><name>Matt Motoki</name></author><id>tag:None,2017-11-26:/bayesian-target-encoding.html</id><summary type="html">&lt;p&gt;Bayesian target encoding is feature engineering technique used to encode categorical variables for supervised learning.&lt;/p&gt;</summary><content type="html">&lt;h1&gt;Problem Formlation&lt;/h1&gt;
+&lt;p&gt;&lt;span class="math"&gt;\(y = mx + b\)&lt;/span&gt;&lt;/p&gt;
+&lt;h1&gt;Solution&lt;/h1&gt;
+&lt;script type="text/javascript"&gt;if (!document.getElementById('mathjaxscript_pelican_#%@#$@#')) {
+    var align = "center",
+        indent = "0em",
+        linebreak = "false";
+
+    if (false) {
+        align = (screen.width &lt; 768) ? "left" : align;
+        indent = (screen.width &lt; 768) ? "0em" : indent;
+        linebreak = (screen.width &lt; 768) ? 'true' : linebreak;
+    }
+
+    var mathjaxscript = document.createElement('script');
+    mathjaxscript.id = 'mathjaxscript_pelican_#%@#$@#';
+    mathjaxscript.type = 'text/javascript';
+    mathjaxscript.src = 'https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.3/latest.js?config=TeX-AMS-MML_HTMLorMML';
+    mathjaxscript[(window.opera ? "innerHTML" : "text")] =
+        "MathJax.Hub.Config({" +
+        "    config: ['MMLorHTML.js']," +
+        "    TeX: { extensions: ['AMSmath.js','AMSsymbols.js','noErrors.js','noUndefined.js'], equationNumbers: { autoNumber: 'AMS' } }," +
+        "    jax: ['input/TeX','input/MathML','output/HTML-CSS']," +
+        "    extensions: ['tex2jax.js','mml2jax.js','MathMenu.js','MathZoom.js']," +
+        "    displayAlign: '"+ align +"'," +
+        "    displayIndent: '"+ indent +"'," +
+        "    showMathMenu: true," +
+        "    messageStyle: 'normal'," +
+        "    tex2jax: { " +
+        "        inlineMath: [ ['\\\\(','\\\\)'] ], " +
+        "        displayMath: [ ['$$','$$'] ]," +
+        "        processEscapes: true," +
+        "        preview: 'TeX'," +
+        "    }, " +
+        "    'HTML-CSS': { " +
+        "        styles: { '.MathJax_Display, .MathJax .mo, .MathJax .mi, .MathJax .mn': {color: 'inherit ! important'} }," +
+        "        linebreaks: { automatic: "+ linebreak +", width: '90% container' }," +
+        "    }, " +
+        "}); " +
+        "if ('default' !== 'default') {" +
+            "MathJax.Hub.Register.StartupHook('HTML-CSS Jax Ready',function () {" +
+                "var VARIANT = MathJax.OutputJax['HTML-CSS'].FONTDATA.VARIANT;" +
+                "VARIANT['normal'].fonts.unshift('MathJax_default');" +
+                "VARIANT['bold'].fonts.unshift('MathJax_default-bold');" +
+                "VARIANT['italic'].fonts.unshift('MathJax_default-italic');" +
+                "VARIANT['-tex-mathit'].fonts.unshift('MathJax_default-italic');" +
+            "});" +
+            "MathJax.Hub.Register.StartupHook('SVG Jax Ready',function () {" +
+                "var VARIANT = MathJax.OutputJax.SVG.FONTDATA.VARIANT;" +
+                "VARIANT['normal'].fonts.unshift('MathJax_default');" +
+                "VARIANT['bold'].fonts.unshift('MathJax_default-bold');" +
+                "VARIANT['italic'].fonts.unshift('MathJax_default-italic');" +
+                "VARIANT['-tex-mathit'].fonts.unshift('MathJax_default-italic');" +
+            "});" +
+        "}";
+    (document.body || document.getElementsByTagName('head')[0]).appendChild(mathjaxscript);
+}
+&lt;/script&gt;</content><category term="Feature Engineering"></category><category term="Bayesian Statistics"></category></entry><entry><title>Cell Division</title><link href="/cell-division.html" rel="alternate"></link><published>2017-11-26T10:01:00-10:00</published><updated>2017-11-27T12:30:00-10:00</updated><author><name>Matt Motoki</name></author><id>tag:None,2017-11-26:/cell-division.html</id><summary type="html">&lt;p&gt;My game&lt;/p&gt;</summary><content type="html">&lt;p&gt;&lt;a href="https://mattmotoki.github.io/cell-division/"&gt;Play Cell Division here&lt;/a&gt;&lt;/p&gt;
 &lt;h1&gt;Introduction&lt;/h1&gt;
-&lt;p&gt;Cell Addition is a strategy-based board game.  Current A.I. opponents implement a deterministic strategy that is greedy with respect to an approximate value function.  A.I. opponents are completely deterministic and so games are reproducible.  &lt;/p&gt;
+&lt;p&gt;Cell Addition is a strategy-based board game. Player take turns placing their cells. A player's cells divide when they connect with each other; vertical, horizontal and diagonal connections are allowed.  Your score is equal to the total number of cell that you have on the board.  The game ends when the board is full and the winner is the player with the most cells. &lt;/p&gt;
+&lt;p&gt;The current A.I. opponents implement a greedy strategy with a strong base heuristic.  A.I. opponents are designed to be completely deterministic so that games are reproducible.  &lt;/p&gt;
 &lt;h2&gt;How to Play&lt;/h2&gt;
-&lt;p&gt;Player take turns placing their cells. A player's cells divide when they connect with each other; vertical, horizontal and diagonal connections are allowed.  &lt;/p&gt;
 &lt;p&gt;&lt;img alt="alt text" src="./images/cell-division-screenshot.png" title="Cell Division - Screenshot"&gt;&lt;/p&gt;
-&lt;p&gt;Your score is equal to the total number of cell that you have on the board.  The game ends when the board is full and the winner is the player with the most cells. &lt;/p&gt;
 &lt;h2&gt;Features&lt;/h2&gt;
 &lt;p&gt;In the current implementation of the game, there are three fixed-difficulty ai opponents.  The R implementation also has an adaptive opponent that plays differently depending on how much it is winning/losing by.&lt;/p&gt;
 &lt;p&gt;The current implementation has three square grid board configuratios. The R implementation has board configurations that are more flexible.  In the break and flask layouts, gravity applies to moves played (cells fall to the lowest open row).&lt;/p&gt;
@@ -31,13 +87,15 @@
 &lt;/pre&gt;&lt;/div&gt;
 
 
-&lt;p&gt;The natural way to define the outline of a cell is in terms of its (x) and (y) coordinates.  Alternatively, the outline can be parameterized by an angle (\theta\in[0,\, 2\pi])  and a radius $r$ and then mapped back to the $xy$-plane using the formulas
-$$
+&lt;p&gt;The natural way to define the outline of a cell is in terms of its &lt;span class="math"&gt;\(x\)&lt;/span&gt; and &lt;span class="math"&gt;\(y\)&lt;/span&gt; coordinates.  Alternatively, the outline can be parameterized by an angle &lt;span class="math"&gt;\(\theta\in[0,\, 2\pi]\)&lt;/span&gt;  and a radius &lt;span class="math"&gt;\(r\)&lt;/span&gt; and then mapped back to the &lt;span class="math"&gt;\(xy\)&lt;/span&gt;-plane using the formulas
+&lt;/p&gt;
+&lt;div class="math"&gt;$$
 x = r\cdot \cos(\theta)
 \qquad
 \qquad
 y = r\cdot \sin(\theta).
-$$
+$$&lt;/div&gt;
+&lt;p&gt;
 A simplifying trick is to specify only the curved sections of the outline and let R automatically create the straight sections by connecting the curves.  Another simplification comes by specifying one pivot point per curved section rather than pivoting about a single origin. &lt;/p&gt;
 &lt;p&gt;The following two functions use this method to create the outline of triangular cells&lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;triangular_cell &lt;span class="o"&gt;&amp;lt;-&lt;/span&gt; &lt;span class="kr"&gt;function&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;r&lt;span class="p"&gt;,&lt;/span&gt; r2&lt;span class="p"&gt;,&lt;/span&gt; n_pnts&lt;span class="p"&gt;)&lt;/span&gt; &lt;span class="p"&gt;{&lt;/span&gt;
@@ -110,16 +168,19 @@ poly_and_points&lt;span class="p"&gt;(&lt;/span&gt;side_tri_y&lt;span class="p"&
 &lt;h3&gt;Shading About the Centroid&lt;/h3&gt;
 &lt;p&gt;There are two types of shading used to create the cells.  Both types of shading are implemented by overlaying a sequence of polygons centered about the center of mass with either decreasing/increasing size and decreasing/increasing transparency. &lt;/p&gt;
 &lt;p&gt;The centroid of a polygon is 
-$$
+&lt;/p&gt;
+&lt;div class="math"&gt;$$
 \begin{split}
-C_x &amp;amp;= \frac{1}{6A} \sum_{i=0}^{n-1} (x_i + x_{i+1}) (x_i \cdot  y_{i+1} - x_{i+1} \cdot y_i)\
-C_y &amp;amp;= \frac{1}{6A} \sum_{i=0}^{n-1} (y_i + y_{i+1}) (x_i \cdot  y_{i+1} - x_{i+1} \cdot y_i)\
+C_x &amp;amp;= \frac{1}{6A} \sum_{i=0}^{n-1} (x_i + x_{i+1}) (x_i \cdot  y_{i+1} - x_{i+1} \cdot y_i)\\
+C_y &amp;amp;= \frac{1}{6A} \sum_{i=0}^{n-1} (y_i + y_{i+1}) (x_i \cdot  y_{i+1} - x_{i+1} \cdot y_i)\\
 \end{split}
-$$
+$$&lt;/div&gt;
+&lt;p&gt;
 where 
-$$
+&lt;/p&gt;
+&lt;div class="math"&gt;$$
 A = \frac{1}{2} \sum_{i=0}^{n-1} (x_i \cdot  y_{i+1} - x_{i+1} \cdot y_i).
-$$&lt;/p&gt;
+$$&lt;/div&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;circularShift &lt;span class="o"&gt;&amp;lt;-&lt;/span&gt; &lt;span class="kr"&gt;function&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;x&lt;span class="p"&gt;,&lt;/span&gt;shift&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="m"&gt;0&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt; &lt;span class="p"&gt;{&lt;/span&gt;
   N &lt;span class="o"&gt;&amp;lt;-&lt;/span&gt; &lt;span class="kp"&gt;length&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;x&lt;span class="p"&gt;)&lt;/span&gt;
   K &lt;span class="o"&gt;&amp;lt;-&lt;/span&gt; shift &lt;span class="o"&gt;%%&lt;/span&gt; N
@@ -182,64 +243,74 @@ plot_cell&lt;span class="p"&gt;(&lt;/span&gt;side_tri_y&lt;span class="p"&gt;,&l
 &lt;h2&gt;A.I. Opponent&lt;/h2&gt;
 &lt;p&gt;All oppponents are greedy with respect to some approximation of the value of a move.  The quality of the approximation determines the difficulty of the opponent.  Since the objective is to maximize your score, it makes sense to approximate the long term benefit of a move with its immediate increase in score.  It turn's out that the increase in score can be decomposed in the a function of the following four variables: &lt;/p&gt;
 &lt;ul&gt;
-&lt;li&gt;$\text{overlap}_p(\text{move})$ is the number of cells adjacent to a move,&lt;/li&gt;
-&lt;li&gt;$\text{interlap}_p(\text{move})$ is the number of times the move is sandwitched by its cell and its opposite,&lt;/li&gt;
-&lt;li&gt;$\text{extensions}_p(\text{move})$ is the number of existing connections that a move extends,&lt;/li&gt;
-&lt;li&gt;$\text{unconnected}_p(\text{move})$ is the number of unconnected cells that a move connects,&lt;/li&gt;
+&lt;li&gt;&lt;span class="math"&gt;\(\text{overlap}_p(\text{move})\)&lt;/span&gt; is the number of cells adjacent to a move,&lt;/li&gt;
+&lt;li&gt;&lt;span class="math"&gt;\(\text{interlap}_p(\text{move})\)&lt;/span&gt; is the number of times the move is sandwitched by its cell and its opposite,&lt;/li&gt;
+&lt;li&gt;&lt;span class="math"&gt;\(\text{extensions}_p(\text{move})\)&lt;/span&gt; is the number of existing connections that a move extends,&lt;/li&gt;
+&lt;li&gt;&lt;span class="math"&gt;\(\text{unconnected}_p(\text{move})\)&lt;/span&gt; is the number of unconnected cells that a move connects,&lt;/li&gt;
 &lt;/ul&gt;
 &lt;p&gt;and the formula is &lt;/p&gt;
-&lt;p&gt;$$\begin{split}
+&lt;div class="math"&gt;$$\begin{split}
 \Delta \text{score}_p(\text{move}) 
-&amp;amp;= \mathbb{I} {\text{overlap}_p(\text{move})&amp;gt;1} - \text{unconnected}_p(\text{move}) \
-&amp;amp;\quad + 2\cdot \big[\text{overlap}_p(\text{move}) - \text{interlap}_p(\text{move})\big] \
+&amp;amp;= \mathbb{I} \{\text{overlap}_p(\text{move})&amp;gt;1\} - \text{unconnected}_p(\text{move}) \\
+&amp;amp;\quad + 2\cdot \big[\text{overlap}_p(\text{move}) - \text{interlap}_p(\text{move})\big] \\
 &amp;amp;\quad + 2\cdot\big[  \text{overlap}_p(\text{move})  - \text{extensions}_p(\text{move}) \big],
-\end{split}$$
-where $p$ denotes the player playing the move.  By convention, define the first player ($p=1$) to be you and the second player ($p=2$) to be the A.I.&lt;br&gt;
+\end{split}$$&lt;/div&gt;
+&lt;p&gt;
+where &lt;span class="math"&gt;\(p\)&lt;/span&gt; denotes the player playing the move.  By convention, define the first player (&lt;span class="math"&gt;\(p=1\)&lt;/span&gt;) to be you and the second player (&lt;span class="math"&gt;\(p=2\)&lt;/span&gt;) to be the A.I.&lt;br&gt;
 One benefit of this decomposition is that each of the variables can be updated in an online fashion.   &lt;/p&gt;
 &lt;p&gt;Additional player-independent variables that have intuitive value are:&lt;/p&gt;
 &lt;ul&gt;
-&lt;li&gt;$\text{openness}(\text{move})$ is move number of open positions adjacent to a move,&lt;/li&gt;
-&lt;li&gt;$\text{centrality}(\text{move})$ measures how close a move is to the center of the board.&lt;/li&gt;
+&lt;li&gt;&lt;span class="math"&gt;\(\text{openness}(\text{move})\)&lt;/span&gt; is move number of open positions adjacent to a move,&lt;/li&gt;
+&lt;li&gt;&lt;span class="math"&gt;\(\text{centrality}(\text{move})\)&lt;/span&gt; measures how close a move is to the center of the board.&lt;/li&gt;
 &lt;/ul&gt;
 &lt;p&gt;To calculate a value of a move, the ai opponent uses a weighted sum of the above variables.&lt;/p&gt;
 &lt;h3&gt;Easy, Medium and Hard Opponents&lt;/h3&gt;
 &lt;p&gt;Cell Addition is a zero sum game and so your gain is the same as the ai's loss.  Thus, when designing the ai, it will be beneficial to take this into account. &lt;/p&gt;
 &lt;p&gt;The easy ai's value function is simply
-$$
+&lt;/p&gt;
+&lt;div class="math"&gt;$$
 \text{easy}(\text{move}) = \text{centrality}(\text{move});
-$$
+$$&lt;/div&gt;
+&lt;p&gt;
 that is, the easy ai just places it's move in the center most position of the board with ties broken arbitrarily.&lt;/p&gt;
 &lt;p&gt;The hard ai's value function is 
-$$
+&lt;/p&gt;
+&lt;div class="math"&gt;$$
 \begin{split}
 \text{hard}(\text{move}) 
-&amp;amp; = \text{centrality}(\text{move}) + 2\cdot \text{openness}(\text{move})\
-&amp;amp; \quad + \big[ \Delta \text{score}_2(\text{move}) + \Delta \text{score}_1(\text{move}) \big]\
+&amp;amp; = \text{centrality}(\text{move}) + 2\cdot \text{openness}(\text{move})\\
+&amp;amp; \quad + \big[ \Delta \text{score}_2(\text{move}) + \Delta \text{score}_1(\text{move}) \big]\\
 &amp;amp;\quad - \big[ \text{overlap}_2(\text{move}) + \text{overlap}_1(\text{move}) \big]
 .
 \end{split}
-$$
-The idea is to find a tradeoff between exploration and exploitation.  To see this, consider the following formula for the increase in the total overlap of a board when playing $\text{move}$
-$$
+$$&lt;/div&gt;
+&lt;p&gt;
+The idea is to find a tradeoff between exploration and exploitation.  To see this, consider the following formula for the increase in the total overlap of a board when playing &lt;span class="math"&gt;\(\text{move}\)&lt;/span&gt;
+&lt;/p&gt;
+&lt;div class="math"&gt;$$
 \Delta\text{total_overlap}_p(\text{move}) = \text{openness}_p(\text{move}) - \text{overlap}_p(\text{move}).
-$$
+$$&lt;/div&gt;
+&lt;p&gt;
 The hard ai's value approximation can now be rewritten as
-$$
+&lt;/p&gt;
+&lt;div class="math"&gt;$$
 \begin{split}
 \text{hard}(\text{move}) 
-&amp;amp; = \text{centrality}(\text{move}) \
-&amp;amp; \quad + \big[ \Delta \text{score}_2(\text{move}) + \Delta \text{score}_1(\text{move}) \big]\
+&amp;amp; = \text{centrality}(\text{move}) \\
+&amp;amp; \quad + \big[ \Delta \text{score}_2(\text{move}) + \Delta \text{score}_1(\text{move}) \big]\\
 &amp;amp; \quad + \big[ \Delta\text{total_overlap}_2(\text{move}) + \Delta\text{total_overlap}_1(\text{move}) \big]
 .
 \end{split}
-$$
-The two first two terms after $\text{centrality}$ encourage exploitation of the current game state while the last two terms encourage exploration of the board.  &lt;/p&gt;
+$$&lt;/div&gt;
+&lt;p&gt;
+The two first two terms after &lt;span class="math"&gt;\(\text{centrality}\)&lt;/span&gt; encourage exploitation of the current game state while the last two terms encourage exploration of the board.  &lt;/p&gt;
 &lt;p&gt;The medium ai's value is the average of the easy and hard opponent's values; i.e., 
-$$
+&lt;/p&gt;
+&lt;div class="math"&gt;$$
 \text{medium}(\text{move}) =
 0.5\cdot \text{hard}(\text{move})  + 
 0.5\cdot \text{easy}(\text{move}) .
-$$&lt;/p&gt;
+$$&lt;/div&gt;
 &lt;h3&gt;Adaptive (R implementation only)&lt;/h3&gt;
 &lt;p&gt;The adaptive ai has a skill level which determines the overall strategy in a game.  &lt;/p&gt;
 &lt;p&gt;The adaptive ai adapts to your play in two ways: &lt;/p&gt;
@@ -248,22 +319,27 @@ $$&lt;/p&gt;
 &lt;li&gt;It adapts its entire strategy after a game.&lt;/li&gt;
 &lt;/ol&gt;
 &lt;p&gt;The adaptive ai uses a convex combination of the easy and hard ai's value approximation.&lt;br&gt;
-$$
+&lt;/p&gt;
+&lt;div class="math"&gt;$$
 \text{adaptive}(\text{move}) 
 = \text{skill}' \cdot \text{hard}(\text{move})
 + (1 - \text{skill}') \cdot  \text{easy}(\text{move}),
-$$
-where $\text{skill}'$ is modified (within-game) skill parameter&lt;/p&gt;
-&lt;p&gt;$$
+$$&lt;/div&gt;
+&lt;p&gt;
+where &lt;span class="math"&gt;\(\text{skill}'\)&lt;/span&gt; is modified (within-game) skill parameter&lt;/p&gt;
+&lt;div class="math"&gt;$$
 \text{skill}' = \text{skill} + 0.01\cdot ( \text{your_score} - \text{ai_score} ).
-$$
+$$&lt;/div&gt;
+&lt;p&gt;
 Notice that if you are winning, then the effective skill of the ai goes up.  Moreover, if you are winning by a lot then the effective skill will go up by a lot.  &lt;/p&gt;
 &lt;p&gt;At the end of the game, the ai's skill level is updated according to the following formula:
-$$
-\text{skill} \leftarrow \text{skill} + 0.01\cdot  \frac{ \text{your_score} - \text{ai_score}  }{1 + \mathbb{I} { \text{your_score} &amp;lt; \text{ai_score} }  }.
-$$
+&lt;/p&gt;
+&lt;div class="math"&gt;$$
+\text{skill} \leftarrow \text{skill} + 0.01\cdot  \frac{ \text{your_score} - \text{ai_score}  }{1 + \mathbb{I} \{ \text{your_score} &amp;lt; \text{ai_score} \}  }.
+$$&lt;/div&gt;
+&lt;p&gt;
 Hence, if you beat the ai, then its skill goes up by the score difference; if you lose, then its skill goes down in proportion to half the absolute score difference.  If the game is a draw, then the skill level stays the same.&lt;/p&gt;
-&lt;p&gt;Ignoring within-game adaptivity, when $\text{skill}=0$ you are essentially playing against the easy ai, when $\text{skill}=1$ you are playing against the hard ai, and when $\text{skill}=0.5$ you are playing against the medium ai.&lt;/p&gt;
+&lt;p&gt;Ignoring within-game adaptivity, when &lt;span class="math"&gt;\(\text{skill}=0\)&lt;/span&gt; you are essentially playing against the easy ai, when &lt;span class="math"&gt;\(\text{skill}=1\)&lt;/span&gt; you are playing against the hard ai, and when &lt;span class="math"&gt;\(\text{skill}=0.5\)&lt;/span&gt; you are playing against the medium ai.&lt;/p&gt;
 &lt;h1&gt;Future Add-Ons&lt;/h1&gt;
 &lt;p&gt;There are many variations on this game that can be played.  What follows is an unordered list of possible improvements/variants of the game.&lt;/p&gt;
 &lt;ul&gt;
@@ -302,4 +378,98 @@ Hence, if you beat the ai, then its skill goes up by the score difference; if yo
 &lt;li&gt;
 &lt;p&gt;&lt;strong&gt;Custom Board Builder&lt;/strong&gt;: Create a GUI that allows the user to click on a grid to define the feasible positions of thier custom board.  Boards can naturally be stored as a binary matrix, thus it would be easy to let the user save and upload thier board.  &lt;/p&gt;
 &lt;/li&gt;
-&lt;/ul&gt;</content><category term="Artificial Intelligence"></category><category term="Games"></category></entry><entry><title>My Jouney</title><link href="/my-journey.html" rel="alternate"></link><published>2017-11-26T10:01:00-10:00</published><updated>2017-11-27T12:30:00-10:00</updated><author><name>Matt Motoki</name></author><id>tag:None,2017-11-26:/my-journey.html</id><summary type="html">&lt;p&gt;Not the Shortest Path&lt;/p&gt;</summary><content type="html"></content><category term="Bio"></category></entry></feed>
+&lt;/ul&gt;
+&lt;script type="text/javascript"&gt;if (!document.getElementById('mathjaxscript_pelican_#%@#$@#')) {
+    var align = "center",
+        indent = "0em",
+        linebreak = "false";
+
+    if (false) {
+        align = (screen.width &lt; 768) ? "left" : align;
+        indent = (screen.width &lt; 768) ? "0em" : indent;
+        linebreak = (screen.width &lt; 768) ? 'true' : linebreak;
+    }
+
+    var mathjaxscript = document.createElement('script');
+    mathjaxscript.id = 'mathjaxscript_pelican_#%@#$@#';
+    mathjaxscript.type = 'text/javascript';
+    mathjaxscript.src = 'https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.3/latest.js?config=TeX-AMS-MML_HTMLorMML';
+    mathjaxscript[(window.opera ? "innerHTML" : "text")] =
+        "MathJax.Hub.Config({" +
+        "    config: ['MMLorHTML.js']," +
+        "    TeX: { extensions: ['AMSmath.js','AMSsymbols.js','noErrors.js','noUndefined.js'], equationNumbers: { autoNumber: 'AMS' } }," +
+        "    jax: ['input/TeX','input/MathML','output/HTML-CSS']," +
+        "    extensions: ['tex2jax.js','mml2jax.js','MathMenu.js','MathZoom.js']," +
+        "    displayAlign: '"+ align +"'," +
+        "    displayIndent: '"+ indent +"'," +
+        "    showMathMenu: true," +
+        "    messageStyle: 'normal'," +
+        "    tex2jax: { " +
+        "        inlineMath: [ ['\\\\(','\\\\)'] ], " +
+        "        displayMath: [ ['$$','$$'] ]," +
+        "        processEscapes: true," +
+        "        preview: 'TeX'," +
+        "    }, " +
+        "    'HTML-CSS': { " +
+        "        styles: { '.MathJax_Display, .MathJax .mo, .MathJax .mi, .MathJax .mn': {color: 'inherit ! important'} }," +
+        "        linebreaks: { automatic: "+ linebreak +", width: '90% container' }," +
+        "    }, " +
+        "}); " +
+        "if ('default' !== 'default') {" +
+            "MathJax.Hub.Register.StartupHook('HTML-CSS Jax Ready',function () {" +
+                "var VARIANT = MathJax.OutputJax['HTML-CSS'].FONTDATA.VARIANT;" +
+                "VARIANT['normal'].fonts.unshift('MathJax_default');" +
+                "VARIANT['bold'].fonts.unshift('MathJax_default-bold');" +
+                "VARIANT['italic'].fonts.unshift('MathJax_default-italic');" +
+                "VARIANT['-tex-mathit'].fonts.unshift('MathJax_default-italic');" +
+            "});" +
+            "MathJax.Hub.Register.StartupHook('SVG Jax Ready',function () {" +
+                "var VARIANT = MathJax.OutputJax.SVG.FONTDATA.VARIANT;" +
+                "VARIANT['normal'].fonts.unshift('MathJax_default');" +
+                "VARIANT['bold'].fonts.unshift('MathJax_default-bold');" +
+                "VARIANT['italic'].fonts.unshift('MathJax_default-italic');" +
+                "VARIANT['-tex-mathit'].fonts.unshift('MathJax_default-italic');" +
+            "});" +
+        "}";
+    (document.body || document.getElementsByTagName('head')[0]).appendChild(mathjaxscript);
+}
+&lt;/script&gt;</content><category term="Artificial Intelligence"></category><category term="Games"></category></entry><entry><title>Decision Matrix</title><link href="/decision-matrix.html" rel="alternate"></link><published>2017-11-26T10:01:00-10:00</published><updated>2017-11-28T12:30:00-10:00</updated><author><name>Matt Motoki</name></author><id>tag:None,2017-11-26:/decision-matrix.html</id><summary type="html">&lt;p&gt;Decision Matrix - A tool for calculated decision making.&lt;/p&gt;</summary><content type="html">&lt;p&gt;If you are like me then you have a million things that you want to do but no clear order in which to do them.  In this post, I will introduce the Decision Matrix which is a tool that breaks down a persons utility funciton into a linear combination of features.   I relate the decision matrix to Utility theory and show how we formulate the problem of finding the optimal schedule as a linear program. 
+I then show how I use it to prioritize my day.&lt;/p&gt;
+&lt;p&gt;We seek to maximize the expected utility of our schedule subject to the constraint that all tasks must be done on time (this constraint can be relaxed by introducing a penalty for late tasks). &lt;/p&gt;
+&lt;p&gt;Every action we take has a consequece, it has a benefit, it takes some time and sometimes it has a deadline associated with.  When we are faced with the problem of choosing which action to take&lt;/p&gt;
+&lt;p&gt;Utility theory says that every rational being can be reduced to an agent who is maximizing the expected value of some utility function.  The decision matrix aims to break an agent's utility into a linear combination of variables.  We provide a greedy approach to scheduling task.  The optimal schedule can be found via linear programming.    &lt;/p&gt;
+&lt;h1&gt;Problem Formlation&lt;/h1&gt;
+&lt;h1&gt;Solution&lt;/h1&gt;
+&lt;h1&gt;Case Study&lt;/h1&gt;
+&lt;h1&gt;Extensions - Soft Deadlines&lt;/h1&gt;
+&lt;h1&gt;Extensions - Nonlinear Objective Function&lt;/h1&gt;</content><category term="misc"></category></entry><entry><title>Ethical AI</title><link href="/ethical-ai.html" rel="alternate"></link><published>2017-11-26T10:01:00-10:00</published><updated>2017-11-27T12:30:00-10:00</updated><author><name>Matt Motoki</name></author><id>tag:None,2017-11-26:/ethical-ai.html</id><summary type="html">&lt;p&gt;Ethical AI&lt;/p&gt;</summary><content type="html">&lt;p&gt;Job loss because of AI&lt;/p&gt;</content><category term="Artificial Intelligence"></category></entry><entry><title>My Jouney</title><link href="/my-journey.html" rel="alternate"></link><published>2017-11-26T10:01:00-10:00</published><updated>2017-11-27T12:30:00-10:00</updated><author><name>Matt Motoki</name></author><id>tag:None,2017-11-26:/my-journey.html</id><summary type="html">&lt;p&gt;Not the Shortest Path&lt;/p&gt;</summary><content type="html">&lt;h1&gt;&lt;/h1&gt;
+&lt;p&gt;I always loved math.&lt;/p&gt;
+&lt;p&gt;Took a detour. &lt;/p&gt;
+&lt;p&gt;Returned 5 years after high school with a passion. &lt;/p&gt;
+&lt;p&gt;Found that pure math and physics was not really what I enjoyed. I actually enjoy empolying math as a tool to solve real-world problems.  That is what engineering is, &lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Engineering is the application of mathematics, physics, and computer science to solve 
+real-world  problems. &lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;I switched majors to Electrical Engineering which is very mathematical and has a large intersection with computer science.  &lt;/p&gt;
+&lt;p&gt;I was intrigued by control theory, signal processing and optimization.  I enjoyed how the solutions to were always deeply rooted in mathematical theory yet the main focus was always to do something useful.  &lt;/p&gt;
+&lt;p&gt;This is were I got my first taste of computers extending human abilities--in EE we make computers and devices do cool things, but behind the scenes there is always a smart human setting things up and ensuring that things don't go crazy.  &lt;/p&gt;
+&lt;p&gt;. &lt;/p&gt;</content><category term="Bio"></category></entry><entry><title>Realistic Reinforcement Learning</title><link href="/realistic-reinforcement-learning.html" rel="alternate"></link><published>2017-11-26T10:01:00-10:00</published><updated>2017-11-27T12:30:00-10:00</updated><author><name>Matt Motoki</name></author><id>tag:None,2017-11-26:/realistic-reinforcement-learning.html</id><summary type="html">&lt;p&gt;Safer AI&lt;/p&gt;</summary><content type="html">&lt;p&gt;A problem with RL systems is that they are still partly a black box.  By that I mean we cannot explain intuitively what they are doing and we can say with certainty how these systems will react in new environemnt. &lt;/p&gt;</content><category term="Artificial Intelligence"></category><category term="Reinforcement Learning"></category></entry><entry><title>Towards Safer AI</title><link href="/towards-safer-ai.html" rel="alternate"></link><published>2017-11-26T10:01:00-10:00</published><updated>2017-11-27T12:30:00-10:00</updated><author><name>Matt Motoki</name></author><id>tag:None,2017-11-26:/towards-safer-ai.html</id><summary type="html">&lt;p&gt;Safer AI&lt;/p&gt;</summary><content type="html">&lt;p&gt;&amp;lt;&amp;lt;&amp;lt;&amp;lt;&amp;lt;&amp;lt;&amp;lt; HEAD
+Use of simulation to test AI systems. In EE we can tell if a system will be stable using theory or by simulating the system on a computer. Simple error metrics used to evaluate performance in modern AI and ML algorithms may not account for the larger implications of the predictions
+=======
+d&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;blockquote&gt;
+&lt;blockquote&gt;
+&lt;blockquote&gt;
+&lt;blockquote&gt;
+&lt;blockquote&gt;
+&lt;blockquote&gt;
+&lt;p&gt;develop&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;/blockquote&gt;
+&lt;/blockquote&gt;
+&lt;/blockquote&gt;
+&lt;/blockquote&gt;
+&lt;/blockquote&gt;
+&lt;/blockquote&gt;</content><category term="Artificial Intelligence"></category></entry></feed>
