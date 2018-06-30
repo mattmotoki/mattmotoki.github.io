@@ -1,6 +1,140 @@
 <?xml version="1.0" encoding="utf-8"?>
-<rss version="2.0"><channel><title>Matt Motoki - Matt Motoki</title><link>/</link><description></description><lastBuildDate>Tue, 28 Nov 2017 12:30:00 -1000</lastBuildDate><item><title>Bayesian Target Encoding</title><link>/bayesian-target-encoding.html</link><description>&lt;h1&gt;Problem Formlation&lt;/h1&gt;
-&lt;h1&gt;Solution&lt;/h1&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Matt Motoki</dc:creator><pubDate>Sun, 26 Nov 2017 10:01:00 -1000</pubDate><guid isPermaLink="false">tag:None,2017-11-26:/bayesian-target-encoding.html</guid><category>Feature Engineering</category><category>Bayesian Statistics</category></item><item><title>Cell Division</title><link>/cell-division.html</link><description>&lt;p&gt;&lt;a href="https://mattmotoki.github.io/cell-division/"&gt;Play Cell Division here&lt;/a&gt;&lt;/p&gt;
+<rss version="2.0"><channel><title>Matt Motoki - Matt Motoki</title><link>/</link><description></description><lastBuildDate>Wed, 28 Nov 2018 12:30:00 -1000</lastBuildDate><item><title>Organizing the Hawaii Machine Learning Meetup</title><link>/hawaii-machinelearning-meetup.html</link><description>&lt;h1&gt;Summary&lt;/h1&gt;
+&lt;p&gt;In July of 2017, my friends &lt;a href="http://thomasyokota.com/"&gt;Tom Yokota&lt;/a&gt;, &lt;a href="https://www.kaggle.com/datascience808"&gt;Sora Khongnawong (Paul)&lt;/a&gt; and I decided to create a Meetup centered around data science, machine learning, and artificial intelligence in Hawaii.  We sought to promte these technologies and increase their adoption in Hawaii.  &lt;/p&gt;
+&lt;p&gt;It took more work than we expected but we now have a vibrant community of 250+ members, we've held periodic study groups for an online machine learning course, and we hosted Hawaii's very first machine learning competition. Overall, I wold consider the Meetup a success. &lt;/p&gt;
+&lt;h2&gt;Motivation&lt;/h2&gt;
+&lt;p&gt;In Hawaii, most people agree that businesses typically adopt technology 5-10 years after the mainland US.  This was especially true for data science and machine learning.  At the time, Tom and I were both working as data scientists at two of the very few consultancy firm specializing in analytics.  At work, one of our biggest hurdles was explaining to our clients what data science and machine learning is and what it isn't, what it could and couldn't do.  As frustrating as it was, the lack of understanding of data science and machine learning was understandable; at the time, there was almost no community resources for data science and machine learning--we wanted to change that.  &lt;/p&gt;
+&lt;p&gt;On Jul 19, 2017 we created the Hawaii Machine Learning Meetup. Two days later we had 20+ members.  We were underprepared--we didn't have any meetup content lined up and no place to actually host a meetup. All we knew was that we wanted to promote machine learning in Hawaii. After assessing the state of machine learning in Hawaii, we came up with our three main goals for the meetup: &lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;Host talks and presentations given by our members, academics, and people in industry.&lt;/strong&gt; This was our main role. As organizers, we would work on contributing our own presentations to the meetup, but we want the focus to be on how the community in Hawaii is using machine learning.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;Promote an understanding of machine learning through study groups.&lt;/strong&gt; This was of secondary importance. We planned to organize study groups for members enrolled in or auditing online courses. We also planned to hold a periodic review session for the material covered in the course. &lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;Organize local machine learning competitions &amp;amp; encourage participation in global competitions.&lt;/strong&gt; We believed that participating in machine learning competitions is a great way to apply machine learning techniques and also a great way to learn new techniques.  &lt;/p&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;Our first Meetup wasn't until September but we once we got started we picked up steam.  In October, we brought on a new organizer Sam Murphy.  With his help we were able to secure the Manoa Innovation Center as our venue for the meetup.  This also meant that we had our first sponsor the Hawaii Technology Development Coporation. &lt;/p&gt;
+&lt;p&gt;In December we started our study group for the &lt;a href="https://www.udemy.com/machinelearning/"&gt;Machine Learning A-Z course&lt;/a&gt; on Udemy.  To complete the course, we outlined a schedule to meet every Saturday for 4 months to discuss a few sections the course.  &lt;/p&gt;
+&lt;p&gt;On March 30th we kicked off Hawaii's first machine learning competition on the Kaggle In-Class platform.  From then until April our members competed to predict the quantity of items sold in online sales transactions.  We held 4 tutorial sessions to help newcomers to competitive machine learning. &lt;/p&gt;
+&lt;p&gt;We've had presentations from our members, researchers from the University of Hawaii's Cancer Research Center, an Assistant Professor in Economics, and even out-of-town guests.  In other words, we met our three main goals for the meetup.  &lt;/p&gt;
+&lt;h1&gt;Conclusion&lt;/h1&gt;
+&lt;p&gt;At the time I was working as a &lt;a href="https://www.zoominfo.com/p/Matthew-Motoki/-1348302200"&gt;data analyst at a local startup&lt;/a&gt; focusing primarily on fundraising analytics for nonprofits. &lt;/p&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Matt Motoki</dc:creator><pubDate>Fri, 29 Jun 2018 02:48:00 -1000</pubDate><guid isPermaLink="false">tag:None,2018-06-29:/hawaii-machinelearning-meetup.html</guid><category>Meetup</category></item><item><title>Bayesian Target Encoding</title><link>/bayesian-target-encoding.html</link><description>&lt;h1&gt;Summary&lt;/h1&gt;
+&lt;p&gt;This blog provides a mathematical framework for the common technique for encoding categorical variables called target encoding.  The method relies on Bayesian statistics and is well-suited for online learning.  Code for implementing the Bayesian target encoding is provided and applied to the recent Avito Kaggle Competition where my team and I took 14th place. &lt;/p&gt;
+&lt;h1&gt;Background&lt;/h1&gt;
+&lt;p&gt;Target encoding is a common technique for encoding a categorical variable. The idea is to capture the relationship between the levels of categorical variable and the target variable by calculating statistics for each level.  The most commonlu used statistic is the mean, in which case it is called mean target encoding.  Catboost and LightGBM offer built-in mean targt encoding. &lt;/p&gt;
+&lt;p&gt;The main drawback of target encoding is that it leaks information about the variable we are trying to predict.  If we have levels with only a few observations then we risk overfitting our data which leads to poor generalization of our models.  This problem is acute when dealing with high cardinality categorical variables.  Regularization either by smoothing estimates or adding noise to the data is the common approach to dealing with overfitting.  By adopting a Bayesian framework, we can handle regularization in a systematic yet intuitive way.  Furthermore, the Bayesian framework is well-suited for online learning requiring only minimal updates as new data is aquired. &lt;/p&gt;
+&lt;p&gt;In what follows I will discuss Bayesian target encoding in the context of binary classification.  However, the framework can be adapted to other target distributions. &lt;/p&gt;
+&lt;h1&gt;Theory&lt;/h1&gt;
+&lt;p&gt;The beta distribution is parameterized by &lt;span class="math"&gt;\(\alpha\)&lt;/span&gt; and &lt;span class="math"&gt;\(\beta\)&lt;/span&gt; which can respectively be thought of as the number of positive and negative examples in a repeated Bernoulli experiment.  We do not want to search over &lt;span class="math"&gt;\(\alpha\)&lt;/span&gt; independently &lt;span class="math"&gt;\(\beta\)&lt;/span&gt;.  Instead, we would prefer to search over &lt;span class="math"&gt;\(\alpha\)&lt;/span&gt; and &lt;span class="math"&gt;\(\beta\)&lt;/span&gt; such that the mean of the distribution is constant
+&lt;/p&gt;
+&lt;div class="math"&gt;$$
+\mu_{prior} = \frac{\alpha}{\alpha + \beta}. 
+$$&lt;/div&gt;
+&lt;p&gt;If we may have intuition about the prior mean (e.g,. in the case of hierarchical Bayesian target encoding) or we may not.  In the latter case we can simply calculate the mean over the entire training set (we leak target information by doing this but the risk of overfitting is minimal).  With the mean known, we can reparamertize the beta distribution in term of &lt;span class="math"&gt;\(\tau = \alpha + \beta\)&lt;/span&gt;.  Intuitvely, &lt;span class="math"&gt;\(tau\)&lt;/span&gt; can be thought of the effective sample size from the prior distribution.  Rewriting the above equation we get
+&lt;/p&gt;
+&lt;div class="math"&gt;$$
+\alpha = \tau \cdot \mu_{prior}  \quad\text{and}\quad \beta = \tau \cdot(1 - \mu_{prior}).
+$$&lt;/div&gt;
+&lt;p&gt;From &lt;a href="https://people.eecs.berkeley.edu/~jordan/courses/260-spring10/other-readings/chapter9.pdf"&gt;Eq. (9.20)&lt;/a&gt;, the posterior mean can be calculated as a weighted average of the prior mean with the MLE 
+&lt;/p&gt;
+&lt;div class="math"&gt;$$
+\mu_{posterior} = \kappa \cdot \mu_{prior} + (1-\kappa) \cdot \frac{n}{N}, 
+$$&lt;/div&gt;
+&lt;p&gt;
+where &lt;span class="math"&gt;\(n\)&lt;/span&gt; is the total number of positive examples, &lt;span class="math"&gt;\(N\)&lt;/span&gt; is the total number of examples, and the weight &lt;span class="math"&gt;\(\kappa\)&lt;/span&gt; is 
+&lt;/p&gt;
+&lt;div class="math"&gt;$$
+\kappa = \frac{\tau}{N+\tau}.
+$$&lt;/div&gt;
+&lt;p&gt;
+We see that increasing &lt;span class="math"&gt;\(tau\)&lt;/span&gt; makes &lt;span class="math"&gt;\(kappa\)&lt;/span&gt; closer to 1 and thus the posterior mean becomes closer to the prior mean.  Hence, &lt;span class="math"&gt;\(\tau\)&lt;/span&gt; is a regularization hyperparameter that we can tune to control the complexity of our target encoded variable.  Another way to write the posterior mean is
+&lt;/p&gt;
+&lt;div class="math"&gt;$$
+\mu_{posterior} = \frac{\tau \cdot \mu_{prior} + n}{N + \tau}.
+$$&lt;/div&gt;
+&lt;p&gt;This equation shows the simple update rule for the posterior mean; all we need to keep track of the counts of 1's and 0's.  &lt;/p&gt;
+&lt;p&gt;Note that the parameters of the posterior distribution are 
+&lt;/p&gt;
+&lt;div class="math"&gt;$$
+\alpha_{posterior} = \tau \cdot \mu_{prior} + n \quad\text{and}\quad \beta_{posterior} = N-n + \tau \cdot (1 - \mu_{prior}).
+$$&lt;/div&gt;
+&lt;p&gt;
+Since the posterior parameters are known we can use them to calculate other statistics; e.g., &lt;/p&gt;
+&lt;div class="math"&gt;$$
+\mathrm{var} = \frac{\alpha\beta}{(\alpha + \beta)^2(\alpha + \beta+1)}
+$$&lt;/div&gt;
+&lt;p&gt;
+and
+&lt;/p&gt;
+&lt;div class="math"&gt;$$
+\mathrm{skewness} = \frac{2 (\beta - \alpha) \sqrt{\alpha + \beta + 1}}{(\alpha + \beta+1)\sqrt{\alpha\beta}}.
+$$&lt;/div&gt;
+&lt;p&gt;Furthermore, we can add noise to the target encoded variables by sampling from the posterior or prior distribution.  For example, fix the noise strength &lt;span class="math"&gt;\(\epsilon\)&lt;/span&gt; we can add noise using the following formula
+&lt;/p&gt;
+&lt;div class="math"&gt;$$
+\tilde{\mu}_{posterior} = (1-\epsilon)\cdot \mu_{posterior} + \epsilon\cdot X_{posterior}
+$$&lt;/div&gt;
+&lt;p&gt;
+where &lt;span class="math"&gt;\(X_{posterior} \sim \mathrm{Beta}(\alpha_{posterior}, \beta_{posterior})\)&lt;/span&gt;. &lt;/p&gt;
+&lt;h1&gt;Examples&lt;/h1&gt;
+&lt;script type="text/javascript"&gt;if (!document.getElementById('mathjaxscript_pelican_#%@#$@#')) {
+    var align = "center",
+        indent = "0em",
+        linebreak = "false";
+
+    if (false) {
+        align = (screen.width &lt; 768) ? "left" : align;
+        indent = (screen.width &lt; 768) ? "0em" : indent;
+        linebreak = (screen.width &lt; 768) ? 'true' : linebreak;
+    }
+
+    var mathjaxscript = document.createElement('script');
+    mathjaxscript.id = 'mathjaxscript_pelican_#%@#$@#';
+    mathjaxscript.type = 'text/javascript';
+    mathjaxscript.src = 'https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.3/latest.js?config=TeX-AMS-MML_HTMLorMML';
+    mathjaxscript[(window.opera ? "innerHTML" : "text")] =
+        "MathJax.Hub.Config({" +
+        "    config: ['MMLorHTML.js']," +
+        "    TeX: { extensions: ['AMSmath.js','AMSsymbols.js','noErrors.js','noUndefined.js'], equationNumbers: { autoNumber: 'AMS' } }," +
+        "    jax: ['input/TeX','input/MathML','output/HTML-CSS']," +
+        "    extensions: ['tex2jax.js','mml2jax.js','MathMenu.js','MathZoom.js']," +
+        "    displayAlign: '"+ align +"'," +
+        "    displayIndent: '"+ indent +"'," +
+        "    showMathMenu: true," +
+        "    messageStyle: 'normal'," +
+        "    tex2jax: { " +
+        "        inlineMath: [ ['\\\\(','\\\\)'] ], " +
+        "        displayMath: [ ['$$','$$'] ]," +
+        "        processEscapes: true," +
+        "        preview: 'TeX'," +
+        "    }, " +
+        "    'HTML-CSS': { " +
+        "        styles: { '.MathJax_Display, .MathJax .mo, .MathJax .mi, .MathJax .mn': {color: 'inherit ! important'} }," +
+        "        linebreaks: { automatic: "+ linebreak +", width: '90% container' }," +
+        "    }, " +
+        "}); " +
+        "if ('default' !== 'default') {" +
+            "MathJax.Hub.Register.StartupHook('HTML-CSS Jax Ready',function () {" +
+                "var VARIANT = MathJax.OutputJax['HTML-CSS'].FONTDATA.VARIANT;" +
+                "VARIANT['normal'].fonts.unshift('MathJax_default');" +
+                "VARIANT['bold'].fonts.unshift('MathJax_default-bold');" +
+                "VARIANT['italic'].fonts.unshift('MathJax_default-italic');" +
+                "VARIANT['-tex-mathit'].fonts.unshift('MathJax_default-italic');" +
+            "});" +
+            "MathJax.Hub.Register.StartupHook('SVG Jax Ready',function () {" +
+                "var VARIANT = MathJax.OutputJax.SVG.FONTDATA.VARIANT;" +
+                "VARIANT['normal'].fonts.unshift('MathJax_default');" +
+                "VARIANT['bold'].fonts.unshift('MathJax_default-bold');" +
+                "VARIANT['italic'].fonts.unshift('MathJax_default-italic');" +
+                "VARIANT['-tex-mathit'].fonts.unshift('MathJax_default-italic');" +
+            "});" +
+        "}";
+    (document.body || document.getElementsByTagName('head')[0]).appendChild(mathjaxscript);
+}
+&lt;/script&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Matt Motoki</dc:creator><pubDate>Sun, 26 Nov 2017 10:01:00 -1000</pubDate><guid isPermaLink="false">tag:None,2017-11-26:/bayesian-target-encoding.html</guid><category>Feature Engineering</category><category>Bayesian Statistics</category></item><item><title>Cell Division</title><link>/cell-division.html</link><description>&lt;p&gt;&lt;a href="https://mattmotoki.github.io/cell-division/"&gt;Play Cell Division here&lt;/a&gt;&lt;/p&gt;
 &lt;h1&gt;Introduction&lt;/h1&gt;
 &lt;p&gt;Cell Addition is a strategy-based board game. Player take turns placing their cells. A player's cells divide when they connect with each other; vertical, horizontal and diagonal connections are allowed.  Your score is equal to the total number of cell that you have on the board.  The game ends when the board is full and the winner is the player with the most cells. &lt;/p&gt;
 &lt;p&gt;The current A.I. opponents implement a greedy strategy with a strong base heuristic.  A.I. opponents are designed to be completely deterministic so that games are reproducible.  &lt;/p&gt;
@@ -31,13 +165,15 @@
 &lt;/pre&gt;&lt;/div&gt;
 
 
-&lt;p&gt;The natural way to define the outline of a cell is in terms of its (x) and (y) coordinates.  Alternatively, the outline can be parameterized by an angle (\theta\in[0,\, 2\pi])  and a radius $r$ and then mapped back to the $xy$-plane using the formulas
-$$
+&lt;p&gt;The natural way to define the outline of a cell is in terms of its &lt;span class="math"&gt;\(x\)&lt;/span&gt; and &lt;span class="math"&gt;\(y\)&lt;/span&gt; coordinates.  Alternatively, the outline can be parameterized by an angle &lt;span class="math"&gt;\(\theta\in[0,\, 2\pi]\)&lt;/span&gt;  and a radius &lt;span class="math"&gt;\(r\)&lt;/span&gt; and then mapped back to the &lt;span class="math"&gt;\(xy\)&lt;/span&gt;-plane using the formulas
+&lt;/p&gt;
+&lt;div class="math"&gt;$$
 x = r\cdot \cos(\theta)
 \qquad
 \qquad
 y = r\cdot \sin(\theta).
-$$
+$$&lt;/div&gt;
+&lt;p&gt;
 A simplifying trick is to specify only the curved sections of the outline and let R automatically create the straight sections by connecting the curves.  Another simplification comes by specifying one pivot point per curved section rather than pivoting about a single origin. &lt;/p&gt;
 &lt;p&gt;The following two functions use this method to create the outline of triangular cells&lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;triangular_cell &lt;span class="o"&gt;&amp;lt;-&lt;/span&gt; &lt;span class="kr"&gt;function&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;r&lt;span class="p"&gt;,&lt;/span&gt; r2&lt;span class="p"&gt;,&lt;/span&gt; n_pnts&lt;span class="p"&gt;)&lt;/span&gt; &lt;span class="p"&gt;{&lt;/span&gt;
@@ -110,16 +246,19 @@ poly_and_points&lt;span class="p"&gt;(&lt;/span&gt;side_tri_y&lt;span class="p"&
 &lt;h3&gt;Shading About the Centroid&lt;/h3&gt;
 &lt;p&gt;There are two types of shading used to create the cells.  Both types of shading are implemented by overlaying a sequence of polygons centered about the center of mass with either decreasing/increasing size and decreasing/increasing transparency. &lt;/p&gt;
 &lt;p&gt;The centroid of a polygon is 
-$$
+&lt;/p&gt;
+&lt;div class="math"&gt;$$
 \begin{split}
-C_x &amp;amp;= \frac{1}{6A} \sum_{i=0}^{n-1} (x_i + x_{i+1}) (x_i \cdot  y_{i+1} - x_{i+1} \cdot y_i)\
-C_y &amp;amp;= \frac{1}{6A} \sum_{i=0}^{n-1} (y_i + y_{i+1}) (x_i \cdot  y_{i+1} - x_{i+1} \cdot y_i)\
+C_x &amp;amp;= \frac{1}{6A} \sum_{i=0}^{n-1} (x_i + x_{i+1}) (x_i \cdot  y_{i+1} - x_{i+1} \cdot y_i)\\
+C_y &amp;amp;= \frac{1}{6A} \sum_{i=0}^{n-1} (y_i + y_{i+1}) (x_i \cdot  y_{i+1} - x_{i+1} \cdot y_i)\\
 \end{split}
-$$
+$$&lt;/div&gt;
+&lt;p&gt;
 where 
-$$
+&lt;/p&gt;
+&lt;div class="math"&gt;$$
 A = \frac{1}{2} \sum_{i=0}^{n-1} (x_i \cdot  y_{i+1} - x_{i+1} \cdot y_i).
-$$&lt;/p&gt;
+$$&lt;/div&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;circularShift &lt;span class="o"&gt;&amp;lt;-&lt;/span&gt; &lt;span class="kr"&gt;function&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;x&lt;span class="p"&gt;,&lt;/span&gt;shift&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="m"&gt;0&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt; &lt;span class="p"&gt;{&lt;/span&gt;
   N &lt;span class="o"&gt;&amp;lt;-&lt;/span&gt; &lt;span class="kp"&gt;length&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;x&lt;span class="p"&gt;)&lt;/span&gt;
   K &lt;span class="o"&gt;&amp;lt;-&lt;/span&gt; shift &lt;span class="o"&gt;%%&lt;/span&gt; N
@@ -182,64 +321,74 @@ plot_cell&lt;span class="p"&gt;(&lt;/span&gt;side_tri_y&lt;span class="p"&gt;,&l
 &lt;h2&gt;A.I. Opponent&lt;/h2&gt;
 &lt;p&gt;All oppponents are greedy with respect to some approximation of the value of a move.  The quality of the approximation determines the difficulty of the opponent.  Since the objective is to maximize your score, it makes sense to approximate the long term benefit of a move with its immediate increase in score.  It turn's out that the increase in score can be decomposed in the a function of the following four variables: &lt;/p&gt;
 &lt;ul&gt;
-&lt;li&gt;$\text{overlap}_p(\text{move})$ is the number of cells adjacent to a move,&lt;/li&gt;
-&lt;li&gt;$\text{interlap}_p(\text{move})$ is the number of times the move is sandwitched by its cell and its opposite,&lt;/li&gt;
-&lt;li&gt;$\text{extensions}_p(\text{move})$ is the number of existing connections that a move extends,&lt;/li&gt;
-&lt;li&gt;$\text{unconnected}_p(\text{move})$ is the number of unconnected cells that a move connects,&lt;/li&gt;
+&lt;li&gt;&lt;span class="math"&gt;\(\text{overlap}_p(\text{move})\)&lt;/span&gt; is the number of cells adjacent to a move,&lt;/li&gt;
+&lt;li&gt;&lt;span class="math"&gt;\(\text{interlap}_p(\text{move})\)&lt;/span&gt; is the number of times the move is sandwitched by its cell and its opposite,&lt;/li&gt;
+&lt;li&gt;&lt;span class="math"&gt;\(\text{extensions}_p(\text{move})\)&lt;/span&gt; is the number of existing connections that a move extends,&lt;/li&gt;
+&lt;li&gt;&lt;span class="math"&gt;\(\text{unconnected}_p(\text{move})\)&lt;/span&gt; is the number of unconnected cells that a move connects,&lt;/li&gt;
 &lt;/ul&gt;
 &lt;p&gt;and the formula is &lt;/p&gt;
-&lt;p&gt;$$\begin{split}
+&lt;div class="math"&gt;$$\begin{split}
 \Delta \text{score}_p(\text{move}) 
-&amp;amp;= \mathbb{I} {\text{overlap}_p(\text{move})&amp;gt;1} - \text{unconnected}_p(\text{move}) \
-&amp;amp;\quad + 2\cdot \big[\text{overlap}_p(\text{move}) - \text{interlap}_p(\text{move})\big] \
+&amp;amp;= \mathbb{I} \{\text{overlap}_p(\text{move})&amp;gt;1\} - \text{unconnected}_p(\text{move}) \\
+&amp;amp;\quad + 2\cdot \big[\text{overlap}_p(\text{move}) - \text{interlap}_p(\text{move})\big] \\
 &amp;amp;\quad + 2\cdot\big[  \text{overlap}_p(\text{move})  - \text{extensions}_p(\text{move}) \big],
-\end{split}$$
-where $p$ denotes the player playing the move.  By convention, define the first player ($p=1$) to be you and the second player ($p=2$) to be the A.I.&lt;br&gt;
+\end{split}$$&lt;/div&gt;
+&lt;p&gt;
+where &lt;span class="math"&gt;\(p\)&lt;/span&gt; denotes the player playing the move.  By convention, define the first player (&lt;span class="math"&gt;\(p=1\)&lt;/span&gt;) to be you and the second player (&lt;span class="math"&gt;\(p=2\)&lt;/span&gt;) to be the A.I.&lt;br&gt;
 One benefit of this decomposition is that each of the variables can be updated in an online fashion.   &lt;/p&gt;
 &lt;p&gt;Additional player-independent variables that have intuitive value are:&lt;/p&gt;
 &lt;ul&gt;
-&lt;li&gt;$\text{openness}(\text{move})$ is move number of open positions adjacent to a move,&lt;/li&gt;
-&lt;li&gt;$\text{centrality}(\text{move})$ measures how close a move is to the center of the board.&lt;/li&gt;
+&lt;li&gt;&lt;span class="math"&gt;\(\text{openness}(\text{move})\)&lt;/span&gt; is move number of open positions adjacent to a move,&lt;/li&gt;
+&lt;li&gt;&lt;span class="math"&gt;\(\text{centrality}(\text{move})\)&lt;/span&gt; measures how close a move is to the center of the board.&lt;/li&gt;
 &lt;/ul&gt;
 &lt;p&gt;To calculate a value of a move, the ai opponent uses a weighted sum of the above variables.&lt;/p&gt;
 &lt;h3&gt;Easy, Medium and Hard Opponents&lt;/h3&gt;
 &lt;p&gt;Cell Addition is a zero sum game and so your gain is the same as the ai's loss.  Thus, when designing the ai, it will be beneficial to take this into account. &lt;/p&gt;
 &lt;p&gt;The easy ai's value function is simply
-$$
+&lt;/p&gt;
+&lt;div class="math"&gt;$$
 \text{easy}(\text{move}) = \text{centrality}(\text{move});
-$$
+$$&lt;/div&gt;
+&lt;p&gt;
 that is, the easy ai just places it's move in the center most position of the board with ties broken arbitrarily.&lt;/p&gt;
 &lt;p&gt;The hard ai's value function is 
-$$
+&lt;/p&gt;
+&lt;div class="math"&gt;$$
 \begin{split}
 \text{hard}(\text{move}) 
-&amp;amp; = \text{centrality}(\text{move}) + 2\cdot \text{openness}(\text{move})\
-&amp;amp; \quad + \big[ \Delta \text{score}_2(\text{move}) + \Delta \text{score}_1(\text{move}) \big]\
+&amp;amp; = \text{centrality}(\text{move}) + 2\cdot \text{openness}(\text{move})\\
+&amp;amp; \quad + \big[ \Delta \text{score}_2(\text{move}) + \Delta \text{score}_1(\text{move}) \big]\\
 &amp;amp;\quad - \big[ \text{overlap}_2(\text{move}) + \text{overlap}_1(\text{move}) \big]
 .
 \end{split}
-$$
-The idea is to find a tradeoff between exploration and exploitation.  To see this, consider the following formula for the increase in the total overlap of a board when playing $\text{move}$
-$$
+$$&lt;/div&gt;
+&lt;p&gt;
+The idea is to find a tradeoff between exploration and exploitation.  To see this, consider the following formula for the increase in the total overlap of a board when playing &lt;span class="math"&gt;\(\text{move}\)&lt;/span&gt;
+&lt;/p&gt;
+&lt;div class="math"&gt;$$
 \Delta\text{total_overlap}_p(\text{move}) = \text{openness}_p(\text{move}) - \text{overlap}_p(\text{move}).
-$$
+$$&lt;/div&gt;
+&lt;p&gt;
 The hard ai's value approximation can now be rewritten as
-$$
+&lt;/p&gt;
+&lt;div class="math"&gt;$$
 \begin{split}
 \text{hard}(\text{move}) 
-&amp;amp; = \text{centrality}(\text{move}) \
-&amp;amp; \quad + \big[ \Delta \text{score}_2(\text{move}) + \Delta \text{score}_1(\text{move}) \big]\
+&amp;amp; = \text{centrality}(\text{move}) \\
+&amp;amp; \quad + \big[ \Delta \text{score}_2(\text{move}) + \Delta \text{score}_1(\text{move}) \big]\\
 &amp;amp; \quad + \big[ \Delta\text{total_overlap}_2(\text{move}) + \Delta\text{total_overlap}_1(\text{move}) \big]
 .
 \end{split}
-$$
-The two first two terms after $\text{centrality}$ encourage exploitation of the current game state while the last two terms encourage exploration of the board.  &lt;/p&gt;
+$$&lt;/div&gt;
+&lt;p&gt;
+The two first two terms after &lt;span class="math"&gt;\(\text{centrality}\)&lt;/span&gt; encourage exploitation of the current game state while the last two terms encourage exploration of the board.  &lt;/p&gt;
 &lt;p&gt;The medium ai's value is the average of the easy and hard opponent's values; i.e., 
-$$
+&lt;/p&gt;
+&lt;div class="math"&gt;$$
 \text{medium}(\text{move}) =
 0.5\cdot \text{hard}(\text{move})  + 
 0.5\cdot \text{easy}(\text{move}) .
-$$&lt;/p&gt;
+$$&lt;/div&gt;
 &lt;h3&gt;Adaptive (R implementation only)&lt;/h3&gt;
 &lt;p&gt;The adaptive ai has a skill level which determines the overall strategy in a game.  &lt;/p&gt;
 &lt;p&gt;The adaptive ai adapts to your play in two ways: &lt;/p&gt;
@@ -248,22 +397,27 @@ $$&lt;/p&gt;
 &lt;li&gt;It adapts its entire strategy after a game.&lt;/li&gt;
 &lt;/ol&gt;
 &lt;p&gt;The adaptive ai uses a convex combination of the easy and hard ai's value approximation.&lt;br&gt;
-$$
+&lt;/p&gt;
+&lt;div class="math"&gt;$$
 \text{adaptive}(\text{move}) 
 = \text{skill}' \cdot \text{hard}(\text{move})
 + (1 - \text{skill}') \cdot  \text{easy}(\text{move}),
-$$
-where $\text{skill}'$ is modified (within-game) skill parameter&lt;/p&gt;
-&lt;p&gt;$$
+$$&lt;/div&gt;
+&lt;p&gt;
+where &lt;span class="math"&gt;\(\text{skill}'\)&lt;/span&gt; is modified (within-game) skill parameter&lt;/p&gt;
+&lt;div class="math"&gt;$$
 \text{skill}' = \text{skill} + 0.01\cdot ( \text{your_score} - \text{ai_score} ).
-$$
+$$&lt;/div&gt;
+&lt;p&gt;
 Notice that if you are winning, then the effective skill of the ai goes up.  Moreover, if you are winning by a lot then the effective skill will go up by a lot.  &lt;/p&gt;
 &lt;p&gt;At the end of the game, the ai's skill level is updated according to the following formula:
-$$
-\text{skill} \leftarrow \text{skill} + 0.01\cdot  \frac{ \text{your_score} - \text{ai_score}  }{1 + \mathbb{I} { \text{your_score} &amp;lt; \text{ai_score} }  }.
-$$
+&lt;/p&gt;
+&lt;div class="math"&gt;$$
+\text{skill} \leftarrow \text{skill} + 0.01\cdot  \frac{ \text{your_score} - \text{ai_score}  }{1 + \mathbb{I} \{ \text{your_score} &amp;lt; \text{ai_score} \}  }.
+$$&lt;/div&gt;
+&lt;p&gt;
 Hence, if you beat the ai, then its skill goes up by the score difference; if you lose, then its skill goes down in proportion to half the absolute score difference.  If the game is a draw, then the skill level stays the same.&lt;/p&gt;
-&lt;p&gt;Ignoring within-game adaptivity, when $\text{skill}=0$ you are essentially playing against the easy ai, when $\text{skill}=1$ you are playing against the hard ai, and when $\text{skill}=0.5$ you are playing against the medium ai.&lt;/p&gt;
+&lt;p&gt;Ignoring within-game adaptivity, when &lt;span class="math"&gt;\(\text{skill}=0\)&lt;/span&gt; you are essentially playing against the easy ai, when &lt;span class="math"&gt;\(\text{skill}=1\)&lt;/span&gt; you are playing against the hard ai, and when &lt;span class="math"&gt;\(\text{skill}=0.5\)&lt;/span&gt; you are playing against the medium ai.&lt;/p&gt;
 &lt;h1&gt;Future Add-Ons&lt;/h1&gt;
 &lt;p&gt;There are many variations on this game that can be played.  What follows is an unordered list of possible improvements/variants of the game.&lt;/p&gt;
 &lt;ul&gt;
@@ -302,7 +456,62 @@ Hence, if you beat the ai, then its skill goes up by the score difference; if yo
 &lt;li&gt;
 &lt;p&gt;&lt;strong&gt;Custom Board Builder&lt;/strong&gt;: Create a GUI that allows the user to click on a grid to define the feasible positions of thier custom board.  Boards can naturally be stored as a binary matrix, thus it would be easy to let the user save and upload thier board.  &lt;/p&gt;
 &lt;/li&gt;
-&lt;/ul&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Matt Motoki</dc:creator><pubDate>Sun, 26 Nov 2017 10:01:00 -1000</pubDate><guid isPermaLink="false">tag:None,2017-11-26:/cell-division.html</guid><category>Artificial Intelligence</category><category>Games</category></item><item><title>Decision Matrix</title><link>/decision-matrix.html</link><description>&lt;p&gt;If you are like me then you have a million things that you want to do but no clear order in which to do them.  In this post, I will introduce the Decision Matrix which is a tool that breaks down a persons utility funciton into a linear combination of features.   I relate the decision matrix to Utility theory and show how we formulate the problem of finding the optimal schedule as a linear program. 
+&lt;/ul&gt;
+&lt;script type="text/javascript"&gt;if (!document.getElementById('mathjaxscript_pelican_#%@#$@#')) {
+    var align = "center",
+        indent = "0em",
+        linebreak = "false";
+
+    if (false) {
+        align = (screen.width &lt; 768) ? "left" : align;
+        indent = (screen.width &lt; 768) ? "0em" : indent;
+        linebreak = (screen.width &lt; 768) ? 'true' : linebreak;
+    }
+
+    var mathjaxscript = document.createElement('script');
+    mathjaxscript.id = 'mathjaxscript_pelican_#%@#$@#';
+    mathjaxscript.type = 'text/javascript';
+    mathjaxscript.src = 'https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.3/latest.js?config=TeX-AMS-MML_HTMLorMML';
+    mathjaxscript[(window.opera ? "innerHTML" : "text")] =
+        "MathJax.Hub.Config({" +
+        "    config: ['MMLorHTML.js']," +
+        "    TeX: { extensions: ['AMSmath.js','AMSsymbols.js','noErrors.js','noUndefined.js'], equationNumbers: { autoNumber: 'AMS' } }," +
+        "    jax: ['input/TeX','input/MathML','output/HTML-CSS']," +
+        "    extensions: ['tex2jax.js','mml2jax.js','MathMenu.js','MathZoom.js']," +
+        "    displayAlign: '"+ align +"'," +
+        "    displayIndent: '"+ indent +"'," +
+        "    showMathMenu: true," +
+        "    messageStyle: 'normal'," +
+        "    tex2jax: { " +
+        "        inlineMath: [ ['\\\\(','\\\\)'] ], " +
+        "        displayMath: [ ['$$','$$'] ]," +
+        "        processEscapes: true," +
+        "        preview: 'TeX'," +
+        "    }, " +
+        "    'HTML-CSS': { " +
+        "        styles: { '.MathJax_Display, .MathJax .mo, .MathJax .mi, .MathJax .mn': {color: 'inherit ! important'} }," +
+        "        linebreaks: { automatic: "+ linebreak +", width: '90% container' }," +
+        "    }, " +
+        "}); " +
+        "if ('default' !== 'default') {" +
+            "MathJax.Hub.Register.StartupHook('HTML-CSS Jax Ready',function () {" +
+                "var VARIANT = MathJax.OutputJax['HTML-CSS'].FONTDATA.VARIANT;" +
+                "VARIANT['normal'].fonts.unshift('MathJax_default');" +
+                "VARIANT['bold'].fonts.unshift('MathJax_default-bold');" +
+                "VARIANT['italic'].fonts.unshift('MathJax_default-italic');" +
+                "VARIANT['-tex-mathit'].fonts.unshift('MathJax_default-italic');" +
+            "});" +
+            "MathJax.Hub.Register.StartupHook('SVG Jax Ready',function () {" +
+                "var VARIANT = MathJax.OutputJax.SVG.FONTDATA.VARIANT;" +
+                "VARIANT['normal'].fonts.unshift('MathJax_default');" +
+                "VARIANT['bold'].fonts.unshift('MathJax_default-bold');" +
+                "VARIANT['italic'].fonts.unshift('MathJax_default-italic');" +
+                "VARIANT['-tex-mathit'].fonts.unshift('MathJax_default-italic');" +
+            "});" +
+        "}";
+    (document.body || document.getElementsByTagName('head')[0]).appendChild(mathjaxscript);
+}
+&lt;/script&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Matt Motoki</dc:creator><pubDate>Sun, 26 Nov 2017 10:01:00 -1000</pubDate><guid isPermaLink="false">tag:None,2017-11-26:/cell-division.html</guid><category>Artificial Intelligence</category><category>Games</category></item><item><title>Decision Matrix</title><link>/decision-matrix.html</link><description>&lt;p&gt;If you are like me then you have a million things that you want to do but no clear order in which to do them.  In this post, I will introduce the Decision Matrix which is a tool that breaks down a persons utility funciton into a linear combination of features.   I relate the decision matrix to Utility theory and show how we formulate the problem of finding the optimal schedule as a linear program. 
 I then show how I use it to prioritize my day.&lt;/p&gt;
 &lt;p&gt;We seek to maximize the expected utility of our schedule subject to the constraint that all tasks must be done on time (this constraint can be relaxed by introducing a penalty for late tasks). &lt;/p&gt;
 &lt;p&gt;Every action we take has a consequece, it has a benefit, it takes some time and sometimes it has a deadline associated with.  When we are faced with the problem of choosing which action to take&lt;/p&gt;
@@ -311,7 +520,86 @@ I then show how I use it to prioritize my day.&lt;/p&gt;
 &lt;h1&gt;Solution&lt;/h1&gt;
 &lt;h1&gt;Case Study&lt;/h1&gt;
 &lt;h1&gt;Extensions - Soft Deadlines&lt;/h1&gt;
-&lt;h1&gt;Extensions - Nonlinear Objective Function&lt;/h1&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Matt Motoki</dc:creator><pubDate>Sun, 26 Nov 2017 10:01:00 -1000</pubDate><guid isPermaLink="false">tag:None,2017-11-26:/decision-matrix.html</guid><category>misc</category></item><item><title>My Jouney</title><link>/my-journey.html</link><description>&lt;h1&gt;&lt;/h1&gt;
+&lt;h1&gt;Extensions - Nonlinear Objective Function&lt;/h1&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Matt Motoki</dc:creator><pubDate>Sun, 26 Nov 2017 10:01:00 -1000</pubDate><guid isPermaLink="false">tag:None,2017-11-26:/decision-matrix.html</guid><category>misc</category></item><item><title>Ethical AI</title><link>/ethical-ai.html</link><description>&lt;p&gt;Job loss because of AI&lt;/p&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Matt Motoki</dc:creator><pubDate>Sun, 26 Nov 2017 10:01:00 -1000</pubDate><guid isPermaLink="false">tag:None,2017-11-26:/ethical-ai.html</guid><category>Artificial Intelligence</category></item><item><title>Hawaii Machine Learning Meetup Challenge</title><link>/hawaii-machinelearning-meetup-challenge.html</link><description>&lt;h2&gt;About the Hawaii Machine Learning Meetup&lt;/h2&gt;
+&lt;h3&gt;Goals of Our Organization&lt;/h3&gt;
+&lt;p&gt;Our roles as organizers of the Hawaii Machine Learning Meetup is to:&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;Host talks and presentations given by our members, academics, and people in industry. This is our main role. As organizers, we will work on contributing our own presentations to the meetup, but we want the focus to be on how the community in Hawaii is using machine learning.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Promote an understanding of machine learning through study groups. This is of secondary importance. We plan to organize study groups for members enrolled in or auditing online courses. We also plan to hold a periodic review session for the material covered in the course. If you are interested in going one of our study group sessions send us an email at hawaiimachinelearning@gmail.com.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Organize local machine learning competitions &amp;amp; encourage participation in global competitions. We believe that participating in machine learning competitions is a great way to apply machine learning techniques and also a great way to learn new techniques.&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;The Hawaii Machine Learning Meetup is a group of students, scientists, engineers, entrepreneurs, and everyday people who are interested in machine learning and related artificial intelligence technologies. Our goal is to promote an interest in Machine Learning &amp;amp; Artificial Intelligence and increase the adoption of these technologies in Hawaii.&lt;/p&gt;
+&lt;p&gt;The Hawaii Machine Leaning Meetup is holding a local machine learning competition open to anyone in Hawaii. &lt;/p&gt;
+&lt;p&gt;The competition will serve to:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Promote machine learning in Hawaii&lt;/li&gt;
+&lt;li&gt;Provide an opportunity to analyze and extract insights from data&lt;/li&gt;
+&lt;li&gt;Teach fundamental machine learning techniques&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;TutorialsWe  plan  to  hold  optional  tutorials  to  teach  the  fundamentals  of  machine  learning.  Tutorial  1:  Exploratory  Data  Analysis  (EDA)  and  Feature  Engineering  –EDA  is  one  of  the  first  steps  in  a  machine  learning  pipeline.    It  is  where  analysts  gain  intuition  about  the  dataset.    Feature  engineering  is  the  process  in  which  raw  data  is  transformed  into  informative  representations  (known  as  features).    Feature  engineering  provides  an  opportunity  for  analysts  to  impart  their  intuition  and  domain  expertise  into  the  machine  learning  pipeline.Tutorial  2:  Training  and  Prediction  –During  training,  machine  learning  models  learn  to  map  input  data  into  predictions.    We  will  cover  this  process  for  standard  machine  learning  models.    Tutorial  3:  Cross  Validation  and  Model  Selection  –Cross  validation  is  the  gold  standard  for  estimating  a  machine  learning  algorithm’s  performance.  Cross  validation  can  be  used  to  select  the  best  machine  learning  model  forthe  task  at  hand.    Cross  validation  is  a  key  technique  that  every  machine  learning  practitioner  should  understand.  Tutorial  4:  Model  Ensembling  and  Blending  –Model  ensembling  is  a  technique  for  combining  the  predictions  of  multiple  machine  learning  algorithms.    Ensembling  is  essential  for  extracting  peak  performance  from  machine  learning  models.&lt;/p&gt;
+&lt;p&gt;Your challenge is to predict online retail sales from transaction data. Use any algorithm you like: train your own neural networks, grow your own decision trees, even spawn an AI to solve the problem for you.&lt;/p&gt;
+&lt;p&gt;If you are new to machine learning, come and join our weekly tutorial sessions to learn the fundamentals of machine learning. If you are are experienced with machine learning, come and show off your skills.&lt;/p&gt;
+&lt;p&gt;Join us to advance the field of machine learning in Hawaii.&lt;/p&gt;
+&lt;p&gt;If you are looking to participate in the competition please use the following link.&lt;/p&gt;
+&lt;p&gt;If you have any questions, contact us as at hawaiimachinelearning@gmail.com&lt;/p&gt;
+&lt;p&gt;Competition Details
+General Objectives
+The competition will provide a low-pressure environment that&lt;/p&gt;
+&lt;p&gt;Promotes machine learning in Hawaii
+Provides an opportunity to gain experience analyzing data
+Teaches fundamental machine learning techniques
+This competition will be valuable to beginners looking to get a start in machine learning. At the same time, this competition will be beneficial to machine learning experts who are interested in applying start-of-the-art techniques to solve real-word problems.&lt;/p&gt;
+&lt;p&gt;Task
+Participants are tasked with predicting sales transactions for online retail stores. Methods developed in this competition will be readily generalized to sales forecasting tasks here in Hawaii.&lt;/p&gt;
+&lt;p&gt;Evaluation
+The competition will evaluate participants objectively using the data rather than subjectively based on human judgement. Participants are ranked on how well they can predict test data (the ground truth is withheld from the participants). The metric that we will use for ranking is the root mean squared log error which is standard for this type of problem.&lt;/p&gt;
+&lt;p&gt;Rules
+Participants can form teams of any size.
+Private sharing of code or data outside of teams in not permitted. It’s okay to share code if made available to all participants on the forums.
+Having multiple accounts per participant is not allowed.
+Participants can submit up to 5 submissions per day. Participants will be allowed to submit 2 submissions for evaluation on the test set.
+Tutorials
+We plan to hold optional tutorials to teach the fundamentals of machine learning. The tutorials are created by machine learning experts. Tutorials will be given in-person, but we will also try to stream the content.&lt;/p&gt;
+&lt;p&gt;Tutorial 1: Exploratory Data Analysis (EDA) and Feature Engineering
+Tutorial 2: Training and Prediction
+Tutorial 3: Cross Validation and Model Selection
+Tutorial 4: Model Ensembling and Blending
+Kernels
+We plan to have a panel of judges who subjectively evaluate kernel submissions based on the following criteria:&lt;/p&gt;
+&lt;p&gt;Originality – does the kernel contain original material
+Helpfulness – does the kernel provide valuable information for the task at hand; the number of upvotes is one measure of helpfulness
+Correctness – are the technical details of the kernel correct, this is the most important aspect of the kernel
+The best kernel will be recognized.&lt;/p&gt;
+&lt;p&gt;Competition Timeline
+The competition is planned to start on March 30th and to finish on April 30th. We will wrap-up the competition on May 4 th.&lt;/p&gt;
+&lt;p&gt;Week 0, Friday March 30, 6:00 PM: Start Competition&lt;/p&gt;
+&lt;p&gt;Description: Kick-off the event. Discuss the competition task, rules, and timeline. Setup complete beginners. Encourage team formation.
+Venue: Presentation Room at Manoa Innovation Center
+Week 1, Monday April 2, 6:00 PM: Tutorial 1&lt;/p&gt;
+&lt;p&gt;Description: Exploratory Data Analysis (EDA) and Feature Engineering
+Venue: Ideation Room at the Manoa Innovation Center
+Week 2, Monday April 9, 6:00 PM: Tutorial 2&lt;/p&gt;
+&lt;p&gt;Description: Training and Prediction
+Venue: Ideation Room at the Manoa Innovation Center
+Week 3, Monday April 16, 6:00 PM: Tutorial 3&lt;/p&gt;
+&lt;p&gt;Description: Cross Validation and Model Selection
+Venue: Ideation Room at the Manoa Innovation Center
+Week 4, Monday April 23, 6:00 PM: Tutorial 4&lt;/p&gt;
+&lt;p&gt;Description: Model Ensembling and Blending
+Venue: Ideation Room at the Manoa Innovation Center
+Week 5a, Monday April 30, 2:00 PM: End Competition&lt;/p&gt;
+&lt;p&gt;Description: End competition on Monday at 2:00 PM HST (Tuesday 00:00 UTC). No new submissions will be allowed. Participants will be notified of the competition’s end. The top 3 teams will be asked to submit their code and prepare their presentations.
+Venue: None
+Week 5b, Friday May 4, 6:00 PM: Winner’s Presentations&lt;/p&gt;
+&lt;p&gt;Description: Finalize the competition results. Judges will explain their choice for Best Kernel. Winners will present their solutions (3rd → 2nd → 1st).
+Venue: Presentation Room at Manoa Innovation Center
+We may host a follow-up meetup for any participant interested in presenting their solution or kernel.&lt;/p&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Matt Motoki</dc:creator><pubDate>Sun, 26 Nov 2017 10:01:00 -1000</pubDate><guid isPermaLink="false">tag:None,2017-11-26:/hawaii-machinelearning-meetup-challenge.html</guid><category>Meetup</category><category>Machine Learning Competitions</category><category>Kaggle</category></item><item><title>My Jouney</title><link>/my-journey.html</link><description>&lt;h1&gt;&lt;/h1&gt;
 &lt;p&gt;I always loved math.&lt;/p&gt;
 &lt;p&gt;Took a detour. &lt;/p&gt;
 &lt;p&gt;Returned 5 years after high school with a passion. &lt;/p&gt;
@@ -323,7 +611,7 @@ real-world  problems. &lt;/p&gt;
 &lt;p&gt;I switched majors to Electrical Engineering which is very mathematical and has a large intersection with computer science.  &lt;/p&gt;
 &lt;p&gt;I was intrigued by control theory, signal processing and optimization.  I enjoyed how the solutions to were always deeply rooted in mathematical theory yet the main focus was always to do something useful.  &lt;/p&gt;
 &lt;p&gt;This is were I got my first taste of computers extending human abilities--in EE we make computers and devices do cool things, but behind the scenes there is always a smart human setting things up and ensuring that things don't go crazy.  &lt;/p&gt;
-&lt;p&gt;. &lt;/p&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Matt Motoki</dc:creator><pubDate>Sun, 26 Nov 2017 10:01:00 -1000</pubDate><guid isPermaLink="false">tag:None,2017-11-26:/my-journey.html</guid><category>Bio</category></item><item><title>Reflection: Tackling the Challenges of Big Data</title><link>/tackling-the-challenges-of-big-data-reflection.html</link><description>&lt;p&gt;Three years ago, I enrolled in "Tackling the Challenges of Big Data".&lt;/p&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Matt Motoki</dc:creator><pubDate>Sun, 26 Nov 2017 10:01:00 -1000</pubDate><guid isPermaLink="false">tag:None,2017-11-26:/tackling-the-challenges-of-big-data-reflection.html</guid><category>Online Courses</category></item><item><title>Towards Safer AI</title><link>/towards-safer-ai.html</link><description>&lt;p&gt;&amp;lt;&amp;lt;&amp;lt;&amp;lt;&amp;lt;&amp;lt;&amp;lt; HEAD
+&lt;p&gt;. &lt;/p&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Matt Motoki</dc:creator><pubDate>Sun, 26 Nov 2017 10:01:00 -1000</pubDate><guid isPermaLink="false">tag:None,2017-11-26:/my-journey.html</guid><category>Bio</category></item><item><title>Realistic Reinforcement Learning</title><link>/realistic-reinforcement-learning.html</link><description>&lt;p&gt;A problem with RL systems is that they are still partly a black box.  By that I mean we cannot explain intuitively what they are doing and we can say with certainty how these systems will react in new environemnt. &lt;/p&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Matt Motoki</dc:creator><pubDate>Sun, 26 Nov 2017 10:01:00 -1000</pubDate><guid isPermaLink="false">tag:None,2017-11-26:/realistic-reinforcement-learning.html</guid><category>Artificial Intelligence</category><category>Reinforcement Learning</category></item><item><title>Reflection: Tackling the Challenges of Big Data</title><link>/tackling-the-challenges-of-big-data-reflection.html</link><description>&lt;p&gt;Three years ago, I enrolled in "Tackling the Challenges of Big Data".&lt;/p&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Matt Motoki</dc:creator><pubDate>Sun, 26 Nov 2017 10:01:00 -1000</pubDate><guid isPermaLink="false">tag:None,2017-11-26:/tackling-the-challenges-of-big-data-reflection.html</guid><category>Online Courses</category></item><item><title>Towards Safer AI</title><link>/towards-safer-ai.html</link><description>&lt;p&gt;&amp;lt;&amp;lt;&amp;lt;&amp;lt;&amp;lt;&amp;lt;&amp;lt; HEAD
 Use of simulation to test AI systems. In EE we can tell if a system will be stable using theory or by simulating the system on a computer. Simple error metrics used to evaluate performance in modern AI and ML algorithms may not account for the larger implications of the predictions
 =======
 d&lt;/p&gt;

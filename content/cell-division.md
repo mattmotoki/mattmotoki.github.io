@@ -63,7 +63,7 @@ blank_plot <- function() {
   )
 }
 ```
-The natural way to define the outline of a cell is in terms of its \(x\) and \(y\) coordinates.  Alternatively, the outline can be parameterized by an angle \(\theta\in[0,\, 2\pi]\)  and a radius $r$ and then mapped back to the $xy$-plane using the formulas
+The natural way to define the outline of a cell is in terms of its $x$ and $y$ coordinates.  Alternatively, the outline can be parameterized by an angle $\theta\in[0,\, 2\pi]$  and a radius $r$ and then mapped back to the $xy$-plane using the formulas
 $$
 x = r\cdot \cos(\theta)
 \qquad

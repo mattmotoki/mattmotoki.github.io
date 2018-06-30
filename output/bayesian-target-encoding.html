@@ -4,17 +4,14 @@
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <meta name="description" content="Problem Formlation Solution">
+        <meta name="description" content="Summary This blog provides a mathematical framework for the common technique for encoding categorical variables called target encoding. The method relies on Bayesian statistics and is well-suited...">
         <meta name="keywords" content="Bayesian Statistics, Feature Engineering">
         <link rel="icon" href="/favicon.ico">
 
         <title>Bayesian Target Encoding - Matt Motoki</title>
 
         <!-- Stylesheets -->
-        <link href="/theme/css/bootstrap.min.css" rel="stylesheet">
-        <link href="/theme/css/fonts.css" rel="stylesheet">
-        <link href="/theme/css/nest.css" rel="stylesheet">
-        <link href="/theme/css/pygment.css" rel="stylesheet">
+        <link href="/theme/css/all.min.css" rel="stylesheet">
         <!-- /Stylesheets -->
 
         <!-- RSS Feeds -->
@@ -28,6 +25,17 @@
           <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
         <![endif]-->
 
+        <!-- Google Analytics -->
+        <script>
+          (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+          (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+          m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+          })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+          ga('create', 'UA-89247796-2', 'auto');
+          ga('send', 'pageview');
+        </script>
+        <!-- /Google Analytics -->
 
 
     </head>
@@ -44,6 +52,8 @@
                         <a class="pull-left" href="/">Matt Motoki</a>
                     </div>
                     <div class="nav pull-right">
+                                <a href="/categories.html">Categories</a>
+                                <a href="/tags.html">Tags</a>
                     </div>
                 </div>
             </div>
@@ -75,8 +85,120 @@
 
         <!-- Content -->
     <div class="container content">
-        <h1>Problem Formlation</h1>
-<h1>Solution</h1>
+        <h1>Summary</h1>
+<p>This blog provides a mathematical framework for the common technique for encoding categorical variables called target encoding.  The method relies on Bayesian statistics and is well-suited for online learning.  Code for implementing the Bayesian target encoding is provided and applied to the recent Avito Kaggle Competition where my team and I took 14th place. </p>
+<h1>Background</h1>
+<p>Target encoding is a common technique for encoding a categorical variable. The idea is to capture the relationship between the levels of categorical variable and the target variable by calculating statistics for each level.  The most commonlu used statistic is the mean, in which case it is called mean target encoding.  Catboost and LightGBM offer built-in mean targt encoding. </p>
+<p>The main drawback of target encoding is that it leaks information about the variable we are trying to predict.  If we have levels with only a few observations then we risk overfitting our data which leads to poor generalization of our models.  This problem is acute when dealing with high cardinality categorical variables.  Regularization either by smoothing estimates or adding noise to the data is the common approach to dealing with overfitting.  By adopting a Bayesian framework, we can handle regularization in a systematic yet intuitive way.  Furthermore, the Bayesian framework is well-suited for online learning requiring only minimal updates as new data is aquired. </p>
+<p>In what follows I will discuss Bayesian target encoding in the context of binary classification.  However, the framework can be adapted to other target distributions. </p>
+<h1>Theory</h1>
+<p>The beta distribution is parameterized by <span class="math">\(\alpha\)</span> and <span class="math">\(\beta\)</span> which can respectively be thought of as the number of positive and negative examples in a repeated Bernoulli experiment.  We do not want to search over <span class="math">\(\alpha\)</span> independently <span class="math">\(\beta\)</span>.  Instead, we would prefer to search over <span class="math">\(\alpha\)</span> and <span class="math">\(\beta\)</span> such that the mean of the distribution is constant
+</p>
+<div class="math">$$
+\mu_{prior} = \frac{\alpha}{\alpha + \beta}. 
+$$</div>
+<p>If we may have intuition about the prior mean (e.g,. in the case of hierarchical Bayesian target encoding) or we may not.  In the latter case we can simply calculate the mean over the entire training set (we leak target information by doing this but the risk of overfitting is minimal).  With the mean known, we can reparamertize the beta distribution in term of <span class="math">\(\tau = \alpha + \beta\)</span>.  Intuitvely, <span class="math">\(tau\)</span> can be thought of the effective sample size from the prior distribution.  Rewriting the above equation we get
+</p>
+<div class="math">$$
+\alpha = \tau \cdot \mu_{prior}  \quad\text{and}\quad \beta = \tau \cdot(1 - \mu_{prior}).
+$$</div>
+<p>From <a href="https://people.eecs.berkeley.edu/~jordan/courses/260-spring10/other-readings/chapter9.pdf">Eq. (9.20)</a>, the posterior mean can be calculated as a weighted average of the prior mean with the MLE 
+</p>
+<div class="math">$$
+\mu_{posterior} = \kappa \cdot \mu_{prior} + (1-\kappa) \cdot \frac{n}{N}, 
+$$</div>
+<p>
+where <span class="math">\(n\)</span> is the total number of positive examples, <span class="math">\(N\)</span> is the total number of examples, and the weight <span class="math">\(\kappa\)</span> is 
+</p>
+<div class="math">$$
+\kappa = \frac{\tau}{N+\tau}.
+$$</div>
+<p>
+We see that increasing <span class="math">\(tau\)</span> makes <span class="math">\(kappa\)</span> closer to 1 and thus the posterior mean becomes closer to the prior mean.  Hence, <span class="math">\(\tau\)</span> is a regularization hyperparameter that we can tune to control the complexity of our target encoded variable.  Another way to write the posterior mean is
+</p>
+<div class="math">$$
+\mu_{posterior} = \frac{\tau \cdot \mu_{prior} + n}{N + \tau}.
+$$</div>
+<p>This equation shows the simple update rule for the posterior mean; all we need to keep track of the counts of 1's and 0's.  </p>
+<p>Note that the parameters of the posterior distribution are 
+</p>
+<div class="math">$$
+\alpha_{posterior} = \tau \cdot \mu_{prior} + n \quad\text{and}\quad \beta_{posterior} = N-n + \tau \cdot (1 - \mu_{prior}).
+$$</div>
+<p>
+Since the posterior parameters are known we can use them to calculate other statistics; e.g., </p>
+<div class="math">$$
+\mathrm{var} = \frac{\alpha\beta}{(\alpha + \beta)^2(\alpha + \beta+1)}
+$$</div>
+<p>
+and
+</p>
+<div class="math">$$
+\mathrm{skewness} = \frac{2 (\beta - \alpha) \sqrt{\alpha + \beta + 1}}{(\alpha + \beta+1)\sqrt{\alpha\beta}}.
+$$</div>
+<p>Furthermore, we can add noise to the target encoded variables by sampling from the posterior or prior distribution.  For example, fix the noise strength <span class="math">\(\epsilon\)</span> we can add noise using the following formula
+</p>
+<div class="math">$$
+\tilde{\mu}_{posterior} = (1-\epsilon)\cdot \mu_{posterior} + \epsilon\cdot X_{posterior}
+$$</div>
+<p>
+where <span class="math">\(X_{posterior} \sim \mathrm{Beta}(\alpha_{posterior}, \beta_{posterior})\)</span>. </p>
+<h1>Examples</h1>
+<script type="text/javascript">if (!document.getElementById('mathjaxscript_pelican_#%@#$@#')) {
+    var align = "center",
+        indent = "0em",
+        linebreak = "false";
+
+    if (false) {
+        align = (screen.width < 768) ? "left" : align;
+        indent = (screen.width < 768) ? "0em" : indent;
+        linebreak = (screen.width < 768) ? 'true' : linebreak;
+    }
+
+    var mathjaxscript = document.createElement('script');
+    mathjaxscript.id = 'mathjaxscript_pelican_#%@#$@#';
+    mathjaxscript.type = 'text/javascript';
+    mathjaxscript.src = 'https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.3/latest.js?config=TeX-AMS-MML_HTMLorMML';
+    mathjaxscript[(window.opera ? "innerHTML" : "text")] =
+        "MathJax.Hub.Config({" +
+        "    config: ['MMLorHTML.js']," +
+        "    TeX: { extensions: ['AMSmath.js','AMSsymbols.js','noErrors.js','noUndefined.js'], equationNumbers: { autoNumber: 'AMS' } }," +
+        "    jax: ['input/TeX','input/MathML','output/HTML-CSS']," +
+        "    extensions: ['tex2jax.js','mml2jax.js','MathMenu.js','MathZoom.js']," +
+        "    displayAlign: '"+ align +"'," +
+        "    displayIndent: '"+ indent +"'," +
+        "    showMathMenu: true," +
+        "    messageStyle: 'normal'," +
+        "    tex2jax: { " +
+        "        inlineMath: [ ['\\\\(','\\\\)'] ], " +
+        "        displayMath: [ ['$$','$$'] ]," +
+        "        processEscapes: true," +
+        "        preview: 'TeX'," +
+        "    }, " +
+        "    'HTML-CSS': { " +
+        "        styles: { '.MathJax_Display, .MathJax .mo, .MathJax .mi, .MathJax .mn': {color: 'inherit ! important'} }," +
+        "        linebreaks: { automatic: "+ linebreak +", width: '90% container' }," +
+        "    }, " +
+        "}); " +
+        "if ('default' !== 'default') {" +
+            "MathJax.Hub.Register.StartupHook('HTML-CSS Jax Ready',function () {" +
+                "var VARIANT = MathJax.OutputJax['HTML-CSS'].FONTDATA.VARIANT;" +
+                "VARIANT['normal'].fonts.unshift('MathJax_default');" +
+                "VARIANT['bold'].fonts.unshift('MathJax_default-bold');" +
+                "VARIANT['italic'].fonts.unshift('MathJax_default-italic');" +
+                "VARIANT['-tex-mathit'].fonts.unshift('MathJax_default-italic');" +
+            "});" +
+            "MathJax.Hub.Register.StartupHook('SVG Jax Ready',function () {" +
+                "var VARIANT = MathJax.OutputJax.SVG.FONTDATA.VARIANT;" +
+                "VARIANT['normal'].fonts.unshift('MathJax_default');" +
+                "VARIANT['bold'].fonts.unshift('MathJax_default-bold');" +
+                "VARIANT['italic'].fonts.unshift('MathJax_default-italic');" +
+                "VARIANT['-tex-mathit'].fonts.unshift('MathJax_default-italic');" +
+            "});" +
+        "}";
+    (document.body || document.getElementsByTagName('head')[0]).appendChild(mathjaxscript);
+}
+</script>
 
 
         
@@ -98,14 +220,14 @@
                         <div class="footer-title"></div>
                         <ul class="list-unstyled">
                             <li><a href="https://www.kaggle.com/mmotoki" target="_blank">Kaggle</a></li>
-                            <li><a href="https://codepen.io/mmotoki/" target="_blank">CodePen</a></li>
+                            <li><a href="https://www.linkedin.com/in/matt-motoki-9b7884a2/" target="_blank">LinkedIn</a></li>
                         </ul>
                     </div>
                     <div class="col-xs-4 col-sm-3 col-md-3 col-lg-3">
                         <div class="footer-title"></div>
                         <ul class="list-unstyled">
-                            <li><a href="http://getpelican.com/" target="_blank">Pelican</a></li>
-                            <li><a href="http://python.org/" target="_blank">Python.org</a></li>
+                            <li><a href="https://github.com/mattmotoki/" target="_blank">GitHub</a></li>
+                            <li><a href="https://codepen.io/mmotoki/" target="_blank">CodePen</a></li>
                         </ul>
                     </div> 
                     <div class="col-xs-12 col-sm-3 col-md-3 col-lg-3">
