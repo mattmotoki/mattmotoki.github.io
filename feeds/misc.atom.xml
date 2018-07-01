@@ -1,7 +1,162 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>Matt Motoki - misc</title><link href="/" rel="alternate"></link><link href="/feeds/misc.atom.xml" rel="self"></link><id>/</id><updated>2017-11-28T12:30:00-10:00</updated><entry><title>Bayesian Target Encoding</title><link href="/bayesian-target-encoding.html" rel="alternate"></link><published>2017-11-26T10:01:00-10:00</published><updated>2017-11-28T12:30:00-10:00</updated><author><name>Matt Motoki</name></author><id>tag:None,2017-11-26:/bayesian-target-encoding.html</id><summary type="html">&lt;p&gt;Bayesian target encoding is feature engineering technique used to encode categorical variables for supervised learning.&lt;/p&gt;</summary><content type="html">&lt;h1&gt;Problem Formlation&lt;/h1&gt;
-&lt;p&gt;&lt;span class="math"&gt;\(y = mx + b\)&lt;/span&gt;&lt;/p&gt;
-&lt;h1&gt;Solution&lt;/h1&gt;
+<feed xmlns="http://www.w3.org/2005/Atom"><title>Matt Motoki - misc</title><link href="/" rel="alternate"></link><link href="/feeds/misc.atom.xml" rel="self"></link><id>/</id><updated>2018-11-28T12:30:00-10:00</updated><entry><title>Organizing the Hawaii Machine Learning Meetup</title><link href="/hawaii-machinelearning-meetup.html" rel="alternate"></link><published>2018-06-29T02:48:00-10:00</published><updated>2018-06-29T02:48:00-10:00</updated><author><name>Matt Motoki</name></author><id>tag:None,2018-06-29:/hawaii-machinelearning-meetup.html</id><summary type="html">&lt;p&gt;The Hawaii Machine Learning Meetup held Hawaii's first machine learning competition.&lt;/p&gt;</summary><content type="html">&lt;h1&gt;Summary&lt;/h1&gt;
+&lt;p&gt;In July of 2017, my friends &lt;a href="http://thomasyokota.com/"&gt;Tom Yokota&lt;/a&gt;, &lt;a href="https://www.kaggle.com/datascience808"&gt;Sora Khongnawong (Paul)&lt;/a&gt; and I decided to create a Meetup centered around data science, machine learning, and artificial intelligence in Hawaii.  We sought to promte these technologies and increase their adoption in Hawaii.  &lt;/p&gt;
+&lt;p&gt;It took more work than we expected but we now have a vibrant community of 250+ members, we've held periodic study groups for an online machine learning course, and we hosted Hawaii's very first machine learning competition. Overall, I wold consider the Meetup a success. &lt;/p&gt;
+&lt;h2&gt;Motivation&lt;/h2&gt;
+&lt;p&gt;In Hawaii, most people agree that businesses typically adopt technology 5-10 years after the mainland US.  This was especially true for data science and machine learning.  At the time, Tom and I were both working as data scientists at two of the very few consultancy firm specializing in analytics.  At work, one of our biggest hurdles was explaining to our clients what data science and machine learning is and what it isn't, what it could and couldn't do.  As frustrating as it was, the lack of understanding of data science and machine learning was understandable; at the time, there was almost no community resources for data science and machine learning--we wanted to change that.  &lt;/p&gt;
+&lt;p&gt;On Jul 19, 2017 we created the Hawaii Machine Learning Meetup. Two days later we had 20+ members.  We were underprepared--we didn't have any meetup content lined up and no place to actually host a meetup. All we knew was that we wanted to promote machine learning in Hawaii. After assessing the state of machine learning in Hawaii, we came up with our three main goals for the meetup: &lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;Host talks and presentations given by our members, academics, and people in industry.&lt;/strong&gt; This was our main role. As organizers, we would work on contributing our own presentations to the meetup, but we want the focus to be on how the community in Hawaii is using machine learning.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;Promote an understanding of machine learning through study groups.&lt;/strong&gt; This was of secondary importance. We planned to organize study groups for members enrolled in or auditing online courses. We also planned to hold a periodic review session for the material covered in the course. &lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;Organize local machine learning competitions &amp;amp; encourage participation in global competitions.&lt;/strong&gt; We believed that participating in machine learning competitions is a great way to apply machine learning techniques and also a great way to learn new techniques.  &lt;/p&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;Our first Meetup wasn't until September but we once we got started we picked up steam.  In October, we brought on a new organizer Sam Murphy.  With his help we were able to secure the Manoa Innovation Center as our venue for the meetup.  This also meant that we had our first sponsor the Hawaii Technology Development Coporation. &lt;/p&gt;
+&lt;p&gt;In December we started our study group for the &lt;a href="https://www.udemy.com/machinelearning/"&gt;Machine Learning A-Z course&lt;/a&gt; on Udemy.  To complete the course, we outlined a schedule to meet every Saturday for 4 months to discuss a few sections the course.  &lt;/p&gt;
+&lt;p&gt;On March 30th we kicked off Hawaii's first machine learning competition on the Kaggle In-Class platform.  From then until April our members competed to predict the quantity of items sold in online sales transactions.  We held 4 tutorial sessions to help newcomers to competitive machine learning. &lt;/p&gt;
+&lt;p&gt;We've had presentations from our members, researchers from the University of Hawaii's Cancer Research Center, an Assistant Professor in Economics, and even out-of-town guests.  In other words, we met our three main goals for the meetup.  &lt;/p&gt;
+&lt;h1&gt;Conclusion&lt;/h1&gt;
+&lt;p&gt;At the time I was working as a &lt;a href="https://www.zoominfo.com/p/Matthew-Motoki/-1348302200"&gt;data analyst at a local startup&lt;/a&gt; focusing primarily on fundraising analytics for nonprofits. &lt;/p&gt;</content><category term="Meetup"></category></entry><entry><title>Bayesian Target Encoding</title><link href="/bayesian-target-encoding.html" rel="alternate"></link><published>2017-11-26T10:01:00-10:00</published><updated>2017-11-28T12:30:00-10:00</updated><author><name>Matt Motoki</name></author><id>tag:None,2017-11-26:/bayesian-target-encoding.html</id><summary type="html">&lt;p&gt;Bayesian target encoding is feature engineering technique used to encode categorical variables for supervised learning.&lt;/p&gt;</summary><content type="html">&lt;h1&gt;Summary&lt;/h1&gt;
+&lt;p&gt;This blog provides a mathematical framework for the common technique for encoding categorical variables called target encoding.  The method relies on Bayesian statistics and is well-suited for online learning.  Code for implementing the Bayesian target encoding is provided and applied to the recent Avito Kaggle Competition where my team and I took 14th place. &lt;/p&gt;
+&lt;h1&gt;Background&lt;/h1&gt;
+&lt;p&gt;Target encoding is a common technique for encoding a categorical variable. The idea is to capture the relationship between the levels of categorical variable and the target variable by calculating statistics for each level.  The most commonlu used statistic is the mean, in which case it is called mean target encoding.  Catboost and LightGBM offer built-in mean targt encoding. &lt;/p&gt;
+&lt;p&gt;The main drawback of target encoding is that it leaks information about the variable we are trying to predict.  If we have levels with only a few observations then we risk overfitting our data which leads to poor generalization of our models.  This problem is acute when dealing with high cardinality categorical variables.  Regularization either by smoothing estimates or adding noise to the data is the common approach to dealing with overfitting.  By adopting a Bayesian framework, we can handle regularization in a systematic yet intuitive way.  Furthermore, the Bayesian framework is well-suited for online learning requiring only minimal updates as new data is aquired. &lt;/p&gt;
+&lt;p&gt;In what follows I will discuss Bayesian target encoding in the context of binary classification.  However, the framework can be adapted to other target distributions. &lt;/p&gt;
+&lt;h1&gt;Theory&lt;/h1&gt;
+&lt;p&gt;The beta distribution is parameterized by &lt;span class="math"&gt;\(\alpha\)&lt;/span&gt; and &lt;span class="math"&gt;\(\beta\)&lt;/span&gt; which can respectively be thought of as the number of positive and negative examples in a repeated Bernoulli experiment.  We do not want to search over &lt;span class="math"&gt;\(\alpha\)&lt;/span&gt; independently &lt;span class="math"&gt;\(\beta\)&lt;/span&gt;.  Instead, we would prefer to search over &lt;span class="math"&gt;\(\alpha\)&lt;/span&gt; and &lt;span class="math"&gt;\(\beta\)&lt;/span&gt; such that the mean of the distribution is constant
+&lt;/p&gt;
+&lt;div class="math"&gt;$$
+\mu_{prior} = \frac{\alpha}{\alpha + \beta}. 
+$$&lt;/div&gt;
+&lt;p&gt;If we may have intuition about the prior mean (e.g,. in the case of hierarchical Bayesian target encoding) or we may not.  In the latter case we can simply calculate the mean over the entire training set (we leak target information by doing this but the risk of overfitting is minimal).  With the mean known, we can reparamertize the beta distribution in term of &lt;span class="math"&gt;\(\tau = \alpha + \beta\)&lt;/span&gt;.  Intuitvely, &lt;span class="math"&gt;\(tau\)&lt;/span&gt; can be thought of the effective sample size from the prior distribution.  Rewriting the above equation we get
+&lt;/p&gt;
+&lt;div class="math"&gt;$$
+\alpha = \tau \cdot \mu_{prior}  \quad\text{and}\quad \beta = \tau \cdot(1 - \mu_{prior}).
+$$&lt;/div&gt;
+&lt;p&gt;From &lt;a href="https://people.eecs.berkeley.edu/~jordan/courses/260-spring10/other-readings/chapter9.pdf"&gt;Eq. (9.20)&lt;/a&gt;, the posterior mean can be calculated as a weighted average of the prior mean with the MLE 
+&lt;/p&gt;
+&lt;div class="math"&gt;$$
+\mu_{posterior} = \kappa \cdot \mu_{prior} + (1-\kappa) \cdot \frac{n}{N}, 
+$$&lt;/div&gt;
+&lt;p&gt;
+where &lt;span class="math"&gt;\(n\)&lt;/span&gt; is the total number of positive examples, &lt;span class="math"&gt;\(N\)&lt;/span&gt; is the total number of examples, and the weight &lt;span class="math"&gt;\(\kappa\)&lt;/span&gt; is 
+&lt;/p&gt;
+&lt;div class="math"&gt;$$
+\kappa = \frac{\tau}{N+\tau}.
+$$&lt;/div&gt;
+&lt;p&gt;
+We see that increasing &lt;span class="math"&gt;\(tau\)&lt;/span&gt; makes &lt;span class="math"&gt;\(kappa\)&lt;/span&gt; closer to 1 and thus the posterior mean becomes closer to the prior mean.  Hence, &lt;span class="math"&gt;\(\tau\)&lt;/span&gt; is a regularization hyperparameter that we can tune to control the complexity of our target encoded variable.  Another way to write the posterior mean is
+&lt;/p&gt;
+&lt;div class="math"&gt;$$
+\mu_{posterior} = \frac{\tau \cdot \mu_{prior} + n}{N + \tau}.
+$$&lt;/div&gt;
+&lt;p&gt;This equation shows the simple update rule for the posterior mean; all we need to keep track of the counts of 1's and 0's.  &lt;/p&gt;
+&lt;p&gt;Note that the parameters of the posterior distribution are 
+&lt;/p&gt;
+&lt;div class="math"&gt;$$
+\alpha_{posterior} = \tau \cdot \mu_{prior} + n \quad\text{and}\quad \beta_{posterior} = N-n + \tau \cdot (1 - \mu_{prior}).
+$$&lt;/div&gt;
+&lt;p&gt;
+Since the posterior parameters are known we can use them to calculate other statistics; e.g., &lt;/p&gt;
+&lt;div class="math"&gt;$$
+\mathrm{var} = \frac{\alpha\beta}{(\alpha + \beta)^2(\alpha + \beta+1)}
+$$&lt;/div&gt;
+&lt;p&gt;
+and
+&lt;/p&gt;
+&lt;div class="math"&gt;$$
+\mathrm{skewness} = \frac{2 (\beta - \alpha) \sqrt{\alpha + \beta + 1}}{(\alpha + \beta+1)\sqrt{\alpha\beta}}.
+$$&lt;/div&gt;
+&lt;p&gt;Furthermore, we can add noise to the target encoded variables by sampling from the posterior or prior distribution.  For example, fix the noise strength &lt;span class="math"&gt;\(\epsilon\)&lt;/span&gt; we can add noise using the following formula
+&lt;/p&gt;
+&lt;div class="math"&gt;$$
+\tilde{\mu}_{posterior} = (1-\epsilon)\cdot \mu_{posterior} + \epsilon\cdot X_{posterior}
+$$&lt;/div&gt;
+&lt;p&gt;
+where &lt;span class="math"&gt;\(X_{posterior} \sim \mathrm{Beta}(\alpha_{posterior}, \beta_{posterior})\)&lt;/span&gt;. &lt;/p&gt;
+&lt;h1&gt;Examples&lt;/h1&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="k"&gt;class&lt;/span&gt; &lt;span class="nc"&gt;BetaEncoder&lt;/span&gt;&lt;span class="p"&gt;():&lt;/span&gt;
+
+    &lt;span class="k"&gt;def&lt;/span&gt; &lt;span class="fm"&gt;__init__&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="bp"&gt;self&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;group&lt;/span&gt;&lt;span class="p"&gt;):&lt;/span&gt;
+
+        &lt;span class="bp"&gt;self&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;group&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;group&lt;/span&gt;
+        &lt;span class="bp"&gt;self&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;stats&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="bp"&gt;None&lt;/span&gt;
+
+    &lt;span class="c1"&gt;# get counts from train set&lt;/span&gt;
+    &lt;span class="k"&gt;def&lt;/span&gt; &lt;span class="nf"&gt;fit&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="bp"&gt;self&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;df&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;target_col&lt;/span&gt;&lt;span class="p"&gt;):&lt;/span&gt;
+        &lt;span class="bp"&gt;self&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;prior_mean&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;np&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;mean&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;df&lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="n"&gt;target_col&lt;/span&gt;&lt;span class="p"&gt;])&lt;/span&gt;
+        &lt;span class="n"&gt;stats&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;df&lt;/span&gt;&lt;span class="p"&gt;[[&lt;/span&gt;&lt;span class="n"&gt;target_col&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="bp"&gt;self&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;group&lt;/span&gt;&lt;span class="p"&gt;]]&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;groupby&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="bp"&gt;self&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;group&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+        &lt;span class="n"&gt;stats&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;stats&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;agg&lt;/span&gt;&lt;span class="p"&gt;([&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;sum&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="s1"&gt;&amp;#39;count&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;])[&lt;/span&gt;&lt;span class="n"&gt;target_col&lt;/span&gt;&lt;span class="p"&gt;]&lt;/span&gt;    
+        &lt;span class="n"&gt;stats&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;rename&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;columns&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="p"&gt;{&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;sum&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="s1"&gt;&amp;#39;n&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="s1"&gt;&amp;#39;count&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="s1"&gt;&amp;#39;N&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;},&lt;/span&gt; &lt;span class="n"&gt;inplace&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="bp"&gt;True&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+        &lt;span class="n"&gt;stats&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;reset_index&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;level&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="mi"&gt;0&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;inplace&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="bp"&gt;True&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;           
+        &lt;span class="bp"&gt;self&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;stats&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;stats&lt;/span&gt;
+
+    &lt;span class="c1"&gt;# extract posterior statistics&lt;/span&gt;
+    &lt;span class="k"&gt;def&lt;/span&gt; &lt;span class="nf"&gt;transform&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="bp"&gt;self&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;df&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;stat_type&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;N_min&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="mi"&gt;1000&lt;/span&gt;&lt;span class="p"&gt;):&lt;/span&gt;
+
+        &lt;span class="n"&gt;df_stats&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;pd&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;merge&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;df&lt;/span&gt;&lt;span class="p"&gt;[[&lt;/span&gt;&lt;span class="bp"&gt;self&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;group&lt;/span&gt;&lt;span class="p"&gt;]],&lt;/span&gt; &lt;span class="bp"&gt;self&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;stats&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;how&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;left&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+        &lt;span class="n"&gt;n&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;df_stats&lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;n&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;]&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;copy&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;
+        &lt;span class="n"&gt;N&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;df_stats&lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;N&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;]&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;copy&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;
+
+        &lt;span class="c1"&gt;# fill in missing&lt;/span&gt;
+        &lt;span class="n"&gt;nan_indexs&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;np&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;isnan&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;n&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+        &lt;span class="n"&gt;n&lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="n"&gt;nan_indexs&lt;/span&gt;&lt;span class="p"&gt;]&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="bp"&gt;self&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;prior_mean&lt;/span&gt;
+        &lt;span class="n"&gt;N&lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="n"&gt;nan_indexs&lt;/span&gt;&lt;span class="p"&gt;]&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="mf"&gt;1.0&lt;/span&gt;
+
+        &lt;span class="c1"&gt;# prior parameters&lt;/span&gt;
+        &lt;span class="n"&gt;N_prior&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;np&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;maximum&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;N_min&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;N&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="mi"&gt;0&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+        &lt;span class="n"&gt;alpha_prior&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="bp"&gt;self&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;prior_mean&lt;/span&gt;&lt;span class="o"&gt;*&lt;/span&gt;&lt;span class="n"&gt;N_prior&lt;/span&gt;
+        &lt;span class="n"&gt;beta_prior&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="mi"&gt;1&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="bp"&gt;self&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;prior_mean&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;&lt;span class="o"&gt;*&lt;/span&gt;&lt;span class="n"&gt;N_prior&lt;/span&gt;
+
+        &lt;span class="c1"&gt;# posterior parameters&lt;/span&gt;
+        &lt;span class="n"&gt;alpha&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;alpha_prior&lt;/span&gt; &lt;span class="o"&gt;+&lt;/span&gt; &lt;span class="n"&gt;n&lt;/span&gt;
+        &lt;span class="n"&gt;beta&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt;  &lt;span class="n"&gt;beta_prior&lt;/span&gt; &lt;span class="o"&gt;+&lt;/span&gt; &lt;span class="n"&gt;N&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;n&lt;/span&gt;
+
+        &lt;span class="c1"&gt;# calculate statistics&lt;/span&gt;
+        &lt;span class="k"&gt;if&lt;/span&gt; &lt;span class="n"&gt;stat_type&lt;/span&gt;&lt;span class="o"&gt;==&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;mean&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;
+            &lt;span class="n"&gt;num&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;alpha&lt;/span&gt;
+            &lt;span class="n"&gt;dem&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;alpha&lt;/span&gt;&lt;span class="o"&gt;+&lt;/span&gt;&lt;span class="n"&gt;beta&lt;/span&gt;
+
+        &lt;span class="k"&gt;elif&lt;/span&gt; &lt;span class="n"&gt;stat_type&lt;/span&gt;&lt;span class="o"&gt;==&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;var&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;
+            &lt;span class="n"&gt;num&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;alpha&lt;/span&gt;&lt;span class="o"&gt;*&lt;/span&gt;&lt;span class="n"&gt;beta&lt;/span&gt;
+            &lt;span class="n"&gt;dem&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;alpha&lt;/span&gt;&lt;span class="o"&gt;+&lt;/span&gt;&lt;span class="n"&gt;beta&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;&lt;span class="o"&gt;**&lt;/span&gt;&lt;span class="mi"&gt;2&lt;/span&gt;&lt;span class="o"&gt;*&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;alpha&lt;/span&gt;&lt;span class="o"&gt;+&lt;/span&gt;&lt;span class="n"&gt;beta&lt;/span&gt;&lt;span class="o"&gt;+&lt;/span&gt;&lt;span class="mi"&gt;1&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+
+        &lt;span class="k"&gt;elif&lt;/span&gt; &lt;span class="n"&gt;stat_type&lt;/span&gt;&lt;span class="o"&gt;==&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;mode&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;
+            &lt;span class="n"&gt;num&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;alpha&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="mi"&gt;1&lt;/span&gt;
+            &lt;span class="n"&gt;dem&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;alpha&lt;/span&gt;&lt;span class="o"&gt;+&lt;/span&gt;&lt;span class="n"&gt;beta&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="mi"&gt;2&lt;/span&gt;
+
+        &lt;span class="k"&gt;elif&lt;/span&gt; &lt;span class="n"&gt;stat_type&lt;/span&gt;&lt;span class="o"&gt;==&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;median&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;
+            &lt;span class="n"&gt;num&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;alpha&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="mi"&gt;1&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="mi"&gt;3&lt;/span&gt;
+            &lt;span class="n"&gt;dem&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;alpha&lt;/span&gt;&lt;span class="o"&gt;+&lt;/span&gt;&lt;span class="n"&gt;beta&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="mi"&gt;2&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="mi"&gt;3&lt;/span&gt;
+
+        &lt;span class="k"&gt;elif&lt;/span&gt; &lt;span class="n"&gt;stat_type&lt;/span&gt;&lt;span class="o"&gt;==&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;skewness&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;
+            &lt;span class="n"&gt;num&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="mi"&gt;2&lt;/span&gt;&lt;span class="o"&gt;*&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;beta&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;alpha&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;&lt;span class="o"&gt;*&lt;/span&gt;&lt;span class="n"&gt;np&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;sqrt&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;alpha&lt;/span&gt;&lt;span class="o"&gt;+&lt;/span&gt;&lt;span class="n"&gt;beta&lt;/span&gt;&lt;span class="o"&gt;+&lt;/span&gt;&lt;span class="mi"&gt;1&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+            &lt;span class="n"&gt;dem&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;alpha&lt;/span&gt;&lt;span class="o"&gt;+&lt;/span&gt;&lt;span class="n"&gt;beta&lt;/span&gt;&lt;span class="o"&gt;+&lt;/span&gt;&lt;span class="mi"&gt;2&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;&lt;span class="o"&gt;*&lt;/span&gt;&lt;span class="n"&gt;np&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;sqrt&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;alpha&lt;/span&gt;&lt;span class="o"&gt;*&lt;/span&gt;&lt;span class="n"&gt;beta&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+
+        &lt;span class="k"&gt;elif&lt;/span&gt; &lt;span class="n"&gt;stat_type&lt;/span&gt;&lt;span class="o"&gt;==&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;kurtosis&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;
+            &lt;span class="n"&gt;num&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="mi"&gt;6&lt;/span&gt;&lt;span class="o"&gt;*&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;alpha&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;beta&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;&lt;span class="o"&gt;**&lt;/span&gt;&lt;span class="mi"&gt;2&lt;/span&gt;&lt;span class="o"&gt;*&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;alpha&lt;/span&gt;&lt;span class="o"&gt;+&lt;/span&gt;&lt;span class="n"&gt;beta&lt;/span&gt;&lt;span class="o"&gt;+&lt;/span&gt;&lt;span class="mi"&gt;1&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt; &lt;span class="o"&gt;-&lt;/span&gt; &lt;span class="n"&gt;alpha&lt;/span&gt;&lt;span class="o"&gt;*&lt;/span&gt;&lt;span class="n"&gt;beta&lt;/span&gt;&lt;span class="o"&gt;*&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;alpha&lt;/span&gt;&lt;span class="o"&gt;+&lt;/span&gt;&lt;span class="n"&gt;beta&lt;/span&gt;&lt;span class="o"&gt;+&lt;/span&gt;&lt;span class="mi"&gt;2&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+            &lt;span class="n"&gt;dem&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;alpha&lt;/span&gt;&lt;span class="o"&gt;*&lt;/span&gt;&lt;span class="n"&gt;beta&lt;/span&gt;&lt;span class="o"&gt;*&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;alpha&lt;/span&gt;&lt;span class="o"&gt;+&lt;/span&gt;&lt;span class="n"&gt;beta&lt;/span&gt;&lt;span class="o"&gt;+&lt;/span&gt;&lt;span class="mi"&gt;2&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;&lt;span class="o"&gt;*&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;alpha&lt;/span&gt;&lt;span class="o"&gt;+&lt;/span&gt;&lt;span class="n"&gt;beta&lt;/span&gt;&lt;span class="o"&gt;+&lt;/span&gt;&lt;span class="mi"&gt;3&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+
+        &lt;span class="k"&gt;else&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;
+            &lt;span class="n"&gt;num&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="bp"&gt;self&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;prior_mean&lt;/span&gt;
+            &lt;span class="n"&gt;dem&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;np&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;ones_like&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;N_prior&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+
+        &lt;span class="c1"&gt;# replace missing&lt;/span&gt;
+        &lt;span class="n"&gt;value&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;num&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;dem&lt;/span&gt;
+        &lt;span class="n"&gt;value&lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="n"&gt;np&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;isnan&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;value&lt;/span&gt;&lt;span class="p"&gt;)]&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;np&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;nanmedian&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;value&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+        &lt;span class="k"&gt;return&lt;/span&gt; &lt;span class="n"&gt;value&lt;/span&gt;
+
+    &lt;span class="k"&gt;def&lt;/span&gt; &lt;span class="nf"&gt;fit_transform&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;df&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;stat_type&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;N_min&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="mi"&gt;100&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;target_col&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;deal_probability&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;):&lt;/span&gt;
+        &lt;span class="bp"&gt;self&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;fit&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;df&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;target_col&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+        &lt;span class="k"&gt;return&lt;/span&gt; &lt;span class="bp"&gt;self&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;transform&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;df&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;stat_type&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;N_min&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
 &lt;script type="text/javascript"&gt;if (!document.getElementById('mathjaxscript_pelican_#%@#$@#')) {
     var align = "center",
         indent = "0em",
@@ -442,7 +597,86 @@ I then show how I use it to prioritize my day.&lt;/p&gt;
 &lt;h1&gt;Solution&lt;/h1&gt;
 &lt;h1&gt;Case Study&lt;/h1&gt;
 &lt;h1&gt;Extensions - Soft Deadlines&lt;/h1&gt;
-&lt;h1&gt;Extensions - Nonlinear Objective Function&lt;/h1&gt;</content><category term="misc"></category></entry><entry><title>Ethical AI</title><link href="/ethical-ai.html" rel="alternate"></link><published>2017-11-26T10:01:00-10:00</published><updated>2017-11-27T12:30:00-10:00</updated><author><name>Matt Motoki</name></author><id>tag:None,2017-11-26:/ethical-ai.html</id><summary type="html">&lt;p&gt;Ethical AI&lt;/p&gt;</summary><content type="html">&lt;p&gt;Job loss because of AI&lt;/p&gt;</content><category term="Artificial Intelligence"></category></entry><entry><title>My Jouney</title><link href="/my-journey.html" rel="alternate"></link><published>2017-11-26T10:01:00-10:00</published><updated>2017-11-27T12:30:00-10:00</updated><author><name>Matt Motoki</name></author><id>tag:None,2017-11-26:/my-journey.html</id><summary type="html">&lt;p&gt;Not the Shortest Path&lt;/p&gt;</summary><content type="html">&lt;h1&gt;&lt;/h1&gt;
+&lt;h1&gt;Extensions - Nonlinear Objective Function&lt;/h1&gt;</content><category term="misc"></category></entry><entry><title>Ethical AI</title><link href="/ethical-ai.html" rel="alternate"></link><published>2017-11-26T10:01:00-10:00</published><updated>2017-11-27T12:30:00-10:00</updated><author><name>Matt Motoki</name></author><id>tag:None,2017-11-26:/ethical-ai.html</id><summary type="html">&lt;p&gt;Ethical AI&lt;/p&gt;</summary><content type="html">&lt;p&gt;Job loss because of AI&lt;/p&gt;</content><category term="Artificial Intelligence"></category></entry><entry><title>Hawaii Machine Learning Meetup Challenge</title><link href="/hawaii-machinelearning-meetup-challenge.html" rel="alternate"></link><published>2017-11-26T10:01:00-10:00</published><updated>2018-11-28T12:30:00-10:00</updated><author><name>Matt Motoki</name></author><id>tag:None,2017-11-26:/hawaii-machinelearning-meetup-challenge.html</id><summary type="html">&lt;p&gt;The Hawaii Machine Learning Meetup held Hawaii's first machine learning competition.&lt;/p&gt;</summary><content type="html">&lt;h2&gt;About the Hawaii Machine Learning Meetup&lt;/h2&gt;
+&lt;h3&gt;Goals of Our Organization&lt;/h3&gt;
+&lt;p&gt;Our roles as organizers of the Hawaii Machine Learning Meetup is to:&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;Host talks and presentations given by our members, academics, and people in industry. This is our main role. As organizers, we will work on contributing our own presentations to the meetup, but we want the focus to be on how the community in Hawaii is using machine learning.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Promote an understanding of machine learning through study groups. This is of secondary importance. We plan to organize study groups for members enrolled in or auditing online courses. We also plan to hold a periodic review session for the material covered in the course. If you are interested in going one of our study group sessions send us an email at hawaiimachinelearning@gmail.com.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Organize local machine learning competitions &amp;amp; encourage participation in global competitions. We believe that participating in machine learning competitions is a great way to apply machine learning techniques and also a great way to learn new techniques.&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;The Hawaii Machine Learning Meetup is a group of students, scientists, engineers, entrepreneurs, and everyday people who are interested in machine learning and related artificial intelligence technologies. Our goal is to promote an interest in Machine Learning &amp;amp; Artificial Intelligence and increase the adoption of these technologies in Hawaii.&lt;/p&gt;
+&lt;p&gt;The Hawaii Machine Leaning Meetup is holding a local machine learning competition open to anyone in Hawaii. &lt;/p&gt;
+&lt;p&gt;The competition will serve to:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Promote machine learning in Hawaii&lt;/li&gt;
+&lt;li&gt;Provide an opportunity to analyze and extract insights from data&lt;/li&gt;
+&lt;li&gt;Teach fundamental machine learning techniques&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;TutorialsWe  plan  to  hold  optional  tutorials  to  teach  the  fundamentals  of  machine  learning.  Tutorial  1:  Exploratory  Data  Analysis  (EDA)  and  Feature  Engineering  –EDA  is  one  of  the  first  steps  in  a  machine  learning  pipeline.    It  is  where  analysts  gain  intuition  about  the  dataset.    Feature  engineering  is  the  process  in  which  raw  data  is  transformed  into  informative  representations  (known  as  features).    Feature  engineering  provides  an  opportunity  for  analysts  to  impart  their  intuition  and  domain  expertise  into  the  machine  learning  pipeline.Tutorial  2:  Training  and  Prediction  –During  training,  machine  learning  models  learn  to  map  input  data  into  predictions.    We  will  cover  this  process  for  standard  machine  learning  models.    Tutorial  3:  Cross  Validation  and  Model  Selection  –Cross  validation  is  the  gold  standard  for  estimating  a  machine  learning  algorithm’s  performance.  Cross  validation  can  be  used  to  select  the  best  machine  learning  model  forthe  task  at  hand.    Cross  validation  is  a  key  technique  that  every  machine  learning  practitioner  should  understand.  Tutorial  4:  Model  Ensembling  and  Blending  –Model  ensembling  is  a  technique  for  combining  the  predictions  of  multiple  machine  learning  algorithms.    Ensembling  is  essential  for  extracting  peak  performance  from  machine  learning  models.&lt;/p&gt;
+&lt;p&gt;Your challenge is to predict online retail sales from transaction data. Use any algorithm you like: train your own neural networks, grow your own decision trees, even spawn an AI to solve the problem for you.&lt;/p&gt;
+&lt;p&gt;If you are new to machine learning, come and join our weekly tutorial sessions to learn the fundamentals of machine learning. If you are are experienced with machine learning, come and show off your skills.&lt;/p&gt;
+&lt;p&gt;Join us to advance the field of machine learning in Hawaii.&lt;/p&gt;
+&lt;p&gt;If you are looking to participate in the competition please use the following link.&lt;/p&gt;
+&lt;p&gt;If you have any questions, contact us as at hawaiimachinelearning@gmail.com&lt;/p&gt;
+&lt;p&gt;Competition Details
+General Objectives
+The competition will provide a low-pressure environment that&lt;/p&gt;
+&lt;p&gt;Promotes machine learning in Hawaii
+Provides an opportunity to gain experience analyzing data
+Teaches fundamental machine learning techniques
+This competition will be valuable to beginners looking to get a start in machine learning. At the same time, this competition will be beneficial to machine learning experts who are interested in applying start-of-the-art techniques to solve real-word problems.&lt;/p&gt;
+&lt;p&gt;Task
+Participants are tasked with predicting sales transactions for online retail stores. Methods developed in this competition will be readily generalized to sales forecasting tasks here in Hawaii.&lt;/p&gt;
+&lt;p&gt;Evaluation
+The competition will evaluate participants objectively using the data rather than subjectively based on human judgement. Participants are ranked on how well they can predict test data (the ground truth is withheld from the participants). The metric that we will use for ranking is the root mean squared log error which is standard for this type of problem.&lt;/p&gt;
+&lt;p&gt;Rules
+Participants can form teams of any size.
+Private sharing of code or data outside of teams in not permitted. It’s okay to share code if made available to all participants on the forums.
+Having multiple accounts per participant is not allowed.
+Participants can submit up to 5 submissions per day. Participants will be allowed to submit 2 submissions for evaluation on the test set.
+Tutorials
+We plan to hold optional tutorials to teach the fundamentals of machine learning. The tutorials are created by machine learning experts. Tutorials will be given in-person, but we will also try to stream the content.&lt;/p&gt;
+&lt;p&gt;Tutorial 1: Exploratory Data Analysis (EDA) and Feature Engineering
+Tutorial 2: Training and Prediction
+Tutorial 3: Cross Validation and Model Selection
+Tutorial 4: Model Ensembling and Blending
+Kernels
+We plan to have a panel of judges who subjectively evaluate kernel submissions based on the following criteria:&lt;/p&gt;
+&lt;p&gt;Originality – does the kernel contain original material
+Helpfulness – does the kernel provide valuable information for the task at hand; the number of upvotes is one measure of helpfulness
+Correctness – are the technical details of the kernel correct, this is the most important aspect of the kernel
+The best kernel will be recognized.&lt;/p&gt;
+&lt;p&gt;Competition Timeline
+The competition is planned to start on March 30th and to finish on April 30th. We will wrap-up the competition on May 4 th.&lt;/p&gt;
+&lt;p&gt;Week 0, Friday March 30, 6:00 PM: Start Competition&lt;/p&gt;
+&lt;p&gt;Description: Kick-off the event. Discuss the competition task, rules, and timeline. Setup complete beginners. Encourage team formation.
+Venue: Presentation Room at Manoa Innovation Center
+Week 1, Monday April 2, 6:00 PM: Tutorial 1&lt;/p&gt;
+&lt;p&gt;Description: Exploratory Data Analysis (EDA) and Feature Engineering
+Venue: Ideation Room at the Manoa Innovation Center
+Week 2, Monday April 9, 6:00 PM: Tutorial 2&lt;/p&gt;
+&lt;p&gt;Description: Training and Prediction
+Venue: Ideation Room at the Manoa Innovation Center
+Week 3, Monday April 16, 6:00 PM: Tutorial 3&lt;/p&gt;
+&lt;p&gt;Description: Cross Validation and Model Selection
+Venue: Ideation Room at the Manoa Innovation Center
+Week 4, Monday April 23, 6:00 PM: Tutorial 4&lt;/p&gt;
+&lt;p&gt;Description: Model Ensembling and Blending
+Venue: Ideation Room at the Manoa Innovation Center
+Week 5a, Monday April 30, 2:00 PM: End Competition&lt;/p&gt;
+&lt;p&gt;Description: End competition on Monday at 2:00 PM HST (Tuesday 00:00 UTC). No new submissions will be allowed. Participants will be notified of the competition’s end. The top 3 teams will be asked to submit their code and prepare their presentations.
+Venue: None
+Week 5b, Friday May 4, 6:00 PM: Winner’s Presentations&lt;/p&gt;
+&lt;p&gt;Description: Finalize the competition results. Judges will explain their choice for Best Kernel. Winners will present their solutions (3rd → 2nd → 1st).
+Venue: Presentation Room at Manoa Innovation Center
+We may host a follow-up meetup for any participant interested in presenting their solution or kernel.&lt;/p&gt;</content><category term="Meetup"></category><category term="Machine Learning Competitions"></category><category term="Kaggle"></category></entry><entry><title>My Jouney</title><link href="/my-journey.html" rel="alternate"></link><published>2017-11-26T10:01:00-10:00</published><updated>2017-11-27T12:30:00-10:00</updated><author><name>Matt Motoki</name></author><id>tag:None,2017-11-26:/my-journey.html</id><summary type="html">&lt;p&gt;Not the Shortest Path&lt;/p&gt;</summary><content type="html">&lt;h1&gt;&lt;/h1&gt;
 &lt;p&gt;I always loved math.&lt;/p&gt;
 &lt;p&gt;Took a detour. &lt;/p&gt;
 &lt;p&gt;Returned 5 years after high school with a passion. &lt;/p&gt;
