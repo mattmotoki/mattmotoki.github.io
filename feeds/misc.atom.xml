@@ -597,7 +597,7 @@ I then show how I use it to prioritize my day.&lt;/p&gt;
 &lt;h1&gt;Solution&lt;/h1&gt;
 &lt;h1&gt;Case Study&lt;/h1&gt;
 &lt;h1&gt;Extensions - Soft Deadlines&lt;/h1&gt;
-&lt;h1&gt;Extensions - Nonlinear Objective Function&lt;/h1&gt;</content><category term="misc"></category></entry><entry><title>Ethical AI</title><link href="/ethical-ai.html" rel="alternate"></link><published>2017-11-26T10:01:00-10:00</published><updated>2017-11-27T12:30:00-10:00</updated><author><name>Matt Motoki</name></author><id>tag:None,2017-11-26:/ethical-ai.html</id><summary type="html">&lt;p&gt;Ethical AI&lt;/p&gt;</summary><content type="html">&lt;p&gt;Job loss because of AI&lt;/p&gt;</content><category term="Artificial Intelligence"></category></entry><entry><title>Hawaii Machine Learning Meetup Challenge</title><link href="/hawaii-machinelearning-meetup-challenge.html" rel="alternate"></link><published>2017-11-26T10:01:00-10:00</published><updated>2018-11-28T12:30:00-10:00</updated><author><name>Matt Motoki</name></author><id>tag:None,2017-11-26:/hawaii-machinelearning-meetup-challenge.html</id><summary type="html">&lt;p&gt;The Hawaii Machine Learning Meetup held Hawaii's first machine learning competition.&lt;/p&gt;</summary><content type="html">&lt;h2&gt;About the Hawaii Machine Learning Meetup&lt;/h2&gt;
+&lt;h1&gt;Extensions - Nonlinear Objective Function&lt;/h1&gt;</content><category term="misc"></category></entry><entry><title>Hawaii Machine Learning Meetup Challenge</title><link href="/hawaii-machinelearning-meetup-challenge.html" rel="alternate"></link><published>2017-11-26T10:01:00-10:00</published><updated>2018-11-28T12:30:00-10:00</updated><author><name>Matt Motoki</name></author><id>tag:None,2017-11-26:/hawaii-machinelearning-meetup-challenge.html</id><summary type="html">&lt;p&gt;The Hawaii Machine Learning Meetup held Hawaii's first machine learning competition.&lt;/p&gt;</summary><content type="html">&lt;h2&gt;About the Hawaii Machine Learning Meetup&lt;/h2&gt;
 &lt;h3&gt;Goals of Our Organization&lt;/h3&gt;
 &lt;p&gt;Our roles as organizers of the Hawaii Machine Learning Meetup is to:&lt;/p&gt;
 &lt;ol&gt;
@@ -676,34 +676,4 @@ Venue: None
 Week 5b, Friday May 4, 6:00 PM: Winner’s Presentations&lt;/p&gt;
 &lt;p&gt;Description: Finalize the competition results. Judges will explain their choice for Best Kernel. Winners will present their solutions (3rd → 2nd → 1st).
 Venue: Presentation Room at Manoa Innovation Center
-We may host a follow-up meetup for any participant interested in presenting their solution or kernel.&lt;/p&gt;</content><category term="Meetup"></category><category term="Machine Learning Competitions"></category><category term="Kaggle"></category></entry><entry><title>My Jouney</title><link href="/my-journey.html" rel="alternate"></link><published>2017-11-26T10:01:00-10:00</published><updated>2017-11-27T12:30:00-10:00</updated><author><name>Matt Motoki</name></author><id>tag:None,2017-11-26:/my-journey.html</id><summary type="html">&lt;p&gt;Not the Shortest Path&lt;/p&gt;</summary><content type="html">&lt;h1&gt;&lt;/h1&gt;
-&lt;p&gt;I always loved math.&lt;/p&gt;
-&lt;p&gt;Took a detour. &lt;/p&gt;
-&lt;p&gt;Returned 5 years after high school with a passion. &lt;/p&gt;
-&lt;p&gt;Found that pure math and physics was not really what I enjoyed. I actually enjoy empolying math as a tool to solve real-world problems.  That is what engineering is, &lt;/p&gt;
-&lt;blockquote&gt;
-&lt;p&gt;Engineering is the application of mathematics, physics, and computer science to solve 
-real-world  problems. &lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;p&gt;I switched majors to Electrical Engineering which is very mathematical and has a large intersection with computer science.  &lt;/p&gt;
-&lt;p&gt;I was intrigued by control theory, signal processing and optimization.  I enjoyed how the solutions to were always deeply rooted in mathematical theory yet the main focus was always to do something useful.  &lt;/p&gt;
-&lt;p&gt;This is were I got my first taste of computers extending human abilities--in EE we make computers and devices do cool things, but behind the scenes there is always a smart human setting things up and ensuring that things don't go crazy.  &lt;/p&gt;
-&lt;p&gt;. &lt;/p&gt;</content><category term="Bio"></category></entry><entry><title>Realistic Reinforcement Learning</title><link href="/realistic-reinforcement-learning.html" rel="alternate"></link><published>2017-11-26T10:01:00-10:00</published><updated>2017-11-27T12:30:00-10:00</updated><author><name>Matt Motoki</name></author><id>tag:None,2017-11-26:/realistic-reinforcement-learning.html</id><summary type="html">&lt;p&gt;Safer AI&lt;/p&gt;</summary><content type="html">&lt;p&gt;A problem with RL systems is that they are still partly a black box.  By that I mean we cannot explain intuitively what they are doing and we can say with certainty how these systems will react in new environemnt. &lt;/p&gt;</content><category term="Artificial Intelligence"></category><category term="Reinforcement Learning"></category></entry><entry><title>Towards Safer AI</title><link href="/towards-safer-ai.html" rel="alternate"></link><published>2017-11-26T10:01:00-10:00</published><updated>2017-11-27T12:30:00-10:00</updated><author><name>Matt Motoki</name></author><id>tag:None,2017-11-26:/towards-safer-ai.html</id><summary type="html">&lt;p&gt;Safer AI&lt;/p&gt;</summary><content type="html">&lt;p&gt;&amp;lt;&amp;lt;&amp;lt;&amp;lt;&amp;lt;&amp;lt;&amp;lt; HEAD
-Use of simulation to test AI systems. In EE we can tell if a system will be stable using theory or by simulating the system on a computer. Simple error metrics used to evaluate performance in modern AI and ML algorithms may not account for the larger implications of the predictions
-=======
-d&lt;/p&gt;
-&lt;blockquote&gt;
-&lt;blockquote&gt;
-&lt;blockquote&gt;
-&lt;blockquote&gt;
-&lt;blockquote&gt;
-&lt;blockquote&gt;
-&lt;blockquote&gt;
-&lt;p&gt;develop&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;/blockquote&gt;
-&lt;/blockquote&gt;
-&lt;/blockquote&gt;
-&lt;/blockquote&gt;
-&lt;/blockquote&gt;
-&lt;/blockquote&gt;</content><category term="Artificial Intelligence"></category></entry></feed>
+We may host a follow-up meetup for any participant interested in presenting their solution or kernel.&lt;/p&gt;</content><category term="Meetup"></category><category term="Machine Learning Competitions"></category><category term="Kaggle"></category></entry></feed>
