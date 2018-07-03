@@ -128,8 +128,8 @@ h2 {
     font-size: 20px;
     line-height: 1.285714285714286em; 
     font-weight: 600;
-    margin-top: 40px;   
-    margin-bottom: 40px;
+    margin-top: 20px;   
+    margin-bottom: 10px;
 }
 h2:after {
     display: block;

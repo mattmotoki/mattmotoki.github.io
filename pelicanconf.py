@@ -60,3 +60,4 @@ PLUGINS = ['render_math']
 GOOGLE_ANALYTICS = 'UA-89247796-2'
 
 
+STATIC_PATHS = ['images', 'pdfs']
