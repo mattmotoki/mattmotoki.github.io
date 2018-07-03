@@ -4,11 +4,11 @@
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <meta name="description" content="Bayesian Target Encoding Summary Bayesian Target Encoding is a feature engineering techinique used to map categorical variables into numberic variables. The Bayesian framework requires only...">
+        <meta name="description" content="Beta Target Encoding Summary Bayesian Target Encoding is a feature engineering technique used to map categorical variables into numeric variables. The Bayesian framework requires only minimal...">
         <meta name="keywords" content="Bayesian Statistics, Feature Engineering, Kaggle">
         <link rel="icon" href="/favicon.ico">
 
-        <title>Bayesian Target Encoding - Matt Motoki</title>
+        <title>Beta Target Encoding - Matt Motoki</title>
 
         <!-- Stylesheets -->
         <link href="/theme/css/all.min.css" rel="stylesheet">
@@ -66,7 +66,7 @@
         <div class="row">
               <div class="col-lg-12">
                   <div class="header-content">
-                      <h1 class="header-title">Bayesian Target Encoding</h1>
+                      <h1 class="header-title">Beta Target Encoding</h1>
                       <p class="header-date"> <a href="/author/matt-motoki.html">Matt Motoki</a>, Sun 01 July 2018,  Sun 01 July 2018,  <a href="/category/misc.html">Misc</a></p>
                       <div class="header-underline"></div>
                       <div class="clearfix"></div>
@@ -86,20 +86,22 @@
 
         <!-- Content -->
     <div class="container content">
-        <h1>Bayesian Target Encoding</h1>
+        <h1>Beta Target Encoding</h1>
 <h2>Summary</h2>
-<p>Bayesian Target Encoding is a feature engineering techinique used to map categorical variables into numberic variables.  The Bayesian framework requires only minimal updates as new data is aquired is thus well-suited for online learning .  Furthermore, the Bayesian approach makes choosing and interpreting hyperparameters intuitive.  Code for implementing the Bayesian target encoding is provided and applied to the recent Avito Kaggle Competition where my team and I took 14th place. </p>
+<p>Bayesian Target Encoding is a feature engineering technique used to map categorical variables into numeric variables.  The Bayesian framework requires only minimal updates as new data is acquired and is thus well-suited for online learning.  Furthermore, the Bayesian approach makes choosing and interpreting hyperparameters intuitive.  I implemented this technique in the recent Avito Kaggle Competition, where my team and I took 14th place out of 1,917 teams.  We found that the Bayesian target encoding outperforms the built-in categorical encoding provided by the LightGBM package. </p>
 <h2>Target Encoding</h2>
-<p>Most machine learning algorithms require numeric input data.  Target encoding is a common technique used to convert categorical varibles into numeric variables.  When done properly target encoding can be very effective [ref].  Target encoding is built into popular machine learning algorithms such as LightGBM [link] and CatBoost [link].  </p>
-<p>In supervised learning, we are given <span class="math">\(N\)</span> data points <span class="math">\((x_i, y_i)\)</span> and tasked with learning a mapping from input variable <span class="math">\(x\)</span> to the target variable <span class="math">\(y\)</span>.   Suppose <span class="math">\(x\)</span> is categorical and takes on one of <span class="math">\(l\)</span> possible (non-numeric) levels <span class="math">\(x\in \left\{ x^{(1)}, x^{(2)}, \dots, x^{(l)} \right\}\)</span>.  Target encoding maps each level of <span class="math">\(x\)</span> into a feature <span class="math">\(\phi\in \left\{ \phi^{(1)}, \phi^{(2)}, \dots, \phi^{(l)} \right\}\)</span> in the following way:</p>
+<p>Most machine learning algorithms require numeric input data.  Target encoding is a common technique used to convert categorical variables into numeric variables.  When done properly, target encoding can be very effective.  Target encoding is built into popular machine learning algorithms such as <a href="http://lightgbm.readthedocs.io/en/latest/Features.html#optimal-split-for-categorical-features">LightGBM</a> and <a href="https://tech.yandex.com/catboost/doc/dg/concepts/algorithm-main-stages_cat-to-numberic-docpage/">CatBoost</a>.<br>
+In supervised learning, we are given <span class="math">\(N\)</span> data points <span class="math">\((x_i, y_i)\)</span> and tasked with learning a mapping from input variable <span class="math">\(x\)</span> to the target variable <span class="math">\(y\)</span>.   Suppose <span class="math">\(x\)</span> is categorical and takes on one of <span class="math">\(l\)</span> possible (non-numeric) levels <span class="math">\(x\in \left\{ x^{(1)}, x^{(2)}, \dots, x^{(l)} \right\}\)</span>.  Target encoding maps each level of <span class="math">\(x\)</span> into a feature <span class="math">\(\phi\in \left\{ \phi^{(1)}, \phi^{(2)}, \dots, \phi^{(l)} \right\}\)</span> in the following way:
+</p>
 <div class="math">$$
 \phi^{(j)} = \frac{1}{N^{(j)}} \sum_{i=1}^N y_i \cdot \mathrm{I}  \! \left\{ x_i = x^{(j)} \right\} \tag{1}
 $$</div>
 <p>
 where <span class="math">\(N^{(j)} = \sum_{i=1}^N \mathrm{I} \! \left\{ x_i = x^{(j)} \right\}\)</span> and <span class="math">\(\mathrm{I}\{\cdot\}\)</span> is the indicator function.  In other words, <span class="math">\(\phi^{(j)}\)</span> is the average <span class="math">\(y\)</span>-value in level <span class="math">\(j\)</span> and <span class="math">\(N^{(j)}\)</span> is the total number of observations in level <span class="math">\(j\)</span>.</p>
 <h3>Overfitting and Regularization</h3>
-<p>Target encoded variables are inherently leaky; that is, their construction requires information that we will not have when we make predictions. To see why this can be a problem, consider the case when <span class="math">\(N^{(j)} = 1\)</span>.  In this case, the summation in <span class="math">\((1)\)</span> involves only one non-zero term when <span class="math">\(x_i = x^{(j)}\)</span>.  Thus, we have <span class="math">\(\phi_i = y_i\)</span>; that is, <span class="math">\(\phi_i\)</span> is encoded with exactly the value we are trying to predict.  Using these target encoded features as-is will lead to overfitting of the training set and poor generalization of our models.  This problem is acute when dealing with high cardinality categorical variables.</p>
-<p>We can combat the data leakage problem by smoothing the estimate of the average <span class="math">\(y\)</span>-value in level <span class="math">\(j\)</span>.  In particular, </p>
+<p>Target-encoded variables are inherently leaky; that is, their construction requires information that we will not have when we make predictions. To see why this can be a problem, consider the case when <span class="math">\(N^{(j)} = 1\)</span>.  In this case, the summation in <span class="math">\((1)\)</span> involves only one non-zero term when <span class="math">\(x_i = x^{(j)}\)</span>.  Thus, we have <span class="math">\(\phi_i = y_i\)</span>; that is, <span class="math">\(\phi_i\)</span> is encoded with exactly the value we are trying to predict.  Using these target-encoded features as is will lead to overfitting of the training set and poor generalization of our models.  This problem is acute when dealing with high cardinality categorical variables.
+We can combat the data leakage problem by smoothing the estimate of the average <span class="math">\(y\)</span>-value in level <span class="math">\(j\)</span>.  In particular, 
+</p>
 <div class="math">$$
 \phi^{(j)} 
 = \lambda^{(j)} \cdot \frac{1}{N}  \sum_{i=1}^N y_i  + \left( 1 - \lambda^{(j)} \right) \cdot \frac{ 1 }{N^{(j)}} \sum_{i=1}^N y_i \cdot \mathrm{I}  \! \left\{ x_i = x^{(j)} \right\}, \tag{2}
@@ -111,18 +113,18 @@ which is just a weighted average of the estimate in <span class="math">\((1)\)</
 \phi^{(j)} = \eta \cdot \epsilon^{(j)} + (1- \eta) \cdot \frac{1}{N^{(j)}} \sum_{i=1}^N y_i \cdot \mathrm{I}  \! \left\{ x_i = x^{(j)} \right\}. \tag{3}
 $$</div>
 <p>
-The hyperparameters <span class="math">\(\lambda^{(j)}\)</span>, <span class="math">\(\eta\)</span> and the distribution of the random variable <span class="math">\(\epsilon^{(j)}\)</span> need to be chosen carefully for target encoding to perform well.   By adopting a Bayesian framework, we can handle regularization in a systematic yet intuitive way.  Furthermore, the Bayesian framework is well-suited for online learning requiring only minimal updates as new data is aquired.  The next section, we will discuss target encoding in the context of binary classification.  </p>
-<h2>Bayesian Target Encoding for Binary Classification</h2>
-<p>In Bayesian statistics we represent our beliefs about the world using a prior distribution. Approaching target encoding from a Bayesian perspective has the following benefits:</p>
+The hyperparameters <span class="math">\(\lambda^{(j)}\)</span>, <span class="math">\(\eta\)</span>, and the distribution of the random variable <span class="math">\(\epsilon^{(j)}\)</span> need to be chosen carefully for target encoding to perform well.   By adopting a Bayesian framework, we can handle regularization in a systematic yet intuitive way.  Furthermore, the Bayesian framework is well-suited for online learning requiring only minimal updates as new data is acquired.  In the next section, we will discuss target encoding in the context of binary classification.  </p>
+<h2>Bayesian Target Encoding</h2>
+<p>In Bayesian statistics, we represent our beliefs about the world using a prior distribution. Approaching target encoding from a Bayesian perspective has the following benefits:</p>
 <ul>
 <li>hyperparameters are easy to interpret</li>
 <li>hyperparameter estimation is well-suited for online learning</li>
 <li>generalizing the encoding to statistics other than the mean is easy</li>
 <li>choosing the distribution for the noise random variable is easy</li>
 </ul>
-<p>The analysis here considers target encoding for binary classification where the target variable <span class="math">\(y\)</span> is takes on two discrete values <span class="math">\(\{0,1\}\)</span>.  The same line of reasoning applies to target encoding for soft binary classification where <span class="math">\(y\)</span> takes on values in the interval <span class="math">\([0, 1]\)</span>.  The general theory applies to other target variable types.</p>
+<p>The analysis here considers target encoding for binary classification where the target variable <span class="math">\(y\)</span> takes on two discrete values <span class="math">\(\{0,1\}\)</span>.  The same line of reasoning applies to target encoding for soft binary classification where <span class="math">\(y\)</span> takes on values in the interval <span class="math">\([0, 1]\)</span>.  The general theory applies to other target variable types.</p>
 <h3>The Beta Distribution<sup><a href="https://en.wikipedia.org/wiki/Beta_distribution">1</a></sup></h3>
-<p>It is convienent to model binary target variables using the Bernoulli distribution which has the Beta distribution as its conjugate prior.  The Beta distribution is parameterized by <span class="math">\(\alpha\)</span> and <span class="math">\(\beta\)</span> which can respectively be thought of as the number of positive and negative examples in a repeated Binomial experiment.  Many useful statistics of the Beta distribution can written in terms of <span class="math">\(\alpha\)</span> and <span class="math">\(\beta\)</span>; e.g., 
+<p>It is convenient to model binary target variables using the Bernoulli distribution, which has the Beta distribution as its conjugate prior.  The Beta distribution is parameterized by <span class="math">\(\alpha\)</span> and <span class="math">\(\beta\)</span>, which can respectively be thought of as the number of positive and negative examples in a repeated Binomial experiment.  Many useful statistics of the Beta distribution can written in terms of <span class="math">\(\alpha\)</span> and <span class="math">\(\beta\)</span>; for example, 
 the mean
 </p>
 <div class="math">$$
@@ -141,12 +143,13 @@ and the skewness
 \gamma = \frac{2 (\beta - \alpha) \sqrt{\alpha + \beta + 1}}{(\alpha + \beta+1)\sqrt{\alpha\beta}}. \tag{6}
 $$</div>
 <h3>Interpreting the Hyperparameters<sup><a href="https://people.eecs.berkeley.edu/~jordan/courses/260-spring10/other-readings/chapter9.pdf">2</a></sup></h3>
-<p>When deciding on the prior distribution, we need to set values for <span class="math">\(\alpha_{prior}\)</span> and <span class="math">\(\beta_{prior}\)</span>.  One way to do this is with grid search and cross-validation. However, we should not want to search over <span class="math">\(\alpha_{prior}\)</span> and <span class="math">\(\beta_{prior}\)</span> independently.  Instead, we can reduce the search space by requiring <span class="math">\(\alpha\)</span> and <span class="math">\(\beta\)</span> to be such that the mean of the prior distribution is constant. The obvious choice for prior mean is the average <span class="math">\(y\)</span>-value in the training set <span class="math">\(\mu_{prior} = \frac{1}{N} \sum_{i=1}^N y_i\)</span>, but the prior mean can also be set in other ways.  If the categorical variables are hierarchical, then the prior mean can from one step up in the hierarchy.  With the mean known, we can reparamertize the beta distribution in terms of <span class="math">\(\tau = \alpha_{prior} + \beta_{prior}\)</span>.  Intuitvely, <span class="math">\(\tau\)</span> can be thought of the effective sample size from the prior distribution.  Rewriting <span class="math">\((4)\)</span> in terms of <span class="math">\(\tau\)</span> we get
+<p>When deciding on the prior distribution, we need to set values for <span class="math">\(\alpha_{prior}\)</span> and <span class="math">\(\beta_{prior}\)</span>.  One way to do this is with grid search and cross-validation. However, we should not want to search over <span class="math">\(\alpha_{prior}\)</span> and <span class="math">\(\beta_{prior}\)</span> independently.  Instead, we can reduce the search space by requiring <span class="math">\(\alpha\)</span> and <span class="math">\(\beta\)</span> to be such that the mean of the prior distribution is constant. The obvious choice for prior mean is the average <span class="math">\(y\)</span>-value in the training set <span class="math">\(\mu_{prior} = \frac{1}{N} \sum_{i=1}^N y_i\)</span>, but the prior mean can also be set in other ways.  If the categorical variables are hierarchical, then the prior mean can come from one step up in the hierarchy.  With the mean known, we can reparameterize the beta distribution in terms of <span class="math">\(\tau = \alpha_{prior} + \beta_{prior}\)</span>.  Intuitively, <span class="math">\(\tau\)</span> can be thought of the effective sample size from the prior distribution.  Rewriting <span class="math">\((4)\)</span> in terms of <span class="math">\(\tau\)</span> we get
 </p>
 <div class="math">$$
 \alpha_{prior} = \tau \cdot \mu_{prior}  \quad\text{and}\quad \beta_{prior} = \tau \cdot(1 - \mu_{prior}).
 $$</div>
-<p>The parameters of the posterior distribution are given by
+<p>
+The parameters of the posterior distribution are given by
 </p>
 <div class="math">$$
 \alpha_{posterior}^{(j)} = \alpha_{prior}+  \sum_{i=1}^N y_i \cdot \mathrm{I}\! \left\{x=x^{(j)}\right\} 
@@ -158,32 +161,27 @@ and
 \beta_{posterior}^{(j)} = \beta_{prior} + N^{(j)} - \alpha_{posterior}^{(j)}.
 $$</div>
 <p>
-These equations shows the simple update rules for the posterior parameters--all we need to keep track of is the sum of the <span class="math">\(y\)</span>-values in a level and the total number of observations in that level.  When the posterior parameters are known, we can use them to calculate other statistics; e.g., those in <span class="math">\((4)\)</span>, <span class="math">\((5)\)</span>, and <span class="math">\((6)\)</span>.</p>
-<p>To see how <span class="math">\(\tau\)</span> controls complexity let's rewrite the posterior mean as
+These equations show the simple update rules for the posterior parameters—all we need to keep track of is the sum of the <span class="math">\(y\)</span>-values in a level and the total number of observations in that level.  When the posterior parameters are known, we can use them to calculate other statistics, such as those in <span class="math">\((4)\)</span>, <span class="math">\((5)\)</span>, and <span class="math">\((6)\)</span>.
+To see how <span class="math">\(\tau\)</span> controls complexity let's rewrite the posterior mean as
 </p>
 <div class="math">$$
 \mu_{posterior}^{(j)} = \lambda^{(j)} \cdot \mu_{prior} + \left( 1-\lambda^{(j)} \right) \cdot \frac{1}{N^{(j)}}  \sum_{i=1}^N y_i \cdot \mathrm{I}\! \left\{x=x^{(j)}\right\}, 
 $$</div>
 <p>
-where <span class="math">\(\lambda^{(j)} = \tau \,\big/\!\left( N^{(j)}+\tau \right).\)</span>  Notice that this equation has the same functional form as <span class="math">\((2)\)</span>.  We see that increasing <span class="math">\(\tau\)</span> brings the estimate closer to the prior mean, decreasing <span class="math">\(\tau\)</span> brings closer to the posterior mean.  </p>
-<p>Recall, that when we use additive noise for regularization <span class="math">\((3)\)</span>, we need to specify the distribution of the noise random variable <span class="math">\(\epsilon^{(j)}\)</span>.  This is natural to do when taking Bayesian approach.  In particular, in we can set <span class="math">\(\epsilon^{(j)} \sim \mathrm{Beta}\!\left(\alpha_{posterior}^{(j)}, \beta_{posterior}^{(j)} \right)\)</span>. The only hyperparameter left to tune is the noise strength <span class="math">\(\eta\)</span>.  Notice that from <span class="math">\((5)\)</span>, the variance of the noise distribution will shrink as we obtain more observations. What this means is that as the number of observations increases, the noise distribution will converge to a delta distribution centered at <span class="math">\(\mu_{posterior}^{(j)}\)</span>.  Thus, we have the nice property that the amount of regularization decreases as the number of observations increases.</p>
-<h2>Case Study: Kaggle - Avito Demand Prediction<sup><a href="https://www.kaggle.com/mmotoki/beta-target-encoding">3</a></sup></h2>
-<p>My team and I used Bayesian target encoding in the recent Kaggle competition <a href="https://www.kaggle.com/c/avito-demand-prediction">Avito Demand Prediction Challenge</a> where we placed 14th out of 1,917 teams.  For a more detailed write-up about our team's solution, see <a href="https://www.kaggle.com/c/avito-demand-prediction/discussion/60059">Peter Hurford's post</a>.</p>
-<p>The task was to predict demand for an online advertisement predict demand for an online advertisement based on its full description (title, description, images, etc.), its context (geographically where it was posted, similar ads already posted) and historical demand for similar ads in similar contexts.  The competition metric was the root mean squared error between our prediction and the probability of a deal.</p>
-<p>We found that the Bayesian target encoded features outperformed the built-in LightGBM categorical variable encoding.  The graph below shows the performance of a LightGBM model using target encoding for various value of <span class="math">\(\tau\)</span> relative to a baseline LightGBM model using built-in categorical encoding. The best model uses Bayesian target encoded features with a hyperparameter setting of <span class="math">\(\tau=10\)</span>.</p>
-<p><img alt="alt text" src="/images/bayesian-mean-target-encoding.svg" title="LightGBM with target encoding compared to built-in categorical variable encoding."></p>
+where <span class="math">\(\lambda^{(j)} = \tau \,\big/\!\left( N^{(j)}+\tau \right).\)</span>  Notice that this equation has the same functional form as <span class="math">\((2)\)</span>.  We see that increasing <span class="math">\(\tau\)</span> brings the estimate closer to the prior mean and that decreasing <span class="math">\(\tau\)</span> brings it closer to the in-level sample average.<br>
+Recall that when we use additive noise for regularization <span class="math">\((3)\)</span>, we need to specify the distribution of the noise random variable <span class="math">\(\epsilon^{(j)}\)</span>.  This is natural to do when taking the Bayesian approach.  In particular, we can set <span class="math">\(\epsilon^{(j)} \sim \mathrm{Beta}\!\left(\alpha_{posterior}^{(j)}, \beta_{posterior}^{(j)} \right)\)</span>. The only hyperparameter left to tune is the noise strength <span class="math">\(\eta\)</span>.  Notice that from <span class="math">\((5)\)</span>, the variance of the noise distribution will shrink as we obtain more observations. What this means is that as the number of observations increases, the noise distribution will converge to a delta distribution centered at <span class="math">\(\mu_{posterior}^{(j)}\)</span>.  Thus, we have the nice property that the amount of regularization decreases as the number of observations increases.</p>
+<h2>Case Study: Kaggle - Avito Demand Prediction<sup><a href="https://www.kaggle.com/mmotoki/avito-target-encoding">3</a></sup></h2>
+<p>My team and I used Bayesian target encoding in the recent Kaggle competition <a href="https://www.kaggle.com/c/avito-demand-prediction">Avito Demand Prediction Challenge</a> where we placed 14th out of 1,917 teams.  For a more detailed write-up about our team's solution, see <a href="https://www.kaggle.com/c/avito-demand-prediction/discussion/60059">Peter Hurford's post</a>.
+The task was to predict demand for an online advertisement based on its full description (title, description, images, etc.), its context (geographically where it was posted, similar ads already posted), and historical demand for similar ads in similar contexts.  The competition metric was the root mean squared error between our prediction and the probability of a deal.
+We found that the Bayesian target-encoded features outperformed the built-in LightGBM categorical variable encoding.  The graph below shows the performance of a LightGBM model using target encoding for various values of <span class="math">\(\tau\)</span> relative to a baseline LightGBM model using built-in categorical encoding. The best model uses Bayesian target-encoded features with a hyperparameter setting of <span class="math">\(\tau=10\)</span>.
+<img alt="alt text" src="/images/bayesian-mean-target-encoding.svg" title="LightGBM with target encoding compared to built-in categorical variable encoding.">
+<em>The figure above shows the relative improvement of the beta target encoded features compared to the built-in LightGBM encodings.  We see that the beta target encodings are better than the baseline for a wide range of hyperparameter settings.</em></p>
 <hr>
-<p><strong>Refrences</strong></p>
+<p><strong>References</strong></p>
 <ul>
-<li>
-<p>[<a href="https://en.wikipedia.org/wiki/Beta_distribution">1</a>]&nbsp; A more comprehensive list of statistics for the Beta distribution.</p>
-</li>
-<li>
-<p>[<a href="https://people.eecs.berkeley.edu/~jordan/courses/260-spring10/other-readings/chapter9.pdf">2</a>]&nbsp; Information about Bayesian statistics and conjugate priors.</p>
-</li>
-<li>
-<p>[<a href="https://www.kaggle.com/mmotoki/beta-target-encoding">3</a>]&nbsp; Code for implementing the Bayesian target encoding.</p>
-</li>
+<li><em>[<a href="https://en.wikipedia.org/wiki/Beta_distribution">1</a>]&nbsp; A more comprehensive list of statistics for the Beta distribution.</em></li>
+<li><em>[<a href="https://people.eecs.berkeley.edu/~jordan/courses/260-spring10/other-readings/chapter9.pdf">2</a>]&nbsp; Information about Bayesian statistics and conjugate priors.</em></li>
+<li><em>[<a href="https://www.kaggle.com/mmotoki/beta-target-encoding">3</a>]&nbsp; Code for implementing the Bayesian target encoding.</em></li>
 </ul>
 <script type="text/javascript">if (!document.getElementById('mathjaxscript_pelican_#%@#$@#')) {
     var align = "center",
