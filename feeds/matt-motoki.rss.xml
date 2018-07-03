@@ -1,537 +1,101 @@
 <?xml version="1.0" encoding="utf-8"?>
-<rss version="2.0"><channel><title>Matt Motoki - Matt Motoki</title><link>/</link><description></description><lastBuildDate>Wed, 28 Nov 2018 12:30:00 -1000</lastBuildDate><item><title>Organizing the Hawaii Machine Learning Meetup</title><link>/hawaii-machinelearning-meetup.html</link><description>&lt;h1&gt;Summary&lt;/h1&gt;
-&lt;p&gt;In July of 2017, my friends &lt;a href="http://thomasyokota.com/"&gt;Tom Yokota&lt;/a&gt;, &lt;a href="https://www.kaggle.com/datascience808"&gt;Sora Khongnawong (Paul)&lt;/a&gt; and I decided to create a Meetup centered around data science, machine learning, and artificial intelligence in Hawaii.  We sought to promte these technologies and increase their adoption in Hawaii.  &lt;/p&gt;
-&lt;p&gt;It took more work than we expected but we now have a vibrant community of 250+ members, we've held periodic study groups for an online machine learning course, and we hosted Hawaii's very first machine learning competition. Overall, I wold consider the Meetup a success. &lt;/p&gt;
-&lt;h2&gt;Motivation&lt;/h2&gt;
-&lt;p&gt;In Hawaii, most people agree that businesses typically adopt technology 5-10 years after the mainland US.  This was especially true for data science and machine learning.  At the time, Tom and I were both working as data scientists at two of the very few consultancy firm specializing in analytics.  At work, one of our biggest hurdles was explaining to our clients what data science and machine learning is and what it isn't, what it could and couldn't do.  As frustrating as it was, the lack of understanding of data science and machine learning was understandable; at the time, there was almost no community resources for data science and machine learning--we wanted to change that.  &lt;/p&gt;
-&lt;p&gt;On Jul 19, 2017 we created the Hawaii Machine Learning Meetup. Two days later we had 20+ members.  We were underprepared--we didn't have any meetup content lined up and no place to actually host a meetup. All we knew was that we wanted to promote machine learning in Hawaii. After assessing the state of machine learning in Hawaii, we came up with our three main goals for the meetup: &lt;/p&gt;
-&lt;ol&gt;
-&lt;li&gt;
-&lt;p&gt;&lt;strong&gt;Host talks and presentations given by our members, academics, and people in industry.&lt;/strong&gt; This was our main role. As organizers, we would work on contributing our own presentations to the meetup, but we want the focus to be on how the community in Hawaii is using machine learning.&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;&lt;strong&gt;Promote an understanding of machine learning through study groups.&lt;/strong&gt; This was of secondary importance. We planned to organize study groups for members enrolled in or auditing online courses. We also planned to hold a periodic review session for the material covered in the course. &lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;&lt;strong&gt;Organize local machine learning competitions &amp;amp; encourage participation in global competitions.&lt;/strong&gt; We believed that participating in machine learning competitions is a great way to apply machine learning techniques and also a great way to learn new techniques.  &lt;/p&gt;
-&lt;/li&gt;
-&lt;/ol&gt;
-&lt;p&gt;Our first Meetup wasn't until September but we once we got started we picked up steam.  In October, we brought on a new organizer Sam Murphy.  With his help we were able to secure the Manoa Innovation Center as our venue for the meetup.  This also meant that we had our first sponsor the Hawaii Technology Development Coporation. &lt;/p&gt;
-&lt;p&gt;In December we started our study group for the &lt;a href="https://www.udemy.com/machinelearning/"&gt;Machine Learning A-Z course&lt;/a&gt; on Udemy.  To complete the course, we outlined a schedule to meet every Saturday for 4 months to discuss a few sections the course.  &lt;/p&gt;
-&lt;p&gt;On March 30th we kicked off Hawaii's first machine learning competition on the Kaggle In-Class platform.  From then until April our members competed to predict the quantity of items sold in online sales transactions.  We held 4 tutorial sessions to help newcomers to competitive machine learning. &lt;/p&gt;
-&lt;p&gt;We've had presentations from our members, researchers from the University of Hawaii's Cancer Research Center, an Assistant Professor in Economics, and even out-of-town guests.  In other words, we met our three main goals for the meetup.  &lt;/p&gt;
-&lt;h1&gt;Conclusion&lt;/h1&gt;
-&lt;p&gt;At the time I was working as a &lt;a href="https://www.zoominfo.com/p/Matthew-Motoki/-1348302200"&gt;data analyst at a local startup&lt;/a&gt; focusing primarily on fundraising analytics for nonprofits. &lt;/p&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Matt Motoki</dc:creator><pubDate>Fri, 29 Jun 2018 02:48:00 -1000</pubDate><guid isPermaLink="false">tag:None,2018-06-29:/hawaii-machinelearning-meetup.html</guid><category>Meetup</category></item><item><title>Bayesian Target Encoding</title><link>/bayesian-target-encoding.html</link><description>&lt;h1&gt;Summary&lt;/h1&gt;
-&lt;p&gt;This blog provides a mathematical framework for the common technique for encoding categorical variables called target encoding.  The method relies on Bayesian statistics and is well-suited for online learning.  Code for implementing the Bayesian target encoding is provided and applied to the recent Avito Kaggle Competition where my team and I took 14th place. &lt;/p&gt;
-&lt;h1&gt;Background&lt;/h1&gt;
-&lt;p&gt;Target encoding is a common technique for encoding a categorical variable. The idea is to capture the relationship between the levels of categorical variable and the target variable by calculating statistics for each level.  The most commonlu used statistic is the mean, in which case it is called mean target encoding.  Catboost and LightGBM offer built-in mean targt encoding. &lt;/p&gt;
-&lt;p&gt;The main drawback of target encoding is that it leaks information about the variable we are trying to predict.  If we have levels with only a few observations then we risk overfitting our data which leads to poor generalization of our models.  This problem is acute when dealing with high cardinality categorical variables.  Regularization either by smoothing estimates or adding noise to the data is the common approach to dealing with overfitting.  By adopting a Bayesian framework, we can handle regularization in a systematic yet intuitive way.  Furthermore, the Bayesian framework is well-suited for online learning requiring only minimal updates as new data is aquired. &lt;/p&gt;
-&lt;p&gt;In what follows I will discuss Bayesian target encoding in the context of binary classification.  However, the framework can be adapted to other target distributions. &lt;/p&gt;
-&lt;h1&gt;Theory&lt;/h1&gt;
-&lt;p&gt;The beta distribution is parameterized by &lt;span class="math"&gt;\(\alpha\)&lt;/span&gt; and &lt;span class="math"&gt;\(\beta\)&lt;/span&gt; which can respectively be thought of as the number of positive and negative examples in a repeated Bernoulli experiment.  We do not want to search over &lt;span class="math"&gt;\(\alpha\)&lt;/span&gt; independently &lt;span class="math"&gt;\(\beta\)&lt;/span&gt;.  Instead, we would prefer to search over &lt;span class="math"&gt;\(\alpha\)&lt;/span&gt; and &lt;span class="math"&gt;\(\beta\)&lt;/span&gt; such that the mean of the distribution is constant
-&lt;/p&gt;
+<rss version="2.0"><channel><title>Matt Motoki - Matt Motoki</title><link>/</link><description></description><lastBuildDate>Sun, 01 Jul 2018 22:47:00 -1000</lastBuildDate><item><title>Bayesian Target Encoding</title><link>/bayesian-target-encoding.html</link><description>&lt;h1&gt;Bayesian Target Encoding&lt;/h1&gt;
+&lt;h2&gt;Summary&lt;/h2&gt;
+&lt;p&gt;Bayesian Target Encoding is a feature engineering techinique used to map categorical variables into numberic variables.  The Bayesian framework requires only minimal updates as new data is aquired is thus well-suited for online learning .  Furthermore, the Bayesian approach makes choosing and interpreting hyperparameters intuitive.  Code for implementing the Bayesian target encoding is provided and applied to the recent Avito Kaggle Competition where my team and I took 14th place. &lt;/p&gt;
+&lt;h2&gt;Target Encoding&lt;/h2&gt;
+&lt;p&gt;Most machine learning algorithms require numeric input data.  Target encoding is a common technique used to convert categorical varibles into numeric variables.  When done properly target encoding can be very effective [ref].  Target encoding is built into popular machine learning algorithms such as LightGBM [link] and CatBoost [link].  &lt;/p&gt;
+&lt;p&gt;In supervised learning, we are given &lt;span class="math"&gt;\(N\)&lt;/span&gt; data points &lt;span class="math"&gt;\((x_i, y_i)\)&lt;/span&gt; and tasked with learning a mapping from input variable &lt;span class="math"&gt;\(x\)&lt;/span&gt; to the target variable &lt;span class="math"&gt;\(y\)&lt;/span&gt;.   Suppose &lt;span class="math"&gt;\(x\)&lt;/span&gt; is categorical and takes on one of &lt;span class="math"&gt;\(l\)&lt;/span&gt; possible (non-numeric) levels &lt;span class="math"&gt;\(x\in \left\{ x^{(1)}, x^{(2)}, \dots, x^{(l)} \right\}\)&lt;/span&gt;.  Target encoding maps each level of &lt;span class="math"&gt;\(x\)&lt;/span&gt; into a feature &lt;span class="math"&gt;\(\phi\in \left\{ \phi^{(1)}, \phi^{(2)}, \dots, \phi^{(l)} \right\}\)&lt;/span&gt; in the following way:&lt;/p&gt;
 &lt;div class="math"&gt;$$
-\mu_{prior} = \frac{\alpha}{\alpha + \beta}. 
-$$&lt;/div&gt;
-&lt;p&gt;If we may have intuition about the prior mean (e.g,. in the case of hierarchical Bayesian target encoding) or we may not.  In the latter case we can simply calculate the mean over the entire training set (we leak target information by doing this but the risk of overfitting is minimal).  With the mean known, we can reparamertize the beta distribution in term of &lt;span class="math"&gt;\(\tau = \alpha + \beta\)&lt;/span&gt;.  Intuitvely, &lt;span class="math"&gt;\(tau\)&lt;/span&gt; can be thought of the effective sample size from the prior distribution.  Rewriting the above equation we get
-&lt;/p&gt;
-&lt;div class="math"&gt;$$
-\alpha = \tau \cdot \mu_{prior}  \quad\text{and}\quad \beta = \tau \cdot(1 - \mu_{prior}).
-$$&lt;/div&gt;
-&lt;p&gt;From &lt;a href="https://people.eecs.berkeley.edu/~jordan/courses/260-spring10/other-readings/chapter9.pdf"&gt;Eq. (9.20)&lt;/a&gt;, the posterior mean can be calculated as a weighted average of the prior mean with the MLE 
-&lt;/p&gt;
-&lt;div class="math"&gt;$$
-\mu_{posterior} = \kappa \cdot \mu_{prior} + (1-\kappa) \cdot \frac{n}{N}, 
+\phi^{(j)} = \frac{1}{N^{(j)}} \sum_{i=1}^N y_i \cdot \mathrm{I}  \! \left\{ x_i = x^{(j)} \right\} \tag{1}
 $$&lt;/div&gt;
 &lt;p&gt;
-where &lt;span class="math"&gt;\(n\)&lt;/span&gt; is the total number of positive examples, &lt;span class="math"&gt;\(N\)&lt;/span&gt; is the total number of examples, and the weight &lt;span class="math"&gt;\(\kappa\)&lt;/span&gt; is 
-&lt;/p&gt;
+where &lt;span class="math"&gt;\(N^{(j)} = \sum_{i=1}^N \mathrm{I} \! \left\{ x_i = x^{(j)} \right\}\)&lt;/span&gt; and &lt;span class="math"&gt;\(\mathrm{I}\{\cdot\}\)&lt;/span&gt; is the indicator function.  In other words, &lt;span class="math"&gt;\(\phi^{(j)}\)&lt;/span&gt; is the average &lt;span class="math"&gt;\(y\)&lt;/span&gt;-value in level &lt;span class="math"&gt;\(j\)&lt;/span&gt; and &lt;span class="math"&gt;\(N^{(j)}\)&lt;/span&gt; is the total number of observations in level &lt;span class="math"&gt;\(j\)&lt;/span&gt;.&lt;/p&gt;
+&lt;h3&gt;Overfitting and Regularization&lt;/h3&gt;
+&lt;p&gt;Target encoded variables are inherently leaky; that is, their construction requires information that we will not have when we make predictions. To see why this can be a problem, consider the case when &lt;span class="math"&gt;\(N^{(j)} = 1\)&lt;/span&gt;.  In this case, the summation in &lt;span class="math"&gt;\((1)\)&lt;/span&gt; involves only one non-zero term when &lt;span class="math"&gt;\(x_i = x^{(j)}\)&lt;/span&gt;.  Thus, we have &lt;span class="math"&gt;\(\phi_i = y_i\)&lt;/span&gt;; that is, &lt;span class="math"&gt;\(\phi_i\)&lt;/span&gt; is encoded with exactly the value we are trying to predict.  Using these target encoded features as-is will lead to overfitting of the training set and poor generalization of our models.  This problem is acute when dealing with high cardinality categorical variables.&lt;/p&gt;
+&lt;p&gt;We can combat the data leakage problem by smoothing the estimate of the average &lt;span class="math"&gt;\(y\)&lt;/span&gt;-value in level &lt;span class="math"&gt;\(j\)&lt;/span&gt;.  In particular, &lt;/p&gt;
 &lt;div class="math"&gt;$$
-\kappa = \frac{\tau}{N+\tau}.
+\phi^{(j)} 
+= \lambda^{(j)} \cdot \frac{1}{N}  \sum_{i=1}^N y_i  + \left( 1 - \lambda^{(j)} \right) \cdot \frac{ 1 }{N^{(j)}} \sum_{i=1}^N y_i \cdot \mathrm{I}  \! \left\{ x_i = x^{(j)} \right\}, \tag{2}
 $$&lt;/div&gt;
 &lt;p&gt;
-We see that increasing &lt;span class="math"&gt;\(tau\)&lt;/span&gt; makes &lt;span class="math"&gt;\(kappa\)&lt;/span&gt; closer to 1 and thus the posterior mean becomes closer to the prior mean.  Hence, &lt;span class="math"&gt;\(\tau\)&lt;/span&gt; is a regularization hyperparameter that we can tune to control the complexity of our target encoded variable.  Another way to write the posterior mean is
+which is just a weighted average of the estimate in &lt;span class="math"&gt;\((1)\)&lt;/span&gt; and the average &lt;span class="math"&gt;\(y\)&lt;/span&gt;-value value over the entire training set. The &lt;span class="math"&gt;\(\lambda^{(j)}\)&lt;/span&gt; is a hyperparameter that controls the amount of smoothing in the estimate.  Alternatively, we could address data leakage by adding noise to the estimate
 &lt;/p&gt;
 &lt;div class="math"&gt;$$
-\mu_{posterior} = \frac{\tau \cdot \mu_{prior} + n}{N + \tau}.
-$$&lt;/div&gt;
-&lt;p&gt;This equation shows the simple update rule for the posterior mean; all we need to keep track of the counts of 1's and 0's.  &lt;/p&gt;
-&lt;p&gt;Note that the parameters of the posterior distribution are 
-&lt;/p&gt;
-&lt;div class="math"&gt;$$
-\alpha_{posterior} = \tau \cdot \mu_{prior} + n \quad\text{and}\quad \beta_{posterior} = N-n + \tau \cdot (1 - \mu_{prior}).
+\phi^{(j)} = \eta \cdot \epsilon^{(j)} + (1- \eta) \cdot \frac{1}{N^{(j)}} \sum_{i=1}^N y_i \cdot \mathrm{I}  \! \left\{ x_i = x^{(j)} \right\}. \tag{3}
 $$&lt;/div&gt;
 &lt;p&gt;
-Since the posterior parameters are known we can use them to calculate other statistics; e.g., &lt;/p&gt;
+The hyperparameters &lt;span class="math"&gt;\(\lambda^{(j)}\)&lt;/span&gt;, &lt;span class="math"&gt;\(\eta\)&lt;/span&gt; and the distribution of the random variable &lt;span class="math"&gt;\(\epsilon^{(j)}\)&lt;/span&gt; need to be chosen carefully for target encoding to perform well.   By adopting a Bayesian framework, we can handle regularization in a systematic yet intuitive way.  Furthermore, the Bayesian framework is well-suited for online learning requiring only minimal updates as new data is aquired.  The next section, we will discuss target encoding in the context of binary classification.  &lt;/p&gt;
+&lt;h2&gt;Bayesian Target Encoding for Binary Classification&lt;/h2&gt;
+&lt;p&gt;In Bayesian statistics we represent our beliefs about the world using a prior distribution. Approaching target encoding from a Bayesian perspective has the following benefits:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;hyperparameters are easy to interpret&lt;/li&gt;
+&lt;li&gt;hyperparameter estimation is well-suited for online learning&lt;/li&gt;
+&lt;li&gt;generalizing the encoding to statistics other than the mean is easy&lt;/li&gt;
+&lt;li&gt;choosing the distribution for the noise random variable is easy&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;The analysis here considers target encoding for binary classification where the target variable &lt;span class="math"&gt;\(y\)&lt;/span&gt; is takes on two discrete values &lt;span class="math"&gt;\(\{0,1\}\)&lt;/span&gt;.  The same line of reasoning applies to target encoding for soft binary classification where &lt;span class="math"&gt;\(y\)&lt;/span&gt; takes on values in the interval &lt;span class="math"&gt;\([0, 1]\)&lt;/span&gt;.  The general theory applies to other target variable types.&lt;/p&gt;
+&lt;h3&gt;The Beta Distribution&lt;sup&gt;&lt;a href="https://en.wikipedia.org/wiki/Beta_distribution"&gt;1&lt;/a&gt;&lt;/sup&gt;&lt;/h3&gt;
+&lt;p&gt;It is convienent to model binary target variables using the Bernoulli distribution which has the Beta distribution as its conjugate prior.  The Beta distribution is parameterized by &lt;span class="math"&gt;\(\alpha\)&lt;/span&gt; and &lt;span class="math"&gt;\(\beta\)&lt;/span&gt; which can respectively be thought of as the number of positive and negative examples in a repeated Binomial experiment.  Many useful statistics of the Beta distribution can written in terms of &lt;span class="math"&gt;\(\alpha\)&lt;/span&gt; and &lt;span class="math"&gt;\(\beta\)&lt;/span&gt;; e.g., 
+the mean
+&lt;/p&gt;
 &lt;div class="math"&gt;$$
-\mathrm{var} = \frac{\alpha\beta}{(\alpha + \beta)^2(\alpha + \beta+1)}
+\mu = \frac{\alpha}{\alpha + \beta}, \tag{4}
+$$&lt;/div&gt;
+&lt;p&gt;
+the variance 
+&lt;/p&gt;
+&lt;div class="math"&gt;$$
+\sigma^2 = \frac{\alpha\beta}{(\alpha + \beta)^2(\alpha + \beta+1)}, \tag{5}
+$$&lt;/div&gt;
+&lt;p&gt;
+and the skewness
+&lt;/p&gt;
+&lt;div class="math"&gt;$$
+\gamma = \frac{2 (\beta - \alpha) \sqrt{\alpha + \beta + 1}}{(\alpha + \beta+1)\sqrt{\alpha\beta}}. \tag{6}
+$$&lt;/div&gt;
+&lt;h3&gt;Interpreting the Hyperparameters&lt;sup&gt;&lt;a href="https://people.eecs.berkeley.edu/~jordan/courses/260-spring10/other-readings/chapter9.pdf"&gt;2&lt;/a&gt;&lt;/sup&gt;&lt;/h3&gt;
+&lt;p&gt;When deciding on the prior distribution, we need to set values for &lt;span class="math"&gt;\(\alpha_{prior}\)&lt;/span&gt; and &lt;span class="math"&gt;\(\beta_{prior}\)&lt;/span&gt;.  One way to do this is with grid search and cross-validation. However, we should not want to search over &lt;span class="math"&gt;\(\alpha_{prior}\)&lt;/span&gt; and &lt;span class="math"&gt;\(\beta_{prior}\)&lt;/span&gt; independently.  Instead, we can reduce the search space by requiring &lt;span class="math"&gt;\(\alpha\)&lt;/span&gt; and &lt;span class="math"&gt;\(\beta\)&lt;/span&gt; to be such that the mean of the prior distribution is constant. The obvious choice for prior mean is the average &lt;span class="math"&gt;\(y\)&lt;/span&gt;-value in the training set &lt;span class="math"&gt;\(\mu_{prior} = \frac{1}{N} \sum_{i=1}^N y_i\)&lt;/span&gt;, but the prior mean can also be set in other ways.  If the categorical variables are hierarchical, then the prior mean can from one step up in the hierarchy.  With the mean known, we can reparamertize the beta distribution in terms of &lt;span class="math"&gt;\(\tau = \alpha_{prior} + \beta_{prior}\)&lt;/span&gt;.  Intuitvely, &lt;span class="math"&gt;\(\tau\)&lt;/span&gt; can be thought of the effective sample size from the prior distribution.  Rewriting &lt;span class="math"&gt;\((4)\)&lt;/span&gt; in terms of &lt;span class="math"&gt;\(\tau\)&lt;/span&gt; we get
+&lt;/p&gt;
+&lt;div class="math"&gt;$$
+\alpha_{prior} = \tau \cdot \mu_{prior}  \quad\text{and}\quad \beta_{prior} = \tau \cdot(1 - \mu_{prior}).
+$$&lt;/div&gt;
+&lt;p&gt;The parameters of the posterior distribution are given by
+&lt;/p&gt;
+&lt;div class="math"&gt;$$
+\alpha_{posterior}^{(j)} = \alpha_{prior}+  \sum_{i=1}^N y_i \cdot \mathrm{I}\! \left\{x=x^{(j)}\right\} 
 $$&lt;/div&gt;
 &lt;p&gt;
 and
 &lt;/p&gt;
 &lt;div class="math"&gt;$$
-\mathrm{skewness} = \frac{2 (\beta - \alpha) \sqrt{\alpha + \beta + 1}}{(\alpha + \beta+1)\sqrt{\alpha\beta}}.
-$$&lt;/div&gt;
-&lt;p&gt;Furthermore, we can add noise to the target encoded variables by sampling from the posterior or prior distribution.  For example, fix the noise strength &lt;span class="math"&gt;\(\epsilon\)&lt;/span&gt; we can add noise using the following formula
-&lt;/p&gt;
-&lt;div class="math"&gt;$$
-\tilde{\mu}_{posterior} = (1-\epsilon)\cdot \mu_{posterior} + \epsilon\cdot X_{posterior}
+\beta_{posterior}^{(j)} = \beta_{prior} + N^{(j)} - \alpha_{posterior}^{(j)}.
 $$&lt;/div&gt;
 &lt;p&gt;
-where &lt;span class="math"&gt;\(X_{posterior} \sim \mathrm{Beta}(\alpha_{posterior}, \beta_{posterior})\)&lt;/span&gt;. &lt;/p&gt;
-&lt;h1&gt;Examples&lt;/h1&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="k"&gt;class&lt;/span&gt; &lt;span class="nc"&gt;BetaEncoder&lt;/span&gt;&lt;span class="p"&gt;():&lt;/span&gt;
-
-    &lt;span class="k"&gt;def&lt;/span&gt; &lt;span class="fm"&gt;__init__&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="bp"&gt;self&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;group&lt;/span&gt;&lt;span class="p"&gt;):&lt;/span&gt;
-
-        &lt;span class="bp"&gt;self&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;group&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;group&lt;/span&gt;
-        &lt;span class="bp"&gt;self&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;stats&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="bp"&gt;None&lt;/span&gt;
-
-    &lt;span class="c1"&gt;# get counts from train set&lt;/span&gt;
-    &lt;span class="k"&gt;def&lt;/span&gt; &lt;span class="nf"&gt;fit&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="bp"&gt;self&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;df&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;target_col&lt;/span&gt;&lt;span class="p"&gt;):&lt;/span&gt;
-        &lt;span class="bp"&gt;self&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;prior_mean&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;np&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;mean&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;df&lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="n"&gt;target_col&lt;/span&gt;&lt;span class="p"&gt;])&lt;/span&gt;
-        &lt;span class="n"&gt;stats&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;df&lt;/span&gt;&lt;span class="p"&gt;[[&lt;/span&gt;&lt;span class="n"&gt;target_col&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="bp"&gt;self&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;group&lt;/span&gt;&lt;span class="p"&gt;]]&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;groupby&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="bp"&gt;self&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;group&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
-        &lt;span class="n"&gt;stats&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;stats&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;agg&lt;/span&gt;&lt;span class="p"&gt;([&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;sum&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="s1"&gt;&amp;#39;count&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;])[&lt;/span&gt;&lt;span class="n"&gt;target_col&lt;/span&gt;&lt;span class="p"&gt;]&lt;/span&gt;    
-        &lt;span class="n"&gt;stats&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;rename&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;columns&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="p"&gt;{&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;sum&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="s1"&gt;&amp;#39;n&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="s1"&gt;&amp;#39;count&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="s1"&gt;&amp;#39;N&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;},&lt;/span&gt; &lt;span class="n"&gt;inplace&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="bp"&gt;True&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
-        &lt;span class="n"&gt;stats&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;reset_index&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;level&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="mi"&gt;0&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;inplace&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="bp"&gt;True&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;           
-        &lt;span class="bp"&gt;self&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;stats&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;stats&lt;/span&gt;
-
-    &lt;span class="c1"&gt;# extract posterior statistics&lt;/span&gt;
-    &lt;span class="k"&gt;def&lt;/span&gt; &lt;span class="nf"&gt;transform&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="bp"&gt;self&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;df&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;stat_type&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;N_min&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="mi"&gt;1000&lt;/span&gt;&lt;span class="p"&gt;):&lt;/span&gt;
-
-        &lt;span class="n"&gt;df_stats&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;pd&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;merge&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;df&lt;/span&gt;&lt;span class="p"&gt;[[&lt;/span&gt;&lt;span class="bp"&gt;self&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;group&lt;/span&gt;&lt;span class="p"&gt;]],&lt;/span&gt; &lt;span class="bp"&gt;self&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;stats&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;how&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;left&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
-        &lt;span class="n"&gt;n&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;df_stats&lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;n&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;]&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;copy&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;
-        &lt;span class="n"&gt;N&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;df_stats&lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;N&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;]&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;copy&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;
-
-        &lt;span class="c1"&gt;# fill in missing&lt;/span&gt;
-        &lt;span class="n"&gt;nan_indexs&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;np&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;isnan&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;n&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
-        &lt;span class="n"&gt;n&lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="n"&gt;nan_indexs&lt;/span&gt;&lt;span class="p"&gt;]&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="bp"&gt;self&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;prior_mean&lt;/span&gt;
-        &lt;span class="n"&gt;N&lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="n"&gt;nan_indexs&lt;/span&gt;&lt;span class="p"&gt;]&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="mf"&gt;1.0&lt;/span&gt;
-
-        &lt;span class="c1"&gt;# prior parameters&lt;/span&gt;
-        &lt;span class="n"&gt;N_prior&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;np&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;maximum&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;N_min&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;N&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="mi"&gt;0&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
-        &lt;span class="n"&gt;alpha_prior&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="bp"&gt;self&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;prior_mean&lt;/span&gt;&lt;span class="o"&gt;*&lt;/span&gt;&lt;span class="n"&gt;N_prior&lt;/span&gt;
-        &lt;span class="n"&gt;beta_prior&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="mi"&gt;1&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="bp"&gt;self&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;prior_mean&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;&lt;span class="o"&gt;*&lt;/span&gt;&lt;span class="n"&gt;N_prior&lt;/span&gt;
-
-        &lt;span class="c1"&gt;# posterior parameters&lt;/span&gt;
-        &lt;span class="n"&gt;alpha&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;alpha_prior&lt;/span&gt; &lt;span class="o"&gt;+&lt;/span&gt; &lt;span class="n"&gt;n&lt;/span&gt;
-        &lt;span class="n"&gt;beta&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt;  &lt;span class="n"&gt;beta_prior&lt;/span&gt; &lt;span class="o"&gt;+&lt;/span&gt; &lt;span class="n"&gt;N&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;n&lt;/span&gt;
-
-        &lt;span class="c1"&gt;# calculate statistics&lt;/span&gt;
-        &lt;span class="k"&gt;if&lt;/span&gt; &lt;span class="n"&gt;stat_type&lt;/span&gt;&lt;span class="o"&gt;==&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;mean&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;
-            &lt;span class="n"&gt;num&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;alpha&lt;/span&gt;
-            &lt;span class="n"&gt;dem&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;alpha&lt;/span&gt;&lt;span class="o"&gt;+&lt;/span&gt;&lt;span class="n"&gt;beta&lt;/span&gt;
-
-        &lt;span class="k"&gt;elif&lt;/span&gt; &lt;span class="n"&gt;stat_type&lt;/span&gt;&lt;span class="o"&gt;==&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;var&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;
-            &lt;span class="n"&gt;num&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;alpha&lt;/span&gt;&lt;span class="o"&gt;*&lt;/span&gt;&lt;span class="n"&gt;beta&lt;/span&gt;
-            &lt;span class="n"&gt;dem&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;alpha&lt;/span&gt;&lt;span class="o"&gt;+&lt;/span&gt;&lt;span class="n"&gt;beta&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;&lt;span class="o"&gt;**&lt;/span&gt;&lt;span class="mi"&gt;2&lt;/span&gt;&lt;span class="o"&gt;*&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;alpha&lt;/span&gt;&lt;span class="o"&gt;+&lt;/span&gt;&lt;span class="n"&gt;beta&lt;/span&gt;&lt;span class="o"&gt;+&lt;/span&gt;&lt;span class="mi"&gt;1&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
-
-        &lt;span class="k"&gt;elif&lt;/span&gt; &lt;span class="n"&gt;stat_type&lt;/span&gt;&lt;span class="o"&gt;==&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;mode&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;
-            &lt;span class="n"&gt;num&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;alpha&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="mi"&gt;1&lt;/span&gt;
-            &lt;span class="n"&gt;dem&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;alpha&lt;/span&gt;&lt;span class="o"&gt;+&lt;/span&gt;&lt;span class="n"&gt;beta&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="mi"&gt;2&lt;/span&gt;
-
-        &lt;span class="k"&gt;elif&lt;/span&gt; &lt;span class="n"&gt;stat_type&lt;/span&gt;&lt;span class="o"&gt;==&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;median&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;
-            &lt;span class="n"&gt;num&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;alpha&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="mi"&gt;1&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="mi"&gt;3&lt;/span&gt;
-            &lt;span class="n"&gt;dem&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;alpha&lt;/span&gt;&lt;span class="o"&gt;+&lt;/span&gt;&lt;span class="n"&gt;beta&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="mi"&gt;2&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="mi"&gt;3&lt;/span&gt;
-
-        &lt;span class="k"&gt;elif&lt;/span&gt; &lt;span class="n"&gt;stat_type&lt;/span&gt;&lt;span class="o"&gt;==&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;skewness&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;
-            &lt;span class="n"&gt;num&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="mi"&gt;2&lt;/span&gt;&lt;span class="o"&gt;*&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;beta&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;alpha&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;&lt;span class="o"&gt;*&lt;/span&gt;&lt;span class="n"&gt;np&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;sqrt&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;alpha&lt;/span&gt;&lt;span class="o"&gt;+&lt;/span&gt;&lt;span class="n"&gt;beta&lt;/span&gt;&lt;span class="o"&gt;+&lt;/span&gt;&lt;span class="mi"&gt;1&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
-            &lt;span class="n"&gt;dem&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;alpha&lt;/span&gt;&lt;span class="o"&gt;+&lt;/span&gt;&lt;span class="n"&gt;beta&lt;/span&gt;&lt;span class="o"&gt;+&lt;/span&gt;&lt;span class="mi"&gt;2&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;&lt;span class="o"&gt;*&lt;/span&gt;&lt;span class="n"&gt;np&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;sqrt&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;alpha&lt;/span&gt;&lt;span class="o"&gt;*&lt;/span&gt;&lt;span class="n"&gt;beta&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
-
-        &lt;span class="k"&gt;elif&lt;/span&gt; &lt;span class="n"&gt;stat_type&lt;/span&gt;&lt;span class="o"&gt;==&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;kurtosis&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;
-            &lt;span class="n"&gt;num&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="mi"&gt;6&lt;/span&gt;&lt;span class="o"&gt;*&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;alpha&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;beta&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;&lt;span class="o"&gt;**&lt;/span&gt;&lt;span class="mi"&gt;2&lt;/span&gt;&lt;span class="o"&gt;*&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;alpha&lt;/span&gt;&lt;span class="o"&gt;+&lt;/span&gt;&lt;span class="n"&gt;beta&lt;/span&gt;&lt;span class="o"&gt;+&lt;/span&gt;&lt;span class="mi"&gt;1&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt; &lt;span class="o"&gt;-&lt;/span&gt; &lt;span class="n"&gt;alpha&lt;/span&gt;&lt;span class="o"&gt;*&lt;/span&gt;&lt;span class="n"&gt;beta&lt;/span&gt;&lt;span class="o"&gt;*&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;alpha&lt;/span&gt;&lt;span class="o"&gt;+&lt;/span&gt;&lt;span class="n"&gt;beta&lt;/span&gt;&lt;span class="o"&gt;+&lt;/span&gt;&lt;span class="mi"&gt;2&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
-            &lt;span class="n"&gt;dem&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;alpha&lt;/span&gt;&lt;span class="o"&gt;*&lt;/span&gt;&lt;span class="n"&gt;beta&lt;/span&gt;&lt;span class="o"&gt;*&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;alpha&lt;/span&gt;&lt;span class="o"&gt;+&lt;/span&gt;&lt;span class="n"&gt;beta&lt;/span&gt;&lt;span class="o"&gt;+&lt;/span&gt;&lt;span class="mi"&gt;2&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;&lt;span class="o"&gt;*&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;alpha&lt;/span&gt;&lt;span class="o"&gt;+&lt;/span&gt;&lt;span class="n"&gt;beta&lt;/span&gt;&lt;span class="o"&gt;+&lt;/span&gt;&lt;span class="mi"&gt;3&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
-
-        &lt;span class="k"&gt;else&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;
-            &lt;span class="n"&gt;num&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="bp"&gt;self&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;prior_mean&lt;/span&gt;
-            &lt;span class="n"&gt;dem&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;np&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;ones_like&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;N_prior&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
-
-        &lt;span class="c1"&gt;# replace missing&lt;/span&gt;
-        &lt;span class="n"&gt;value&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;num&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;dem&lt;/span&gt;
-        &lt;span class="n"&gt;value&lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="n"&gt;np&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;isnan&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;value&lt;/span&gt;&lt;span class="p"&gt;)]&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;np&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;nanmedian&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;value&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
-        &lt;span class="k"&gt;return&lt;/span&gt; &lt;span class="n"&gt;value&lt;/span&gt;
-
-    &lt;span class="k"&gt;def&lt;/span&gt; &lt;span class="nf"&gt;fit_transform&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;df&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;stat_type&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;N_min&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="mi"&gt;100&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;target_col&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;deal_probability&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;):&lt;/span&gt;
-        &lt;span class="bp"&gt;self&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;fit&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;df&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;target_col&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
-        &lt;span class="k"&gt;return&lt;/span&gt; &lt;span class="bp"&gt;self&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;transform&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;df&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;stat_type&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;N_min&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
-&lt;/pre&gt;&lt;/div&gt;
-
-
-&lt;script type="text/javascript"&gt;if (!document.getElementById('mathjaxscript_pelican_#%@#$@#')) {
-    var align = "center",
-        indent = "0em",
-        linebreak = "false";
-
-    if (false) {
-        align = (screen.width &lt; 768) ? "left" : align;
-        indent = (screen.width &lt; 768) ? "0em" : indent;
-        linebreak = (screen.width &lt; 768) ? 'true' : linebreak;
-    }
-
-    var mathjaxscript = document.createElement('script');
-    mathjaxscript.id = 'mathjaxscript_pelican_#%@#$@#';
-    mathjaxscript.type = 'text/javascript';
-    mathjaxscript.src = 'https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.3/latest.js?config=TeX-AMS-MML_HTMLorMML';
-    mathjaxscript[(window.opera ? "innerHTML" : "text")] =
-        "MathJax.Hub.Config({" +
-        "    config: ['MMLorHTML.js']," +
-        "    TeX: { extensions: ['AMSmath.js','AMSsymbols.js','noErrors.js','noUndefined.js'], equationNumbers: { autoNumber: 'AMS' } }," +
-        "    jax: ['input/TeX','input/MathML','output/HTML-CSS']," +
-        "    extensions: ['tex2jax.js','mml2jax.js','MathMenu.js','MathZoom.js']," +
-        "    displayAlign: '"+ align +"'," +
-        "    displayIndent: '"+ indent +"'," +
-        "    showMathMenu: true," +
-        "    messageStyle: 'normal'," +
-        "    tex2jax: { " +
-        "        inlineMath: [ ['\\\\(','\\\\)'] ], " +
-        "        displayMath: [ ['$$','$$'] ]," +
-        "        processEscapes: true," +
-        "        preview: 'TeX'," +
-        "    }, " +
-        "    'HTML-CSS': { " +
-        "        styles: { '.MathJax_Display, .MathJax .mo, .MathJax .mi, .MathJax .mn': {color: 'inherit ! important'} }," +
-        "        linebreaks: { automatic: "+ linebreak +", width: '90% container' }," +
-        "    }, " +
-        "}); " +
-        "if ('default' !== 'default') {" +
-            "MathJax.Hub.Register.StartupHook('HTML-CSS Jax Ready',function () {" +
-                "var VARIANT = MathJax.OutputJax['HTML-CSS'].FONTDATA.VARIANT;" +
-                "VARIANT['normal'].fonts.unshift('MathJax_default');" +
-                "VARIANT['bold'].fonts.unshift('MathJax_default-bold');" +
-                "VARIANT['italic'].fonts.unshift('MathJax_default-italic');" +
-                "VARIANT['-tex-mathit'].fonts.unshift('MathJax_default-italic');" +
-            "});" +
-            "MathJax.Hub.Register.StartupHook('SVG Jax Ready',function () {" +
-                "var VARIANT = MathJax.OutputJax.SVG.FONTDATA.VARIANT;" +
-                "VARIANT['normal'].fonts.unshift('MathJax_default');" +
-                "VARIANT['bold'].fonts.unshift('MathJax_default-bold');" +
-                "VARIANT['italic'].fonts.unshift('MathJax_default-italic');" +
-                "VARIANT['-tex-mathit'].fonts.unshift('MathJax_default-italic');" +
-            "});" +
-        "}";
-    (document.body || document.getElementsByTagName('head')[0]).appendChild(mathjaxscript);
-}
-&lt;/script&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Matt Motoki</dc:creator><pubDate>Sun, 26 Nov 2017 10:01:00 -1000</pubDate><guid isPermaLink="false">tag:None,2017-11-26:/bayesian-target-encoding.html</guid><category>Feature Engineering</category><category>Bayesian Statistics</category></item><item><title>Cell Division</title><link>/cell-division.html</link><description>&lt;p&gt;&lt;a href="https://mattmotoki.github.io/cell-division/"&gt;Play Cell Division here&lt;/a&gt;&lt;/p&gt;
-&lt;h1&gt;Introduction&lt;/h1&gt;
-&lt;p&gt;Cell Addition is a strategy-based board game. Player take turns placing their cells. A player's cells divide when they connect with each other; vertical, horizontal and diagonal connections are allowed.  Your score is equal to the total number of cell that you have on the board.  The game ends when the board is full and the winner is the player with the most cells. &lt;/p&gt;
-&lt;p&gt;The current A.I. opponents implement a greedy strategy with a strong base heuristic.  A.I. opponents are designed to be completely deterministic so that games are reproducible.  &lt;/p&gt;
-&lt;h2&gt;How to Play&lt;/h2&gt;
-&lt;p&gt;&lt;img alt="alt text" src="./images/cell-division-screenshot.png" title="Cell Division - Screenshot"&gt;&lt;/p&gt;
-&lt;h2&gt;Features&lt;/h2&gt;
-&lt;p&gt;In the current implementation of the game, there are three fixed-difficulty ai opponents.  The R implementation also has an adaptive opponent that plays differently depending on how much it is winning/losing by.&lt;/p&gt;
-&lt;p&gt;The current implementation has three square grid board configuratios. The R implementation has board configurations that are more flexible.  In the break and flask layouts, gravity applies to moves played (cells fall to the lowest open row).&lt;/p&gt;
-&lt;h1&gt;Implementation&lt;/h1&gt;
-&lt;h2&gt;R&lt;/h2&gt;
-&lt;p&gt;Cell Division was originally written using R Shiny which converts R code into HTML, CSS and Javascript. The code for the original game is available &lt;a href="https://github.com/mattmotoki/Games.ai/tree/master/Cell%20Division"&gt;here&lt;/a&gt; and can be played &lt;a href="https://mmotoki.shinyapps.io/cell_division/"&gt;here&lt;/a&gt;.  R Shiny is geared more towards interactive data analytics and is not well-suited for this type of game.  &lt;/p&gt;
-&lt;h2&gt;HTML, CSS and Javascript&lt;/h2&gt;
-&lt;p&gt;The current implementation of the game is writen in plain HTML, CSS and Javascript.  The code is available &lt;a href="https://github.com/mattmotoki/mattmotoki.github.io"&gt;here&lt;/a&gt; and can be played  &lt;a href="https://mattmotoki.github.io/"&gt;here&lt;/a&gt;.  This implementation lacks a few features of the R implementation, but overall it is a better implementation. &lt;/p&gt;
-&lt;h1&gt;Technical Stuff&lt;/h1&gt;
-&lt;h2&gt;Creating The Cells&lt;/h2&gt;
-&lt;p&gt;The visuals in this R implementation are limited; e.g.,&lt;/p&gt;
-&lt;p&gt;&lt;img alt="alt text" src="./images/petri4.png" title="Cell Division - Petri Dish Board"&gt;&lt;/p&gt;
-&lt;p&gt;Cartoon-like cells look better than overlaid squares and lines.  This section describes the process of creating cell images from scratch using base R graphics.  The images can then be loaded and displayed as buttons in the game. &lt;/p&gt;
-&lt;h3&gt;Defining the Outline&lt;/h3&gt;
-&lt;p&gt;Cells are drawn as layered polygons in base R.  Before calling the &lt;code&gt;polygon&lt;/code&gt; functiona new plot needs to be created.  The &lt;code&gt;blank_plot&lt;/code&gt; function creates a new empty plot and draws lines to highlight the edges of the cell which we will be at 0 and 1 in both directions. &lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;blank_plot &lt;span class="o"&gt;&amp;lt;-&lt;/span&gt; &lt;span class="kr"&gt;function&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt; &lt;span class="p"&gt;{&lt;/span&gt;
-  par&lt;span class="p"&gt;(&lt;/span&gt;mar&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="kt"&gt;c&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="m"&gt;0&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="m"&gt;0&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="m"&gt;0&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="m"&gt;0&lt;/span&gt;&lt;span class="p"&gt;),&lt;/span&gt; bg&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="kc"&gt;NA&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
-  plot&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="m"&gt;1&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; type&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s"&gt;&amp;quot;n&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; asp&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="m"&gt;1&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; axes&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="kc"&gt;FALSE&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; 
-       yaxs&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s"&gt;&amp;quot;i&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; xaxs&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s"&gt;&amp;quot;i&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; xlab &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="s"&gt;&amp;quot;&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; ylab &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="s"&gt;&amp;quot;&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;
-       xlim &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="kt"&gt;c&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="m"&gt;-0.1&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="m"&gt;1.1&lt;/span&gt;&lt;span class="p"&gt;),&lt;/span&gt; ylim &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="kt"&gt;c&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="m"&gt;-0.1&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="m"&gt;1.1&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
-  &lt;span class="p"&gt;)&lt;/span&gt;
-&lt;span class="p"&gt;}&lt;/span&gt;
-&lt;/pre&gt;&lt;/div&gt;
-
-
-&lt;p&gt;The natural way to define the outline of a cell is in terms of its &lt;span class="math"&gt;\(x\)&lt;/span&gt; and &lt;span class="math"&gt;\(y\)&lt;/span&gt; coordinates.  Alternatively, the outline can be parameterized by an angle &lt;span class="math"&gt;\(\theta\in[0,\, 2\pi]\)&lt;/span&gt;  and a radius &lt;span class="math"&gt;\(r\)&lt;/span&gt; and then mapped back to the &lt;span class="math"&gt;\(xy\)&lt;/span&gt;-plane using the formulas
+These equations shows the simple update rules for the posterior parameters--all we need to keep track of is the sum of the &lt;span class="math"&gt;\(y\)&lt;/span&gt;-values in a level and the total number of observations in that level.  When the posterior parameters are known, we can use them to calculate other statistics; e.g., those in &lt;span class="math"&gt;\((4)\)&lt;/span&gt;, &lt;span class="math"&gt;\((5)\)&lt;/span&gt;, and &lt;span class="math"&gt;\((6)\)&lt;/span&gt;.&lt;/p&gt;
+&lt;p&gt;To see how &lt;span class="math"&gt;\(\tau\)&lt;/span&gt; controls complexity let's rewrite the posterior mean as
 &lt;/p&gt;
 &lt;div class="math"&gt;$$
-x = r\cdot \cos(\theta)
-\qquad
-\qquad
-y = r\cdot \sin(\theta).
+\mu_{posterior}^{(j)} = \lambda^{(j)} \cdot \mu_{prior} + \left( 1-\lambda^{(j)} \right) \cdot \frac{1}{N^{(j)}}  \sum_{i=1}^N y_i \cdot \mathrm{I}\! \left\{x=x^{(j)}\right\}, 
 $$&lt;/div&gt;
 &lt;p&gt;
-A simplifying trick is to specify only the curved sections of the outline and let R automatically create the straight sections by connecting the curves.  Another simplification comes by specifying one pivot point per curved section rather than pivoting about a single origin. &lt;/p&gt;
-&lt;p&gt;The following two functions use this method to create the outline of triangular cells&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;triangular_cell &lt;span class="o"&gt;&amp;lt;-&lt;/span&gt; &lt;span class="kr"&gt;function&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;r&lt;span class="p"&gt;,&lt;/span&gt; r2&lt;span class="p"&gt;,&lt;/span&gt; n_pnts&lt;span class="p"&gt;)&lt;/span&gt; &lt;span class="p"&gt;{&lt;/span&gt;
-  R &lt;span class="o"&gt;&amp;lt;-&lt;/span&gt; &lt;span class="kp"&gt;rep&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;r&lt;span class="p"&gt;,&lt;/span&gt; n_pnts&lt;span class="p"&gt;)&lt;/span&gt;
-  R2 &lt;span class="o"&gt;&amp;lt;-&lt;/span&gt; &lt;span class="kp"&gt;rep&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;r2&lt;span class="p"&gt;,&lt;/span&gt; n_pnts&lt;span class="p"&gt;)&lt;/span&gt;
-
-  theta &lt;span class="o"&gt;&amp;lt;-&lt;/span&gt; &lt;span class="kt"&gt;c&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="kp"&gt;seq&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="m"&gt;0&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="kc"&gt;pi&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="m"&gt;2&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; length.out &lt;span class="o"&gt;=&lt;/span&gt; n_pnts&lt;span class="p"&gt;),&lt;/span&gt; 
-             &lt;span class="kp"&gt;seq&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="kc"&gt;pi&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="m"&gt;2&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="m"&gt;5&lt;/span&gt;&lt;span class="o"&gt;*&lt;/span&gt;&lt;span class="kc"&gt;pi&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="m"&gt;4&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; length.out &lt;span class="o"&gt;=&lt;/span&gt; n_pnts&lt;span class="p"&gt;),&lt;/span&gt;
-             &lt;span class="kp"&gt;seq&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="m"&gt;5&lt;/span&gt;&lt;span class="o"&gt;*&lt;/span&gt;&lt;span class="kc"&gt;pi&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="m"&gt;4&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="m"&gt;2&lt;/span&gt;&lt;span class="o"&gt;*&lt;/span&gt;&lt;span class="kc"&gt;pi&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; length.out &lt;span class="o"&gt;=&lt;/span&gt; n_pnts&lt;span class="p"&gt;))&lt;/span&gt;
-
-  x_pivots &lt;span class="o"&gt;&amp;lt;-&lt;/span&gt; &lt;span class="kt"&gt;c&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="m"&gt;1&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;R&lt;span class="p"&gt;,&lt;/span&gt; R2&lt;span class="o"&gt;*&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="m"&gt;1&lt;/span&gt;&lt;span class="o"&gt;+&lt;/span&gt;&lt;span class="kp"&gt;sqrt&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="m"&gt;2&lt;/span&gt;&lt;span class="p"&gt;)),&lt;/span&gt;  &lt;span class="m"&gt;1&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;R2&lt;span class="p"&gt;)&lt;/span&gt; &lt;span class="o"&gt;-&lt;/span&gt; &lt;span class="m"&gt;0.5&lt;/span&gt;
-  y_pivots &lt;span class="o"&gt;&amp;lt;-&lt;/span&gt; &lt;span class="kt"&gt;c&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="m"&gt;1&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;R&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="m"&gt;1&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;R2&lt;span class="p"&gt;,&lt;/span&gt;  R2&lt;span class="o"&gt;*&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="m"&gt;1&lt;/span&gt;&lt;span class="o"&gt;+&lt;/span&gt;&lt;span class="kp"&gt;sqrt&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="m"&gt;2&lt;/span&gt;&lt;span class="p"&gt;)))&lt;/span&gt; &lt;span class="o"&gt;-&lt;/span&gt; &lt;span class="m"&gt;0.5&lt;/span&gt;
-
-  &lt;span class="kp"&gt;cbind&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;
-    &lt;span class="kt"&gt;c&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;R&lt;span class="p"&gt;,&lt;/span&gt; R2&lt;span class="p"&gt;,&lt;/span&gt; R2&lt;span class="p"&gt;)&lt;/span&gt;&lt;span class="o"&gt;*&lt;/span&gt;&lt;span class="kp"&gt;cos&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;theta&lt;span class="p"&gt;)&lt;/span&gt; &lt;span class="o"&gt;+&lt;/span&gt; x_pivots&lt;span class="p"&gt;,&lt;/span&gt;
-    &lt;span class="kt"&gt;c&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;R&lt;span class="p"&gt;,&lt;/span&gt; R2&lt;span class="p"&gt;,&lt;/span&gt; R2&lt;span class="p"&gt;)&lt;/span&gt;&lt;span class="o"&gt;*&lt;/span&gt;&lt;span class="kp"&gt;sin&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;theta&lt;span class="p"&gt;)&lt;/span&gt; &lt;span class="o"&gt;+&lt;/span&gt; y_pivots
-  &lt;span class="p"&gt;)&lt;/span&gt;
-&lt;span class="p"&gt;}&lt;/span&gt;
-
-&lt;span class="c1"&gt;# variant&lt;/span&gt;
-side_triangular_cell &lt;span class="o"&gt;&amp;lt;-&lt;/span&gt; &lt;span class="kr"&gt;function&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;r&lt;span class="p"&gt;,&lt;/span&gt; r2&lt;span class="p"&gt;,&lt;/span&gt; n_pnts&lt;span class="p"&gt;)&lt;/span&gt; &lt;span class="p"&gt;{&lt;/span&gt;
-  R &lt;span class="o"&gt;&amp;lt;-&lt;/span&gt; &lt;span class="kp"&gt;rep&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;r&lt;span class="p"&gt;,&lt;/span&gt; n_pnts&lt;span class="p"&gt;)&lt;/span&gt;
-  R2 &lt;span class="o"&gt;&amp;lt;-&lt;/span&gt; &lt;span class="kp"&gt;rep&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;r2&lt;span class="p"&gt;,&lt;/span&gt; n_pnts&lt;span class="p"&gt;)&lt;/span&gt;
-
-  theta &lt;span class="o"&gt;&amp;lt;-&lt;/span&gt; &lt;span class="kt"&gt;c&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="kp"&gt;seq&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="m"&gt;0&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="m"&gt;3&lt;/span&gt;&lt;span class="o"&gt;*&lt;/span&gt;&lt;span class="kc"&gt;pi&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="m"&gt;4&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; length.out &lt;span class="o"&gt;=&lt;/span&gt; n_pnts&lt;span class="p"&gt;),&lt;/span&gt;
-             &lt;span class="kp"&gt;seq&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="m"&gt;3&lt;/span&gt;&lt;span class="o"&gt;*&lt;/span&gt;&lt;span class="kc"&gt;pi&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="m"&gt;4&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="m"&gt;5&lt;/span&gt;&lt;span class="o"&gt;*&lt;/span&gt;&lt;span class="kc"&gt;pi&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="m"&gt;4&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; length.out &lt;span class="o"&gt;=&lt;/span&gt; n_pnts&lt;span class="p"&gt;),&lt;/span&gt;
-             &lt;span class="kp"&gt;seq&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="m"&gt;5&lt;/span&gt;&lt;span class="o"&gt;*&lt;/span&gt;&lt;span class="kc"&gt;pi&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="m"&gt;4&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="m"&gt;2&lt;/span&gt;&lt;span class="o"&gt;*&lt;/span&gt;&lt;span class="kc"&gt;pi&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; length.out &lt;span class="o"&gt;=&lt;/span&gt; n_pnts&lt;span class="p"&gt;))&lt;/span&gt;
-
-  x_pivots &lt;span class="o"&gt;&amp;lt;-&lt;/span&gt; &lt;span class="kt"&gt;c&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="m"&gt;1&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;R&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="m"&gt;0.5&lt;/span&gt;&lt;span class="o"&gt;+&lt;/span&gt;&lt;span class="kp"&gt;sqrt&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="m"&gt;2&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;&lt;span class="o"&gt;*&lt;/span&gt;R2&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="m"&gt;1&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;R&lt;span class="p"&gt;)&lt;/span&gt; &lt;span class="o"&gt;-&lt;/span&gt; &lt;span class="m"&gt;0.5&lt;/span&gt;
-  y_pivots &lt;span class="o"&gt;&amp;lt;-&lt;/span&gt; &lt;span class="kt"&gt;c&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="m"&gt;1&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="m"&gt;1&lt;/span&gt;&lt;span class="o"&gt;+&lt;/span&gt;&lt;span class="kp"&gt;sqrt&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="m"&gt;2&lt;/span&gt;&lt;span class="p"&gt;))&lt;/span&gt;&lt;span class="o"&gt;*&lt;/span&gt;R&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="kp"&gt;rep&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="m"&gt;0.5&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; n_pnts&lt;span class="p"&gt;),&lt;/span&gt; &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="m"&gt;1&lt;/span&gt;&lt;span class="o"&gt;+&lt;/span&gt;&lt;span class="kp"&gt;sqrt&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="m"&gt;2&lt;/span&gt;&lt;span class="p"&gt;))&lt;/span&gt;&lt;span class="o"&gt;*&lt;/span&gt;R&lt;span class="p"&gt;)&lt;/span&gt; &lt;span class="o"&gt;-&lt;/span&gt; &lt;span class="m"&gt;0.5&lt;/span&gt;
-
-  &lt;span class="kp"&gt;cbind&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;
-    &lt;span class="kt"&gt;c&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;R&lt;span class="p"&gt;,&lt;/span&gt; R2&lt;span class="p"&gt;,&lt;/span&gt; R&lt;span class="p"&gt;)&lt;/span&gt;&lt;span class="o"&gt;*&lt;/span&gt;&lt;span class="kp"&gt;cos&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;theta&lt;span class="p"&gt;)&lt;/span&gt; &lt;span class="o"&gt;+&lt;/span&gt; x_pivots&lt;span class="p"&gt;,&lt;/span&gt;
-    &lt;span class="kt"&gt;c&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;R&lt;span class="p"&gt;,&lt;/span&gt; R2&lt;span class="p"&gt;,&lt;/span&gt; R&lt;span class="p"&gt;)&lt;/span&gt;&lt;span class="o"&gt;*&lt;/span&gt;&lt;span class="kp"&gt;sin&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;theta&lt;span class="p"&gt;)&lt;/span&gt; &lt;span class="o"&gt;+&lt;/span&gt; y_pivots
-  &lt;span class="p"&gt;)&lt;/span&gt;
-&lt;span class="p"&gt;}&lt;/span&gt;
-&lt;/pre&gt;&lt;/div&gt;
-
-
-&lt;p&gt;Here's the output. &lt;/p&gt;
-&lt;p&gt;&lt;img src="./images/cell-outline.png" alt="Basic Cell Shape" width="200px"/&gt;&lt;/p&gt;
-&lt;p&gt;Multiple cells can be drawn with translations, rotations and reflections of the original outline. For example,&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="c1"&gt;# create outlines&lt;/span&gt;
-side_tri_outline &lt;span class="o"&gt;&amp;lt;-&lt;/span&gt; side_triangular_cell&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="m"&gt;0.1&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="m"&gt;0.3&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="m"&gt;10&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
-side_tri_x &lt;span class="o"&gt;&amp;lt;-&lt;/span&gt; side_tri_outline&lt;span class="p"&gt;[,&lt;/span&gt; &lt;span class="m"&gt;1&lt;/span&gt;&lt;span class="p"&gt;]&lt;/span&gt;&lt;span class="m"&gt;+0.5&lt;/span&gt;
-side_tri_y &lt;span class="o"&gt;&amp;lt;-&lt;/span&gt; side_tri_outline&lt;span class="p"&gt;[,&lt;/span&gt; &lt;span class="m"&gt;2&lt;/span&gt;&lt;span class="p"&gt;]&lt;/span&gt;&lt;span class="m"&gt;+0.5&lt;/span&gt;
-
-sm_tri_outline &lt;span class="o"&gt;&amp;lt;-&lt;/span&gt; triangular_cell&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="m"&gt;0.3&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="m"&gt;0.2&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="m"&gt;10&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
-sm_tri_x &lt;span class="o"&gt;&amp;lt;-&lt;/span&gt; &lt;span class="m"&gt;0.5&lt;/span&gt;&lt;span class="o"&gt;*&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;sm_tri_outline&lt;span class="p"&gt;[,&lt;/span&gt; &lt;span class="m"&gt;1&lt;/span&gt;&lt;span class="p"&gt;]&lt;/span&gt;&lt;span class="m"&gt;+0.5&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
-sm_tri_y &lt;span class="o"&gt;&amp;lt;-&lt;/span&gt; &lt;span class="m"&gt;0.5&lt;/span&gt;&lt;span class="o"&gt;*&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;sm_tri_outline&lt;span class="p"&gt;[,&lt;/span&gt; &lt;span class="m"&gt;2&lt;/span&gt;&lt;span class="p"&gt;]&lt;/span&gt;&lt;span class="m"&gt;+0.5&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
-
-&lt;span class="c1"&gt;# plot cells and show points&lt;/span&gt;
-blank_plot&lt;span class="p"&gt;()&lt;/span&gt;
-abline&lt;span class="p"&gt;(&lt;/span&gt;h&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="kt"&gt;c&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="m"&gt;0&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="m"&gt;1&lt;/span&gt;&lt;span class="p"&gt;),&lt;/span&gt; v&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="kt"&gt;c&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="m"&gt;0&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="m"&gt;1&lt;/span&gt;&lt;span class="p"&gt;))&lt;/span&gt;
-cellgreen &lt;span class="o"&gt;&amp;lt;-&lt;/span&gt; &lt;span class="kt"&gt;c&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="m"&gt;34&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="m"&gt;255&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="m"&gt;250&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="m"&gt;255&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="m"&gt;34&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="m"&gt;255&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
-poly_and_points &lt;span class="o"&gt;&amp;lt;-&lt;/span&gt; &lt;span class="kr"&gt;function&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;x&lt;span class="p"&gt;,&lt;/span&gt; y&lt;span class="p"&gt;)&lt;/span&gt; &lt;span class="p"&gt;{&lt;/span&gt;
-  polygon&lt;span class="p"&gt;(&lt;/span&gt;x&lt;span class="p"&gt;,&lt;/span&gt; y&lt;span class="p"&gt;,&lt;/span&gt; col&lt;span class="o"&gt;=&lt;/span&gt;rgb&lt;span class="p"&gt;(&lt;/span&gt;cellgreen&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="m"&gt;1&lt;/span&gt;&lt;span class="p"&gt;],&lt;/span&gt; cellgreen&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="m"&gt;2&lt;/span&gt;&lt;span class="p"&gt;],&lt;/span&gt; cellgreen&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="m"&gt;3&lt;/span&gt;&lt;span class="p"&gt;]))&lt;/span&gt;
-  points&lt;span class="p"&gt;(&lt;/span&gt;x&lt;span class="p"&gt;,&lt;/span&gt; y&lt;span class="p"&gt;)&lt;/span&gt;
-&lt;span class="p"&gt;}&lt;/span&gt;
-
-poly_and_points&lt;span class="p"&gt;(&lt;/span&gt;sm_tri_x&lt;span class="m"&gt;+0.5&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="m"&gt;1&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;sm_tri_y&lt;span class="p"&gt;)&lt;/span&gt; &lt;span class="c1"&gt;# top right&lt;/span&gt;
-poly_and_points&lt;span class="p"&gt;(&lt;/span&gt;sm_tri_x&lt;span class="m"&gt;+0.5&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; sm_tri_y&lt;span class="p"&gt;)&lt;/span&gt;   &lt;span class="c1"&gt;# bot right&lt;/span&gt;
-poly_and_points&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="m"&gt;0.5&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;sm_tri_x&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="m"&gt;1&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;sm_tri_y&lt;span class="p"&gt;)&lt;/span&gt; &lt;span class="c1"&gt;# top left&lt;/span&gt;
-poly_and_points&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="m"&gt;0.5&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;sm_tri_x&lt;span class="p"&gt;,&lt;/span&gt; sm_tri_y&lt;span class="p"&gt;)&lt;/span&gt;   &lt;span class="c1"&gt;# bot left&lt;/span&gt;
-poly_and_points&lt;span class="p"&gt;(&lt;/span&gt;side_tri_y&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="m"&gt;1&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;side_tri_x&lt;span class="p"&gt;)&lt;/span&gt; &lt;span class="c1"&gt;# bottom &lt;/span&gt;
-poly_and_points&lt;span class="p"&gt;(&lt;/span&gt;side_tri_y&lt;span class="p"&gt;,&lt;/span&gt; side_tri_x&lt;span class="p"&gt;)&lt;/span&gt;   &lt;span class="c1"&gt;# top&lt;/span&gt;
-&lt;/pre&gt;&lt;/div&gt;
-
-
-&lt;h3&gt;Shading About the Centroid&lt;/h3&gt;
-&lt;p&gt;There are two types of shading used to create the cells.  Both types of shading are implemented by overlaying a sequence of polygons centered about the center of mass with either decreasing/increasing size and decreasing/increasing transparency. &lt;/p&gt;
-&lt;p&gt;The centroid of a polygon is 
-&lt;/p&gt;
-&lt;div class="math"&gt;$$
-\begin{split}
-C_x &amp;amp;= \frac{1}{6A} \sum_{i=0}^{n-1} (x_i + x_{i+1}) (x_i \cdot  y_{i+1} - x_{i+1} \cdot y_i)\\
-C_y &amp;amp;= \frac{1}{6A} \sum_{i=0}^{n-1} (y_i + y_{i+1}) (x_i \cdot  y_{i+1} - x_{i+1} \cdot y_i)\\
-\end{split}
-$$&lt;/div&gt;
-&lt;p&gt;
-where 
-&lt;/p&gt;
-&lt;div class="math"&gt;$$
-A = \frac{1}{2} \sum_{i=0}^{n-1} (x_i \cdot  y_{i+1} - x_{i+1} \cdot y_i).
-$$&lt;/div&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;circularShift &lt;span class="o"&gt;&amp;lt;-&lt;/span&gt; &lt;span class="kr"&gt;function&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;x&lt;span class="p"&gt;,&lt;/span&gt;shift&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="m"&gt;0&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt; &lt;span class="p"&gt;{&lt;/span&gt;
-  N &lt;span class="o"&gt;&amp;lt;-&lt;/span&gt; &lt;span class="kp"&gt;length&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;x&lt;span class="p"&gt;)&lt;/span&gt;
-  K &lt;span class="o"&gt;&amp;lt;-&lt;/span&gt; shift &lt;span class="o"&gt;%%&lt;/span&gt; N
-  &lt;span class="kr"&gt;if&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;K &lt;span class="o"&gt;==&lt;/span&gt; &lt;span class="m"&gt;0&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt; x &lt;span class="kr"&gt;else&lt;/span&gt; &lt;span class="kt"&gt;c&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;x&lt;span class="p"&gt;[(&lt;/span&gt;N&lt;span class="o"&gt;-&lt;/span&gt;K&lt;span class="m"&gt;+1&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt;N&lt;span class="p"&gt;],&lt;/span&gt;x&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="m"&gt;1&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;N&lt;span class="o"&gt;-&lt;/span&gt;K&lt;span class="p"&gt;)])&lt;/span&gt;
-&lt;span class="p"&gt;}&lt;/span&gt;
-
-centroidCalc &lt;span class="o"&gt;&amp;lt;-&lt;/span&gt; &lt;span class="kr"&gt;function&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;x&lt;span class="p"&gt;,&lt;/span&gt; y&lt;span class="p"&gt;)&lt;/span&gt; &lt;span class="p"&gt;{&lt;/span&gt;
-  shift_x &lt;span class="o"&gt;&amp;lt;-&lt;/span&gt; circularShift&lt;span class="p"&gt;(&lt;/span&gt;x&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="m"&gt;1&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
-  shift_y &lt;span class="o"&gt;&amp;lt;-&lt;/span&gt; circularShift&lt;span class="p"&gt;(&lt;/span&gt;y&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="m"&gt;1&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
-  d &lt;span class="o"&gt;&amp;lt;-&lt;/span&gt; x&lt;span class="o"&gt;*&lt;/span&gt;shift_y &lt;span class="o"&gt;-&lt;/span&gt; shift_x&lt;span class="o"&gt;*&lt;/span&gt;y
-  &lt;span class="kt"&gt;c&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="kp"&gt;sum&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt; &lt;span class="p"&gt;(&lt;/span&gt;x&lt;span class="o"&gt;+&lt;/span&gt;shift_x&lt;span class="p"&gt;)&lt;/span&gt;&lt;span class="o"&gt;*&lt;/span&gt;d &lt;span class="p"&gt;),&lt;/span&gt; &lt;span class="kp"&gt;sum&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt; &lt;span class="p"&gt;(&lt;/span&gt;y&lt;span class="o"&gt;+&lt;/span&gt;shift_y&lt;span class="p"&gt;)&lt;/span&gt;&lt;span class="o"&gt;*&lt;/span&gt;d &lt;span class="p"&gt;)&lt;/span&gt; &lt;span class="p"&gt;)&lt;/span&gt; &lt;span class="o"&gt;/&lt;/span&gt; &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="m"&gt;3&lt;/span&gt;&lt;span class="o"&gt;*&lt;/span&gt;&lt;span class="kp"&gt;sum&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;d&lt;span class="p"&gt;))&lt;/span&gt;
-&lt;span class="p"&gt;}&lt;/span&gt;
-&lt;/pre&gt;&lt;/div&gt;
-
-
-&lt;p&gt;The shading for the outline of the cell uses a decreasing sequence of polygon size and transparency.  On the other hand, the shading that creates depth in the middle of the cell uses an increasing sequence of polygon size and transparency.&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="kn"&gt;library&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;png&lt;span class="p"&gt;)&lt;/span&gt;
-&lt;span class="c1"&gt;# plot a single cell with shadow and dimple&lt;/span&gt;
-plot_cell &lt;span class="o"&gt;&amp;lt;-&lt;/span&gt; &lt;span class="kr"&gt;function&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;x&lt;span class="p"&gt;,&lt;/span&gt; y&lt;span class="p"&gt;,&lt;/span&gt; color&lt;span class="p"&gt;)&lt;/span&gt; &lt;span class="p"&gt;{&lt;/span&gt;
-  centroid &lt;span class="o"&gt;&amp;lt;-&lt;/span&gt; centroidCalc&lt;span class="p"&gt;(&lt;/span&gt;x&lt;span class="p"&gt;,&lt;/span&gt; y&lt;span class="p"&gt;)&lt;/span&gt;
-
-  &lt;span class="c1"&gt;# add shadow&lt;/span&gt;
-  n_layers &lt;span class="o"&gt;&amp;lt;-&lt;/span&gt; &lt;span class="m"&gt;100&lt;/span&gt;
-  shrink &lt;span class="o"&gt;&amp;lt;-&lt;/span&gt; &lt;span class="kp"&gt;seq&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="m"&gt;1&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="m"&gt;0&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;length&lt;span class="o"&gt;=&lt;/span&gt;n_layers&lt;span class="p"&gt;)&lt;/span&gt;
-  alpha &lt;span class="o"&gt;&amp;lt;-&lt;/span&gt; &lt;span class="kp"&gt;seq&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="m"&gt;0.1&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="m"&gt;1&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; length&lt;span class="o"&gt;=&lt;/span&gt;n_layers&lt;span class="p"&gt;)&lt;/span&gt;
-  polygon&lt;span class="p"&gt;(&lt;/span&gt;x&lt;span class="p"&gt;,&lt;/span&gt; y&lt;span class="p"&gt;,&lt;/span&gt; col&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s"&gt;&amp;quot;black&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; border&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="kc"&gt;NA&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
-  &lt;span class="kr"&gt;for&lt;/span&gt; &lt;span class="p"&gt;(&lt;/span&gt;k &lt;span class="kr"&gt;in&lt;/span&gt; &lt;span class="m"&gt;1&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt;n_layers&lt;span class="p"&gt;)&lt;/span&gt; &lt;span class="p"&gt;{&lt;/span&gt;
-    polygon&lt;span class="p"&gt;(&lt;/span&gt;shrink&lt;span class="p"&gt;[&lt;/span&gt;k&lt;span class="p"&gt;]&lt;/span&gt;&lt;span class="o"&gt;*&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;x&lt;span class="o"&gt;-&lt;/span&gt;centroid&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="m"&gt;1&lt;/span&gt;&lt;span class="p"&gt;])&lt;/span&gt;&lt;span class="o"&gt;+&lt;/span&gt;centroid&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="m"&gt;1&lt;/span&gt;&lt;span class="p"&gt;],&lt;/span&gt;
-            shrink&lt;span class="p"&gt;[&lt;/span&gt;k&lt;span class="p"&gt;]&lt;/span&gt;&lt;span class="o"&gt;*&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;y&lt;span class="o"&gt;-&lt;/span&gt;centroid&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="m"&gt;2&lt;/span&gt;&lt;span class="p"&gt;])&lt;/span&gt;&lt;span class="o"&gt;+&lt;/span&gt;centroid&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="m"&gt;2&lt;/span&gt;&lt;span class="p"&gt;],&lt;/span&gt;
-            col&lt;span class="o"&gt;=&lt;/span&gt;rgb&lt;span class="p"&gt;(&lt;/span&gt;color&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="m"&gt;1&lt;/span&gt;&lt;span class="p"&gt;],&lt;/span&gt; color&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="m"&gt;2&lt;/span&gt;&lt;span class="p"&gt;],&lt;/span&gt; color&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="m"&gt;3&lt;/span&gt;&lt;span class="p"&gt;],&lt;/span&gt; alpha&lt;span class="p"&gt;[&lt;/span&gt;k&lt;span class="p"&gt;]),&lt;/span&gt;
-            border&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="kc"&gt;NA&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt; 
-  &lt;span class="p"&gt;}&lt;/span&gt;
-
-  &lt;span class="c1"&gt;# add dimple&lt;/span&gt;
-  n_layers &lt;span class="o"&gt;&amp;lt;-&lt;/span&gt; &lt;span class="m"&gt;25&lt;/span&gt;
-  shrink &lt;span class="o"&gt;&amp;lt;-&lt;/span&gt; &lt;span class="kp"&gt;seq&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="m"&gt;0.25&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="m"&gt;0.85&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; length&lt;span class="o"&gt;=&lt;/span&gt;n_layers&lt;span class="p"&gt;)&lt;/span&gt;&lt;span class="o"&gt;^&lt;/span&gt;&lt;span class="m"&gt;2&lt;/span&gt;
-  alpha &lt;span class="o"&gt;&amp;lt;-&lt;/span&gt; &lt;span class="kp"&gt;seq&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="m"&gt;0.01&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="m"&gt;0.05&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; length&lt;span class="o"&gt;=&lt;/span&gt;n_layers&lt;span class="p"&gt;)&lt;/span&gt;
-  color &lt;span class="o"&gt;&amp;lt;-&lt;/span&gt; &lt;span class="m"&gt;0.5&lt;/span&gt;&lt;span class="o"&gt;*&lt;/span&gt;color
-  &lt;span class="kr"&gt;for&lt;/span&gt; &lt;span class="p"&gt;(&lt;/span&gt;k &lt;span class="kr"&gt;in&lt;/span&gt; &lt;span class="m"&gt;1&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt;n_layers&lt;span class="p"&gt;)&lt;/span&gt; &lt;span class="p"&gt;{&lt;/span&gt;
-    polygon&lt;span class="p"&gt;(&lt;/span&gt;shrink&lt;span class="p"&gt;[&lt;/span&gt;k&lt;span class="p"&gt;]&lt;/span&gt;&lt;span class="o"&gt;*&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;x&lt;span class="o"&gt;-&lt;/span&gt;centroid&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="m"&gt;1&lt;/span&gt;&lt;span class="p"&gt;])&lt;/span&gt;&lt;span class="o"&gt;+&lt;/span&gt;centroid&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="m"&gt;1&lt;/span&gt;&lt;span class="p"&gt;],&lt;/span&gt;
-            shrink&lt;span class="p"&gt;[&lt;/span&gt;k&lt;span class="p"&gt;]&lt;/span&gt;&lt;span class="o"&gt;*&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;y&lt;span class="o"&gt;-&lt;/span&gt;centroid&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="m"&gt;2&lt;/span&gt;&lt;span class="p"&gt;])&lt;/span&gt;&lt;span class="o"&gt;+&lt;/span&gt;centroid&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="m"&gt;2&lt;/span&gt;&lt;span class="p"&gt;],&lt;/span&gt;
-            col&lt;span class="o"&gt;=&lt;/span&gt;rgb&lt;span class="p"&gt;(&lt;/span&gt;color&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="m"&gt;1&lt;/span&gt;&lt;span class="p"&gt;],&lt;/span&gt; color&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="m"&gt;2&lt;/span&gt;&lt;span class="p"&gt;],&lt;/span&gt; color&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="m"&gt;3&lt;/span&gt;&lt;span class="p"&gt;],&lt;/span&gt; alpha&lt;span class="p"&gt;[&lt;/span&gt;k&lt;span class="p"&gt;]),&lt;/span&gt;
-            border&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="kc"&gt;NA&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
-  &lt;span class="p"&gt;}&lt;/span&gt;
-&lt;span class="p"&gt;}&lt;/span&gt;
-
-&lt;span class="c1"&gt;# plot cells&lt;/span&gt;
-blank_plot&lt;span class="p"&gt;()&lt;/span&gt;
-abline&lt;span class="p"&gt;(&lt;/span&gt;h&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="kt"&gt;c&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="m"&gt;0&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="m"&gt;1&lt;/span&gt;&lt;span class="p"&gt;),&lt;/span&gt; v&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="kt"&gt;c&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="m"&gt;0&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="m"&gt;1&lt;/span&gt;&lt;span class="p"&gt;))&lt;/span&gt;
-
-plot_cell&lt;span class="p"&gt;(&lt;/span&gt;sm_tri_x&lt;span class="m"&gt;+0.5&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="m"&gt;1&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;sm_tri_y&lt;span class="p"&gt;,&lt;/span&gt; color&lt;span class="o"&gt;=&lt;/span&gt;cellgreen&lt;span class="p"&gt;)&lt;/span&gt; &lt;span class="c1"&gt;# top right&lt;/span&gt;
-plot_cell&lt;span class="p"&gt;(&lt;/span&gt;sm_tri_x&lt;span class="m"&gt;+0.5&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; sm_tri_y&lt;span class="p"&gt;,&lt;/span&gt; color&lt;span class="o"&gt;=&lt;/span&gt;cellgreen&lt;span class="p"&gt;)&lt;/span&gt;   &lt;span class="c1"&gt;# bot right&lt;/span&gt;
-plot_cell&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="m"&gt;0.5&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;sm_tri_x&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="m"&gt;1&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;sm_tri_y&lt;span class="p"&gt;,&lt;/span&gt; color&lt;span class="o"&gt;=&lt;/span&gt;cellgreen&lt;span class="p"&gt;)&lt;/span&gt; &lt;span class="c1"&gt;# top left&lt;/span&gt;
-plot_cell&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="m"&gt;0.5&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;sm_tri_x&lt;span class="p"&gt;,&lt;/span&gt; sm_tri_y&lt;span class="p"&gt;,&lt;/span&gt; color&lt;span class="o"&gt;=&lt;/span&gt;cellgreen&lt;span class="p"&gt;)&lt;/span&gt;   &lt;span class="c1"&gt;# bot left&lt;/span&gt;
-plot_cell&lt;span class="p"&gt;(&lt;/span&gt;side_tri_y&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="m"&gt;1&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;side_tri_x&lt;span class="p"&gt;,&lt;/span&gt; color&lt;span class="o"&gt;=&lt;/span&gt;cellgreen&lt;span class="p"&gt;)&lt;/span&gt; &lt;span class="c1"&gt;# bottom&lt;/span&gt;
-plot_cell&lt;span class="p"&gt;(&lt;/span&gt;side_tri_y&lt;span class="p"&gt;,&lt;/span&gt; side_tri_x&lt;span class="p"&gt;,&lt;/span&gt; color&lt;span class="o"&gt;=&lt;/span&gt;cellgreen&lt;span class="p"&gt;)&lt;/span&gt;   &lt;span class="c1"&gt;# top&lt;/span&gt;
-&lt;/pre&gt;&lt;/div&gt;
-
-
-&lt;h2&gt;A.I. Opponent&lt;/h2&gt;
-&lt;p&gt;All oppponents are greedy with respect to some approximation of the value of a move.  The quality of the approximation determines the difficulty of the opponent.  Since the objective is to maximize your score, it makes sense to approximate the long term benefit of a move with its immediate increase in score.  It turn's out that the increase in score can be decomposed in the a function of the following four variables: &lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;span class="math"&gt;\(\text{overlap}_p(\text{move})\)&lt;/span&gt; is the number of cells adjacent to a move,&lt;/li&gt;
-&lt;li&gt;&lt;span class="math"&gt;\(\text{interlap}_p(\text{move})\)&lt;/span&gt; is the number of times the move is sandwitched by its cell and its opposite,&lt;/li&gt;
-&lt;li&gt;&lt;span class="math"&gt;\(\text{extensions}_p(\text{move})\)&lt;/span&gt; is the number of existing connections that a move extends,&lt;/li&gt;
-&lt;li&gt;&lt;span class="math"&gt;\(\text{unconnected}_p(\text{move})\)&lt;/span&gt; is the number of unconnected cells that a move connects,&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;and the formula is &lt;/p&gt;
-&lt;div class="math"&gt;$$\begin{split}
-\Delta \text{score}_p(\text{move}) 
-&amp;amp;= \mathbb{I} \{\text{overlap}_p(\text{move})&amp;gt;1\} - \text{unconnected}_p(\text{move}) \\
-&amp;amp;\quad + 2\cdot \big[\text{overlap}_p(\text{move}) - \text{interlap}_p(\text{move})\big] \\
-&amp;amp;\quad + 2\cdot\big[  \text{overlap}_p(\text{move})  - \text{extensions}_p(\text{move}) \big],
-\end{split}$$&lt;/div&gt;
-&lt;p&gt;
-where &lt;span class="math"&gt;\(p\)&lt;/span&gt; denotes the player playing the move.  By convention, define the first player (&lt;span class="math"&gt;\(p=1\)&lt;/span&gt;) to be you and the second player (&lt;span class="math"&gt;\(p=2\)&lt;/span&gt;) to be the A.I.&lt;br&gt;
-One benefit of this decomposition is that each of the variables can be updated in an online fashion.   &lt;/p&gt;
-&lt;p&gt;Additional player-independent variables that have intuitive value are:&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;span class="math"&gt;\(\text{openness}(\text{move})\)&lt;/span&gt; is move number of open positions adjacent to a move,&lt;/li&gt;
-&lt;li&gt;&lt;span class="math"&gt;\(\text{centrality}(\text{move})\)&lt;/span&gt; measures how close a move is to the center of the board.&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;To calculate a value of a move, the ai opponent uses a weighted sum of the above variables.&lt;/p&gt;
-&lt;h3&gt;Easy, Medium and Hard Opponents&lt;/h3&gt;
-&lt;p&gt;Cell Addition is a zero sum game and so your gain is the same as the ai's loss.  Thus, when designing the ai, it will be beneficial to take this into account. &lt;/p&gt;
-&lt;p&gt;The easy ai's value function is simply
-&lt;/p&gt;
-&lt;div class="math"&gt;$$
-\text{easy}(\text{move}) = \text{centrality}(\text{move});
-$$&lt;/div&gt;
-&lt;p&gt;
-that is, the easy ai just places it's move in the center most position of the board with ties broken arbitrarily.&lt;/p&gt;
-&lt;p&gt;The hard ai's value function is 
-&lt;/p&gt;
-&lt;div class="math"&gt;$$
-\begin{split}
-\text{hard}(\text{move}) 
-&amp;amp; = \text{centrality}(\text{move}) + 2\cdot \text{openness}(\text{move})\\
-&amp;amp; \quad + \big[ \Delta \text{score}_2(\text{move}) + \Delta \text{score}_1(\text{move}) \big]\\
-&amp;amp;\quad - \big[ \text{overlap}_2(\text{move}) + \text{overlap}_1(\text{move}) \big]
-.
-\end{split}
-$$&lt;/div&gt;
-&lt;p&gt;
-The idea is to find a tradeoff between exploration and exploitation.  To see this, consider the following formula for the increase in the total overlap of a board when playing &lt;span class="math"&gt;\(\text{move}\)&lt;/span&gt;
-&lt;/p&gt;
-&lt;div class="math"&gt;$$
-\Delta\text{total_overlap}_p(\text{move}) = \text{openness}_p(\text{move}) - \text{overlap}_p(\text{move}).
-$$&lt;/div&gt;
-&lt;p&gt;
-The hard ai's value approximation can now be rewritten as
-&lt;/p&gt;
-&lt;div class="math"&gt;$$
-\begin{split}
-\text{hard}(\text{move}) 
-&amp;amp; = \text{centrality}(\text{move}) \\
-&amp;amp; \quad + \big[ \Delta \text{score}_2(\text{move}) + \Delta \text{score}_1(\text{move}) \big]\\
-&amp;amp; \quad + \big[ \Delta\text{total_overlap}_2(\text{move}) + \Delta\text{total_overlap}_1(\text{move}) \big]
-.
-\end{split}
-$$&lt;/div&gt;
-&lt;p&gt;
-The two first two terms after &lt;span class="math"&gt;\(\text{centrality}\)&lt;/span&gt; encourage exploitation of the current game state while the last two terms encourage exploration of the board.  &lt;/p&gt;
-&lt;p&gt;The medium ai's value is the average of the easy and hard opponent's values; i.e., 
-&lt;/p&gt;
-&lt;div class="math"&gt;$$
-\text{medium}(\text{move}) =
-0.5\cdot \text{hard}(\text{move})  + 
-0.5\cdot \text{easy}(\text{move}) .
-$$&lt;/div&gt;
-&lt;h3&gt;Adaptive (R implementation only)&lt;/h3&gt;
-&lt;p&gt;The adaptive ai has a skill level which determines the overall strategy in a game.  &lt;/p&gt;
-&lt;p&gt;The adaptive ai adapts to your play in two ways: &lt;/p&gt;
-&lt;ol&gt;
-&lt;li&gt;It adapts to your play within a game.&lt;/li&gt;
-&lt;li&gt;It adapts its entire strategy after a game.&lt;/li&gt;
-&lt;/ol&gt;
-&lt;p&gt;The adaptive ai uses a convex combination of the easy and hard ai's value approximation.&lt;br&gt;
-&lt;/p&gt;
-&lt;div class="math"&gt;$$
-\text{adaptive}(\text{move}) 
-= \text{skill}' \cdot \text{hard}(\text{move})
-+ (1 - \text{skill}') \cdot  \text{easy}(\text{move}),
-$$&lt;/div&gt;
-&lt;p&gt;
-where &lt;span class="math"&gt;\(\text{skill}'\)&lt;/span&gt; is modified (within-game) skill parameter&lt;/p&gt;
-&lt;div class="math"&gt;$$
-\text{skill}' = \text{skill} + 0.01\cdot ( \text{your_score} - \text{ai_score} ).
-$$&lt;/div&gt;
-&lt;p&gt;
-Notice that if you are winning, then the effective skill of the ai goes up.  Moreover, if you are winning by a lot then the effective skill will go up by a lot.  &lt;/p&gt;
-&lt;p&gt;At the end of the game, the ai's skill level is updated according to the following formula:
-&lt;/p&gt;
-&lt;div class="math"&gt;$$
-\text{skill} \leftarrow \text{skill} + 0.01\cdot  \frac{ \text{your_score} - \text{ai_score}  }{1 + \mathbb{I} \{ \text{your_score} &amp;lt; \text{ai_score} \}  }.
-$$&lt;/div&gt;
-&lt;p&gt;
-Hence, if you beat the ai, then its skill goes up by the score difference; if you lose, then its skill goes down in proportion to half the absolute score difference.  If the game is a draw, then the skill level stays the same.&lt;/p&gt;
-&lt;p&gt;Ignoring within-game adaptivity, when &lt;span class="math"&gt;\(\text{skill}=0\)&lt;/span&gt; you are essentially playing against the easy ai, when &lt;span class="math"&gt;\(\text{skill}=1\)&lt;/span&gt; you are playing against the hard ai, and when &lt;span class="math"&gt;\(\text{skill}=0.5\)&lt;/span&gt; you are playing against the medium ai.&lt;/p&gt;
-&lt;h1&gt;Future Add-Ons&lt;/h1&gt;
-&lt;p&gt;There are many variations on this game that can be played.  What follows is an unordered list of possible improvements/variants of the game.&lt;/p&gt;
+where &lt;span class="math"&gt;\(\lambda^{(j)} = \tau \,\big/\!\left( N^{(j)}+\tau \right).\)&lt;/span&gt;  Notice that this equation has the same functional form as &lt;span class="math"&gt;\((2)\)&lt;/span&gt;.  We see that increasing &lt;span class="math"&gt;\(\tau\)&lt;/span&gt; brings the estimate closer to the prior mean, decreasing &lt;span class="math"&gt;\(\tau\)&lt;/span&gt; brings closer to the posterior mean.  &lt;/p&gt;
+&lt;p&gt;Recall, that when we use additive noise for regularization &lt;span class="math"&gt;\((3)\)&lt;/span&gt;, we need to specify the distribution of the noise random variable &lt;span class="math"&gt;\(\epsilon^{(j)}\)&lt;/span&gt;.  This is natural to do when taking Bayesian approach.  In particular, in we can set &lt;span class="math"&gt;\(\epsilon^{(j)} \sim \mathrm{Beta}\!\left(\alpha_{posterior}^{(j)}, \beta_{posterior}^{(j)} \right)\)&lt;/span&gt;. The only hyperparameter left to tune is the noise strength &lt;span class="math"&gt;\(\eta\)&lt;/span&gt;.  Notice that from &lt;span class="math"&gt;\((5)\)&lt;/span&gt;, the variance of the noise distribution will shrink as we obtain more observations. What this means is that as the number of observations increases, the noise distribution will converge to a delta distribution centered at &lt;span class="math"&gt;\(\mu_{posterior}^{(j)}\)&lt;/span&gt;.  Thus, we have the nice property that the amount of regularization decreases as the number of observations increases.&lt;/p&gt;
+&lt;h2&gt;Case Study: Kaggle - Avito Demand Prediction&lt;sup&gt;&lt;a href="https://www.kaggle.com/mmotoki/beta-target-encoding"&gt;3&lt;/a&gt;&lt;/sup&gt;&lt;/h2&gt;
+&lt;p&gt;My team and I used Bayesian target encoding in the recent Kaggle competition &lt;a href="https://www.kaggle.com/c/avito-demand-prediction"&gt;Avito Demand Prediction Challenge&lt;/a&gt; where we placed 14th out of 1,917 teams.  For a more detailed write-up about our team's solution, see &lt;a href="https://www.kaggle.com/c/avito-demand-prediction/discussion/60059"&gt;Peter Hurford's post&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;The task was to predict demand for an online advertisement predict demand for an online advertisement based on its full description (title, description, images, etc.), its context (geographically where it was posted, similar ads already posted) and historical demand for similar ads in similar contexts.  The competition metric was the root mean squared error between our prediction and the probability of a deal.&lt;/p&gt;
+&lt;p&gt;We found that the Bayesian target encoded features outperformed the built-in LightGBM categorical variable encoding.  The graph below shows the performance of a LightGBM model using target encoding for various value of &lt;span class="math"&gt;\(\tau\)&lt;/span&gt; relative to a baseline LightGBM model using built-in categorical encoding. The best model uses Bayesian target encoded features with a hyperparameter setting of &lt;span class="math"&gt;\(\tau=10\)&lt;/span&gt;.&lt;/p&gt;
+&lt;p&gt;&lt;img alt="alt text" src="/images/bayesian-mean-target-encoding.svg" title="LightGBM with target encoding compared to built-in categorical variable encoding."&gt;&lt;/p&gt;
+&lt;hr&gt;
+&lt;p&gt;&lt;strong&gt;Refrences&lt;/strong&gt;&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;
-&lt;p&gt;&lt;strong&gt;Stem Cells&lt;/strong&gt;: Undifferentiated cell that can become partially colored once fully surrounded.  If fully surrounded, the center of the stem cells can also be colored, resulting in a cell with a total of nine divisions.  &lt;/p&gt;
+&lt;p&gt;[&lt;a href="https://en.wikipedia.org/wiki/Beta_distribution"&gt;1&lt;/a&gt;]&amp;nbsp; A more comprehensive list of statistics for the Beta distribution.&lt;/p&gt;
 &lt;/li&gt;
 &lt;li&gt;
-&lt;p&gt;&lt;strong&gt;Early Stopping&lt;/strong&gt;: Getting the first move can be an advantage, especially on the medium board configuration.  To mitigate this, the game can stop a few rounds early.  For example, in the medium board configuration, if the game stops one round early then both players will get have an equal number o moves.  &lt;/p&gt;
+&lt;p&gt;[&lt;a href="https://people.eecs.berkeley.edu/~jordan/courses/260-spring10/other-readings/chapter9.pdf"&gt;2&lt;/a&gt;]&amp;nbsp; Information about Bayesian statistics and conjugate priors.&lt;/p&gt;
 &lt;/li&gt;
 &lt;li&gt;
-&lt;p&gt;&lt;strong&gt;Attack Moves&lt;/strong&gt;: Give players access to the strong acid HCl and the strong base NaOH.  Each acid/base will destroy the other player's cells while leaving their cells intact.  Similarly, isopropyl alcohol can be played to destroy any cell.  &lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Sythesis Process&lt;/strong&gt;: Let NaOH/HCl and isopropyl alcohol regenerate over time. &lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;&lt;strong&gt;cell Walls&lt;/strong&gt;: Let players enforce their cells with cell walls (or membranes) to guard against HCl/NaOH/Alcochol attacks. &lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;&lt;strong&gt;Alternative Objectives&lt;/strong&gt;: Instead of placing cells on the board, we can start with a given number of each player's cells in a predefined configuration.  You are allowed to move a cell one step in any direction or swap your cell with an opponent's adjacent cell.  Cells continue to divide based on thier connections.  The end of a game occurs after a fixed number of moves. The winner is the player with the most cells at the end of the game.  &lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Cell Swap&lt;/strong&gt;: Let player's swap their cell's with their oppoent's; &lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;&lt;strong&gt;Cell Jumps&lt;/strong&gt;: Let players jump their opponent's cells (as in checkers) to convert them to one of their own.&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;&lt;strong&gt;Triangular and Hexagonal Grids&lt;/strong&gt;: Storing a board defined over these grids can be done by modifying what it means to be adjacent to another cell.  Thus, boards can be stored and analyzed in a similar way to the rectangular grid.  The approximations that the A.I. opponents use will probably also generalize well to these types of grids. &lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;&lt;strong&gt;Modified Scoring&lt;/strong&gt;: One of the problems with this game is that the scoring system --- although well-defined --- is not very intuitive.  A more natural scoring system may be to count the number of connections rather than the number of divisions.&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;&lt;strong&gt;Cell Capture&lt;/strong&gt;: This is a &lt;a href="https://en.wikipedia.org/wiki/Go_(game)" target="_blank"&gt;Go&lt;/a&gt;-like feature which allows you to convert your opponent's cells into your own.  This is achieved by completely surrounding your opponent's cells or sandwiching them between the edge of a board and your cells.  &lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;&lt;strong&gt;Partial Cells&lt;/strong&gt;: Allow and score partial cells. Triangular cell's might not be too hard to add in. &lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;&lt;strong&gt;Custom Board Builder&lt;/strong&gt;: Create a GUI that allows the user to click on a grid to define the feasible positions of thier custom board.  Boards can naturally be stored as a binary matrix, thus it would be easy to let the user save and upload thier board.  &lt;/p&gt;
+&lt;p&gt;[&lt;a href="https://www.kaggle.com/mmotoki/beta-target-encoding"&gt;3&lt;/a&gt;]&amp;nbsp; Code for implementing the Bayesian target encoding.&lt;/p&gt;
 &lt;/li&gt;
 &lt;/ul&gt;
 &lt;script type="text/javascript"&gt;if (!document.getElementById('mathjaxscript_pelican_#%@#$@#')) {
@@ -588,92 +152,4 @@ Hence, if you beat the ai, then its skill goes up by the score difference; if yo
         "}";
     (document.body || document.getElementsByTagName('head')[0]).appendChild(mathjaxscript);
 }
-&lt;/script&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Matt Motoki</dc:creator><pubDate>Sun, 26 Nov 2017 10:01:00 -1000</pubDate><guid isPermaLink="false">tag:None,2017-11-26:/cell-division.html</guid><category>Artificial Intelligence</category><category>Games</category></item><item><title>Decision Matrix</title><link>/decision-matrix.html</link><description>&lt;p&gt;If you are like me then you have a million things that you want to do but no clear order in which to do them.  In this post, I will introduce the Decision Matrix which is a tool that breaks down a persons utility funciton into a linear combination of features.   I relate the decision matrix to Utility theory and show how we formulate the problem of finding the optimal schedule as a linear program. 
-I then show how I use it to prioritize my day.&lt;/p&gt;
-&lt;p&gt;We seek to maximize the expected utility of our schedule subject to the constraint that all tasks must be done on time (this constraint can be relaxed by introducing a penalty for late tasks). &lt;/p&gt;
-&lt;p&gt;Every action we take has a consequece, it has a benefit, it takes some time and sometimes it has a deadline associated with.  When we are faced with the problem of choosing which action to take&lt;/p&gt;
-&lt;p&gt;Utility theory says that every rational being can be reduced to an agent who is maximizing the expected value of some utility function.  The decision matrix aims to break an agent's utility into a linear combination of variables.  We provide a greedy approach to scheduling task.  The optimal schedule can be found via linear programming.    &lt;/p&gt;
-&lt;h1&gt;Problem Formlation&lt;/h1&gt;
-&lt;h1&gt;Solution&lt;/h1&gt;
-&lt;h1&gt;Case Study&lt;/h1&gt;
-&lt;h1&gt;Extensions - Soft Deadlines&lt;/h1&gt;
-&lt;h1&gt;Extensions - Nonlinear Objective Function&lt;/h1&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Matt Motoki</dc:creator><pubDate>Sun, 26 Nov 2017 10:01:00 -1000</pubDate><guid isPermaLink="false">tag:None,2017-11-26:/decision-matrix.html</guid><category>misc</category></item><item><title>Hawaii Machine Learning Meetup Challenge</title><link>/hawaii-machinelearning-meetup-challenge.html</link><description>&lt;h2&gt;About the Hawaii Machine Learning Meetup&lt;/h2&gt;
-&lt;h3&gt;Goals of Our Organization&lt;/h3&gt;
-&lt;p&gt;Our roles as organizers of the Hawaii Machine Learning Meetup is to:&lt;/p&gt;
-&lt;ol&gt;
-&lt;li&gt;
-&lt;p&gt;Host talks and presentations given by our members, academics, and people in industry. This is our main role. As organizers, we will work on contributing our own presentations to the meetup, but we want the focus to be on how the community in Hawaii is using machine learning.&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;Promote an understanding of machine learning through study groups. This is of secondary importance. We plan to organize study groups for members enrolled in or auditing online courses. We also plan to hold a periodic review session for the material covered in the course. If you are interested in going one of our study group sessions send us an email at hawaiimachinelearning@gmail.com.&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;Organize local machine learning competitions &amp;amp; encourage participation in global competitions. We believe that participating in machine learning competitions is a great way to apply machine learning techniques and also a great way to learn new techniques.&lt;/p&gt;
-&lt;/li&gt;
-&lt;/ol&gt;
-&lt;p&gt;The Hawaii Machine Learning Meetup is a group of students, scientists, engineers, entrepreneurs, and everyday people who are interested in machine learning and related artificial intelligence technologies. Our goal is to promote an interest in Machine Learning &amp;amp; Artificial Intelligence and increase the adoption of these technologies in Hawaii.&lt;/p&gt;
-&lt;p&gt;The Hawaii Machine Leaning Meetup is holding a local machine learning competition open to anyone in Hawaii. &lt;/p&gt;
-&lt;p&gt;The competition will serve to:&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;Promote machine learning in Hawaii&lt;/li&gt;
-&lt;li&gt;Provide an opportunity to analyze and extract insights from data&lt;/li&gt;
-&lt;li&gt;Teach fundamental machine learning techniques&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;TutorialsWe  plan  to  hold  optional  tutorials  to  teach  the  fundamentals  of  machine  learning.  Tutorial  1:  Exploratory  Data  Analysis  (EDA)  and  Feature  Engineering  –EDA  is  one  of  the  first  steps  in  a  machine  learning  pipeline.    It  is  where  analysts  gain  intuition  about  the  dataset.    Feature  engineering  is  the  process  in  which  raw  data  is  transformed  into  informative  representations  (known  as  features).    Feature  engineering  provides  an  opportunity  for  analysts  to  impart  their  intuition  and  domain  expertise  into  the  machine  learning  pipeline.Tutorial  2:  Training  and  Prediction  –During  training,  machine  learning  models  learn  to  map  input  data  into  predictions.    We  will  cover  this  process  for  standard  machine  learning  models.    Tutorial  3:  Cross  Validation  and  Model  Selection  –Cross  validation  is  the  gold  standard  for  estimating  a  machine  learning  algorithm’s  performance.  Cross  validation  can  be  used  to  select  the  best  machine  learning  model  forthe  task  at  hand.    Cross  validation  is  a  key  technique  that  every  machine  learning  practitioner  should  understand.  Tutorial  4:  Model  Ensembling  and  Blending  –Model  ensembling  is  a  technique  for  combining  the  predictions  of  multiple  machine  learning  algorithms.    Ensembling  is  essential  for  extracting  peak  performance  from  machine  learning  models.&lt;/p&gt;
-&lt;p&gt;Your challenge is to predict online retail sales from transaction data. Use any algorithm you like: train your own neural networks, grow your own decision trees, even spawn an AI to solve the problem for you.&lt;/p&gt;
-&lt;p&gt;If you are new to machine learning, come and join our weekly tutorial sessions to learn the fundamentals of machine learning. If you are are experienced with machine learning, come and show off your skills.&lt;/p&gt;
-&lt;p&gt;Join us to advance the field of machine learning in Hawaii.&lt;/p&gt;
-&lt;p&gt;If you are looking to participate in the competition please use the following link.&lt;/p&gt;
-&lt;p&gt;If you have any questions, contact us as at hawaiimachinelearning@gmail.com&lt;/p&gt;
-&lt;p&gt;Competition Details
-General Objectives
-The competition will provide a low-pressure environment that&lt;/p&gt;
-&lt;p&gt;Promotes machine learning in Hawaii
-Provides an opportunity to gain experience analyzing data
-Teaches fundamental machine learning techniques
-This competition will be valuable to beginners looking to get a start in machine learning. At the same time, this competition will be beneficial to machine learning experts who are interested in applying start-of-the-art techniques to solve real-word problems.&lt;/p&gt;
-&lt;p&gt;Task
-Participants are tasked with predicting sales transactions for online retail stores. Methods developed in this competition will be readily generalized to sales forecasting tasks here in Hawaii.&lt;/p&gt;
-&lt;p&gt;Evaluation
-The competition will evaluate participants objectively using the data rather than subjectively based on human judgement. Participants are ranked on how well they can predict test data (the ground truth is withheld from the participants). The metric that we will use for ranking is the root mean squared log error which is standard for this type of problem.&lt;/p&gt;
-&lt;p&gt;Rules
-Participants can form teams of any size.
-Private sharing of code or data outside of teams in not permitted. It’s okay to share code if made available to all participants on the forums.
-Having multiple accounts per participant is not allowed.
-Participants can submit up to 5 submissions per day. Participants will be allowed to submit 2 submissions for evaluation on the test set.
-Tutorials
-We plan to hold optional tutorials to teach the fundamentals of machine learning. The tutorials are created by machine learning experts. Tutorials will be given in-person, but we will also try to stream the content.&lt;/p&gt;
-&lt;p&gt;Tutorial 1: Exploratory Data Analysis (EDA) and Feature Engineering
-Tutorial 2: Training and Prediction
-Tutorial 3: Cross Validation and Model Selection
-Tutorial 4: Model Ensembling and Blending
-Kernels
-We plan to have a panel of judges who subjectively evaluate kernel submissions based on the following criteria:&lt;/p&gt;
-&lt;p&gt;Originality – does the kernel contain original material
-Helpfulness – does the kernel provide valuable information for the task at hand; the number of upvotes is one measure of helpfulness
-Correctness – are the technical details of the kernel correct, this is the most important aspect of the kernel
-The best kernel will be recognized.&lt;/p&gt;
-&lt;p&gt;Competition Timeline
-The competition is planned to start on March 30th and to finish on April 30th. We will wrap-up the competition on May 4 th.&lt;/p&gt;
-&lt;p&gt;Week 0, Friday March 30, 6:00 PM: Start Competition&lt;/p&gt;
-&lt;p&gt;Description: Kick-off the event. Discuss the competition task, rules, and timeline. Setup complete beginners. Encourage team formation.
-Venue: Presentation Room at Manoa Innovation Center
-Week 1, Monday April 2, 6:00 PM: Tutorial 1&lt;/p&gt;
-&lt;p&gt;Description: Exploratory Data Analysis (EDA) and Feature Engineering
-Venue: Ideation Room at the Manoa Innovation Center
-Week 2, Monday April 9, 6:00 PM: Tutorial 2&lt;/p&gt;
-&lt;p&gt;Description: Training and Prediction
-Venue: Ideation Room at the Manoa Innovation Center
-Week 3, Monday April 16, 6:00 PM: Tutorial 3&lt;/p&gt;
-&lt;p&gt;Description: Cross Validation and Model Selection
-Venue: Ideation Room at the Manoa Innovation Center
-Week 4, Monday April 23, 6:00 PM: Tutorial 4&lt;/p&gt;
-&lt;p&gt;Description: Model Ensembling and Blending
-Venue: Ideation Room at the Manoa Innovation Center
-Week 5a, Monday April 30, 2:00 PM: End Competition&lt;/p&gt;
-&lt;p&gt;Description: End competition on Monday at 2:00 PM HST (Tuesday 00:00 UTC). No new submissions will be allowed. Participants will be notified of the competition’s end. The top 3 teams will be asked to submit their code and prepare their presentations.
-Venue: None
-Week 5b, Friday May 4, 6:00 PM: Winner’s Presentations&lt;/p&gt;
-&lt;p&gt;Description: Finalize the competition results. Judges will explain their choice for Best Kernel. Winners will present their solutions (3rd → 2nd → 1st).
-Venue: Presentation Room at Manoa Innovation Center
-We may host a follow-up meetup for any participant interested in presenting their solution or kernel.&lt;/p&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Matt Motoki</dc:creator><pubDate>Sun, 26 Nov 2017 10:01:00 -1000</pubDate><guid isPermaLink="false">tag:None,2017-11-26:/hawaii-machinelearning-meetup-challenge.html</guid><category>Meetup</category><category>Machine Learning Competitions</category><category>Kaggle</category></item></channel></rss>
+&lt;/script&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Matt Motoki</dc:creator><pubDate>Sun, 01 Jul 2018 22:47:00 -1000</pubDate><guid isPermaLink="false">tag:None,2018-07-01:/bayesian-target-encoding.html</guid><category>Feature Engineering</category><category>Bayesian Statistics</category><category>Kaggle</category></item></channel></rss>
