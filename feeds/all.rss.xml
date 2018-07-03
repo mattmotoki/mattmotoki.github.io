@@ -6,6 +6,7 @@
 &lt;ul&gt;
 &lt;li&gt;&lt;a href="#the-analytics-edge"&gt;The Analytics Edge&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href="#artificial-intelligence"&gt;Artificial Intelligence&lt;/a&gt; &lt;/li&gt;
+&lt;li&gt;&lt;a href="#policy-analysis-using-interrupted-time-series"&gt;Policy Analysis using Interrupted Time Series &lt;/a&gt; &lt;/li&gt;
 &lt;/ul&gt;
 &lt;p&gt;&lt;a href="#big-data"&gt;&lt;strong&gt;Big Data&lt;/strong&gt;&lt;/a&gt;&lt;/p&gt;
 &lt;ul&gt;
@@ -19,10 +20,14 @@
 &lt;li&gt;&lt;a href="#html5-part-2"&gt;HTML5 Part 2: Advanced Techniques for Designing HTML5 Apps&lt;/a&gt;    &lt;/li&gt;
 &lt;/ul&gt;
 &lt;p&gt;&lt;a href="#miscellaneous"&gt;&lt;strong&gt;Miscellaneous&lt;/strong&gt;&lt;/a&gt;&lt;/p&gt;
-&lt;h2 id="machine-learning"&gt;Machine Learning &amp;nbsp;&lt;small&gt;&lt;a href="#toc"&gt;back to top&lt;/a&gt;&lt;/small&gt;&lt;/h2&gt;
-
-&lt;p&gt;Data Science + Machine Learning + Artificial Intelligence&lt;/p&gt;
-&lt;h3 id="the-analytics-edge"&gt;The Analytics Edge &amp;nbsp;&lt;small&gt;&lt;a href="#toc"&gt;back to top&lt;/a&gt;&lt;/small&gt;&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href="#video-game-design-history"&gt;Video Game Design History&lt;/a&gt;    &lt;/li&gt;
+&lt;li&gt;&lt;a href="#becoming-an-entrepreneur"&gt;MIT Launch X – Becoming an Entrepreneur&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;br&gt;
+&lt;hr&gt;
+&lt;h1 id="machine-learning"&gt;Machine Learning&lt;/h1&gt; &lt;/p&gt;
+&lt;h2 id="the-analytics-edge"&gt;The Analytics Edge &amp;nbsp;&lt;b&gt;&lt;a href="#toc"&gt;&amp;#8593;&lt;/a&gt;&lt;/b&gt;&lt;/h2&gt;
 
 &lt;ul&gt;
 &lt;li&gt;&lt;strong&gt;Institution&lt;/strong&gt;: MITx&lt;/li&gt;
@@ -32,7 +37,7 @@
 &lt;a href="https://s3.amazonaws.com/verify.edx.org/downloads/4792739100a743398f5fee3a8bc11e88/Certificate.pdf"&gt;Certificate of Achievement&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;p&gt;This course was one of the first online courses that I ever took. It was taught by Dimitris Bertsimas who is well-known in the field of Operations Research.  The course was primarily business analytics covering fundamental methods such as linear regression, logistic regression, CART, clustering, data visualization, and linear programming.  The problem sets were done in R and Excel (linear programming solver).  The final course project was participating in a Kaggle competition.  &lt;/p&gt;
-&lt;h3 id="artificial-intelligence"&gt;Artificial Intelligence &amp;nbsp;&lt;small&gt;&lt;a href="#toc"&gt;back to top&lt;/a&gt;&lt;/small&gt;&lt;/h3&gt;
+&lt;h2 id="artificial-intelligence"&gt;Artificial Intelligence &amp;nbsp;&lt;b&gt;&lt;a href="#toc"&gt;&amp;#8593;&lt;/a&gt;&lt;/b&gt;&lt;/h2&gt;
 
 &lt;ul&gt;
 &lt;li&gt;&lt;strong&gt;Institution&lt;/strong&gt;: BerkeleyX&lt;/li&gt;
@@ -42,10 +47,21 @@
 &lt;a href="https://s3.amazonaws.com/verify.edx.org/downloads/0cce9857a49b4302ba74236789d52a13/Certificate.pdf"&gt;Certificate of Achievement&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;p&gt;This course was taught by Dan Klein and Pieter Abbeel who are both professors at UC Berkeley and are both prominent researchers in their respective fields of NLP and reinforcement learning.  The course covered search, planning, constraint satisfaction problems, decision theory, Markov decision processes, and reinforcement learning.  The course assignments were in python.  The course projects centered around teaching an agent to play Pac-Man.&lt;/p&gt;
-&lt;h2 id="big-data"&gt;Big Data&lt;/h2&gt;
+&lt;h2 id="policy-analysis-using-interrupted-time-series"&gt;Policy Analysis using Interrupted Time Series &amp;nbsp;&lt;b&gt;&lt;a href="#toc"&gt;&amp;#8593;&lt;/a&gt;&lt;/b&gt;&lt;/h2&gt;
 
-&lt;h3 id="introduction-to-big-data-with-apache-spark"&gt;Introduction to Big Data with Apache Spark &amp;nbsp;&lt;small&gt;&lt;a href="#toc"&gt;back to top&lt;/a&gt;&lt;/small&gt;&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Institution&lt;/strong&gt;: UBCx&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Date Completed&lt;/strong&gt;:  February 21, 2017&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Links:&lt;/strong&gt; 
+&lt;a href="https://d37djvu3ytnwxt.cloudfront.net/assets/courseware/v1/edb6888857978fc5b00f4db0d2e1bc06/asset-v1:UBCx+ITSx+1T2017+type@asset+block/Syllabus_ITSx_Handouts.pdf"&gt;Course Website&lt;/a&gt;, 
+&lt;a href="https://courses.edx.org/certificates/e1e2b440be3f4830acb6706e6b2c81ea"&gt;Certificate of Achievement&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;br&gt;
+&lt;hr&gt;
+&lt;h1 id="big-data"&gt;Big Data&lt;/h1&gt; &lt;/p&gt;
+&lt;h2 id="introduction-to-big-data-with-apache-spark"&gt;Introduction to Big Data with Apache Spark &amp;nbsp;&lt;b&gt;&lt;a href="#toc"&gt;&amp;#8593;&lt;/a&gt;&lt;/b&gt;&lt;/h2&gt;
 
+&lt;p&gt;&lt;/h2&gt; &lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;strong&gt;Institution&lt;/strong&gt;: BerkeleyX&lt;/li&gt;
 &lt;li&gt;&lt;strong&gt;Date Completed&lt;/strong&gt;:  July 10, 2015&lt;/li&gt;
@@ -54,7 +70,7 @@
 &lt;a href="https://s3.amazonaws.com/verify.edx.org/downloads/ba01a98edcf045b096ad77c6d9b51e50/Certificate.pdf"&gt;Certificate of Achievement&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;p&gt;This was the first course in a series of courses that I took on Apache Spark and big data.  This course covered advanced undergraduate-level statistics and data analysis.  The course assignments used PySpark (the Python API for Spark) to manipulate data sets in parallel.  In particular, we covered log mining, textual entity recognition and collaborative filtering techniques. &lt;/p&gt;
-&lt;h3 id="scalable-machine-learning"&gt;Scalable Machine Learning &amp;nbsp;&lt;small&gt;&lt;a href="#toc"&gt;back to top&lt;/a&gt;&lt;/small&gt;&lt;/h3&gt;
+&lt;h2 id="scalable-machine-learning"&gt;Scalable Machine Learning &amp;nbsp;&lt;b&gt;&lt;a href="#toc"&gt;&amp;#8593;&lt;/a&gt;&lt;/b&gt;&lt;/h2&gt;
 
 &lt;ul&gt;
 &lt;li&gt;&lt;strong&gt;Institution&lt;/strong&gt;: BerkeleyX&lt;/li&gt;
@@ -64,9 +80,10 @@
 &lt;a href="https://s3.amazonaws.com/verify.edx.org/downloads/77263e51cee94dc7a4a0b62aa1c04081/Certificate.pdf"&gt;Certificate of Achievement&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;p&gt;This was the second course in a series of courses that I took on Apache Spark and big data.  This course introduced the underlying statistical and algorithmic principles required to develop scalable real-world machine learning pipelines. The course presented an integrated view of data processing by highlighting the various components of these pipelines, including feature extraction, supervised learning, model evaluation, and exploratory data analysis. The course assignments were done in PySpark to implement several scalable learning pipelines.&lt;/p&gt;
-&lt;h2 id="web-development"&gt;Web Development&lt;/h2&gt;
-
-&lt;h3 id="html5-introduction"&gt;HTML5 Introduction &amp;nbsp;&lt;small&gt;&lt;a href="#toc"&gt;back to top&lt;/a&gt;&lt;/small&gt;&lt;/h3&gt;
+&lt;p&gt;&lt;br&gt;
+&lt;hr&gt;
+&lt;h1 id="web-development"&gt;Web Development&lt;/h1&gt; &lt;/p&gt;
+&lt;h2 id="html5-introduction"&gt;HTML5 Introduction &amp;nbsp;&lt;b&gt;&lt;a href="#toc"&gt;&amp;#8593;&lt;/a&gt;&lt;/b&gt;&lt;/h2&gt;
 
 &lt;ul&gt;
 &lt;li&gt;&lt;strong&gt;Institution&lt;/strong&gt;: W3Cx&lt;/li&gt;
@@ -75,7 +92,7 @@
 &lt;a href="https://courses.edx.org/courses/course-v1:W3Cx+HTML5.0x+2T_2016/course/"&gt;Course Website&lt;/a&gt;, 
 &lt;a href="https://courses.edx.org/certificates/0bf5fb9f5fc04f7c9824cf46f35f7dbb"&gt;Certificate of Achievement&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
-&lt;h3 id="html5-part-1"&gt;HTML5 Part 1: HTML5 Coding Essentials and Best Practices &amp;nbsp;&lt;small&gt;&lt;a href="#toc"&gt;back to top&lt;/a&gt;&lt;/small&gt;&lt;/h3&gt;
+&lt;h2 id="html5-part-1"&gt;HTML5 Part 1: HTML5 Coding Essentials and Best Practices &amp;nbsp;&lt;b&gt;&lt;a href="#toc"&gt;&amp;#8593;&lt;/a&gt;&lt;/b&gt;&lt;/h2&gt;
 
 &lt;ul&gt;
 &lt;li&gt;&lt;strong&gt;Institution&lt;/strong&gt;: W3Cx&lt;/li&gt;
@@ -84,7 +101,7 @@
 &lt;a href="https://courses.edx.org/courses/course-v1:W3Cx+HTML5.1x+3T2016/course/"&gt;Course Website&lt;/a&gt;, 
 &lt;a href="https://courses.edx.org/certificates/906abb031c4740f89a73d1aab5ac054a"&gt;Certificate of Achievement&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
-&lt;h3 id="html5-part-2"&gt;HTML5 Part 2: Advanced Techniques for Designing HTML5 Apps &amp;nbsp;&lt;small&gt;&lt;a href="#toc"&gt;back to top&lt;/a&gt;&lt;/small&gt;&lt;/h3&gt;
+&lt;h2 id="html5-part-2"&gt;HTML5 Part 2: Advanced Techniques for Designing HTML5 Apps &amp;nbsp;&lt;b&gt;&lt;a href="#toc"&gt;&amp;#8593;&lt;/a&gt;&lt;/b&gt;&lt;/h2&gt;
 
 &lt;ul&gt;
 &lt;li&gt;&lt;strong&gt;Institution&lt;/strong&gt;: W3Cx&lt;/li&gt;
@@ -93,7 +110,36 @@
 &lt;a href="https://courses.edx.org/courses/course-v1:W3Cx+HTML5.2x+2T2016/course/"&gt;Course Website&lt;/a&gt;, 
 &lt;a href="https://courses.edx.org/certificates/61149abe704147ebaa553ed506924ba8"&gt;Certificate of Achievement&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
-&lt;h2 id="miscellaneous"&gt;Miscellaneous&lt;/h2&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Matt Motoki</dc:creator><pubDate>Mon, 02 Jul 2018 11:42:00 -1000</pubDate><guid isPermaLink="false">tag:None,2018-07-02:/online-course-archive.html</guid><category>Online Courses</category><category>Big Data</category><category>Machine Learning</category><category>Data Science</category><category>Artificial Intelligence</category><category>Web Development</category></item><item><title>Beta Target Encoding</title><link>/beta-target-encoding.html</link><description>&lt;h1&gt;Beta Target Encoding&lt;/h1&gt;
+&lt;h2 id="advanced-css-concepts"&gt;Advanced CSS Concepts &amp;nbsp;&lt;b&gt;&lt;a href="#toc"&gt;&amp;#8593;&lt;/a&gt;&lt;/b&gt;&lt;/h2&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Institution&lt;/strong&gt;: Microsoft&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Date Completed&lt;/strong&gt;: February 14, 2017&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Links:&lt;/strong&gt; 
+&lt;a href="https://courses.edx.org/courses/course-v1:Microsoft+DEV218x+3T2016/course/"&gt;Course Website&lt;/a&gt;, 
+&lt;a href="https://courses.edx.org/certificates/429c9a4bac0e403d9ea2810e6d94427c"&gt;Certificate of Achievement&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;br&gt;
+&lt;hr&gt;
+&lt;h1 id="miscellaneous"&gt;Miscellaneous&lt;/h1&gt; &lt;/p&gt;
+&lt;h2 id="video-game-design-history"&gt;Video Game Design History &amp;nbsp;&lt;b&gt;&lt;a href="#toc"&gt;&amp;#8593;&lt;/a&gt;&lt;/b&gt;&lt;/h2&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Institution&lt;/strong&gt;: RITx&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Date Completed&lt;/strong&gt;: February 21, 2017&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Links:&lt;/strong&gt; 
+&lt;a href="https://courses.edx.org/courses/course-v1:RITx+GAME101x+3T2016/898702cdaee44383bab13784a4a13bac/"&gt;Course Website&lt;/a&gt;, 
+&lt;a href="https://courses.edx.org/certificates/85bddd3a20cb4fdfab4c5f7c52586097"&gt;Certificate of Achievement&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id="becoming-an-entrepreneur"&gt;MIT Launch X – Becoming an Entrepreneur &amp;nbsp;&lt;b&gt;&lt;a href="#toc"&gt;&amp;#8593;&lt;/a&gt;&lt;/b&gt;&lt;/h2&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Institution&lt;/strong&gt;: MITx&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Date Completed&lt;/strong&gt;: February 21, 2017&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Links:&lt;/strong&gt; 
+&lt;a href="https://courses.edx.org/courses/course-v1:MITx+Launch.x_3+1T2017/course/"&gt;Course Website&lt;/a&gt;, 
+&lt;a href="https://courses.edx.org/certificates/14b79eae6f364bcabbbbaf6cb5015398"&gt;Certificate of Achievement&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Matt Motoki</dc:creator><pubDate>Mon, 02 Jul 2018 11:42:00 -1000</pubDate><guid isPermaLink="false">tag:None,2018-07-02:/online-course-archive.html</guid><category>Online Courses</category><category>Big Data</category><category>Machine Learning</category><category>Data Science</category><category>Artificial Intelligence</category><category>Web Development</category></item><item><title>Beta Target Encoding</title><link>/beta-target-encoding.html</link><description>&lt;h1&gt;Beta Target Encoding&lt;/h1&gt;
 &lt;h2&gt;Summary&lt;/h2&gt;
 &lt;p&gt;Bayesian Target Encoding is a feature engineering technique used to map categorical variables into numeric variables.  The Bayesian framework requires only minimal updates as new data is acquired and is thus well-suited for online learning.  Furthermore, the Bayesian approach makes choosing and interpreting hyperparameters intuitive.  I implemented this technique in the recent Avito Kaggle Competition, where my team and I took 14th place out of 1,917 teams.  We found that the Bayesian target encoding outperforms the built-in categorical encoding provided by the LightGBM package. &lt;/p&gt;
 &lt;h2&gt;Target Encoding&lt;/h2&gt;
