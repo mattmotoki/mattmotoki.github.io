@@ -10,6 +10,7 @@ PATH = 'content'
 
 TIMEZONE = 'Pacific/Honolulu'
 
+DEFAULT_METADATA = {'status': 'draft'}
 DEFAULT_LANG = 'en'
 
 NEST_HEADER_IMAGES = 'bg0.png'
@@ -34,13 +35,13 @@ AUTHOR_FEED_ATOM = None
 
 # Blogroll
 LINKS = (
-	('GitHub', 'https://github.com/mattmotoki/'),
+	('Kaggle', 'https://www.kaggle.com/mmotoki'),
     ('CodePen', 'https://codepen.io/mmotoki/'),
 )
 
 # Social widget
 SOCIAL = (
-	('Kaggle', 'https://www.kaggle.com/mmotoki'),
+	('GitHub', 'https://github.com/mattmotoki/'),
     ('LinkedIn', 'https://www.linkedin.com/in/matt-motoki-9b7884a2/'),
     
 )
