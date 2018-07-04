@@ -3,16 +3,31 @@
 
 &lt;p&gt;This is an archive of Kaggle competitions that I have done. &lt;/p&gt;
 &lt;ul&gt;
+&lt;li&gt;&lt;a href="#santander-customer-satisfaction"&gt;Santander Customer Satisfaction&lt;/a&gt; &lt;/li&gt;
 &lt;li&gt;&lt;a href="#toxic-comment-classification-challenge"&gt;Toxic Comment Classification Challenge&lt;/a&gt; &lt;/li&gt;
+&lt;li&gt;&lt;a href="#instacart-market-basket-analysis"&gt;Instacart Market Basket Analysis&lt;/a&gt; &lt;/li&gt;
 &lt;li&gt;&lt;a href="#porto-seguros-safe-driver-prediction"&gt;Porto Seguro’s Safe Driver Prediction&lt;/a&gt; &lt;/li&gt;
+&lt;li&gt;&lt;a href="#quora-question-pairs"&gt;Quora Question Pairs&lt;/a&gt; &lt;/li&gt;
 &lt;li&gt;&lt;a href="#corporación-favorita-grocery-sales-forecasting"&gt;Corporación Favorita Grocery Sales Forecasting&lt;/a&gt; &lt;/li&gt;
+&lt;li&gt;&lt;a href="#facebook-v-predicting-check-ins"&gt;Facebook V: Predicting Check Ins&lt;/a&gt; &lt;/li&gt;
 &lt;li&gt;&lt;a href="#cdiscounts-image-classification-challenge"&gt;Cdiscount’s Image Classification Challenge&lt;/a&gt; &lt;/li&gt;
+&lt;li&gt;&lt;a href="#carvana-image-masking-challenge"&gt;Carvana Image Masking Challenge&lt;/a&gt; &lt;/li&gt;
+&lt;li&gt;&lt;a href="#grupo-bimbo-inventory-demand"&gt;Grupo Bimbo Inventory Demand&lt;/a&gt; &lt;/li&gt;
 &lt;li&gt;&lt;a href="#santa-gift-matching-challenge"&gt;Santa Gift Matching Challenge&lt;/a&gt; &lt;/li&gt;
 &lt;/ul&gt;
+&lt;p&gt;&lt;h2 id=santander-customer-satisfaction&gt;Santander Customer Satisfaction &amp;nbsp;&lt;b&gt;&lt;a href="#toc"&gt;&amp;#8593;&lt;/a&gt;&lt;/b&gt;&lt;/h2&gt;  &lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Private Leaderboard Rank&lt;/strong&gt;: 8/5123 (top 0.2%)&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Date Completed&lt;/strong&gt;:  May 2, 2016&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Competition Host&lt;/strong&gt;: Santander&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Links:&lt;/strong&gt; 
+&lt;a href="https://www.kaggle.com/c/santander-customer-satisfaction"&gt;Competition Website&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Predicted customer satisfaction for the multinational bank Santander.  The formal objective was to minimize the AUROC (area under the receiver operator curve) of the probability that a customer is dissatisfied with service.   Customized feature engineering appealed to statistical patterns in the anonymized data to create robust low-dimensional features.  These features helped to both increase accuracy and decrease variance in the model predictions.  The final model ranked in the top 0.2% and consisted of an ensemble of three xgboost models trained with different feature groupings and a stacked Extra Trees model.   &lt;/p&gt;
 &lt;h2 id=toxic-comment-classification-challenge&gt;Toxic Comment Classification Challenge &amp;nbsp;&lt;b&gt;&lt;a href="#toc"&gt;&amp;#8593;&lt;/a&gt;&lt;/b&gt;&lt;/h2&gt;
 
 &lt;ul&gt;
-&lt;li&gt;&lt;strong&gt;Private Leaderboard Rank&lt;/strong&gt;: 33/4,551 (0.7%)&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Private Leaderboard Rank&lt;/strong&gt;: 33/4551 (top 0.7%)&lt;/li&gt;
 &lt;li&gt;&lt;strong&gt;Date Completed&lt;/strong&gt;:  March 20, 2018&lt;/li&gt;
 &lt;li&gt;&lt;strong&gt;Competition Host&lt;/strong&gt;: Jigsaw&lt;/li&gt;
 &lt;li&gt;&lt;strong&gt;Links:&lt;/strong&gt; 
@@ -21,30 +36,60 @@
 &lt;a href="https://github.com/mattmotoki/toxic-comment-classification"&gt;Code&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;p&gt;Optimized various recurrent and 1-D convolutional neural networks to categorize the sentiment of online comments.  Designed a fast similarity embedding imputation to address out-of-vocabulary (OOV) words.  The imputation method produced results that were on par with the current state-of-the-art method for filling in OOV words; however, the imputation method is more widely applicable.  My final solution ranked in the top 0.7%. &lt;/p&gt;
+&lt;h2 id=instacart-market-basket-analysis&gt;Instacart Market Basket Analysis &amp;nbsp;&lt;b&gt;&lt;a href="#toc"&gt;&amp;#8593;&lt;/a&gt;&lt;/b&gt;&lt;/h2&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Private Leaderboard Rank&lt;/strong&gt;: 29/2623 (top 1.1%)&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Date Completed&lt;/strong&gt;:  August 14, 2017 &lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Competition Host&lt;/strong&gt;: Instacart&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Links:&lt;/strong&gt; 
+&lt;a href="https://www.kaggle.com/c/instacart-market-basket-analysis"&gt;Competition Website&lt;/a&gt;,
+&lt;a href="https://www.kaggle.com/mmotoki/markov-chain-tutorial"&gt;Markov Chain Tutorial&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Applied forecasting techniques to predict customer reorders for grocery delivery company Instacart. The metric used in this competition was the mean F1 score and the data for the competition consisted of order histories of 300,000+ members for 50,000+ products.  Features were derived from Markov Chains and ARIMA models.  A customized post-processing routine optimized predictions for the F1 metric.  The final model ranked in the top 1.1%. &lt;/p&gt;
 &lt;h2 id=porto-seguros-safe-driver-prediction&gt;Porto Seguro’s Safe Driver Prediction &amp;nbsp;&lt;b&gt;&lt;a href="#toc"&gt;&amp;#8593;&lt;/a&gt;&lt;/b&gt;&lt;/h2&gt;
 
 &lt;ul&gt;
-&lt;li&gt;&lt;strong&gt;Private Leaderboard Rank&lt;/strong&gt;: 58/5169 (1.1%)&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Private Leaderboard Rank&lt;/strong&gt;: 58/5169 (top 1.1%)&lt;/li&gt;
 &lt;li&gt;&lt;strong&gt;Date Completed&lt;/strong&gt;:  November 29, 2017 &lt;/li&gt;
 &lt;li&gt;&lt;strong&gt;Competition Host&lt;/strong&gt;: Porto Seguro&lt;/li&gt;
 &lt;li&gt;&lt;strong&gt;Links:&lt;/strong&gt; 
 &lt;a href="https://www.kaggle.com/c/porto-seguro-safe-driver-prediction"&gt;Competition Website&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;p&gt;Used robust modeling techniques to predict the probability of an insurance claim from noisy anonymized data.  Multiple implementations of gradient boosted decision tree libraries (including Xgboost, Catboost, and LightGBM) were blended to reduce the variance in predictions.  The evaluation metric was the Normalized Gini Coefficient.  My final submission ranked in the top 1.1%.  &lt;/p&gt;
+&lt;h2 id=quora-question-pairs&gt;Quora Question Pairs &amp;nbsp;&lt;b&gt;&lt;a href="#toc"&gt;&amp;#8593;&lt;/a&gt;&lt;/b&gt;&lt;/h2&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Private Leaderboard Rank&lt;/strong&gt;: 95/3307 (top 2.9%)&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Date Completed&lt;/strong&gt;:  June 6, 2017 &lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Competition Host&lt;/strong&gt;: Quora&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Links:&lt;/strong&gt; 
+&lt;a href="https://www.kaggle.com/c/quora-question-pairs"&gt;Competition Website&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Partnered with a local data scientist to apply natural language processing (NLP) techniques to detect duplicate questions for the crowdsourcing question and answer company Quora. The metric used in this competition was the log loss and the data for the competition consisted of 300,000+ question pairs.  We constructed sentence features from variants of TF-IDF weightings, part-of-speech tags and string and word distances.  We created ensembles of recurrent neural networks (in particular LSTM) trained on learned and precomputed word embeddings.  We ranked in the top 2.9% using a blend of gradient boosted decision trees and recurrent neural networks. &lt;/p&gt;
 &lt;h2 id=corporación-favorita-grocery-sales-forecasting&gt;Corporación Favorita Grocery Sales Forecasting &amp;nbsp;&lt;b&gt;&lt;a href="#toc"&gt;&amp;#8593;&lt;/a&gt;&lt;/b&gt;&lt;/h2&gt;
 
 &lt;ul&gt;
-&lt;li&gt;&lt;strong&gt;Private Leaderboard Rank&lt;/strong&gt;: 76/1,675 (4.5%)&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Private Leaderboard Rank&lt;/strong&gt;: 76/1675 (top 4.5%)&lt;/li&gt;
 &lt;li&gt;&lt;strong&gt;Date Completed&lt;/strong&gt;:  January 15, 2018&lt;/li&gt;
 &lt;li&gt;&lt;strong&gt;Competition Host&lt;/strong&gt;: Corporación Favorita&lt;/li&gt;
 &lt;li&gt;&lt;strong&gt;Links:&lt;/strong&gt; 
 &lt;a href="https://www.kaggle.com/c/favorita-grocery-sales-forecasting"&gt;Competition Website&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;p&gt;Created grocery sales forecast for a 16day horizon.  Feature engineering was an important part the final solution; features included lagged sales aggregated over multiple windows.   Features were fed into LightGBM for fast training and prediction.  Models were evaluated using the Normalized Weighted Root Mean Squared Logarithmic Error.  My final submission ranked in the top 4.5%.  &lt;/p&gt;
+&lt;p&gt;&lt;h2 id=facebook-v-predicting-check-ins&gt;Facebook V: Predicting Check Ins &amp;nbsp;&lt;b&gt;&lt;a href="#toc"&gt;&amp;#8593;&lt;/a&gt;&lt;/b&gt;&lt;/h2&gt;  &lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Private Leaderboard Rank&lt;/strong&gt;: 85/1212 (top 7.0%)&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Date Completed&lt;/strong&gt;:  July 6, 2016&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Competition Host&lt;/strong&gt;: Facebook&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Links:&lt;/strong&gt; 
+&lt;a href="https://www.kaggle.com/c/facebook-v-predicting-check-ins"&gt;Competition Website&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Predicted the check-in location of a person from noisy simulated Facebook data.  The objective was to minimize the mean average precision between the top 3 predicted check-in locations and the actual check-in location.  The data was particularly interesting in that it contained relatively few explanatory variables (5) and over 100,000 check-in locations to predict.  My approach was to subset the data using overlapping grids, train models on the subsets, and then combine the models' predictions using a spatial weighting system.  The final result ranked in the top 7.0%. &lt;/p&gt;
 &lt;h2 id=cdiscounts-image-classification-challenge&gt;Cdiscount’s Image Classification Challenge &amp;nbsp;&lt;b&gt;&lt;a href="#toc"&gt;&amp;#8593;&lt;/a&gt;&lt;/b&gt;&lt;/h2&gt;
 
 &lt;ul&gt;
-&lt;li&gt;&lt;strong&gt;Private Leaderboard Rank&lt;/strong&gt;: 52/627 (8.3%)&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Private Leaderboard Rank&lt;/strong&gt;: 52/627 (top 8.3%)&lt;/li&gt;
 &lt;li&gt;&lt;strong&gt;Date Completed&lt;/strong&gt;:  December 14, 2017 &lt;/li&gt;
 &lt;li&gt;&lt;strong&gt;Competition Host&lt;/strong&gt;: Cdiscount&lt;/li&gt;
 &lt;li&gt;&lt;strong&gt;Links:&lt;/strong&gt; 
@@ -58,36 +103,35 @@
 &lt;li&gt;Over 62 GB of bson files (binary json) &lt;/li&gt;
 &lt;/ul&gt;
 &lt;p&gt;My final solution which was an ensemble of various DenseNet, Resnet, Inception, and Xception architectures ranked in the top 3.8%.  &lt;/p&gt;
+&lt;h2 id=carvana-image-masking-challenge&gt;Carvana Image Masking Challenge &amp;nbsp;&lt;b&gt;&lt;a href="#toc"&gt;&amp;#8593;&lt;/a&gt;&lt;/b&gt;&lt;/h2&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Private Leaderboard Rank&lt;/strong&gt;: 72/735 (top 9.8%)&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Date Completed&lt;/strong&gt;:  September 27, 2017 &lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Competition Host&lt;/strong&gt;: Carvana&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Links:&lt;/strong&gt; 
+&lt;a href="https://www.kaggle.com/c/carvana-image-masking-challenge"&gt;Competition Website&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Used deep learning to create high-quality image masks for the online car dealership company Carvana. The metric used in this competition was the dice coefficient and the data for the competition consisted of 5,000+ high resolution images of showroom car.  A very deep neural network architecture called U-Net quickly achieved greater than 99.5% accuracy.  My final submission of an ensemble of U-Nets ranked in the top 9.8%. &lt;/p&gt;
+&lt;p&gt;&lt;h2 id=grupo-bimbo-inventory-demand&gt;Grupo Bimbo Inventory Demand &amp;nbsp;&lt;b&gt;&lt;a href="#toc"&gt;&amp;#8593;&lt;/a&gt;&lt;/b&gt;&lt;/h2&gt;  &lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Private Leaderboard Rank&lt;/strong&gt;: 231/1969 (top 11.7%)&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Date Completed&lt;/strong&gt;:  August 30, 2016&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Competition Host&lt;/strong&gt;: Grupo Bimbo&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Links:&lt;/strong&gt; 
+&lt;a href="https://www.kaggle.com/c/grupo-bimbo-inventory-demand"&gt;Competition Website&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Partnered with a local data analyst to provide a two week ahead forecast for client-product sales of the multinational company Grupo Bimbo. The metric used in this competition was the log RMSE and the data for the competition consisted of nearly one million clients each with a few thousand products to order. Our feature engineering consisted of mapping high cardinality categorical variables into a more readily usable form. The final submission ranked in the top 11.7%. &lt;/p&gt;
 &lt;h2 id=santa-gift-matching-challenge&gt;Santa Gift Matching Challenge &amp;nbsp;&lt;b&gt;&lt;a href="#toc"&gt;&amp;#8593;&lt;/a&gt;&lt;/b&gt;&lt;/h2&gt;
 
 &lt;ul&gt;
-&lt;li&gt;&lt;strong&gt;Private Leaderboard Rank&lt;/strong&gt;: 88/428 (20.6%)&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Private Leaderboard Rank&lt;/strong&gt;: 88/428 (top 20.6%)&lt;/li&gt;
 &lt;li&gt;&lt;strong&gt;Date Completed&lt;/strong&gt;:  January 12, 2018&lt;/li&gt;
 &lt;li&gt;&lt;strong&gt;Competition Host&lt;/strong&gt;: Kaggle&lt;/li&gt;
 &lt;li&gt;&lt;strong&gt;Links:&lt;/strong&gt; 
 &lt;a href="https://www.kaggle.com/c/santa-gift-matching"&gt;Competition Website&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
-&lt;p&gt;Teamed up with a Kaggle Grandmaster to find a near optimal solution to a large scale nonlinear optimization problem.  The task was to assign gifts to children, each assignment has a gift happiness and child happiness, the objective was to maximize the cube of the total gift happiness plus the cube of the total child happiness, the constraints were essentially linear.   The objective function—while nonlinear—is well modeled by a linear approximation.  The linearized problem was framed as a max-flow min-cost problem and solved exactly using Google’s OR-Tools.   The solution was then fine tuned using a greedy heuristic implemented in plain C for speed. Our final submission ranked in the top 20.6%. &lt;/p&gt;
-&lt;hr&gt;
-
-&lt;p&gt;72nd out of 735 in “Carvana Image Masking“ &lt;/p&gt;
-&lt;p&gt;September 2017 &lt;/p&gt;
-&lt;p&gt;Used deep learning to create high-quality image masks for the online car dealership company Carvana. The metric used in this competition was the dice coefficient and the data for the competition consisted of 5,000+ high resolution images of showroom car.  A very deep neural network architecture called U-Net quickly achieved greater than 99.5% accuracy.  My final submission of an ensemble of U-Nets ranked in the top 10%. &lt;/p&gt;
-&lt;p&gt;29th out of 2623 in “Instacart Market Basket Analysis“ &lt;/p&gt;
-&lt;p&gt;August 2017 &lt;/p&gt;
-&lt;p&gt;Applied forecasting techniques to predict customer reorders for grocery delivery company Instacart. The metric used in this competition was the mean F1 score and the data for the competition consisted of order histories of 300,000+ members for 50,000+ products.  Features were derived from Markov Chains and ARIMA models.  A customized post-processing routine optimized predictions for the F1 metric.  The final model ranked in the top 2%. &lt;/p&gt;
-&lt;p&gt;95th out of 3307 in “Quora Question Pairs“ &lt;/p&gt;
-&lt;p&gt;June 2017 &lt;/p&gt;
-&lt;p&gt;Partnered with a local data scientist to apply natural language processing (NLP) techniques to detect duplicate questions for the crowdsourcing question and answer company Quora. The metric used in this competition was the log loss and the data for the competition consisted of 300,000+ question pairs.  We constructed sentence features from variants of TF-IDF weightings, part-of-speech tags and string and word distances.  We created ensembles of recurrent neural networks (in particular LSTM) trained on learned and precomputed word embeddings.  We ranked in the top 3% using a blend of gradient boosted decision trees and recurrent neural networks. &lt;/p&gt;
-&lt;p&gt;231th out of 1969 in “Grupo Bimbo Inventory Demand“ &lt;/p&gt;
-&lt;p&gt;August 2016 &lt;/p&gt;
-&lt;p&gt;Partnered with a local data analyst to provide a two week ahead forecast for client-product sales of the multinational company Grupo Bimbo. The metric used in this competition was the log RMSE and the data for the competition consisted of nearly one million clients each with a few thousand products to order. Our feature engineering consisted of mapping high cardinality categorical variables into a more readily usable form. The final submission ranked in the top 12%. &lt;/p&gt;
-&lt;p&gt;85th out of 1212 in “Facebook V: Predicting Check Ins“ &lt;/p&gt;
-&lt;p&gt;July 2016 &lt;/p&gt;
-&lt;p&gt;Predicted the check-in location of a person from noisy simulated Facebook data.  The objective was to minimize the mean average precision between the top 3 predicted check-in locations and the actual check-in location.  The data was particularly interesting in that it contained relatively few explanatory variables (5) and over 100,000 check-in locations to predict.  My approach was to subset the data using overlapping grids, train models on the subsets, and then combine the models' predictions using a spatial weighting system.  The final result ranked in the top 8%. &lt;/p&gt;
-&lt;p&gt;8th out of 5123 in “Santander Customer Satisfaction“ &lt;/p&gt;
-&lt;p&gt;May 2016 &lt;/p&gt;
-&lt;p&gt;Predicted customer satisfaction for the multinational bank Santander.  The formal objective was to minimize the AUROC (area under the receiver operator curve) of the probability that a customer is dissatisfied with service.   Customized feature engineering appealed to statistical patterns in the anonymized data to create robust low-dimensional features.  These features helped to both increase accuracy and decrease variance in the model predictions.  The final model ranked in the top 0.05% and consisted of an ensemble of three xgboost models trained with different feature groupings and a stacked Extra Trees model.   &lt;/p&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Matt Motoki</dc:creator><pubDate>Tue, 03 Jul 2018 01:40:00 -1000</pubDate><guid isPermaLink="false">tag:None,2018-07-03:/kaggle-archive.html</guid><category>Kaggle</category><category>Natural Language Processing</category><category>Computer Vision</category></item><item><title>Online Course Archive</title><link>/online-course-archive.html</link><description>&lt;h1 id="toc"&gt;Table Of Contents&lt;/h1&gt;
+&lt;p&gt;Teamed up with a Kaggle Grandmaster to find a near optimal solution to a large scale nonlinear optimization problem.  The task was to assign gifts to children, each assignment has a gift happiness and child happiness, the objective was to maximize the cube of the total gift happiness plus the cube of the total child happiness, the constraints were essentially linear.   The objective function—while nonlinear—is well modeled by a linear approximation.  The linearized problem was framed as a max-flow min-cost problem and solved exactly using Google’s OR-Tools.   The solution was then fine tuned using a greedy heuristic implemented in plain C for speed. Our final submission ranked in the top 20.6%. &lt;/p&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Matt Motoki</dc:creator><pubDate>Tue, 03 Jul 2018 01:40:00 -1000</pubDate><guid isPermaLink="false">tag:None,2018-07-03:/kaggle-archive.html</guid><category>Kaggle</category><category>Natural Language Processing</category><category>Computer Vision</category></item><item><title>Online Course Archive</title><link>/online-course-archive.html</link><description>&lt;h1 id="toc"&gt;Table Of Contents&lt;/h1&gt;
 
 &lt;p&gt;This is an archive of online courses that I have taken and certificates that I have achieved. &lt;/p&gt;
 &lt;p&gt;&lt;a href="#machine-learning"&gt;&lt;strong&gt;Machine Learning&lt;/strong&gt;&lt;/a&gt;&lt;/p&gt;
