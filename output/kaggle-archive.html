@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="description" content="Table Of Contents This is an archive of Kaggle competitions that I have done. Santander Customer Satisfaction Toxic Comment Classification Challenge Instacart Market Basket Analysis Porto Seguro’s...">
+        <meta name="keywords" content="Computer Vision, Kaggle, Natural Language Processing">
+        <link rel="icon" href="/favicon.ico">
+
+        <title>Kaggle Competition Archive - Matt Motoki</title>
+
+        <!-- Stylesheets -->
+        <link href="/theme/css/all.min.css" rel="stylesheet">
+        <!-- /Stylesheets -->
+
+        <!-- RSS Feeds -->
+        <link href="/feeds/all.atom.xml" type="application/atom+xml" rel="alternate" title="Matt Motoki Full Atom Feed" />
+        <link href="/feeds/all.rss.xml" type="application/rss+xml" rel="alternate" title="Matt Motoki Full RSS Feed" />
+        <link href="/feeds/misc.atom.xml" type="application/atom+xml" rel="alternate" title="Matt Motoki Categories Atom Feed" />
+        <!-- /RSS Feeds -->
+
+        <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+        <!--[if lt IE 9]>
+          <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+          <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+        <![endif]-->
+
+        <!-- Google Analytics -->
+        <script>
+          (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+          (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+          m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+          })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+          ga('create', 'UA-89247796-2', 'auto');
+          ga('send', 'pageview');
+        </script>
+        <!-- /Google Analytics -->
+
+
+    </head>
+
+    <body>
+
+        <!-- Header -->
+    <div class="header-container" style="background: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url('/images/bg0.png'); background-position: center; background-size: cover;">
+
+            <!-- Static navbar -->
+            <div class="container">
+                <div class="header-nav">
+                    <div class="header-logo">
+                        <a class="pull-left" href="/">Matt Motoki</a>
+                    </div>
+                    <div class="nav pull-right">
+                                <a href="/categories.html">Categories</a>
+                                <a href="/tags.html">Tags</a>
+                    </div>
+                </div>
+            </div>
+            <!-- /Static navbar -->
+
+            <!-- Header -->
+    <!-- Header -->
+    <div class="container header-wrapper">
+        <div class="row">
+              <div class="col-lg-12">
+                  <div class="header-content">
+                      <h1 class="header-title">Kaggle Competition Archive</h1>
+                      <p class="header-date"> <a href="/author/matt-motoki.html">Matt Motoki</a>, Tue 03 July 2018,  Tue 03 July 2018,  <a href="/category/misc.html">Misc</a></p>
+                      <div class="header-underline"></div>
+                      <div class="clearfix"></div>
+                      <p class="pull-right header-tags">
+                          <span class="glyphicon glyphicon-tags mr5" aria-hidden="true"></span>
+<a href="/tag/computer-vision.html">Computer Vision</a>, <a href="/tag/kaggle.html">Kaggle</a>, <a href="/tag/natural-language-processing.html">Natural Language Processing</a>                      </p>
+                  </div>
+              </div>
+        </div>
+    </div>
+    <!-- /Header -->
+            <!-- /Header -->
+
+        </div>
+        <!-- /Header -->
+
+
+        <!-- Content -->
+    <div class="container content">
+        <h1 id="toc">Table Of Contents</h1>
+
+<p>This is an archive of Kaggle competitions that I have done. </p>
+<ul>
+<li><a href="#santander-customer-satisfaction">Santander Customer Satisfaction</a> </li>
+<li><a href="#toxic-comment-classification-challenge">Toxic Comment Classification Challenge</a> </li>
+<li><a href="#instacart-market-basket-analysis">Instacart Market Basket Analysis</a> </li>
+<li><a href="#porto-seguros-safe-driver-prediction">Porto Seguro’s Safe Driver Prediction</a> </li>
+<li><a href="#quora-question-pairs">Quora Question Pairs</a> </li>
+<li><a href="#corporación-favorita-grocery-sales-forecasting">Corporación Favorita Grocery Sales Forecasting</a> </li>
+<li><a href="#facebook-v-predicting-check-ins">Facebook V: Predicting Check Ins</a> </li>
+<li><a href="#cdiscounts-image-classification-challenge">Cdiscount’s Image Classification Challenge</a> </li>
+<li><a href="#carvana-image-masking-challenge">Carvana Image Masking Challenge</a> </li>
+<li><a href="#grupo-bimbo-inventory-demand">Grupo Bimbo Inventory Demand</a> </li>
+<li><a href="#santa-gift-matching-challenge">Santa Gift Matching Challenge</a> </li>
+</ul>
+<p><h2 id=santander-customer-satisfaction>Santander Customer Satisfaction &nbsp;<b><a href="#toc">&#8593;</a></b></h2>  </p>
+<ul>
+<li><strong>Private Leaderboard Rank</strong>: 8/5123 (top 0.2%)</li>
+<li><strong>Date Completed</strong>:  May 2, 2016</li>
+<li><strong>Competition Host</strong>: Santander</li>
+<li><strong>Links:</strong> 
+<a href="https://www.kaggle.com/c/santander-customer-satisfaction">Competition Website</a></li>
+</ul>
+<p>Predicted customer satisfaction for the multinational bank Santander.  The formal objective was to minimize the AUROC (area under the receiver operator curve) of the probability that a customer is dissatisfied with service.   Customized feature engineering appealed to statistical patterns in the anonymized data to create robust low-dimensional features.  These features helped to both increase accuracy and decrease variance in the model predictions.  The final model ranked in the top 0.2% and consisted of an ensemble of three xgboost models trained with different feature groupings and a stacked Extra Trees model.   </p>
+<h2 id=toxic-comment-classification-challenge>Toxic Comment Classification Challenge &nbsp;<b><a href="#toc">&#8593;</a></b></h2>
+
+<ul>
+<li><strong>Private Leaderboard Rank</strong>: 33/4551 (top 0.7%)</li>
+<li><strong>Date Completed</strong>:  March 20, 2018</li>
+<li><strong>Competition Host</strong>: Jigsaw</li>
+<li><strong>Links:</strong> 
+<a href="https://www.kaggle.com/c/jigsaw-toxic-comment-classification-challenge">Competition Website</a>, 
+<a href="https://www.kaggle.com/c/jigsaw-toxic-comment-classification-challenge/discussion/52666">Discussion Post</a>,
+<a href="https://github.com/mattmotoki/toxic-comment-classification">Code</a></li>
+</ul>
+<p>Optimized various recurrent and 1-D convolutional neural networks to categorize the sentiment of online comments.  Designed a fast similarity embedding imputation to address out-of-vocabulary (OOV) words.  The imputation method produced results that were on par with the current state-of-the-art method for filling in OOV words; however, the imputation method is more widely applicable.  My final solution ranked in the top 0.7%. </p>
+<h2 id=instacart-market-basket-analysis>Instacart Market Basket Analysis &nbsp;<b><a href="#toc">&#8593;</a></b></h2>
+
+<ul>
+<li><strong>Private Leaderboard Rank</strong>: 29/2623 (top 1.1%)</li>
+<li><strong>Date Completed</strong>:  August 14, 2017 </li>
+<li><strong>Competition Host</strong>: Instacart</li>
+<li><strong>Links:</strong> 
+<a href="https://www.kaggle.com/c/instacart-market-basket-analysis">Competition Website</a>,
+<a href="https://www.kaggle.com/mmotoki/markov-chain-tutorial">Markov Chain Tutorial</a></li>
+</ul>
+<p>Applied forecasting techniques to predict customer reorders for grocery delivery company Instacart. The metric used in this competition was the mean F1 score and the data for the competition consisted of order histories of 300,000+ members for 50,000+ products.  Features were derived from Markov Chains and ARIMA models.  A customized post-processing routine optimized predictions for the F1 metric.  The final model ranked in the top 1.1%. </p>
+<h2 id=porto-seguros-safe-driver-prediction>Porto Seguro’s Safe Driver Prediction &nbsp;<b><a href="#toc">&#8593;</a></b></h2>
+
+<ul>
+<li><strong>Private Leaderboard Rank</strong>: 58/5169 (top 1.1%)</li>
+<li><strong>Date Completed</strong>:  November 29, 2017 </li>
+<li><strong>Competition Host</strong>: Porto Seguro</li>
+<li><strong>Links:</strong> 
+<a href="https://www.kaggle.com/c/porto-seguro-safe-driver-prediction">Competition Website</a></li>
+</ul>
+<p>Used robust modeling techniques to predict the probability of an insurance claim from noisy anonymized data.  Multiple implementations of gradient boosted decision tree libraries (including Xgboost, Catboost, and LightGBM) were blended to reduce the variance in predictions.  The evaluation metric was the Normalized Gini Coefficient.  My final submission ranked in the top 1.1%.  </p>
+<h2 id=quora-question-pairs>Quora Question Pairs &nbsp;<b><a href="#toc">&#8593;</a></b></h2>
+
+<ul>
+<li><strong>Private Leaderboard Rank</strong>: 95/3307 (top 2.9%)</li>
+<li><strong>Date Completed</strong>:  June 6, 2017 </li>
+<li><strong>Competition Host</strong>: Quora</li>
+<li><strong>Links:</strong> 
+<a href="https://www.kaggle.com/c/quora-question-pairs">Competition Website</a></li>
+</ul>
+<p>Partnered with a local data scientist to apply natural language processing (NLP) techniques to detect duplicate questions for the crowdsourcing question and answer company Quora. The metric used in this competition was the log loss and the data for the competition consisted of 300,000+ question pairs.  We constructed sentence features from variants of TF-IDF weightings, part-of-speech tags and string and word distances.  We created ensembles of recurrent neural networks (in particular LSTM) trained on learned and precomputed word embeddings.  We ranked in the top 2.9% using a blend of gradient boosted decision trees and recurrent neural networks. </p>
+<h2 id=corporación-favorita-grocery-sales-forecasting>Corporación Favorita Grocery Sales Forecasting &nbsp;<b><a href="#toc">&#8593;</a></b></h2>
+
+<ul>
+<li><strong>Private Leaderboard Rank</strong>: 76/1675 (top 4.5%)</li>
+<li><strong>Date Completed</strong>:  January 15, 2018</li>
+<li><strong>Competition Host</strong>: Corporación Favorita</li>
+<li><strong>Links:</strong> 
+<a href="https://www.kaggle.com/c/favorita-grocery-sales-forecasting">Competition Website</a></li>
+</ul>
+<p>Created grocery sales forecast for a 16day horizon.  Feature engineering was an important part the final solution; features included lagged sales aggregated over multiple windows.   Features were fed into LightGBM for fast training and prediction.  Models were evaluated using the Normalized Weighted Root Mean Squared Logarithmic Error.  My final submission ranked in the top 4.5%.  </p>
+<p><h2 id=facebook-v-predicting-check-ins>Facebook V: Predicting Check Ins &nbsp;<b><a href="#toc">&#8593;</a></b></h2>  </p>
+<ul>
+<li><strong>Private Leaderboard Rank</strong>: 85/1212 (top 7.0%)</li>
+<li><strong>Date Completed</strong>:  July 6, 2016</li>
+<li><strong>Competition Host</strong>: Facebook</li>
+<li><strong>Links:</strong> 
+<a href="https://www.kaggle.com/c/facebook-v-predicting-check-ins">Competition Website</a></li>
+</ul>
+<p>Predicted the check-in location of a person from noisy simulated Facebook data.  The objective was to minimize the mean average precision between the top 3 predicted check-in locations and the actual check-in location.  The data was particularly interesting in that it contained relatively few explanatory variables (5) and over 100,000 check-in locations to predict.  My approach was to subset the data using overlapping grids, train models on the subsets, and then combine the models' predictions using a spatial weighting system.  The final result ranked in the top 7.0%. </p>
+<h2 id=cdiscounts-image-classification-challenge>Cdiscount’s Image Classification Challenge &nbsp;<b><a href="#toc">&#8593;</a></b></h2>
+
+<ul>
+<li><strong>Private Leaderboard Rank</strong>: 52/627 (top 8.3%)</li>
+<li><strong>Date Completed</strong>:  December 14, 2017 </li>
+<li><strong>Competition Host</strong>: Cdiscount</li>
+<li><strong>Links:</strong> 
+<a href="https://www.kaggle.com/c/cdiscount-image-classification-challenge">Competition Website</a></li>
+</ul>
+<p>Fine-tuned many of the current state-of-the-art neural network architectures to predict the category of online products.  The dataset was very large: </p>
+<ul>
+<li>Almost 9 million products  </li>
+<li>More than 15 million images at 180x180 resolution </li>
+<li>More than 5000 categories </li>
+<li>Over 62 GB of bson files (binary json) </li>
+</ul>
+<p>My final solution which was an ensemble of various DenseNet, Resnet, Inception, and Xception architectures ranked in the top 3.8%.  </p>
+<h2 id=carvana-image-masking-challenge>Carvana Image Masking Challenge &nbsp;<b><a href="#toc">&#8593;</a></b></h2>
+
+<ul>
+<li><strong>Private Leaderboard Rank</strong>: 72/735 (top 9.8%)</li>
+<li><strong>Date Completed</strong>:  September 27, 2017 </li>
+<li><strong>Competition Host</strong>: Carvana</li>
+<li><strong>Links:</strong> 
+<a href="https://www.kaggle.com/c/carvana-image-masking-challenge">Competition Website</a></li>
+</ul>
+<p>Used deep learning to create high-quality image masks for the online car dealership company Carvana. The metric used in this competition was the dice coefficient and the data for the competition consisted of 5,000+ high resolution images of showroom car.  A very deep neural network architecture called U-Net quickly achieved greater than 99.5% accuracy.  My final submission of an ensemble of U-Nets ranked in the top 9.8%. </p>
+<p><h2 id=grupo-bimbo-inventory-demand>Grupo Bimbo Inventory Demand &nbsp;<b><a href="#toc">&#8593;</a></b></h2>  </p>
+<ul>
+<li><strong>Private Leaderboard Rank</strong>: 231/1969 (top 11.7%)</li>
+<li><strong>Date Completed</strong>:  August 30, 2016</li>
+<li><strong>Competition Host</strong>: Grupo Bimbo</li>
+<li><strong>Links:</strong> 
+<a href="https://www.kaggle.com/c/grupo-bimbo-inventory-demand">Competition Website</a></li>
+</ul>
+<p>Partnered with a local data analyst to provide a two week ahead forecast for client-product sales of the multinational company Grupo Bimbo. The metric used in this competition was the log RMSE and the data for the competition consisted of nearly one million clients each with a few thousand products to order. Our feature engineering consisted of mapping high cardinality categorical variables into a more readily usable form. The final submission ranked in the top 11.7%. </p>
+<h2 id=santa-gift-matching-challenge>Santa Gift Matching Challenge &nbsp;<b><a href="#toc">&#8593;</a></b></h2>
+
+<ul>
+<li><strong>Private Leaderboard Rank</strong>: 88/428 (top 20.6%)</li>
+<li><strong>Date Completed</strong>:  January 12, 2018</li>
+<li><strong>Competition Host</strong>: Kaggle</li>
+<li><strong>Links:</strong> 
+<a href="https://www.kaggle.com/c/santa-gift-matching">Competition Website</a></li>
+</ul>
+<p>Teamed up with a Kaggle Grandmaster to find a near optimal solution to a large scale nonlinear optimization problem.  The task was to assign gifts to children, each assignment has a gift happiness and child happiness, the objective was to maximize the cube of the total gift happiness plus the cube of the total child happiness, the constraints were essentially linear.   The objective function—while nonlinear—is well modeled by a linear approximation.  The linearized problem was framed as a max-flow min-cost problem and solved exactly using Google’s OR-Tools.   The solution was then fine tuned using a greedy heuristic implemented in plain C for speed. Our final submission ranked in the top 20.6%. </p>
+
+
+        
+    </div>
+        <!-- /Content --> 
+
+        <!-- Footer -->
+        <div class="footer gradient-2">
+            <div class="container footer-container ">
+                <div class="row">
+                    <div class="col-xs-4 col-sm-3 col-md-3 col-lg-3">
+                        <div class="footer-title"></div>
+                        <ul class="list-unstyled">
+                            <li><a href="/feeds/all.atom.xml" type="application/atom+xml" rel="alternate"></a></li>
+                            <li><a href="/feeds/all.rss.xml" type="application/rss+xml" rel="alternate"></a></li>
+                        </ul>
+                    </div>
+                    <div class="col-xs-4 col-sm-3 col-md-3 col-lg-3">
+                        <div class="footer-title"></div>
+                        <ul class="list-unstyled">
+                            <li><a href="https://github.com/mattmotoki/" target="_blank">GitHub</a></li>
+                            <li><a href="https://www.linkedin.com/in/matt-motoki-9b7884a2/" target="_blank">LinkedIn</a></li>
+                        </ul>
+                    </div>
+                    <div class="col-xs-4 col-sm-3 col-md-3 col-lg-3">
+                        <div class="footer-title"></div>
+                        <ul class="list-unstyled">
+                            <li><a href="https://www.kaggle.com/mmotoki" target="_blank">Kaggle</a></li>
+                            <li><a href="https://codepen.io/mmotoki/" target="_blank">CodePen</a></li>
+                        </ul>
+                    </div> 
+                    <div class="col-xs-12 col-sm-3 col-md-3 col-lg-3">
+                        <p class="pull-right text-right">
+                            <small><em>Proudly powered by <a href="http://docs.getpelican.com/" target="_blank">pelican</a></em></small><br/>
+                            <small><em>Theme and code by <a href="https://github.com/molivier" target="_blank">molivier</a></em></small><br/>
+                            <small></small>
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- /Footer -->
+    </body>
+</html>
