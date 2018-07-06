@@ -7,7 +7,7 @@ Slug: masters-thesis
 Authors: Matt Motoki
 Illustration: adp-for-water-heating.png
 Summary: Master's Thesis
-Status: 
+Status: published
 
 ## [Master's Thesis]({filename}/pdfs/matt-motoki-masters-thesis.pdf)
 

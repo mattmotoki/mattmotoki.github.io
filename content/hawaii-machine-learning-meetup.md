@@ -11,6 +11,30 @@ Status:
 
 # Summary
 
+In July of 2017, my friends and I decided to create a [meetup](https://www.meetup.com/Hawaii-Machine-Learning-Meetup/) centered around data science, machine learning, and artificial intelligence .  We sought to promote these technologies and increase their adoption in Hawaii.  We thought the group would remain small due to low interest in machine learning, but we were soon overwhelmed with the amount of responses and the work it took to organize the group.
+
+Some of the problems that we encountered were:
+* We were all new to this role and didn’t know how to organize a group like this.
+* We didn’t have any funding, community support, or venue for the meetups.
+* We didn’t have much content to share.
+
+
+We addressed these challenges by:
+
+* Defining roles for the organizers and outlining the general goals for the meetup.
+* Reaching out to local organizations for sponsorship.  We were able to secure a venue for our meetup through the Hawaii Technology Development Corporation.
+* Encouraging our members and outsiders to present at our meetup.  We also created our own presentations.  To date, we’ve held 33 meetups. 
+
+Overall, the success of the meetup exceeded my expectations.  We now have:
+
+* A vibrant community of 250+ members.
+* Held periodic study groups for an online machine learning course.
+* Been invited to a [local radio show](http://www.bytemarkscafe.org/tag/hawaii-biotech/) to talk about machine learning.
+* Hosted Hawaii's very first [machine learning competition](https://www.kaggle.com/c/hawaiiml0) funded by local companies.
+
+
+
+
 In July of 2017, my friends [Tom Yokota](http://thomasyokota.com/), [Sora Khongnawong (Paul)](https://www.kaggle.com/datascience808) and I decided to create a Meetup centered around data science, machine learning, and artificial intelligence in Hawaii.  We sought to promote these technologies and increase their adoption in Hawaii.  
 
 It took more work than we expected but now:
