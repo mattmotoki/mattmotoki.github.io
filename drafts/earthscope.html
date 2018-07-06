@@ -4,11 +4,11 @@
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <meta name="description" content="">
-        <meta name="keywords" content="">
+        <meta name="description" content="EarthScope From January 2017 - March 2017, I worked with a good friend Sam Murphy on his StartUp called EarthScope. EarthScope aims to monitor the world&#39;s wildfires. Sam&#39;s PhD is in remote sensing...">
+        <meta name="keywords" content="Computer Visions, Machine Learning, Remote Sensing, U-Net">
         <link rel="icon" href="/favicon.ico">
 
-        <title> - Matt Motoki</title>
+        <title>EarthScope - Matt Motoki</title>
 
         <!-- Stylesheets -->
         <link href="/theme/css/all.min.css" rel="stylesheet">
@@ -17,6 +17,7 @@
         <!-- RSS Feeds -->
         <link href="/feeds/all.atom.xml" type="application/atom+xml" rel="alternate" title="Matt Motoki Full Atom Feed" />
         <link href="/feeds/all.rss.xml" type="application/rss+xml" rel="alternate" title="Matt Motoki Full RSS Feed" />
+        <link href="/feeds/misc.atom.xml" type="application/atom+xml" rel="alternate" title="Matt Motoki Categories Atom Feed" />
         <!-- /RSS Feeds -->
 
         <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
@@ -43,7 +44,7 @@
     <body>
 
         <!-- Header -->
-    <div class="header-container" style="background: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url('/images/bg0.png'); background-position: center; background-size: cover;">
+    <div class="header-container" style="background: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url('/images/earthscope-bg.jpg'); background-position: center; background-size: cover;">
 
             <!-- Static navbar -->
             <div class="container">
@@ -60,17 +61,23 @@
             <!-- /Static navbar -->
 
             <!-- Header -->
+    <!-- Header -->
     <div class="container header-wrapper">
         <div class="row">
               <div class="col-lg-12">
                   <div class="header-content">
-                      <h1 class="header-title text-uppercase"></h1>
+                      <h1 class="header-title">EarthScope</h1>
+                      <p class="header-date"> <a href="/author/matt-motoki.html">Matt Motoki</a>, Sun 01 July 2018,  Sun 01 July 2018,  <a href="/category/misc.html">Misc</a></p>
                       <div class="header-underline"></div>
-                      <p class="header-subtitle header-subtitle-homepage"></p>
+                      <div class="clearfix"></div>
+                      <p class="pull-right header-tags">
+                          <span class="glyphicon glyphicon-tags mr5" aria-hidden="true"></span>
+<a href="/tag/computer-visions.html">Computer Visions</a>, <a href="/tag/machine-learning.html">Machine Learning</a>, <a href="/tag/remote-sensing.html">Remote Sensing</a>, <a href="/tag/u-net.html">U-Net</a>                      </p>
                   </div>
               </div>
         </div>
     </div>
+    <!-- /Header -->
             <!-- /Header -->
 
         </div>
@@ -78,20 +85,22 @@
 
 
         <!-- Content -->
-    <div class="archive-container">
-        <div class="container content archive">
-            <h2><a href="/author/matt-motoki.html">Matt Motoki</a></h2>
-            <dl class="dl-horizontal">
-            	<dt>Wed 04 July 2018</dt>
-            	<dd><a href="/beta-target-encoding.html">Beta Target Encoding</a></dd>
-            	<dt>Tue 03 July 2018</dt>
-            	<dd><a href="/kaggle-archive.html">Kaggle Competition Archive</a></dd>
-            	<dt>Mon 02 July 2018</dt>
-            	<dd><a href="/online-course-archive.html">Online Course Archive</a></dd>
-            	<dt>Tue 26 June 2018</dt>
-            	<dd><a href="/cell-division.html">Cell Division</a></dd>
-            </dl>
-        </div>
+    <div class="container content">
+        <h2>EarthScope</h2>
+<p>From January 2017 - March 2017, I worked with a good friend Sam Murphy on his StartUp called <a href="https://earthscope.io/preview.html">EarthScope</a>.  EarthScope aims to monitor the world's wildfires.  Sam's PhD is in remote sensing and his postdoctoral research was funded by Google Earth Engine. During this time I helped him train a neural network with the U-Net architecture on his dataset of over 32 GB of satellite imagery.  We used batch renormalization to deal small batch sizes.  Data augmentation consisted of random crops, rotations, and horizontal flip.  Our neural network produced state-of-the-art detection accuracy.  </p>
+<h2>Implementation</h2>
+<p>Batch normalization is a technique that is used to </p>
+<p><img alt="alt text" src="./images/u-net-architecture.png" title="U-Net Architecture"></p>
+<h2>References</h2>
+<ul>
+<li><a href="https://arxiv.org/abs/1702.03275">Batch Renormalization: Towards Reducing Minibatch Dependence in Batch-Normalized Models</a></li>
+<li><a href="https://arxiv.org/abs/1502.03167">Batch Normalization: Accelerating Deep Network Training by Reducing Internal Covariate Shift</a></li>
+<li><a href="no code yet">Code</a></li>
+</ul>
+<!-- Wildfires are a big problem.  Using a new constellation of satellites we will have more frequent access to data and will be able to detect fires faster than ever before.  -->
+
+
+        
     </div>
         <!-- /Content --> 
 
