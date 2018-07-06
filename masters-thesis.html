@@ -4,8 +4,8 @@
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <meta name="description" content="Master&#39;s Thesis My Master’s was on approximate dynamic programming methods for control of a water heater. The results outperformed the current methodology and the problem framework was well-suited...">
-        <meta name="keywords" content="Meetup">
+        <meta name="description" content="Master&#39;s Thesis Summary Read the full thesis here. My Master’s thesis was on approximate dynamic programming methods for control of a water heater. Problem has simple but non-trivial non-Markovian...">
+        <meta name="keywords" content="Optimization, Reinforcement Learning">
         <link rel="icon" href="/favicon.ico">
 
         <title>Master's Thesis - Matt Motoki</title>
@@ -72,7 +72,7 @@
                       <div class="clearfix"></div>
                       <p class="pull-right header-tags">
                           <span class="glyphicon glyphicon-tags mr5" aria-hidden="true"></span>
-<a href="/tag/meetup.html">Meetup</a>                      </p>
+<a href="/tag/optimization.html">Optimization</a>, <a href="/tag/reinforcement-learning.html">Reinforcement Learning</a>                      </p>
                   </div>
               </div>
         </div>
@@ -86,21 +86,21 @@
 
         <!-- Content -->
     <div class="container content">
-        <h2><a href="/pdfs/matt-motoki-masters-thesis.pdf">Master's Thesis</a></h2>
-<p>My Master’s was on approximate dynamic programming methods for control of a water heater.  The results outperformed the current methodology and the problem framework was well-suited for other derivative applications.  I currently do work as a consultant for a smart water heating company where my Master’s research has been extended to more novel practical problems such as inferring the temperature of the water heater with only measurements of current and flow (not temperature itself). There are other aspects of this problem that can be worked on; e.g., using an RNN to forecast hot water usage, and using a GAN to generate realistic training data which can then be used to train better models. </p>
+        <h1>Master's Thesis Summary</h1>
+<p><a href="./pdfs/matt-motoki-masters-thesis.pdf"> Read the full thesis here.</a></p>
+<p>My Master’s thesis was on approximate dynamic programming methods for control of a water heater.  </p>
 <ul>
-<li>
-<p>Problem is a simple but has non-trivial Non-Markovian dynamics. </p>
-</li>
-<li>
-<p>Solved a simplified problem and proved that it's solution is at least as good the current state-of-the-art methods.</p>
-</li>
+<li>Problem has simple but non-trivial non-Markovian dynamics. </li>
+<li>Solved a simplified problem and proved that it's solution is at least as good the current state-of-the-art methods.</li>
 <li>Developed an aggregation scheme to handle continuous state-space and showed that it is unbiased and has minimal variance. </li>
 <li>Approximated a solution to the full problem and showed that the cost achieved was near to the theoretical prescient lower bound.</li>
 <li>Applied optimized water heaters for derivative applications such as load shifting. </li>
 </ul>
+<hr>
+
+<p>We formulated the problem of optimizing a water heater as a discrete-time finite-state average cost Markov decision problem.  Used state aggregation and solved the aggregate problem exactly. Proved that the solution to the aggregate problem was no worse than other state-of-the-art methods.  Derived features and solved the problem in feature space using approximate dynamic programming methods.  Showed that performance came close to theoretical optimal provided by the prescient lower bound. </p>
 <p>The water heater problem that I worked on during my Master’s thesis had a simple but non-trivial system with non-Markovian dynamics.   The prescient lower bound provides a theoretical lower bound on the minimum total cost of the water heater problem.  This bound can be used to help assess the quality of the solutions to the water heater problem. </p>
-<p>Formulated the problem of optimizing a water heater as a discrete-time finite-state average cost Markov decision problem.  Used state aggregation and solved the aggregate problem exactly. Proved that the solution to the aggregate problem was no worse than other state-of-the-art methods.  Derived features and solved the problem in feature space using approximate dynamic programming methods.  Showed that performance came close to theoretical optimal provided by the prescient lower bound. </p>
+<p>The results outperformed the current methodology and the problem framework was well-suited for other derivative applications.  I currently do work as a consultant for a smart water heating company where my Master’s research has been extended to more novel practical problems such as inferring the temperature of the water heater with only measurements of current and flow (not temperature itself). There are other aspects of this problem that can be worked on; e.g., using an RNN to forecast hot water usage, and using a GAN to generate realistic training data which can then be used to train better models. </p>
 
 
         
