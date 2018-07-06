@@ -2,6 +2,7 @@
 # -*- coding: utf-8 -*- #
 from __future__ import unicode_literals
 
+
 AUTHOR = 'Matt Motoki'
 SITENAME = 'Matt Motoki'
 SITEURL = ''
@@ -18,7 +19,8 @@ NEST_HEADER_IMAGES = 'bg0.png'
 NEST_CSS_MINIFY = True
 
 NEST_INDEX_HEADER_TITLE = u"Matt Motoki's Blog"
-NEST_INDEX_HEADER_SUBTITLE = u'Machine Learning Enthusiast'
+NEST_INDEX_HEADER_SUBTITLE = u'Machine Learning Practitioner'
+
 
 MENUITEMS = [('Categories','/categories.html'),('Tags','/tags.html')]
 
@@ -43,8 +45,8 @@ LINKS = (
 SOCIAL = (
 	('GitHub', 'https://github.com/mattmotoki/'),
     ('LinkedIn', 'https://www.linkedin.com/in/matt-motoki-9b7884a2/'),
-    
 )
+
 
 TWITTER_USERNAME = 'matt_motoki'
 

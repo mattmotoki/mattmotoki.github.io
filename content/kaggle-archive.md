@@ -32,7 +32,11 @@ This is an archive of Kaggle competitions that I have done.
 
 
 
- <h2 id=santander-customer-satisfaction>Santander Customer Satisfaction &nbsp;<b><a href="#toc">&#8593;</a></b></h2>  
+
+
+
+<h2 id=santander-customer-satisfaction>Santander Customer Satisfaction <b><a href="#toc">&#8593;</a></b></h2>  
+
 
 * **Private Leaderboard Rank**: 8/5123 (top 0.2%)
 * **Date Completed**:  May 2, 2016
@@ -45,7 +49,7 @@ Predicted customer satisfaction for the multinational bank Santander.  The forma
 
 
 
-<h2 id=toxic-comment-classification-challenge>Toxic Comment Classification Challenge &nbsp;<b><a href="#toc">&#8593;</a></b></h2>  
+<h2 id=toxic-comment-classification-challenge>Toxic Comment Classification Challenge <b><a href="#toc">&#8593;</a></b></h2>  
 
 * **Private Leaderboard Rank**: 33/4551 (top 0.7%)
 * **Date Completed**:  March 20, 2018
@@ -60,7 +64,7 @@ Optimized various recurrent and 1-D convolutional neural networks to categorize 
 
 
 
-<h2 id=instacart-market-basket-analysis>Instacart Market Basket Analysis &nbsp;<b><a href="#toc">&#8593;</a></b></h2>  
+<h2 id=instacart-market-basket-analysis>Instacart Market Basket Analysis <b><a href="#toc">&#8593;</a></b></h2>  
 
 * **Private Leaderboard Rank**: 29/2623 (top 1.1%)
 * **Date Completed**:  August 14, 2017 
@@ -74,7 +78,7 @@ Applied forecasting techniques to predict customer reorders for grocery delivery
 
 
 
-<h2 id=porto-seguros-safe-driver-prediction>Porto Seguro’s Safe Driver Prediction &nbsp;<b><a href="#toc">&#8593;</a></b></h2>  
+<h2 id=porto-seguros-safe-driver-prediction>Porto Seguro’s Safe Driver Prediction <b><a href="#toc">&#8593;</a></b></h2>  
 
 * **Private Leaderboard Rank**: 58/5169 (top 1.1%)
 * **Date Completed**:  November 29, 2017 
@@ -87,7 +91,7 @@ Used robust modeling techniques to predict the probability of an insurance claim
 
 
 
-<h2 id=quora-question-pairs>Quora Question Pairs &nbsp;<b><a href="#toc">&#8593;</a></b></h2>  
+<h2 id=quora-question-pairs>Quora Question Pairs <b><a href="#toc">&#8593;</a></b></h2>  
 
 * **Private Leaderboard Rank**: 95/3307 (top 2.9%)
 * **Date Completed**:  June 6, 2017 
@@ -100,7 +104,7 @@ Partnered with a local data scientist to apply natural language processing (NLP)
 
 
 
-<h2 id=corporación-favorita-grocery-sales-forecasting>Corporación Favorita Grocery Sales Forecasting &nbsp;<b><a href="#toc">&#8593;</a></b></h2>  
+<h2 id=corporación-favorita-grocery-sales-forecasting>Corporación Favorita Grocery Sales Forecasting <b><a href="#toc">&#8593;</a></b></h2>  
 
 * **Private Leaderboard Rank**: 76/1675 (top 4.5%)
 * **Date Completed**:  January 15, 2018
@@ -113,7 +117,7 @@ Created grocery sales forecast for a 16day horizon.  Feature engineering was an 
  
 
 
- <h2 id=facebook-v-predicting-check-ins>Facebook V: Predicting Check Ins &nbsp;<b><a href="#toc">&#8593;</a></b></h2>  
+ <h2 id=facebook-v-predicting-check-ins>Facebook V: Predicting Check Ins <b><a href="#toc">&#8593;</a></b></h2>  
 
 * **Private Leaderboard Rank**: 85/1212 (top 7.0%)
 * **Date Completed**:  July 6, 2016
@@ -126,7 +130,7 @@ Predicted the check-in location of a person from noisy simulated Facebook data. 
 
 
 
-<h2 id=cdiscounts-image-classification-challenge>Cdiscount’s Image Classification Challenge &nbsp;<b><a href="#toc">&#8593;</a></b></h2>  
+<h2 id=cdiscounts-image-classification-challenge>Cdiscount’s Image Classification Challenge <b><a href="#toc">&#8593;</a></b></h2>  
 
 * **Private Leaderboard Rank**: 52/627 (top 8.3%)
 * **Date Completed**:  December 14, 2017 
@@ -146,7 +150,7 @@ My final solution which was an ensemble of various DenseNet, Resnet, Inception, 
 
 
 
-<h2 id=carvana-image-masking-challenge>Carvana Image Masking Challenge &nbsp;<b><a href="#toc">&#8593;</a></b></h2>  
+<h2 id=carvana-image-masking-challenge>Carvana Image Masking Challenge <b><a href="#toc">&#8593;</a></b></h2>  
 
 * **Private Leaderboard Rank**: 72/735 (top 9.8%)
 * **Date Completed**:  September 27, 2017 
@@ -159,7 +163,7 @@ Used deep learning to create high-quality image masks for the online car dealers
 
  
 
- <h2 id=grupo-bimbo-inventory-demand>Grupo Bimbo Inventory Demand &nbsp;<b><a href="#toc">&#8593;</a></b></h2>  
+ <h2 id=grupo-bimbo-inventory-demand>Grupo Bimbo Inventory Demand <b><a href="#toc">&#8593;</a></b></h2>  
 
 * **Private Leaderboard Rank**: 231/1969 (top 11.7%)
 * **Date Completed**:  August 30, 2016
@@ -173,7 +177,7 @@ Partnered with a local data analyst to provide a two week ahead forecast for cli
 
 
 
-<h2 id=santa-gift-matching-challenge>Santa Gift Matching Challenge &nbsp;<b><a href="#toc">&#8593;</a></b></h2>  
+<h2 id=santa-gift-matching-challenge>Santa Gift Matching Challenge <b><a href="#toc">&#8593;</a></b></h2>  
 
 * **Private Leaderboard Rank**: 88/428 (top 20.6%)
 * **Date Completed**:  January 12, 2018

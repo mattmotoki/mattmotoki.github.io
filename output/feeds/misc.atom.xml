@@ -1,279 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>Matt Motoki - misc</title><link href="/" rel="alternate"></link><link href="/feeds/misc.atom.xml" rel="self"></link><id>/</id><updated>2018-07-04T10:36:00-10:00</updated><entry><title>Kaggle Competition Archive</title><link href="/kaggle-archive.html" rel="alternate"></link><published>2018-07-03T01:40:00-10:00</published><updated>2018-07-03T01:40:00-10:00</updated><author><name>Matt Motoki</name></author><id>tag:None,2018-07-03:/kaggle-archive.html</id><summary type="html">&lt;p&gt;Summary of Methods Used In Kaggle Competitions&lt;/p&gt;</summary><content type="html">&lt;h1 id="toc"&gt;Table Of Contents&lt;/h1&gt;
-
-&lt;p&gt;This is an archive of Kaggle competitions that I have done. &lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;a href="#santander-customer-satisfaction"&gt;Santander Customer Satisfaction&lt;/a&gt; &lt;/li&gt;
-&lt;li&gt;&lt;a href="#toxic-comment-classification-challenge"&gt;Toxic Comment Classification Challenge&lt;/a&gt; &lt;/li&gt;
-&lt;li&gt;&lt;a href="#instacart-market-basket-analysis"&gt;Instacart Market Basket Analysis&lt;/a&gt; &lt;/li&gt;
-&lt;li&gt;&lt;a href="#porto-seguros-safe-driver-prediction"&gt;Porto Seguro’s Safe Driver Prediction&lt;/a&gt; &lt;/li&gt;
-&lt;li&gt;&lt;a href="#quora-question-pairs"&gt;Quora Question Pairs&lt;/a&gt; &lt;/li&gt;
-&lt;li&gt;&lt;a href="#corporación-favorita-grocery-sales-forecasting"&gt;Corporación Favorita Grocery Sales Forecasting&lt;/a&gt; &lt;/li&gt;
-&lt;li&gt;&lt;a href="#facebook-v-predicting-check-ins"&gt;Facebook V: Predicting Check Ins&lt;/a&gt; &lt;/li&gt;
-&lt;li&gt;&lt;a href="#cdiscounts-image-classification-challenge"&gt;Cdiscount’s Image Classification Challenge&lt;/a&gt; &lt;/li&gt;
-&lt;li&gt;&lt;a href="#carvana-image-masking-challenge"&gt;Carvana Image Masking Challenge&lt;/a&gt; &lt;/li&gt;
-&lt;li&gt;&lt;a href="#grupo-bimbo-inventory-demand"&gt;Grupo Bimbo Inventory Demand&lt;/a&gt; &lt;/li&gt;
-&lt;li&gt;&lt;a href="#santa-gift-matching-challenge"&gt;Santa Gift Matching Challenge&lt;/a&gt; &lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;&lt;h2 id=santander-customer-satisfaction&gt;Santander Customer Satisfaction &amp;nbsp;&lt;b&gt;&lt;a href="#toc"&gt;&amp;#8593;&lt;/a&gt;&lt;/b&gt;&lt;/h2&gt;  &lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;strong&gt;Private Leaderboard Rank&lt;/strong&gt;: 8/5123 (top 0.2%)&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Date Completed&lt;/strong&gt;:  May 2, 2016&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Competition Host&lt;/strong&gt;: Santander&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Links:&lt;/strong&gt; 
-&lt;a href="https://www.kaggle.com/c/santander-customer-satisfaction"&gt;Competition Website&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;Predicted customer satisfaction for the multinational bank Santander.  The formal objective was to minimize the AUROC (area under the receiver operator curve) of the probability that a customer is dissatisfied with service.   Customized feature engineering appealed to statistical patterns in the anonymized data to create robust low-dimensional features.  These features helped to both increase accuracy and decrease variance in the model predictions.  The final model ranked in the top 0.2% and consisted of an ensemble of three xgboost models trained with different feature groupings and a stacked Extra Trees model.   &lt;/p&gt;
-&lt;h2 id=toxic-comment-classification-challenge&gt;Toxic Comment Classification Challenge &amp;nbsp;&lt;b&gt;&lt;a href="#toc"&gt;&amp;#8593;&lt;/a&gt;&lt;/b&gt;&lt;/h2&gt;
-
-&lt;ul&gt;
-&lt;li&gt;&lt;strong&gt;Private Leaderboard Rank&lt;/strong&gt;: 33/4551 (top 0.7%)&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Date Completed&lt;/strong&gt;:  March 20, 2018&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Competition Host&lt;/strong&gt;: Jigsaw&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Links:&lt;/strong&gt; 
-&lt;a href="https://www.kaggle.com/c/jigsaw-toxic-comment-classification-challenge"&gt;Competition Website&lt;/a&gt;, 
-&lt;a href="https://www.kaggle.com/c/jigsaw-toxic-comment-classification-challenge/discussion/52666"&gt;Discussion Post&lt;/a&gt;,
-&lt;a href="https://github.com/mattmotoki/toxic-comment-classification"&gt;Code&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;Optimized various recurrent and 1-D convolutional neural networks to categorize the sentiment of online comments.  Designed a fast similarity embedding imputation to address out-of-vocabulary (OOV) words.  The imputation method produced results that were on par with the current state-of-the-art method for filling in OOV words; however, the imputation method is more widely applicable.  My final solution ranked in the top 0.7%. &lt;/p&gt;
-&lt;h2 id=instacart-market-basket-analysis&gt;Instacart Market Basket Analysis &amp;nbsp;&lt;b&gt;&lt;a href="#toc"&gt;&amp;#8593;&lt;/a&gt;&lt;/b&gt;&lt;/h2&gt;
-
-&lt;ul&gt;
-&lt;li&gt;&lt;strong&gt;Private Leaderboard Rank&lt;/strong&gt;: 29/2623 (top 1.1%)&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Date Completed&lt;/strong&gt;:  August 14, 2017 &lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Competition Host&lt;/strong&gt;: Instacart&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Links:&lt;/strong&gt; 
-&lt;a href="https://www.kaggle.com/c/instacart-market-basket-analysis"&gt;Competition Website&lt;/a&gt;,
-&lt;a href="https://www.kaggle.com/mmotoki/markov-chain-tutorial"&gt;Markov Chain Tutorial&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;Applied forecasting techniques to predict customer reorders for grocery delivery company Instacart. The metric used in this competition was the mean F1 score and the data for the competition consisted of order histories of 300,000+ members for 50,000+ products.  Features were derived from Markov Chains and ARIMA models.  A customized post-processing routine optimized predictions for the F1 metric.  The final model ranked in the top 1.1%. &lt;/p&gt;
-&lt;h2 id=porto-seguros-safe-driver-prediction&gt;Porto Seguro’s Safe Driver Prediction &amp;nbsp;&lt;b&gt;&lt;a href="#toc"&gt;&amp;#8593;&lt;/a&gt;&lt;/b&gt;&lt;/h2&gt;
-
-&lt;ul&gt;
-&lt;li&gt;&lt;strong&gt;Private Leaderboard Rank&lt;/strong&gt;: 58/5169 (top 1.1%)&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Date Completed&lt;/strong&gt;:  November 29, 2017 &lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Competition Host&lt;/strong&gt;: Porto Seguro&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Links:&lt;/strong&gt; 
-&lt;a href="https://www.kaggle.com/c/porto-seguro-safe-driver-prediction"&gt;Competition Website&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;Used robust modeling techniques to predict the probability of an insurance claim from noisy anonymized data.  Multiple implementations of gradient boosted decision tree libraries (including Xgboost, Catboost, and LightGBM) were blended to reduce the variance in predictions.  The evaluation metric was the Normalized Gini Coefficient.  My final submission ranked in the top 1.1%.  &lt;/p&gt;
-&lt;h2 id=quora-question-pairs&gt;Quora Question Pairs &amp;nbsp;&lt;b&gt;&lt;a href="#toc"&gt;&amp;#8593;&lt;/a&gt;&lt;/b&gt;&lt;/h2&gt;
-
-&lt;ul&gt;
-&lt;li&gt;&lt;strong&gt;Private Leaderboard Rank&lt;/strong&gt;: 95/3307 (top 2.9%)&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Date Completed&lt;/strong&gt;:  June 6, 2017 &lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Competition Host&lt;/strong&gt;: Quora&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Links:&lt;/strong&gt; 
-&lt;a href="https://www.kaggle.com/c/quora-question-pairs"&gt;Competition Website&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;Partnered with a local data scientist to apply natural language processing (NLP) techniques to detect duplicate questions for the crowdsourcing question and answer company Quora. The metric used in this competition was the log loss and the data for the competition consisted of 300,000+ question pairs.  We constructed sentence features from variants of TF-IDF weightings, part-of-speech tags and string and word distances.  We created ensembles of recurrent neural networks (in particular LSTM) trained on learned and precomputed word embeddings.  We ranked in the top 2.9% using a blend of gradient boosted decision trees and recurrent neural networks. &lt;/p&gt;
-&lt;h2 id=corporación-favorita-grocery-sales-forecasting&gt;Corporación Favorita Grocery Sales Forecasting &amp;nbsp;&lt;b&gt;&lt;a href="#toc"&gt;&amp;#8593;&lt;/a&gt;&lt;/b&gt;&lt;/h2&gt;
-
-&lt;ul&gt;
-&lt;li&gt;&lt;strong&gt;Private Leaderboard Rank&lt;/strong&gt;: 76/1675 (top 4.5%)&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Date Completed&lt;/strong&gt;:  January 15, 2018&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Competition Host&lt;/strong&gt;: Corporación Favorita&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Links:&lt;/strong&gt; 
-&lt;a href="https://www.kaggle.com/c/favorita-grocery-sales-forecasting"&gt;Competition Website&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;Created grocery sales forecast for a 16day horizon.  Feature engineering was an important part the final solution; features included lagged sales aggregated over multiple windows.   Features were fed into LightGBM for fast training and prediction.  Models were evaluated using the Normalized Weighted Root Mean Squared Logarithmic Error.  My final submission ranked in the top 4.5%.  &lt;/p&gt;
-&lt;p&gt;&lt;h2 id=facebook-v-predicting-check-ins&gt;Facebook V: Predicting Check Ins &amp;nbsp;&lt;b&gt;&lt;a href="#toc"&gt;&amp;#8593;&lt;/a&gt;&lt;/b&gt;&lt;/h2&gt;  &lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;strong&gt;Private Leaderboard Rank&lt;/strong&gt;: 85/1212 (top 7.0%)&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Date Completed&lt;/strong&gt;:  July 6, 2016&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Competition Host&lt;/strong&gt;: Facebook&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Links:&lt;/strong&gt; 
-&lt;a href="https://www.kaggle.com/c/facebook-v-predicting-check-ins"&gt;Competition Website&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;Predicted the check-in location of a person from noisy simulated Facebook data.  The objective was to minimize the mean average precision between the top 3 predicted check-in locations and the actual check-in location.  The data was particularly interesting in that it contained relatively few explanatory variables (5) and over 100,000 check-in locations to predict.  My approach was to subset the data using overlapping grids, train models on the subsets, and then combine the models' predictions using a spatial weighting system.  The final result ranked in the top 7.0%. &lt;/p&gt;
-&lt;h2 id=cdiscounts-image-classification-challenge&gt;Cdiscount’s Image Classification Challenge &amp;nbsp;&lt;b&gt;&lt;a href="#toc"&gt;&amp;#8593;&lt;/a&gt;&lt;/b&gt;&lt;/h2&gt;
-
-&lt;ul&gt;
-&lt;li&gt;&lt;strong&gt;Private Leaderboard Rank&lt;/strong&gt;: 52/627 (top 8.3%)&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Date Completed&lt;/strong&gt;:  December 14, 2017 &lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Competition Host&lt;/strong&gt;: Cdiscount&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Links:&lt;/strong&gt; 
-&lt;a href="https://www.kaggle.com/c/cdiscount-image-classification-challenge"&gt;Competition Website&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;Fine-tuned many of the current state-of-the-art neural network architectures to predict the category of online products.  The dataset was very large: &lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;Almost 9 million products  &lt;/li&gt;
-&lt;li&gt;More than 15 million images at 180x180 resolution &lt;/li&gt;
-&lt;li&gt;More than 5000 categories &lt;/li&gt;
-&lt;li&gt;Over 62 GB of bson files (binary json) &lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;My final solution which was an ensemble of various DenseNet, Resnet, Inception, and Xception architectures ranked in the top 3.8%.  &lt;/p&gt;
-&lt;h2 id=carvana-image-masking-challenge&gt;Carvana Image Masking Challenge &amp;nbsp;&lt;b&gt;&lt;a href="#toc"&gt;&amp;#8593;&lt;/a&gt;&lt;/b&gt;&lt;/h2&gt;
-
-&lt;ul&gt;
-&lt;li&gt;&lt;strong&gt;Private Leaderboard Rank&lt;/strong&gt;: 72/735 (top 9.8%)&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Date Completed&lt;/strong&gt;:  September 27, 2017 &lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Competition Host&lt;/strong&gt;: Carvana&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Links:&lt;/strong&gt; 
-&lt;a href="https://www.kaggle.com/c/carvana-image-masking-challenge"&gt;Competition Website&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;Used deep learning to create high-quality image masks for the online car dealership company Carvana. The metric used in this competition was the dice coefficient and the data for the competition consisted of 5,000+ high resolution images of showroom car.  A very deep neural network architecture called U-Net quickly achieved greater than 99.5% accuracy.  My final submission of an ensemble of U-Nets ranked in the top 9.8%. &lt;/p&gt;
-&lt;p&gt;&lt;h2 id=grupo-bimbo-inventory-demand&gt;Grupo Bimbo Inventory Demand &amp;nbsp;&lt;b&gt;&lt;a href="#toc"&gt;&amp;#8593;&lt;/a&gt;&lt;/b&gt;&lt;/h2&gt;  &lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;strong&gt;Private Leaderboard Rank&lt;/strong&gt;: 231/1969 (top 11.7%)&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Date Completed&lt;/strong&gt;:  August 30, 2016&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Competition Host&lt;/strong&gt;: Grupo Bimbo&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Links:&lt;/strong&gt; 
-&lt;a href="https://www.kaggle.com/c/grupo-bimbo-inventory-demand"&gt;Competition Website&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;Partnered with a local data analyst to provide a two week ahead forecast for client-product sales of the multinational company Grupo Bimbo. The metric used in this competition was the log RMSE and the data for the competition consisted of nearly one million clients each with a few thousand products to order. Our feature engineering consisted of mapping high cardinality categorical variables into a more readily usable form. The final submission ranked in the top 11.7%. &lt;/p&gt;
-&lt;h2 id=santa-gift-matching-challenge&gt;Santa Gift Matching Challenge &amp;nbsp;&lt;b&gt;&lt;a href="#toc"&gt;&amp;#8593;&lt;/a&gt;&lt;/b&gt;&lt;/h2&gt;
-
-&lt;ul&gt;
-&lt;li&gt;&lt;strong&gt;Private Leaderboard Rank&lt;/strong&gt;: 88/428 (top 20.6%)&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Date Completed&lt;/strong&gt;:  January 12, 2018&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Competition Host&lt;/strong&gt;: Kaggle&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Links:&lt;/strong&gt; 
-&lt;a href="https://www.kaggle.com/c/santa-gift-matching"&gt;Competition Website&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;Teamed up with a Kaggle Grandmaster to find a near optimal solution to a large scale nonlinear optimization problem.  The task was to assign gifts to children, each assignment has a gift happiness and child happiness, the objective was to maximize the cube of the total gift happiness plus the cube of the total child happiness, the constraints were essentially linear.   The objective function—while nonlinear—is well modeled by a linear approximation.  The linearized problem was framed as a max-flow min-cost problem and solved exactly using Google’s OR-Tools.   The solution was then fine tuned using a greedy heuristic implemented in plain C for speed. Our final submission ranked in the top 20.6%. &lt;/p&gt;</content><category term="Kaggle"></category><category term="Natural Language Processing"></category><category term="Computer Vision"></category></entry><entry><title>Online Course Archive</title><link href="/online-course-archive.html" rel="alternate"></link><published>2018-07-02T11:42:00-10:00</published><updated>2018-07-02T11:42:00-10:00</updated><author><name>Matt Motoki</name></author><id>tag:None,2018-07-02:/online-course-archive.html</id><summary type="html">&lt;p&gt;Online Course Archive&lt;/p&gt;</summary><content type="html">&lt;h1 id="toc"&gt;Table Of Contents&lt;/h1&gt;
-
-&lt;p&gt;This is an archive of online courses that I have taken and certificates that I have achieved. &lt;/p&gt;
-&lt;p&gt;&lt;a href="#machine-learning"&gt;&lt;strong&gt;Machine Learning&lt;/strong&gt;&lt;/a&gt;&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;a href="#policy-analysis-using-interrupted-time-series"&gt;Policy Analysis using Interrupted Time Series &lt;/a&gt; &lt;/li&gt;
-&lt;li&gt;&lt;a href="#the-analytics-edge"&gt;The Analytics Edge&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href="#artificial-intelligence"&gt;Artificial Intelligence&lt;/a&gt; &lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;&lt;a href="#big-data"&gt;&lt;strong&gt;Big Data&lt;/strong&gt;&lt;/a&gt;&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;a href="#scalable-machine-learning"&gt;Scalable Machine Learning&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href="#introduction-to-big-data-with-apache-spark"&gt;Introduction to Big Data with Apache Spark&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;&lt;a href="#web-development"&gt;&lt;strong&gt;Web Development&lt;/strong&gt;&lt;/a&gt;&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;a href="#html5-part-2"&gt;HTML5 Part 2: Advanced Techniques for Designing HTML5 Apps&lt;/a&gt;    &lt;/li&gt;
-&lt;li&gt;&lt;a href="#advanced-css-concepts"&gt;Advanced CSS Concepts&lt;/a&gt;    &lt;/li&gt;
-&lt;li&gt;&lt;a href="#html5-part-1"&gt;HTML5 Part 1: HTML5 Coding Essentials and Best Practices&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href="#html5-introduction"&gt;HTML5 Introduction&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;&lt;a href="#miscellaneous"&gt;&lt;strong&gt;Miscellaneous&lt;/strong&gt;&lt;/a&gt;&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;a href="#becoming-an-entrepreneur"&gt;MIT Launch X – Becoming an Entrepreneur&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href="#video-game-design-history"&gt;Video Game Design History&lt;/a&gt;    &lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;&lt;br&gt;
-&lt;hr&gt;
-&lt;h1 id="machine-learning"&gt;Machine Learning&lt;/h1&gt; &lt;/p&gt;
-&lt;h2 id="policy-analysis-using-interrupted-time-series"&gt;Policy Analysis using Interrupted Time Series &amp;nbsp;&lt;b&gt;&lt;a href="#toc"&gt;&amp;#8593;&lt;/a&gt;&lt;/b&gt;&lt;/h2&gt;
-
-&lt;ul&gt;
-&lt;li&gt;&lt;strong&gt;Institution&lt;/strong&gt;: UBCx&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Date Completed&lt;/strong&gt;:  February 21, 2017&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Links:&lt;/strong&gt; 
-&lt;a href="https://d37djvu3ytnwxt.cloudfront.net/assets/courseware/v1/edb6888857978fc5b00f4db0d2e1bc06/asset-v1:UBCx+ITSx+1T2017+type@asset+block/Syllabus_ITSx_Handouts.pdf"&gt;Course Website&lt;/a&gt;, 
-&lt;a href="https://courses.edx.org/certificates/e1e2b440be3f4830acb6706e6b2c81ea"&gt;Certificate of Achievement&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h2 id="the-analytics-edge"&gt;The Analytics Edge &amp;nbsp;&lt;b&gt;&lt;a href="#toc"&gt;&amp;#8593;&lt;/a&gt;&lt;/b&gt;&lt;/h2&gt;
-
-&lt;ul&gt;
-&lt;li&gt;&lt;strong&gt;Institution&lt;/strong&gt;: MITx&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Date Completed&lt;/strong&gt;:  May 28, 2015&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Links:&lt;/strong&gt; 
-&lt;a href="https://courses.edx.org/courses/MITx/15.071x_2/1T2015/4264e68418f34d839cf0b33a5da644b2/"&gt;Course Website&lt;/a&gt;, 
-&lt;a href="https://s3.amazonaws.com/verify.edx.org/downloads/4792739100a743398f5fee3a8bc11e88/Certificate.pdf"&gt;Certificate of Achievement&lt;/a&gt;,
-&lt;a href="https://www.kaggle.com/c/15-071x-the-analytics-edge-competition-spring-2015#description"&gt;Kaggle Competition&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;This course was one of the first online courses that I ever took. It was taught by Dimitris Bertsimas who is well-known in the field of Operations Research.  The course was primarily business analytics covering fundamental methods such as linear regression, logistic regression, CART, clustering, data visualization, and linear programming.  The problem sets were done in R and Excel (linear programming solver).  The final course project was to participate in a Kaggle competition; that was my first competition and it started my love for Kaggle.  &lt;/p&gt;
-&lt;h2 id="artificial-intelligence"&gt;Artificial Intelligence &amp;nbsp;&lt;b&gt;&lt;a href="#toc"&gt;&amp;#8593;&lt;/a&gt;&lt;/b&gt;&lt;/h2&gt;
-
-&lt;ul&gt;
-&lt;li&gt;&lt;strong&gt;Institution&lt;/strong&gt;: BerkeleyX&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Date Completed&lt;/strong&gt;:  May 4th, 2015&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Links:&lt;/strong&gt; 
-&lt;a href="https://courses.edx.org/courses/BerkeleyX/CS188.1x-4/1T2015/20021a0a32d14a31b087db8d4bb582fd/"&gt;Course Website&lt;/a&gt;, 
-&lt;a href="https://s3.amazonaws.com/verify.edx.org/downloads/0cce9857a49b4302ba74236789d52a13/Certificate.pdf"&gt;Certificate of Achievement&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;This course was taught by Dan Klein and Pieter Abbeel who are both professors at UC Berkeley and are both prominent researchers in their respective fields of NLP and reinforcement learning.  The course covered search, planning, constraint satisfaction problems, decision theory, Markov decision processes, and reinforcement learning.  The course assignments were in Python.  The course projects centered around teaching an agent to play Pac-Man.&lt;/p&gt;
-&lt;p&gt;&lt;br&gt;
-&lt;hr&gt;
-&lt;h1 id="big-data"&gt;Big Data&lt;/h1&gt; &lt;/p&gt;
-&lt;h2 id="scalable-machine-learning"&gt;Scalable Machine Learning &amp;nbsp;&lt;b&gt;&lt;a href="#toc"&gt;&amp;#8593;&lt;/a&gt;&lt;/b&gt;&lt;/h2&gt;
-
-&lt;ul&gt;
-&lt;li&gt;&lt;strong&gt;Institution&lt;/strong&gt;: BerkeleyX&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Date Completed&lt;/strong&gt;: August 06, 2015&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Links:&lt;/strong&gt; 
-&lt;a href="https://courses.edx.org/courses/BerkeleyX/CS190.1x/1T2015/fbe63aa3c95948e3912fa128aedec27d/"&gt;Course Website&lt;/a&gt;, 
-&lt;a href="https://s3.amazonaws.com/verify.edx.org/downloads/77263e51cee94dc7a4a0b62aa1c04081/Certificate.pdf"&gt;Certificate of Achievement&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;This was the second course in a series of courses that I took on Apache Spark and big data.  This course introduced the underlying statistical and algorithmic principles required to develop scalable real-world machine learning pipelines. The course presented an integrated view of data processing by highlighting the various components of these pipelines, including feature extraction, supervised learning, model evaluation, and exploratory data analysis. The course assignments were done in PySpark to implement several scalable learning pipelines.&lt;/p&gt;
-&lt;h2 id="introduction-to-big-data-with-apache-spark"&gt;Introduction to Big Data with Apache Spark &amp;nbsp;&lt;b&gt;&lt;a href="#toc"&gt;&amp;#8593;&lt;/a&gt;&lt;/b&gt;&lt;/h2&gt;
-
-&lt;p&gt;&lt;/h2&gt; &lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;strong&gt;Institution&lt;/strong&gt;: BerkeleyX&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Date Completed&lt;/strong&gt;:  July 10, 2015&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Links:&lt;/strong&gt; 
-&lt;a href="https://courses.edx.org/courses/BerkeleyX/CS100.1x/1T2015/fbe63aa3c95948e3912fa128aedec27d/"&gt;Course Website&lt;/a&gt;, 
-&lt;a href="https://s3.amazonaws.com/verify.edx.org/downloads/ba01a98edcf045b096ad77c6d9b51e50/Certificate.pdf"&gt;Certificate of Achievement&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;This was the first course in a series of courses that I took on Apache Spark and big data.  This course covered advanced undergraduate-level statistics and data analysis.  The course assignments used PySpark (the Python API for Spark) to manipulate data sets in parallel.  In particular, we covered log mining, textual entity recognition and collaborative filtering techniques. &lt;/p&gt;
-&lt;p&gt;&lt;br&gt;
-&lt;hr&gt;
-&lt;h1 id="web-development"&gt;Web Development&lt;/h1&gt; &lt;/p&gt;
-&lt;h2 id="html5-part-2"&gt;HTML5 Part 2: Advanced Techniques for Designing HTML5 Apps &amp;nbsp;&lt;b&gt;&lt;a href="#toc"&gt;&amp;#8593;&lt;/a&gt;&lt;/b&gt;&lt;/h2&gt;
-
-&lt;ul&gt;
-&lt;li&gt;&lt;strong&gt;Institution&lt;/strong&gt;: W3Cx&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Date Completed&lt;/strong&gt;: February 24, 2017&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Links:&lt;/strong&gt; 
-&lt;a href="https://courses.edx.org/courses/course-v1:W3Cx+HTML5.2x+2T2016/course/"&gt;Course Website&lt;/a&gt;, 
-&lt;a href="https://courses.edx.org/certificates/61149abe704147ebaa553ed506924ba8"&gt;Certificate of Achievement&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h2 id="advanced-css-concepts"&gt;Advanced CSS Concepts &amp;nbsp;&lt;b&gt;&lt;a href="#toc"&gt;&amp;#8593;&lt;/a&gt;&lt;/b&gt;&lt;/h2&gt;
-
-&lt;ul&gt;
-&lt;li&gt;&lt;strong&gt;Institution&lt;/strong&gt;: Microsoft&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Date Completed&lt;/strong&gt;: February 14, 2017&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Links:&lt;/strong&gt; 
-&lt;a href="https://courses.edx.org/courses/course-v1:Microsoft+DEV218x+3T2016/course/"&gt;Course Website&lt;/a&gt;, 
-&lt;a href="https://courses.edx.org/certificates/429c9a4bac0e403d9ea2810e6d94427c"&gt;Certificate of Achievement&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h2 id="html5-part-1"&gt;HTML5 Part 1: HTML5 Coding Essentials and Best Practices &amp;nbsp;&lt;b&gt;&lt;a href="#toc"&gt;&amp;#8593;&lt;/a&gt;&lt;/b&gt;&lt;/h2&gt;
-
-&lt;ul&gt;
-&lt;li&gt;&lt;strong&gt;Institution&lt;/strong&gt;: W3Cx&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Date Completed&lt;/strong&gt;: November 28, 2016&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Links:&lt;/strong&gt; 
-&lt;a href="https://courses.edx.org/courses/course-v1:W3Cx+HTML5.1x+3T2016/course/"&gt;Course Website&lt;/a&gt;, 
-&lt;a href="https://courses.edx.org/certificates/906abb031c4740f89a73d1aab5ac054a"&gt;Certificate of Achievement&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h2 id="html5-introduction"&gt;HTML5 Introduction &amp;nbsp;&lt;b&gt;&lt;a href="#toc"&gt;&amp;#8593;&lt;/a&gt;&lt;/b&gt;&lt;/h2&gt;
-
-&lt;ul&gt;
-&lt;li&gt;&lt;strong&gt;Institution&lt;/strong&gt;: W3Cx&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Date Completed&lt;/strong&gt;: November 20, 2016&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Links:&lt;/strong&gt; 
-&lt;a href="https://courses.edx.org/courses/course-v1:W3Cx+HTML5.0x+2T_2016/course/"&gt;Course Website&lt;/a&gt;, 
-&lt;a href="https://courses.edx.org/certificates/0bf5fb9f5fc04f7c9824cf46f35f7dbb"&gt;Certificate of Achievement&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;&lt;br&gt;
-&lt;hr&gt;
-&lt;h1 id="miscellaneous"&gt;Miscellaneous&lt;/h1&gt; &lt;/p&gt;
-&lt;h2 id="becoming-an-entrepreneur"&gt;MIT Launch X – Becoming an Entrepreneur &amp;nbsp;&lt;b&gt;&lt;a href="#toc"&gt;&amp;#8593;&lt;/a&gt;&lt;/b&gt;&lt;/h2&gt;
-
-&lt;ul&gt;
-&lt;li&gt;&lt;strong&gt;Institution&lt;/strong&gt;: MITx&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Date Completed&lt;/strong&gt;: February 21, 2017&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Links:&lt;/strong&gt; 
-&lt;a href="https://courses.edx.org/courses/course-v1:MITx+Launch.x_3+1T2017/course/"&gt;Course Website&lt;/a&gt;, 
-&lt;a href="https://courses.edx.org/certificates/14b79eae6f364bcabbbbaf6cb5015398"&gt;Certificate of Achievement&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h2 id="video-game-design-history"&gt;Video Game Design History &amp;nbsp;&lt;b&gt;&lt;a href="#toc"&gt;&amp;#8593;&lt;/a&gt;&lt;/b&gt;&lt;/h2&gt;
-
-&lt;ul&gt;
-&lt;li&gt;&lt;strong&gt;Institution&lt;/strong&gt;: RITx&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Date Completed&lt;/strong&gt;: February 21, 2017&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Links:&lt;/strong&gt; 
-&lt;a href="https://courses.edx.org/courses/course-v1:RITx+GAME101x+3T2016/898702cdaee44383bab13784a4a13bac/"&gt;Course Website&lt;/a&gt;, 
-&lt;a href="https://courses.edx.org/certificates/85bddd3a20cb4fdfab4c5f7c52586097"&gt;Certificate of Achievement&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;</content><category term="Online Courses"></category><category term="Big Data"></category><category term="Machine Learning"></category><category term="Data Science"></category><category term="Artificial Intelligence"></category><category term="Web Development"></category></entry><entry><title>Beta Target Encoding</title><link href="/beta-target-encoding.html" rel="alternate"></link><published>2018-07-01T22:47:00-10:00</published><updated>2018-07-04T10:36:00-10:00</updated><author><name>Matt Motoki</name></author><id>tag:None,2018-07-01:/beta-target-encoding.html</id><summary type="html">&lt;p&gt;Beta target encoding is feature engineering technique used to encode categorical variables for binary classification.&lt;/p&gt;</summary><content type="html">&lt;h1&gt;Beta Target Encoding&lt;/h1&gt;
+<feed xmlns="http://www.w3.org/2005/Atom"><title>Matt Motoki - misc</title><link href="/" rel="alternate"></link><link href="/feeds/misc.atom.xml" rel="self"></link><id>/</id><updated>2018-07-04T10:36:00-10:00</updated><entry><title>Beta Target Encoding</title><link href="/beta-target-encoding.html" rel="alternate"></link><published>2018-07-04T10:36:00-10:00</published><updated>2018-07-04T10:36:00-10:00</updated><author><name>Matt Motoki</name></author><id>tag:None,2018-07-04:/beta-target-encoding.html</id><summary type="html">&lt;p&gt;Beta target encoding is feature engineering technique used to encode categorical variables for binary classification.&lt;/p&gt;</summary><content type="html">&lt;h1&gt;Beta Target Encoding&lt;/h1&gt;
 &lt;h2&gt;Summary&lt;/h2&gt;
 &lt;p&gt;Bayesian Target Encoding is a feature engineering technique used to map categorical variables into numeric variables.  The Bayesian framework requires only minimal updates as new data is acquired and is thus well-suited for online learning.  Furthermore, the Bayesian approach makes choosing and interpreting hyperparameters intuitive.  I developed this technique in the recent Avito Kaggle Competition, where my team and I took 14th place out of 1,917 teams.  We found that the Bayesian target encoding outperforms the built-in categorical encoding provided by the LightGBM package. &lt;/p&gt;
 &lt;h2&gt;Target Encoding&lt;/h2&gt;
@@ -357,7 +83,7 @@ $$&lt;/div&gt;
 &lt;p&gt;
 where &lt;span class="math"&gt;\(\lambda^{(j)} = \tau \,\big/\!\left( N^{(j)}+\tau \right).\)&lt;/span&gt;  Notice that this equation has the same functional form as &lt;span class="math"&gt;\((2)\)&lt;/span&gt;.  We see that increasing &lt;span class="math"&gt;\(\tau\)&lt;/span&gt; brings the estimate closer to the prior mean and that decreasing &lt;span class="math"&gt;\(\tau\)&lt;/span&gt; brings it closer to the in-level sample average.&lt;br&gt;
 Recall that when we use additive noise for regularization &lt;span class="math"&gt;\((3)\)&lt;/span&gt;, we need to specify the distribution of the noise random variable &lt;span class="math"&gt;\(\epsilon^{(j)}\)&lt;/span&gt;.  This is natural to do when taking the Bayesian approach.  In particular, we can set &lt;span class="math"&gt;\(\epsilon^{(j)} \sim \mathrm{Beta}\!\left(\alpha_{posterior}^{(j)}, \beta_{posterior}^{(j)} \right)\)&lt;/span&gt;. The only hyperparameter left to tune is the noise strength &lt;span class="math"&gt;\(\eta\)&lt;/span&gt;.  Notice that from &lt;span class="math"&gt;\((5)\)&lt;/span&gt;, the variance of the noise distribution will shrink as we obtain more observations. What this means is that as the number of observations increases, the noise distribution will converge to a delta distribution centered at &lt;span class="math"&gt;\(\mu_{posterior}^{(j)}\)&lt;/span&gt;.  Thus, we have the nice property that the amount of regularization decreases as the number of observations increases.&lt;/p&gt;
-&lt;h2&gt;Case Study: Kaggle - Avito Demand Prediction&lt;sup&gt;&lt;a href="https://www.kaggle.com/mmotoki/beta-target-encoding"&gt;3&lt;/a&gt;&lt;/sup&gt;&lt;/h2&gt;
+&lt;h2&gt;Case Study: Kaggle - Avito Demand Prediction&lt;sup&gt;&lt;a href="https://www.kaggle.com/mmotoki/avito-target-encoding"&gt;3&lt;/a&gt;&lt;/sup&gt;&lt;/h2&gt;
 &lt;p&gt;My team and I used Bayesian target encoding in the recent Kaggle competition &lt;a href="https://www.kaggle.com/c/avito-demand-prediction"&gt;Avito Demand Prediction Challenge&lt;/a&gt; where we placed 14th out of 1,917 teams.  For a more detailed write-up about our team's solution, see &lt;a href="https://www.kaggle.com/c/avito-demand-prediction/discussion/60059"&gt;Peter Hurford's post&lt;/a&gt;.
 The task was to predict demand for an online advertisement based on its full description (title, description, images, etc.), its context (geographically where it was posted, similar ads already posted), and historical demand for similar ads in similar contexts.  The competition metric was the root mean squared error between our prediction and the probability of a deal.
 We found that the Bayesian target-encoded features outperformed the built-in LightGBM categorical variable encoding.  The graph below shows the performance of a LightGBM model using target encoding for various values of &lt;span class="math"&gt;\(\tau\)&lt;/span&gt; relative to a baseline LightGBM model using built-in categorical encoding. The best model uses Bayesian target-encoded features with a hyperparameter setting of &lt;span class="math"&gt;\(\tau=10\)&lt;/span&gt;.
@@ -368,7 +94,7 @@ We found that the Bayesian target-encoded features outperformed the built-in Lig
 &lt;ul&gt;
 &lt;li&gt;&lt;em&gt;[&lt;a href="https://en.wikipedia.org/wiki/Beta_distribution"&gt;1&lt;/a&gt;]&amp;nbsp; A more comprehensive list of statistics for the Beta distribution.&lt;/em&gt;&lt;/li&gt;
 &lt;li&gt;&lt;em&gt;[&lt;a href="https://people.eecs.berkeley.edu/~jordan/courses/260-spring10/other-readings/chapter9.pdf"&gt;2&lt;/a&gt;]&amp;nbsp; Information about Bayesian statistics and conjugate priors.&lt;/em&gt;&lt;/li&gt;
-&lt;li&gt;&lt;em&gt;[&lt;a href="https://www.kaggle.com/mmotoki/beta-target-encoding"&gt;3&lt;/a&gt;]&amp;nbsp; Code for implementing the Bayesian target encoding.&lt;/em&gt;&lt;/li&gt;
+&lt;li&gt;&lt;em&gt;[&lt;a href="https://www.kaggle.com/mmotoki/avito-target-encoding"&gt;3&lt;/a&gt;]&amp;nbsp; Code for implementing the Bayesian target encoding.&lt;/em&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;script type="text/javascript"&gt;if (!document.getElementById('mathjaxscript_pelican_#%@#$@#')) {
     var align = "center",
@@ -424,4 +150,475 @@ We found that the Bayesian target-encoded features outperformed the built-in Lig
         "}";
     (document.body || document.getElementsByTagName('head')[0]).appendChild(mathjaxscript);
 }
-&lt;/script&gt;</content><category term="Bayesian Statistics"></category><category term="Feature Engineering"></category><category term="Kaggle"></category></entry></feed>
+&lt;/script&gt;</content><category term="Bayesian Statistics"></category><category term="Feature Engineering"></category><category term="Kaggle"></category></entry><entry><title>Kaggle Competition Archive</title><link href="/kaggle-archive.html" rel="alternate"></link><published>2018-07-03T01:40:00-10:00</published><updated>2018-07-03T01:40:00-10:00</updated><author><name>Matt Motoki</name></author><id>tag:None,2018-07-03:/kaggle-archive.html</id><summary type="html">&lt;p&gt;Summary of Methods Used In Kaggle Competitions&lt;/p&gt;</summary><content type="html">&lt;h1 id="toc"&gt;Table Of Contents&lt;/h1&gt;
+
+&lt;p&gt;This is an archive of Kaggle competitions that I have done. &lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href="#santander-customer-satisfaction"&gt;Santander Customer Satisfaction&lt;/a&gt; &lt;/li&gt;
+&lt;li&gt;&lt;a href="#toxic-comment-classification-challenge"&gt;Toxic Comment Classification Challenge&lt;/a&gt; &lt;/li&gt;
+&lt;li&gt;&lt;a href="#instacart-market-basket-analysis"&gt;Instacart Market Basket Analysis&lt;/a&gt; &lt;/li&gt;
+&lt;li&gt;&lt;a href="#porto-seguros-safe-driver-prediction"&gt;Porto Seguro’s Safe Driver Prediction&lt;/a&gt; &lt;/li&gt;
+&lt;li&gt;&lt;a href="#quora-question-pairs"&gt;Quora Question Pairs&lt;/a&gt; &lt;/li&gt;
+&lt;li&gt;&lt;a href="#corporación-favorita-grocery-sales-forecasting"&gt;Corporación Favorita Grocery Sales Forecasting&lt;/a&gt; &lt;/li&gt;
+&lt;li&gt;&lt;a href="#facebook-v-predicting-check-ins"&gt;Facebook V: Predicting Check Ins&lt;/a&gt; &lt;/li&gt;
+&lt;li&gt;&lt;a href="#cdiscounts-image-classification-challenge"&gt;Cdiscount’s Image Classification Challenge&lt;/a&gt; &lt;/li&gt;
+&lt;li&gt;&lt;a href="#carvana-image-masking-challenge"&gt;Carvana Image Masking Challenge&lt;/a&gt; &lt;/li&gt;
+&lt;li&gt;&lt;a href="#grupo-bimbo-inventory-demand"&gt;Grupo Bimbo Inventory Demand&lt;/a&gt; &lt;/li&gt;
+&lt;li&gt;&lt;a href="#santa-gift-matching-challenge"&gt;Santa Gift Matching Challenge&lt;/a&gt; &lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=santander-customer-satisfaction&gt;Santander Customer Satisfaction &lt;b&gt;&lt;a href="#toc"&gt;&amp;#8593;&lt;/a&gt;&lt;/b&gt;&lt;/h2&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Private Leaderboard Rank&lt;/strong&gt;: 8/5123 (top 0.2%)&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Date Completed&lt;/strong&gt;:  May 2, 2016&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Competition Host&lt;/strong&gt;: Santander&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Links:&lt;/strong&gt; 
+&lt;a href="https://www.kaggle.com/c/santander-customer-satisfaction"&gt;Competition Website&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Predicted customer satisfaction for the multinational bank Santander.  The formal objective was to minimize the AUROC (area under the receiver operator curve) of the probability that a customer is dissatisfied with service.   Customized feature engineering appealed to statistical patterns in the anonymized data to create robust low-dimensional features.  These features helped to both increase accuracy and decrease variance in the model predictions.  The final model ranked in the top 0.2% and consisted of an ensemble of three xgboost models trained with different feature groupings and a stacked Extra Trees model.   &lt;/p&gt;
+&lt;h2 id=toxic-comment-classification-challenge&gt;Toxic Comment Classification Challenge &lt;b&gt;&lt;a href="#toc"&gt;&amp;#8593;&lt;/a&gt;&lt;/b&gt;&lt;/h2&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Private Leaderboard Rank&lt;/strong&gt;: 33/4551 (top 0.7%)&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Date Completed&lt;/strong&gt;:  March 20, 2018&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Competition Host&lt;/strong&gt;: Jigsaw&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Links:&lt;/strong&gt; 
+&lt;a href="https://www.kaggle.com/c/jigsaw-toxic-comment-classification-challenge"&gt;Competition Website&lt;/a&gt;, 
+&lt;a href="https://www.kaggle.com/c/jigsaw-toxic-comment-classification-challenge/discussion/52666"&gt;Discussion Post&lt;/a&gt;,
+&lt;a href="https://github.com/mattmotoki/toxic-comment-classification"&gt;Code&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Optimized various recurrent and 1-D convolutional neural networks to categorize the sentiment of online comments.  Designed a fast similarity embedding imputation to address out-of-vocabulary (OOV) words.  The imputation method produced results that were on par with the current state-of-the-art method for filling in OOV words; however, the imputation method is more widely applicable.  My final solution ranked in the top 0.7%. &lt;/p&gt;
+&lt;h2 id=instacart-market-basket-analysis&gt;Instacart Market Basket Analysis &lt;b&gt;&lt;a href="#toc"&gt;&amp;#8593;&lt;/a&gt;&lt;/b&gt;&lt;/h2&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Private Leaderboard Rank&lt;/strong&gt;: 29/2623 (top 1.1%)&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Date Completed&lt;/strong&gt;:  August 14, 2017 &lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Competition Host&lt;/strong&gt;: Instacart&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Links:&lt;/strong&gt; 
+&lt;a href="https://www.kaggle.com/c/instacart-market-basket-analysis"&gt;Competition Website&lt;/a&gt;,
+&lt;a href="https://www.kaggle.com/mmotoki/markov-chain-tutorial"&gt;Markov Chain Tutorial&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Applied forecasting techniques to predict customer reorders for grocery delivery company Instacart. The metric used in this competition was the mean F1 score and the data for the competition consisted of order histories of 300,000+ members for 50,000+ products.  Features were derived from Markov Chains and ARIMA models.  A customized post-processing routine optimized predictions for the F1 metric.  The final model ranked in the top 1.1%. &lt;/p&gt;
+&lt;h2 id=porto-seguros-safe-driver-prediction&gt;Porto Seguro’s Safe Driver Prediction &lt;b&gt;&lt;a href="#toc"&gt;&amp;#8593;&lt;/a&gt;&lt;/b&gt;&lt;/h2&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Private Leaderboard Rank&lt;/strong&gt;: 58/5169 (top 1.1%)&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Date Completed&lt;/strong&gt;:  November 29, 2017 &lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Competition Host&lt;/strong&gt;: Porto Seguro&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Links:&lt;/strong&gt; 
+&lt;a href="https://www.kaggle.com/c/porto-seguro-safe-driver-prediction"&gt;Competition Website&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Used robust modeling techniques to predict the probability of an insurance claim from noisy anonymized data.  Multiple implementations of gradient boosted decision tree libraries (including Xgboost, Catboost, and LightGBM) were blended to reduce the variance in predictions.  The evaluation metric was the Normalized Gini Coefficient.  My final submission ranked in the top 1.1%.  &lt;/p&gt;
+&lt;h2 id=quora-question-pairs&gt;Quora Question Pairs &lt;b&gt;&lt;a href="#toc"&gt;&amp;#8593;&lt;/a&gt;&lt;/b&gt;&lt;/h2&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Private Leaderboard Rank&lt;/strong&gt;: 95/3307 (top 2.9%)&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Date Completed&lt;/strong&gt;:  June 6, 2017 &lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Competition Host&lt;/strong&gt;: Quora&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Links:&lt;/strong&gt; 
+&lt;a href="https://www.kaggle.com/c/quora-question-pairs"&gt;Competition Website&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Partnered with a local data scientist to apply natural language processing (NLP) techniques to detect duplicate questions for the crowdsourcing question and answer company Quora. The metric used in this competition was the log loss and the data for the competition consisted of 300,000+ question pairs.  We constructed sentence features from variants of TF-IDF weightings, part-of-speech tags and string and word distances.  We created ensembles of recurrent neural networks (in particular LSTM) trained on learned and precomputed word embeddings.  We ranked in the top 2.9% using a blend of gradient boosted decision trees and recurrent neural networks. &lt;/p&gt;
+&lt;h2 id=corporación-favorita-grocery-sales-forecasting&gt;Corporación Favorita Grocery Sales Forecasting &lt;b&gt;&lt;a href="#toc"&gt;&amp;#8593;&lt;/a&gt;&lt;/b&gt;&lt;/h2&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Private Leaderboard Rank&lt;/strong&gt;: 76/1675 (top 4.5%)&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Date Completed&lt;/strong&gt;:  January 15, 2018&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Competition Host&lt;/strong&gt;: Corporación Favorita&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Links:&lt;/strong&gt; 
+&lt;a href="https://www.kaggle.com/c/favorita-grocery-sales-forecasting"&gt;Competition Website&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Created grocery sales forecast for a 16day horizon.  Feature engineering was an important part the final solution; features included lagged sales aggregated over multiple windows.   Features were fed into LightGBM for fast training and prediction.  Models were evaluated using the Normalized Weighted Root Mean Squared Logarithmic Error.  My final submission ranked in the top 4.5%.  &lt;/p&gt;
+&lt;p&gt;&lt;h2 id=facebook-v-predicting-check-ins&gt;Facebook V: Predicting Check Ins &lt;b&gt;&lt;a href="#toc"&gt;&amp;#8593;&lt;/a&gt;&lt;/b&gt;&lt;/h2&gt;  &lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Private Leaderboard Rank&lt;/strong&gt;: 85/1212 (top 7.0%)&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Date Completed&lt;/strong&gt;:  July 6, 2016&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Competition Host&lt;/strong&gt;: Facebook&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Links:&lt;/strong&gt; 
+&lt;a href="https://www.kaggle.com/c/facebook-v-predicting-check-ins"&gt;Competition Website&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Predicted the check-in location of a person from noisy simulated Facebook data.  The objective was to minimize the mean average precision between the top 3 predicted check-in locations and the actual check-in location.  The data was particularly interesting in that it contained relatively few explanatory variables (5) and over 100,000 check-in locations to predict.  My approach was to subset the data using overlapping grids, train models on the subsets, and then combine the models' predictions using a spatial weighting system.  The final result ranked in the top 7.0%. &lt;/p&gt;
+&lt;h2 id=cdiscounts-image-classification-challenge&gt;Cdiscount’s Image Classification Challenge &lt;b&gt;&lt;a href="#toc"&gt;&amp;#8593;&lt;/a&gt;&lt;/b&gt;&lt;/h2&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Private Leaderboard Rank&lt;/strong&gt;: 52/627 (top 8.3%)&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Date Completed&lt;/strong&gt;:  December 14, 2017 &lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Competition Host&lt;/strong&gt;: Cdiscount&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Links:&lt;/strong&gt; 
+&lt;a href="https://www.kaggle.com/c/cdiscount-image-classification-challenge"&gt;Competition Website&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Fine-tuned many of the current state-of-the-art neural network architectures to predict the category of online products.  The dataset was very large: &lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Almost 9 million products  &lt;/li&gt;
+&lt;li&gt;More than 15 million images at 180x180 resolution &lt;/li&gt;
+&lt;li&gt;More than 5000 categories &lt;/li&gt;
+&lt;li&gt;Over 62 GB of bson files (binary json) &lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;My final solution which was an ensemble of various DenseNet, Resnet, Inception, and Xception architectures ranked in the top 3.8%.  &lt;/p&gt;
+&lt;h2 id=carvana-image-masking-challenge&gt;Carvana Image Masking Challenge &lt;b&gt;&lt;a href="#toc"&gt;&amp;#8593;&lt;/a&gt;&lt;/b&gt;&lt;/h2&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Private Leaderboard Rank&lt;/strong&gt;: 72/735 (top 9.8%)&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Date Completed&lt;/strong&gt;:  September 27, 2017 &lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Competition Host&lt;/strong&gt;: Carvana&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Links:&lt;/strong&gt; 
+&lt;a href="https://www.kaggle.com/c/carvana-image-masking-challenge"&gt;Competition Website&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Used deep learning to create high-quality image masks for the online car dealership company Carvana. The metric used in this competition was the dice coefficient and the data for the competition consisted of 5,000+ high resolution images of showroom car.  A very deep neural network architecture called U-Net quickly achieved greater than 99.5% accuracy.  My final submission of an ensemble of U-Nets ranked in the top 9.8%. &lt;/p&gt;
+&lt;p&gt;&lt;h2 id=grupo-bimbo-inventory-demand&gt;Grupo Bimbo Inventory Demand &lt;b&gt;&lt;a href="#toc"&gt;&amp;#8593;&lt;/a&gt;&lt;/b&gt;&lt;/h2&gt;  &lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Private Leaderboard Rank&lt;/strong&gt;: 231/1969 (top 11.7%)&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Date Completed&lt;/strong&gt;:  August 30, 2016&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Competition Host&lt;/strong&gt;: Grupo Bimbo&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Links:&lt;/strong&gt; 
+&lt;a href="https://www.kaggle.com/c/grupo-bimbo-inventory-demand"&gt;Competition Website&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Partnered with a local data analyst to provide a two week ahead forecast for client-product sales of the multinational company Grupo Bimbo. The metric used in this competition was the log RMSE and the data for the competition consisted of nearly one million clients each with a few thousand products to order. Our feature engineering consisted of mapping high cardinality categorical variables into a more readily usable form. The final submission ranked in the top 11.7%. &lt;/p&gt;
+&lt;h2 id=santa-gift-matching-challenge&gt;Santa Gift Matching Challenge &lt;b&gt;&lt;a href="#toc"&gt;&amp;#8593;&lt;/a&gt;&lt;/b&gt;&lt;/h2&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Private Leaderboard Rank&lt;/strong&gt;: 88/428 (top 20.6%)&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Date Completed&lt;/strong&gt;:  January 12, 2018&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Competition Host&lt;/strong&gt;: Kaggle&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Links:&lt;/strong&gt; 
+&lt;a href="https://www.kaggle.com/c/santa-gift-matching"&gt;Competition Website&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Teamed up with a Kaggle Grandmaster to find a near optimal solution to a large scale nonlinear optimization problem.  The task was to assign gifts to children, each assignment has a gift happiness and child happiness, the objective was to maximize the cube of the total gift happiness plus the cube of the total child happiness, the constraints were essentially linear.   The objective function—while nonlinear—is well modeled by a linear approximation.  The linearized problem was framed as a max-flow min-cost problem and solved exactly using Google’s OR-Tools.   The solution was then fine tuned using a greedy heuristic implemented in plain C for speed. Our final submission ranked in the top 20.6%. &lt;/p&gt;</content><category term="Kaggle"></category><category term="Natural Language Processing"></category><category term="Computer Vision"></category></entry><entry><title>Online Course Archive</title><link href="/online-course-archive.html" rel="alternate"></link><published>2018-07-02T11:42:00-10:00</published><updated>2018-07-02T11:42:00-10:00</updated><author><name>Matt Motoki</name></author><id>tag:None,2018-07-02:/online-course-archive.html</id><summary type="html">&lt;p&gt;Online Course Archive&lt;/p&gt;</summary><content type="html">&lt;h1 id="toc"&gt;Table Of Contents&lt;/h1&gt;
+
+&lt;p&gt;This is an archive of online courses that I have taken and certificates that I have achieved. &lt;/p&gt;
+&lt;p&gt;&lt;a href="#machine-learning"&gt;&lt;strong&gt;Machine Learning&lt;/strong&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href="#policy-analysis-using-interrupted-time-series"&gt;Policy Analysis using Interrupted Time Series &lt;/a&gt; &lt;/li&gt;
+&lt;li&gt;&lt;a href="#the-analytics-edge"&gt;The Analytics Edge&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="#artificial-intelligence"&gt;Artificial Intelligence&lt;/a&gt; &lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;a href="#big-data"&gt;&lt;strong&gt;Big Data&lt;/strong&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href="#scalable-machine-learning"&gt;Scalable Machine Learning&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="#introduction-to-big-data-with-apache-spark"&gt;Introduction to Big Data with Apache Spark&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;a href="#web-development"&gt;&lt;strong&gt;Web Development&lt;/strong&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href="#html5-part-2"&gt;HTML5 Part 2: Advanced Techniques for Designing HTML5 Apps&lt;/a&gt;    &lt;/li&gt;
+&lt;li&gt;&lt;a href="#advanced-css-concepts"&gt;Advanced CSS Concepts&lt;/a&gt;    &lt;/li&gt;
+&lt;li&gt;&lt;a href="#html5-part-1"&gt;HTML5 Part 1: HTML5 Coding Essentials and Best Practices&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="#html5-introduction"&gt;HTML5 Introduction&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;a href="#miscellaneous"&gt;&lt;strong&gt;Miscellaneous&lt;/strong&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href="#becoming-an-entrepreneur"&gt;MIT Launch X – Becoming an Entrepreneur&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="#video-game-design-history"&gt;Video Game Design History&lt;/a&gt;    &lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;br&gt;
+&lt;hr&gt;
+&lt;h1 id="machine-learning"&gt;Machine Learning&lt;/h1&gt; &lt;/p&gt;
+&lt;h2 id="policy-analysis-using-interrupted-time-series"&gt;Policy Analysis using Interrupted Time Series &lt;b&gt;&lt;a href="#toc"&gt;&amp;#8593;&lt;/a&gt;&lt;/b&gt;&lt;/h2&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Institution&lt;/strong&gt;: UBCx&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Date Completed&lt;/strong&gt;:  February 21, 2017&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Links:&lt;/strong&gt; 
+&lt;a href="https://d37djvu3ytnwxt.cloudfront.net/assets/courseware/v1/edb6888857978fc5b00f4db0d2e1bc06/asset-v1:UBCx+ITSx+1T2017+type@asset+block/Syllabus_ITSx_Handouts.pdf"&gt;Course Website&lt;/a&gt;, 
+&lt;a href="https://courses.edx.org/certificates/e1e2b440be3f4830acb6706e6b2c81ea"&gt;Certificate of Achievement&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id="the-analytics-edge"&gt;The Analytics Edge &lt;b&gt;&lt;a href="#toc"&gt;&amp;#8593;&lt;/a&gt;&lt;/b&gt;&lt;/h2&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Institution&lt;/strong&gt;: MITx&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Date Completed&lt;/strong&gt;:  May 28, 2015&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Links:&lt;/strong&gt; 
+&lt;a href="https://courses.edx.org/courses/MITx/15.071x_2/1T2015/4264e68418f34d839cf0b33a5da644b2/"&gt;Course Website&lt;/a&gt;, 
+&lt;a href="https://s3.amazonaws.com/verify.edx.org/downloads/4792739100a743398f5fee3a8bc11e88/Certificate.pdf"&gt;Certificate of Achievement&lt;/a&gt;,
+&lt;a href="https://www.kaggle.com/c/15-071x-the-analytics-edge-competition-spring-2015#description"&gt;Kaggle Competition&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;This course was one of the first online courses that I ever took. It was taught by Dimitris Bertsimas who is well-known in the field of Operations Research.  The course was primarily business analytics covering fundamental methods such as linear regression, logistic regression, CART, clustering, data visualization, and linear programming.  The problem sets were done in R and Excel (linear programming solver).  The final course project was to participate in a Kaggle competition; that was my first competition and it started my love for Kaggle.  &lt;/p&gt;
+&lt;h2 id="artificial-intelligence"&gt;Artificial Intelligence &lt;b&gt;&lt;a href="#toc"&gt;&amp;#8593;&lt;/a&gt;&lt;/b&gt;&lt;/h2&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Institution&lt;/strong&gt;: BerkeleyX&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Date Completed&lt;/strong&gt;:  May 4th, 2015&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Links:&lt;/strong&gt; 
+&lt;a href="https://courses.edx.org/courses/BerkeleyX/CS188.1x-4/1T2015/20021a0a32d14a31b087db8d4bb582fd/"&gt;Course Website&lt;/a&gt;, 
+&lt;a href="https://s3.amazonaws.com/verify.edx.org/downloads/0cce9857a49b4302ba74236789d52a13/Certificate.pdf"&gt;Certificate of Achievement&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;This course was taught by Dan Klein and Pieter Abbeel who are both professors at UC Berkeley and are both prominent researchers in their respective fields of NLP and reinforcement learning.  The course covered search, planning, constraint satisfaction problems, decision theory, Markov decision processes, and reinforcement learning.  The course assignments were in Python.  The course projects centered around teaching an agent to play Pac-Man.&lt;/p&gt;
+&lt;p&gt;&lt;br&gt;
+&lt;hr&gt;
+&lt;h1 id="big-data"&gt;Big Data&lt;/h1&gt; &lt;/p&gt;
+&lt;h2 id="scalable-machine-learning"&gt;Scalable Machine Learning &lt;b&gt;&lt;a href="#toc"&gt;&amp;#8593;&lt;/a&gt;&lt;/b&gt;&lt;/h2&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Institution&lt;/strong&gt;: BerkeleyX&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Date Completed&lt;/strong&gt;: August 06, 2015&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Links:&lt;/strong&gt; 
+&lt;a href="https://courses.edx.org/courses/BerkeleyX/CS190.1x/1T2015/fbe63aa3c95948e3912fa128aedec27d/"&gt;Course Website&lt;/a&gt;, 
+&lt;a href="https://s3.amazonaws.com/verify.edx.org/downloads/77263e51cee94dc7a4a0b62aa1c04081/Certificate.pdf"&gt;Certificate of Achievement&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;This was the second course in a series of courses that I took on Apache Spark and big data.  This course introduced the underlying statistical and algorithmic principles required to develop scalable real-world machine learning pipelines. The course presented an integrated view of data processing by highlighting the various components of these pipelines, including feature extraction, supervised learning, model evaluation, and exploratory data analysis. The course assignments were done in PySpark to implement several scalable learning pipelines.&lt;/p&gt;
+&lt;h2 id="introduction-to-big-data-with-apache-spark"&gt;Introduction to Big Data with Apache Spark &lt;b&gt;&lt;a href="#toc"&gt;&amp;#8593;&lt;/a&gt;&lt;/b&gt;&lt;/h2&gt;
+
+&lt;p&gt;&lt;/h2&gt; &lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Institution&lt;/strong&gt;: BerkeleyX&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Date Completed&lt;/strong&gt;:  July 10, 2015&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Links:&lt;/strong&gt; 
+&lt;a href="https://courses.edx.org/courses/BerkeleyX/CS100.1x/1T2015/fbe63aa3c95948e3912fa128aedec27d/"&gt;Course Website&lt;/a&gt;, 
+&lt;a href="https://s3.amazonaws.com/verify.edx.org/downloads/ba01a98edcf045b096ad77c6d9b51e50/Certificate.pdf"&gt;Certificate of Achievement&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;This was the first course in a series of courses that I took on Apache Spark and big data.  This course covered advanced undergraduate-level statistics and data analysis.  The course assignments used PySpark (the Python API for Spark) to manipulate data sets in parallel.  In particular, we covered log mining, textual entity recognition and collaborative filtering techniques. &lt;/p&gt;
+&lt;p&gt;&lt;br&gt;
+&lt;hr&gt;
+&lt;h1 id="web-development"&gt;Web Development&lt;/h1&gt; &lt;/p&gt;
+&lt;h2 id="html5-part-2"&gt;HTML5 Part 2: Advanced Techniques for Designing HTML5 Apps &lt;b&gt;&lt;a href="#toc"&gt;&amp;#8593;&lt;/a&gt;&lt;/b&gt;&lt;/h2&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Institution&lt;/strong&gt;: W3Cx&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Date Completed&lt;/strong&gt;: February 24, 2017&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Links:&lt;/strong&gt; 
+&lt;a href="https://courses.edx.org/courses/course-v1:W3Cx+HTML5.2x+2T2016/course/"&gt;Course Website&lt;/a&gt;, 
+&lt;a href="https://courses.edx.org/certificates/61149abe704147ebaa553ed506924ba8"&gt;Certificate of Achievement&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id="advanced-css-concepts"&gt;Advanced CSS Concepts &lt;b&gt;&lt;a href="#toc"&gt;&amp;#8593;&lt;/a&gt;&lt;/b&gt;&lt;/h2&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Institution&lt;/strong&gt;: Microsoft&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Date Completed&lt;/strong&gt;: February 14, 2017&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Links:&lt;/strong&gt; 
+&lt;a href="https://courses.edx.org/courses/course-v1:Microsoft+DEV218x+3T2016/course/"&gt;Course Website&lt;/a&gt;, 
+&lt;a href="https://courses.edx.org/certificates/429c9a4bac0e403d9ea2810e6d94427c"&gt;Certificate of Achievement&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id="html5-part-1"&gt;HTML5 Part 1: HTML5 Coding Essentials and Best Practices &lt;b&gt;&lt;a href="#toc"&gt;&amp;#8593;&lt;/a&gt;&lt;/b&gt;&lt;/h2&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Institution&lt;/strong&gt;: W3Cx&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Date Completed&lt;/strong&gt;: November 28, 2016&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Links:&lt;/strong&gt; 
+&lt;a href="https://courses.edx.org/courses/course-v1:W3Cx+HTML5.1x+3T2016/course/"&gt;Course Website&lt;/a&gt;, 
+&lt;a href="https://courses.edx.org/certificates/906abb031c4740f89a73d1aab5ac054a"&gt;Certificate of Achievement&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id="html5-introduction"&gt;HTML5 Introduction &lt;b&gt;&lt;a href="#toc"&gt;&amp;#8593;&lt;/a&gt;&lt;/b&gt;&lt;/h2&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Institution&lt;/strong&gt;: W3Cx&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Date Completed&lt;/strong&gt;: November 20, 2016&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Links:&lt;/strong&gt; 
+&lt;a href="https://courses.edx.org/courses/course-v1:W3Cx+HTML5.0x+2T_2016/course/"&gt;Course Website&lt;/a&gt;, 
+&lt;a href="https://courses.edx.org/certificates/0bf5fb9f5fc04f7c9824cf46f35f7dbb"&gt;Certificate of Achievement&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;br&gt;
+&lt;hr&gt;
+&lt;h1 id="miscellaneous"&gt;Miscellaneous&lt;/h1&gt; &lt;/p&gt;
+&lt;h2 id="becoming-an-entrepreneur"&gt;MIT Launch X – Becoming an Entrepreneur &lt;b&gt;&lt;a href="#toc"&gt;&amp;#8593;&lt;/a&gt;&lt;/b&gt;&lt;/h2&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Institution&lt;/strong&gt;: MITx&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Date Completed&lt;/strong&gt;: February 21, 2017&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Links:&lt;/strong&gt; 
+&lt;a href="https://courses.edx.org/courses/course-v1:MITx+Launch.x_3+1T2017/course/"&gt;Course Website&lt;/a&gt;, 
+&lt;a href="https://courses.edx.org/certificates/14b79eae6f364bcabbbbaf6cb5015398"&gt;Certificate of Achievement&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id="video-game-design-history"&gt;Video Game Design History &lt;b&gt;&lt;a href="#toc"&gt;&amp;#8593;&lt;/a&gt;&lt;/b&gt;&lt;/h2&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Institution&lt;/strong&gt;: RITx&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Date Completed&lt;/strong&gt;: February 21, 2017&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Links:&lt;/strong&gt; 
+&lt;a href="https://courses.edx.org/courses/course-v1:RITx+GAME101x+3T2016/898702cdaee44383bab13784a4a13bac/"&gt;Course Website&lt;/a&gt;, 
+&lt;a href="https://courses.edx.org/certificates/85bddd3a20cb4fdfab4c5f7c52586097"&gt;Certificate of Achievement&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;</content><category term="Online Courses"></category><category term="Big Data"></category><category term="Machine Learning"></category><category term="Data Science"></category><category term="Artificial Intelligence"></category><category term="Web Development"></category></entry><entry><title>Cell Division</title><link href="/cell-division.html" rel="alternate"></link><published>2018-06-26T18:11:00-10:00</published><updated>2018-06-26T18:11:00-10:00</updated><author><name>Matt Motoki</name></author><id>tag:None,2018-06-26:/cell-division.html</id><summary type="html">&lt;p&gt;A Biology-Inspired Board Game with an AI Opponent&lt;/p&gt;</summary><content type="html">&lt;h1 style="text-align: center; letter-spacing: 1px;"&gt; &lt;a href="https://mattmotoki.github.io/cell-division/"&gt; Play the Game &lt;span class="glyphicon glyphicon-play"&gt;&lt;/span&gt; &lt;/a&gt; &lt;/h1&gt;
+
+&lt;p&gt;&lt;br&gt; &lt;/p&gt;
+&lt;h1&gt;Introduction&lt;/h1&gt;
+&lt;p&gt;Cell Division is a strategy-based board game. Player take turns placing their cells. A player's cells divide when they connect with each other; vertical, horizontal and diagonal connections are allowed.  Your score is equal to the total number of cell that you have on the board.  The game ends when the board is full and the winner is the player with the most cells. &lt;/p&gt;
+&lt;p&gt;Cell Division has a few properties that make it a great test bed for reinforcement learning algorithms&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;Scoring mechanism is visually intuitive. &lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Larger branching factor than Go.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Interesting long-term and short-term strategies. &lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Easily generalizes to multi-agent games&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;The current implementation of the game is written in plAIn HTML, CSS and Javascript.  The code is avAIlable &lt;a href="https://github.com/mattmotoki/cell-division"&gt;here&lt;/a&gt;.  &lt;/p&gt;
+&lt;h1&gt;Implementation&lt;/h1&gt;
+&lt;p&gt;In the production implementation of the game, there are three fixed-difficulty AI opponents.  AI opponents are designed to be completely deterministic so that games are reproducible.  &lt;/p&gt;
+&lt;p&gt;The AI opponents implement a greedy strategy with a strong base heuristic. The quality of the heuristic determines the difficulty of the opponent.  Since the objective is to maximize your score, it makes sense to approximate the long term benefit of a move with its immediate increase in score.  It turns out that the increase in score can be decomposed in the a function of the following four variables: &lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;span class="math"&gt;\(\text{overlap}_p(\text{move})\)&lt;/span&gt; is the number of cells adjacent to a move,&lt;/li&gt;
+&lt;li&gt;&lt;span class="math"&gt;\(\text{interlap}_p(\text{move})\)&lt;/span&gt; is the number of times the move is sandwiched by its cell and its opposite,&lt;/li&gt;
+&lt;li&gt;&lt;span class="math"&gt;\(\text{extensions}_p(\text{move})\)&lt;/span&gt; is the number of existing connections that a move extends,&lt;/li&gt;
+&lt;li&gt;&lt;span class="math"&gt;\(\text{unconnected}_p(\text{move})\)&lt;/span&gt; is the number of unconnected cells that a move connects&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;and the formula is &lt;/p&gt;
+&lt;div class="math"&gt;$$\begin{split}
+\Delta \text{score}_p(\text{move}) 
+&amp;amp;= \mathrm{I} \{\text{overlap}_p(\text{move})&amp;gt;1\} - \text{unconnected}_p(\text{move}) \\
+&amp;amp;\quad + 2\cdot \big[\text{overlap}_p(\text{move}) - \text{interlap}_p(\text{move})\big] \\
+&amp;amp;\quad + 2\cdot\big[  \text{overlap}_p(\text{move})  - \text{extensions}_p(\text{move}) \big],
+\end{split}$$&lt;/div&gt;
+&lt;p&gt;
+where &lt;span class="math"&gt;\(p\)&lt;/span&gt; denotes the player playing the move.  By convention, define the first player (&lt;span class="math"&gt;\(p=1\)&lt;/span&gt;) to be you and the second player (&lt;span class="math"&gt;\(p=2\)&lt;/span&gt;) to be the AI&lt;br&gt;
+One benefit of this decomposition is that each of the variables can be updated in an online fashion.   &lt;/p&gt;
+&lt;p&gt;Additional player-independent variables that have intuitive value are:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;span class="math"&gt;\(\text{openness}(\text{move})\)&lt;/span&gt; is move number of open positions adjacent to a move,&lt;/li&gt;
+&lt;li&gt;&lt;span class="math"&gt;\(\text{centrality}(\text{move})\)&lt;/span&gt; measures how close a move is to the center of the board.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;To calculate a value of a move, the AI opponent uses a weighted sum of the above variables.&lt;/p&gt;
+&lt;h2&gt;Easy, Medium and Hard Opponents&lt;/h2&gt;
+&lt;p&gt;Cell Addition is a zero sum game and so your gAIn is the same as the AI's loss.  Thus, when designing the AI, it will be beneficial to take this into account. &lt;/p&gt;
+&lt;p&gt;The easy AI's value function is simply
+&lt;/p&gt;
+&lt;div class="math"&gt;$$
+\text{easy}(\text{move}) = \text{centrality}(\text{move});
+$$&lt;/div&gt;
+&lt;p&gt;
+that is, the easy AI just places it's move in the center most position of the board with ties broken arbitrarily.&lt;/p&gt;
+&lt;p&gt;The hard AI's value function is 
+&lt;/p&gt;
+&lt;div class="math"&gt;$$
+\begin{split}
+\text{hard}(\text{move}) 
+&amp;amp; = \text{centrality}(\text{move}) + 2\cdot \text{openness}(\text{move})\\
+&amp;amp; \quad + \big[ \Delta \text{score}_2(\text{move}) + \Delta \text{score}_1(\text{move}) \big]\\
+&amp;amp;\quad - \big[ \text{overlap}_2(\text{move}) + \text{overlap}_1(\text{move}) \big]
+.
+\end{split}
+$$&lt;/div&gt;
+&lt;p&gt;
+The idea is to find a tradeoff between exploration and exploitation.  To see this, consider the following formula for the increase in the total overlap of a board when playing &lt;span class="math"&gt;\(\text{move}\)&lt;/span&gt;
+&lt;/p&gt;
+&lt;div class="math"&gt;$$
+\Delta\text{total_overlap}_p(\text{move}) = \text{openness}_p(\text{move}) - \text{overlap}_p(\text{move}).
+$$&lt;/div&gt;
+&lt;p&gt;
+The hard AI's value approximation can now be rewritten as
+&lt;/p&gt;
+&lt;div class="math"&gt;$$
+\begin{split}
+\text{hard}(\text{move}) 
+&amp;amp; = \text{centrality}(\text{move}) \\
+&amp;amp; \quad + \big[ \Delta \text{score}_2(\text{move}) + \Delta \text{score}_1(\text{move}) \big]\\
+&amp;amp; \quad + \big[ \Delta\text{total_overlap}_2(\text{move}) + \Delta\text{total_overlap}_1(\text{move}) \big]
+.
+\end{split}
+$$&lt;/div&gt;
+&lt;p&gt;
+The two first two terms after &lt;span class="math"&gt;\(\text{centrality}\)&lt;/span&gt; encourage exploitation of the current game state while the last two terms encourage exploration of the board.&lt;br&gt;
+The Medium AI's value is the average of the easy and hard opponent's values; i.e., 
+&lt;/p&gt;
+&lt;div class="math"&gt;$$
+\text{medium}(\text{move}) =
+0.5\cdot \text{hard}(\text{move})  + 
+0.5\cdot \text{easy}(\text{move}) .
+$$&lt;/div&gt;
+&lt;h1&gt;Prototype&lt;/h1&gt;
+&lt;h1 style="text-align: center; letter-spacing: 1px; font-size: 20px;"&gt; &lt;a href="https://mmotoki.shinyapps.io/cell_division/"&gt; Play the Prototype &lt;span class="glyphicon glyphicon-play"&gt;&lt;/span&gt; &lt;/a&gt; &lt;/h1&gt;
+
+&lt;h2&gt;Adaptive AI&lt;/h2&gt;
+&lt;p&gt;The prototype implementation has an adaptive opponent that plays whose difficulty is affected by the win/lose rate. The adaptive AI has a skill level which determines the overall strategy in a game.  The Adaptive AI adapts to your play in two ways: &lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;It adapts to your play within a game.&lt;/li&gt;
+&lt;li&gt;It adapts its entire strategy after a game.&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;The adaptive AI uses a convex combination of the easy and hard AI's value approximation.&lt;br&gt;
+&lt;/p&gt;
+&lt;div class="math"&gt;$$
+\text{adaptive}(\text{move}) 
+= \text{skill}' \cdot \text{hard}(\text{move})
++ (1 - \text{skill}') \cdot  \text{easy}(\text{move}),
+$$&lt;/div&gt;
+&lt;p&gt;
+where &lt;span class="math"&gt;\(\text{skill}'\)&lt;/span&gt; is modified (within-game) skill parameter&lt;/p&gt;
+&lt;div class="math"&gt;$$
+\text{skill}' = \text{skill} + 0.01\cdot ( \text{your_score} - \text{AI_score} ).
+$$&lt;/div&gt;
+&lt;p&gt;
+Notice that if you are winning, then the effective skill of the AI goes up.  Moreover, if you are winning by a lot then the effective skill will go up by a lot.  &lt;/p&gt;
+&lt;p&gt;At the end of the game, the AI's skill level is updated according to the following formula:
+&lt;/p&gt;
+&lt;div class="math"&gt;$$
+\text{skill} \leftarrow \text{skill} + 0.01\cdot  \frac{ \text{your_score} - \text{AI_score}  }{1 + \mathrm{I} \{ \text{your_score} &amp;lt; \text{AI_score} \}  }.
+$$&lt;/div&gt;
+&lt;p&gt;
+Hence, if you beat the AI, then its skill goes up by the score difference; if you lose, then its skill goes down in proportion to half the absolute score difference.  If the game is a draw, then the skill level stays the same.&lt;/p&gt;
+&lt;p&gt;Ignoring within-game adaptivity, when &lt;span class="math"&gt;\(\text{skill}=0\)&lt;/span&gt; you are essentially playing agAInst the easy AI, when &lt;span class="math"&gt;\(\text{skill}=1\)&lt;/span&gt; you are playing agAInst the hard AI, and when &lt;span class="math"&gt;\(\text{skill}=0.5\)&lt;/span&gt; you are playing agAInst the medium AI.&lt;/p&gt;
+&lt;h2&gt;Alternative Game Boards and Mechanics&lt;/h2&gt;
+&lt;p&gt;The prototype implementation has different layouts and game mechanics. In the break and flask layouts, gravity applies to moves played (cells fall to the lowest open row).&lt;/p&gt;
+&lt;h1&gt;Future Add-Ons&lt;/h1&gt;
+&lt;p&gt;There are many variations on this game that can be played.  What follows is an unordered list of possible improvements/variants of the game.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;Stem Cells&lt;/strong&gt;: Undifferentiated cell that can become partially colored once fully surrounded.  If fully surrounded, the center of the stem cells can also be colored, resulting in a cell with a total of nine divisions.  &lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;Time Limit&lt;/strong&gt;: Getting the first move can be an advantage, especially on the medium board configuration.  To mitigate this, the game can stop a few rounds early.  For example, in the medium board configuration, if the game stops one round early then both players will get have an equal number o moves.  &lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;Attack/Defense Moves&lt;/strong&gt;: Give players access to the strong acid HCl and the strong base NaOH.  Each acid/base will destroy the other player's cells while leaving their cells intact.  Similarly, isopropyl alcohol can be played to destroy any cell.  Let players enforce their cells with cell walls (or membranes) to guard agAInst HCl/NaOH/Alcohol attacks. &lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;Triangular and Hexagonal Grids&lt;/strong&gt;: Storing a board defined over these grids can be done by modifying what it means to be adjacent to another cell.  Thus, boards can be stored and analyzed in a similar way to the rectangular grid.  The approximations that the AI opponents use will most likely generalize well to these types of grids. &lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;script type="text/javascript"&gt;if (!document.getElementById('mathjaxscript_pelican_#%@#$@#')) {
+    var align = "center",
+        indent = "0em",
+        linebreak = "false";
+
+    if (false) {
+        align = (screen.width &lt; 768) ? "left" : align;
+        indent = (screen.width &lt; 768) ? "0em" : indent;
+        linebreak = (screen.width &lt; 768) ? 'true' : linebreak;
+    }
+
+    var mathjaxscript = document.createElement('script');
+    mathjaxscript.id = 'mathjaxscript_pelican_#%@#$@#';
+    mathjaxscript.type = 'text/javascript';
+    mathjaxscript.src = 'https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.3/latest.js?config=TeX-AMS-MML_HTMLorMML';
+    mathjaxscript[(window.opera ? "innerHTML" : "text")] =
+        "MathJax.Hub.Config({" +
+        "    config: ['MMLorHTML.js']," +
+        "    TeX: { extensions: ['AMSmath.js','AMSsymbols.js','noErrors.js','noUndefined.js'], equationNumbers: { autoNumber: 'AMS' } }," +
+        "    jax: ['input/TeX','input/MathML','output/HTML-CSS']," +
+        "    extensions: ['tex2jax.js','mml2jax.js','MathMenu.js','MathZoom.js']," +
+        "    displayAlign: '"+ align +"'," +
+        "    displayIndent: '"+ indent +"'," +
+        "    showMathMenu: true," +
+        "    messageStyle: 'normal'," +
+        "    tex2jax: { " +
+        "        inlineMath: [ ['\\\\(','\\\\)'] ], " +
+        "        displayMath: [ ['$$','$$'] ]," +
+        "        processEscapes: true," +
+        "        preview: 'TeX'," +
+        "    }, " +
+        "    'HTML-CSS': { " +
+        "        styles: { '.MathJax_Display, .MathJax .mo, .MathJax .mi, .MathJax .mn': {color: 'inherit ! important'} }," +
+        "        linebreaks: { automatic: "+ linebreak +", width: '90% container' }," +
+        "    }, " +
+        "}); " +
+        "if ('default' !== 'default') {" +
+            "MathJax.Hub.Register.StartupHook('HTML-CSS Jax Ready',function () {" +
+                "var VARIANT = MathJax.OutputJax['HTML-CSS'].FONTDATA.VARIANT;" +
+                "VARIANT['normal'].fonts.unshift('MathJax_default');" +
+                "VARIANT['bold'].fonts.unshift('MathJax_default-bold');" +
+                "VARIANT['italic'].fonts.unshift('MathJax_default-italic');" +
+                "VARIANT['-tex-mathit'].fonts.unshift('MathJax_default-italic');" +
+            "});" +
+            "MathJax.Hub.Register.StartupHook('SVG Jax Ready',function () {" +
+                "var VARIANT = MathJax.OutputJax.SVG.FONTDATA.VARIANT;" +
+                "VARIANT['normal'].fonts.unshift('MathJax_default');" +
+                "VARIANT['bold'].fonts.unshift('MathJax_default-bold');" +
+                "VARIANT['italic'].fonts.unshift('MathJax_default-italic');" +
+                "VARIANT['-tex-mathit'].fonts.unshift('MathJax_default-italic');" +
+            "});" +
+        "}";
+    (document.body || document.getElementsByTagName('head')[0]).appendChild(mathjaxscript);
+}
+&lt;/script&gt;</content><category term="Artificial Intelligence"></category><category term="Games"></category><category term="Cell-Division"></category></entry></feed>

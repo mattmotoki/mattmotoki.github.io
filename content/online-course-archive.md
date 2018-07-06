@@ -54,7 +54,7 @@ This is an archive of online courses that I have taken and certificates that I h
 
 
 
-<h2 id="policy-analysis-using-interrupted-time-series">Policy Analysis using Interrupted Time Series &nbsp;<b><a href="#toc">&#8593;</a></b></h2>  
+<h2 id="policy-analysis-using-interrupted-time-series">Policy Analysis using Interrupted Time Series <b><a href="#toc">&#8593;</a></b></h2>  
 
 * **Institution**: UBCx
 * **Date Completed**:  February 21, 2017
@@ -64,7 +64,7 @@ This is an archive of online courses that I have taken and certificates that I h
 
 
 
-<h2 id="the-analytics-edge">The Analytics Edge &nbsp;<b><a href="#toc">&#8593;</a></b></h2>  
+<h2 id="the-analytics-edge">The Analytics Edge <b><a href="#toc">&#8593;</a></b></h2>  
 
 * **Institution**: MITx
 * **Date Completed**:  May 28, 2015
@@ -78,7 +78,7 @@ This course was one of the first online courses that I ever took. It was taught 
 
 
 
-<h2 id="artificial-intelligence">Artificial Intelligence &nbsp;<b><a href="#toc">&#8593;</a></b></h2>  
+<h2 id="artificial-intelligence">Artificial Intelligence <b><a href="#toc">&#8593;</a></b></h2>  
 
 * **Institution**: BerkeleyX
 * **Date Completed**:  May 4th, 2015
@@ -98,7 +98,7 @@ This course was taught by Dan Klein and Pieter Abbeel who are both professors at
 
 
 
-<h2 id="scalable-machine-learning">Scalable Machine Learning &nbsp;<b><a href="#toc">&#8593;</a></b></h2> 
+<h2 id="scalable-machine-learning">Scalable Machine Learning <b><a href="#toc">&#8593;</a></b></h2> 
 
 * **Institution**: BerkeleyX
 * **Date Completed**: August 06, 2015
@@ -111,7 +111,7 @@ This was the second course in a series of courses that I took on Apache Spark an
 
 
 
-<h2 id="introduction-to-big-data-with-apache-spark">Introduction to Big Data with Apache Spark &nbsp;<b><a href="#toc">&#8593;</a></b></h2> 
+<h2 id="introduction-to-big-data-with-apache-spark">Introduction to Big Data with Apache Spark <b><a href="#toc">&#8593;</a></b></h2> 
 </h2> 
 
 
@@ -133,7 +133,7 @@ This was the first course in a series of courses that I took on Apache Spark and
 
 
 
-<h2 id="html5-part-2">HTML5 Part 2: Advanced Techniques for Designing HTML5 Apps &nbsp;<b><a href="#toc">&#8593;</a></b></h2> 
+<h2 id="html5-part-2">HTML5 Part 2: Advanced Techniques for Designing HTML5 Apps <b><a href="#toc">&#8593;</a></b></h2> 
 
 
 * **Institution**: W3Cx
@@ -144,7 +144,7 @@ This was the first course in a series of courses that I took on Apache Spark and
 
 
 
-<h2 id="advanced-css-concepts">Advanced CSS Concepts &nbsp;<b><a href="#toc">&#8593;</a></b></h2> 
+<h2 id="advanced-css-concepts">Advanced CSS Concepts <b><a href="#toc">&#8593;</a></b></h2> 
 
 
 * **Institution**: Microsoft
@@ -155,7 +155,7 @@ This was the first course in a series of courses that I took on Apache Spark and
 
 
 
-<h2 id="html5-part-1">HTML5 Part 1: HTML5 Coding Essentials and Best Practices &nbsp;<b><a href="#toc">&#8593;</a></b></h2> 
+<h2 id="html5-part-1">HTML5 Part 1: HTML5 Coding Essentials and Best Practices <b><a href="#toc">&#8593;</a></b></h2> 
 
 
 * **Institution**: W3Cx
@@ -167,7 +167,7 @@ This was the first course in a series of courses that I took on Apache Spark and
 
 
 
-<h2 id="html5-introduction">HTML5 Introduction &nbsp;<b><a href="#toc">&#8593;</a></b></h2> 
+<h2 id="html5-introduction">HTML5 Introduction <b><a href="#toc">&#8593;</a></b></h2> 
 
 
 * **Institution**: W3Cx
@@ -178,14 +178,13 @@ This was the first course in a series of courses that I took on Apache Spark and
 
 
 
-
 <br>
 <hr>
 <h1 id="miscellaneous">Miscellaneous</h1> 
 
 
 
-<h2 id="becoming-an-entrepreneur">MIT Launch X – Becoming an Entrepreneur &nbsp;<b><a href="#toc">&#8593;</a></b></h2> 
+<h2 id="becoming-an-entrepreneur">MIT Launch X – Becoming an Entrepreneur <b><a href="#toc">&#8593;</a></b></h2> 
 
 
 * **Institution**: MITx
@@ -197,7 +196,7 @@ This was the first course in a series of courses that I took on Apache Spark and
 
 
 
-<h2 id="video-game-design-history">Video Game Design History &nbsp;<b><a href="#toc">&#8593;</a></b></h2> 
+<h2 id="video-game-design-history">Video Game Design History <b><a href="#toc">&#8593;</a></b></h2> 
 
 * **Institution**: RITx
 * **Date Completed**: February 21, 2017
