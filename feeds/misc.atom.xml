@@ -426,7 +426,8 @@ We found that the Bayesian target-encoded features outperformed the built-in Lig
 &lt;a href="https://courses.edx.org/courses/course-v1:RITx+GAME101x+3T2016/898702cdaee44383bab13784a4a13bac/"&gt;Course Website&lt;/a&gt;, 
 &lt;a href="https://courses.edx.org/certificates/85bddd3a20cb4fdfab4c5f7c52586097"&gt;Certificate of Achievement&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;</content><category term="Online Courses"></category><category term="Big Data"></category><category term="Machine Learning"></category><category term="Data Science"></category><category term="Artificial Intelligence"></category><category term="Web Development"></category></entry><entry><title>Master's Thesis</title><link href="/masters-thesis.html" rel="alternate"></link><published>2018-07-01T22:47:00-10:00</published><updated>2018-07-01T22:47:00-10:00</updated><author><name>Matt Motoki</name></author><id>tag:None,2018-07-01:/masters-thesis.html</id><summary type="html">&lt;p&gt;Master's Thesis&lt;/p&gt;</summary><content type="html">&lt;h1&gt;Master's Thesis Summary&lt;/h1&gt;
-&lt;p&gt;&lt;a href="./pdfs/matt-motoki-masters-thesis.pdf"&gt; Read the full thesis here.&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href="./pdfs/matt-motoki-masters-thesis.pdf"&gt; Read the full thesis here.&lt;/a&gt;
+&lt;a href="./pdfs/matt-motoki-resume.pdf"&gt; Resume.&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;My Master’s thesis was on approximate dynamic programming methods for control of a water heater.  &lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;Problem has simple but non-trivial non-Markovian dynamics. &lt;/li&gt;
