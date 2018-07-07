@@ -44,7 +44,7 @@ This is an archive of Kaggle competitions that I have done.
 * **Links:** 
 [Competition Website](https://www.kaggle.com/c/santander-customer-satisfaction)
 
-Predicted customer satisfaction for the multinational bank Santander.  The formal objective was to minimize the AUROC (area under the receiver operator curve) of the probability that a customer is dissatisfied with service.   Customized feature engineering appealed to statistical patterns in the anonymized data to create robust low-dimensional features.  These features helped to both increase accuracy and decrease variance in the model predictions.  The final model ranked in the top 0.2% and consisted of an ensemble of three xgboost models trained with different feature groupings and a stacked Extra Trees model.   
+Predicted customer satisfaction for the multinational bank Santander.  The formal objective was to minimize the AUROC (area under the receiver operator curve) of the probability that a customer is dissatisfied with service.   Customized feature engineering appealed to statistical patterns in the anonymized data to create robust low-dimensional features.  These features helped to both increase accuracy and decrease variance in the model predictions.  The final model ranked in the top 0.2% and consisted of an ensemble of three XGBoost models trained with different feature groupings and a stacked Extra Trees model.   
 
 
 
@@ -86,7 +86,7 @@ Applied forecasting techniques to predict customer reorders for grocery delivery
 * **Links:** 
 [Competition Website](https://www.kaggle.com/c/porto-seguro-safe-driver-prediction)
 
-Used robust modeling techniques to predict the probability of an insurance claim from noisy anonymized data.  Multiple implementations of gradient boosted decision tree libraries (including Xgboost, Catboost, and LightGBM) were blended to reduce the variance in predictions.  The evaluation metric was the Normalized Gini Coefficient.  My final submission ranked in the top 1.1%.  
+Used robust modeling techniques to predict the probability of an insurance claim from noisy anonymized data.  Multiple implementations of gradient boosted decision tree libraries (including XGBoost, CatBoost, and LightGBM) were blended to reduce the variance in predictions.  The evaluation metric was the Normalized Gini Coefficient.  My final submission ranked in the top 1.1%.  
 
 
 
@@ -99,7 +99,7 @@ Used robust modeling techniques to predict the probability of an insurance claim
 * **Links:** 
 [Competition Website](https://www.kaggle.com/c/quora-question-pairs)
 
-Partnered with a local data scientist to apply natural language processing (NLP) techniques to detect duplicate questions for the crowdsourcing question and answer company Quora. The metric used in this competition was the log loss and the data for the competition consisted of 300,000+ question pairs.  We constructed sentence features from variants of TF-IDF weightings, part-of-speech tags and string and word distances.  We created ensembles of recurrent neural networks (in particular LSTM) trained on learned and precomputed word embeddings.  We ranked in the top 2.9% using a blend of gradient boosted decision trees and recurrent neural networks. 
+Partnered with a Hawaii-based data scientist to apply natural language processing (NLP) techniques to detect duplicate questions for the crowdsourcing question and answer company Quora. The metric used in this competition was the log loss and the data for the competition consisted of 300,000+ question pairs.  We constructed sentence features from variants of TF-IDF weightings, part-of-speech tags, and string and word distances.  We created ensembles of recurrent neural networks (in particular LSTM) trained on learned and precomputed word embeddings.  We ranked in the top 2.9% using a blend of gradient boosted decision trees and recurrent neural networks. 
 
 
 
@@ -112,7 +112,7 @@ Partnered with a local data scientist to apply natural language processing (NLP)
 * **Links:** 
 [Competition Website](https://www.kaggle.com/c/favorita-grocery-sales-forecasting)
 
-Created grocery sales forecast for a 16day horizon.  Feature engineering was an important part the final solution; features included lagged sales aggregated over multiple windows.   Features were fed into LightGBM for fast training and prediction.  Models were evaluated using the Normalized Weighted Root Mean Squared Logarithmic Error.  My final submission ranked in the top 4.5%.  
+Created grocery sales forecast for a 16day horizon.  Feature engineering was an important part of the final solution; features included lagged sales aggregated over multiple windows.   Features were fed into LightGBM for fast training and prediction.  Models were evaluated using the Normalized Weighted Root Mean Squared Logarithmic Error.  My final submission ranked in the top 4.5%.  
 
  
 
@@ -143,9 +143,9 @@ Fine-tuned many of the current state-of-the-art neural network architectures to 
 * Almost 9 million products  
 * More than 15 million images at 180x180 resolution 
 * More than 5000 categories 
-* Over 62 GB of bson files (binary json) 
+* Over 62 GB of BSON files (binary JSON) 
 
-My final solution which was an ensemble of various DenseNet, Resnet, Inception, and Xception architectures ranked in the top 3.8%.  
+My final solution, which was an ensemble of various DenseNet, Resnet, Inception, and Xception architectures, ranked in the top 3.8%
 
 
 
@@ -172,7 +172,7 @@ Used deep learning to create high-quality image masks for the online car dealers
 [Competition Website](https://www.kaggle.com/c/grupo-bimbo-inventory-demand)
 
 
-Partnered with a local data analyst to provide a two week ahead forecast for client-product sales of the multinational company Grupo Bimbo. The metric used in this competition was the log RMSE and the data for the competition consisted of nearly one million clients each with a few thousand products to order. Our feature engineering consisted of mapping high cardinality categorical variables into a more readily usable form. The final submission ranked in the top 11.7%. 
+Partnered with a Hawaii-based data scientist to provide a two-week ahead forecast for client-product sales of the multinational company Grupo Bimbo. The metric used in this competition was the log RMSE and the data for the competition consisted of nearly one million clients each with a few thousand products to order. Our feature engineering consisted of mapping high cardinality categorical variables into a more readily usable form. The final submission ranked in the top 11.7%. 
 
 
 
@@ -185,7 +185,7 @@ Partnered with a local data analyst to provide a two week ahead forecast for cli
 * **Links:** 
 [Competition Website](https://www.kaggle.com/c/santa-gift-matching)
 
-Teamed up with a Kaggle Grandmaster to find a near optimal solution to a large scale nonlinear optimization problem.  The task was to assign gifts to children, each assignment has a gift happiness and child happiness, the objective was to maximize the cube of the total gift happiness plus the cube of the total child happiness, the constraints were essentially linear.   The objective function—while nonlinear—is well modeled by a linear approximation.  The linearized problem was framed as a max-flow min-cost problem and solved exactly using Google’s OR-Tools.   The solution was then fine tuned using a greedy heuristic implemented in plain C for speed. Our final submission ranked in the top 20.6%. 
+Teamed up with a Kaggle Grandmaster to find a near optimal solution to a large-scale nonlinear optimization problem.  The task was to assign gifts to children.  Each assignment has a gift happiness and child happiness.  The objective was to maximize the cube of the total gift happiness plus the cube of the total child happiness. The constraints of the problem were essentially linear.   The objective function—while nonlinear—is well modeled by a linear approximation.  The linearized problem was framed as a max-flow min-cost problem and solved exactly using Google’s OR-Tools.   The solution was then fine-tuned using a greedy heuristic implemented in plain C for speed. Our final submission ranked in the top 20.6%. 
 
  
 

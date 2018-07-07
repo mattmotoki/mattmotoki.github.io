@@ -5,7 +5,7 @@ Category: misc
 Tags: Optimization, Reinforcement Learning
 Slug: masters-thesis
 Authors: Matt Motoki
-Illustration: adp-for-water-heating.png
+Illustration: StockSnap_KSSAO47REJ.jpg
 Summary: Master's Thesis
 Status: published
 
@@ -15,7 +15,7 @@ Status: published
 My Master’s thesis was on approximate dynamic programming methods for control of a water heater.  
 
 * Problem has simple but non-trivial non-Markovian dynamics. 
-* Solved a simplified problem and proved that it's solution is at least as good the current state-of-the-art methods.
+* Solved a simplified problem and proved that its solution is at least as good the current state-of-the-art methods.
 * Developed an aggregation scheme to handle continuous state-space and showed that it is unbiased and has minimal variance. 
 * Approximated a solution to the full problem and showed that the cost achieved was near to the theoretical prescient lower bound.
 * Applied optimized water heaters for derivative applications such as load shifting. 

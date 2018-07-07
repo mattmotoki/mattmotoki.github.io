@@ -4,7 +4,7 @@
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <meta name="description" content="Play the Game Introduction Cell Division is a strategy-based board game. Player take turns placing their cells. A player&#39;s cells divide when they connect with each other; vertical, horizontal and...">
+        <meta name="description" content="Play the Game Introduction Cell Division is a strategy-based board game. Players take turns placing their cells. A player&#39;s cells divide when they connect with each other; vertical, horizontal and...">
         <meta name="keywords" content="Artificial Intelligence, Cell-Division, Games">
         <link rel="icon" href="/favicon.ico">
 
@@ -89,8 +89,8 @@
 
 <p><br> </p>
 <h1>Introduction</h1>
-<p>Cell Division is a strategy-based board game. Player take turns placing their cells. A player's cells divide when they connect with each other; vertical, horizontal and diagonal connections are allowed.  Your score is equal to the total number of cell that you have on the board.  The game ends when the board is full and the winner is the player with the most cells. </p>
-<p>Cell Division has a few properties that make it a great test bed for reinforcement learning algorithms</p>
+<p>Cell Division is a strategy-based board game. Players take turns placing their cells. A player's cells divide when they connect with each other; vertical, horizontal and diagonal connections are allowed.  Your score is equal to the total number of cells that you have on the board.  The game ends when the board is full and the winner is the player with the most cells. </p>
+<p>Cell Division has a few properties that make it a great test bed for reinforcement learning algorithms:</p>
 <ul>
 <li>
 <p>Scoring mechanism is visually intuitive. </p>
@@ -102,10 +102,15 @@
 <p>Interesting long-term and short-term strategies. </p>
 </li>
 <li>
-<p>Easily generalizes to multi-agent games</p>
+<p>Easily generalizes to multi-agent games.</p>
 </li>
 </ul>
-<p>The current implementation of the game is written in plAIn HTML, CSS and Javascript.  The code is avAIlable <a href="https://github.com/mattmotoki/cell-division">here</a>.  </p>
+<p>The current implementation of the game is written in plain HTML, CSS and Javascript. </p>
+<h1 style="text-align: center; letter-spacing: 1px; font-size: 20px;"> <a href="https://github.com/mattmotoki/cell-division"> 
+ The code is available here. </a> </h1>
+
+<!-- The code is available <a href="https://github.com/mattmotoki/cell-division">here</a>.   -->
+
 <h1>Implementation</h1>
 <p>In the production implementation of the game, there are three fixed-difficulty AI opponents.  AI opponents are designed to be completely deterministic so that games are reproducible.  </p>
 <p>The AI opponents implement a greedy strategy with a strong base heuristic. The quality of the heuristic determines the difficulty of the opponent.  Since the objective is to maximize your score, it makes sense to approximate the long term benefit of a move with its immediate increase in score.  It turns out that the increase in score can be decomposed in the a function of the following four variables: </p>
@@ -123,23 +128,22 @@
 &amp;\quad + 2\cdot\big[  \text{overlap}_p(\text{move})  - \text{extensions}_p(\text{move}) \big],
 \end{split}$$</div>
 <p>
-where <span class="math">\(p\)</span> denotes the player playing the move.  By convention, define the first player (<span class="math">\(p=1\)</span>) to be you and the second player (<span class="math">\(p=2\)</span>) to be the AI<br>
-One benefit of this decomposition is that each of the variables can be updated in an online fashion.   </p>
+where <span class="math">\(p\)</span> denotes the player playing the move.  By convention, define the first player (<span class="math">\(p=1\)</span>) to be you and the second player (<span class="math">\(p=2\)</span>) to be the AI.  One benefit of this decomposition is that each of the variables can be updated in an online fashion.   </p>
 <p>Additional player-independent variables that have intuitive value are:</p>
 <ul>
 <li><span class="math">\(\text{openness}(\text{move})\)</span> is move number of open positions adjacent to a move,</li>
 <li><span class="math">\(\text{centrality}(\text{move})\)</span> measures how close a move is to the center of the board.</li>
 </ul>
 <p>To calculate a value of a move, the AI opponent uses a weighted sum of the above variables.</p>
-<h2>Easy, Medium and Hard Opponents</h2>
-<p>Cell Addition is a zero sum game and so your gAIn is the same as the AI's loss.  Thus, when designing the AI, it will be beneficial to take this into account. </p>
+<h2>Easy, Medium, and Hard Opponents</h2>
+<p>Cell Addition is a zero sum game and so your gain is the same as the AI's loss.  Thus, when designing the AI, it will be beneficial to take this into account. </p>
 <p>The easy AI's value function is simply
 </p>
 <div class="math">$$
 \text{easy}(\text{move}) = \text{centrality}(\text{move});
 $$</div>
 <p>
-that is, the easy AI just places it's move in the center most position of the board with ties broken arbitrarily.</p>
+that is, the easy AI just places its move in the center-most position of the board with ties broken arbitrarily.</p>
 <p>The hard AI's value function is 
 </p>
 <div class="math">$$
@@ -182,7 +186,7 @@ $$</div>
 <h1 style="text-align: center; letter-spacing: 1px; font-size: 20px;"> <a href="https://mmotoki.shinyapps.io/cell_division/"> Play the Prototype <span class="glyphicon glyphicon-play"></span> </a> </h1>
 
 <h2>Adaptive AI</h2>
-<p>The prototype implementation has an adaptive opponent that plays whose difficulty is affected by the win/lose rate. The adaptive AI has a skill level which determines the overall strategy in a game.  The Adaptive AI adapts to your play in two ways: </p>
+<p>The prototype implementation has an adaptive opponent whose difficulty is affected by the win/lose rate. The adaptive AI has a skill level which determines the overall strategy in a game.  The Adaptive AI adapts to your play in two ways: </p>
 <ol>
 <li>It adapts to your play within a game.</li>
 <li>It adapts its entire strategy after a game.</li>
@@ -195,7 +199,7 @@ $$</div>
 + (1 - \text{skill}') \cdot  \text{easy}(\text{move}),
 $$</div>
 <p>
-where <span class="math">\(\text{skill}'\)</span> is modified (within-game) skill parameter</p>
+where <span class="math">\(\text{skill}'\)</span> is the modified (within-game) skill parameter</p>
 <div class="math">$$
 \text{skill}' = \text{skill} + 0.01\cdot ( \text{your_score} - \text{AI_score} ).
 $$</div>
@@ -208,20 +212,20 @@ Notice that if you are winning, then the effective skill of the AI goes up.  Mor
 $$</div>
 <p>
 Hence, if you beat the AI, then its skill goes up by the score difference; if you lose, then its skill goes down in proportion to half the absolute score difference.  If the game is a draw, then the skill level stays the same.</p>
-<p>Ignoring within-game adaptivity, when <span class="math">\(\text{skill}=0\)</span> you are essentially playing agAInst the easy AI, when <span class="math">\(\text{skill}=1\)</span> you are playing agAInst the hard AI, and when <span class="math">\(\text{skill}=0.5\)</span> you are playing agAInst the medium AI.</p>
+<p>Ignoring within-game adaptivity, when <span class="math">\(\text{skill}=0\)</span> you are essentially playing against the easy AI, when <span class="math">\(\text{skill}=1\)</span> you are playing against the hard AI, and when <span class="math">\(\text{skill}=0.5\)</span> you are playing against the medium AI.</p>
 <h2>Alternative Game Boards and Mechanics</h2>
 <p>The prototype implementation has different layouts and game mechanics. In the break and flask layouts, gravity applies to moves played (cells fall to the lowest open row).</p>
 <h1>Future Add-Ons</h1>
 <p>There are many variations on this game that can be played.  What follows is an unordered list of possible improvements/variants of the game.</p>
 <ul>
 <li>
-<p><strong>Stem Cells</strong>: Undifferentiated cell that can become partially colored once fully surrounded.  If fully surrounded, the center of the stem cells can also be colored, resulting in a cell with a total of nine divisions.  </p>
+<p><strong>Stem Cells</strong>: Undifferentiated cells that can become partially colored once fully surrounded.  If fully surrounded, the center of the stem cells can also be colored, resulting in a cell with a total of nine divisions.  </p>
 </li>
 <li>
-<p><strong>Time Limit</strong>: Getting the first move can be an advantage, especially on the medium board configuration.  To mitigate this, the game can stop a few rounds early.  For example, in the medium board configuration, if the game stops one round early then both players will get have an equal number o moves.  </p>
+<p><strong>Time Limit</strong>: Getting the first move can be an advantage, especially on the medium board configuration.  To mitigate this, the game can stop a few rounds early.  For example, in the medium board configuration, if the game stops one round early, then both players will have an equal number of moves.  </p>
 </li>
 <li>
-<p><strong>Attack/Defense Moves</strong>: Give players access to the strong acid HCl and the strong base NaOH.  Each acid/base will destroy the other player's cells while leaving their cells intact.  Similarly, isopropyl alcohol can be played to destroy any cell.  Let players enforce their cells with cell walls (or membranes) to guard agAInst HCl/NaOH/Alcohol attacks. </p>
+<p><strong>Attack/Defense Moves</strong>: Give players access to the strong acid HCl and the strong base NaOH.  Each acid/base will destroy the other player's cells while leaving their cells intact.  Similarly, isopropyl alcohol can be played to destroy any cell.  Let players enforce their cells with cell walls (or membranes) to guard against HCl/NaOH/alcohol attacks. </p>
 </li>
 <li>
 <p><strong>Triangular and Hexagonal Grids</strong>: Storing a board defined over these grids can be done by modifying what it means to be adjacent to another cell.  Thus, boards can be stored and analyzed in a similar way to the rectangular grid.  The approximations that the AI opponents use will most likely generalize well to these types of grids. </p>

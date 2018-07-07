@@ -175,7 +175,7 @@ We found that the Bayesian target-encoded features outperformed the built-in Lig
 &lt;li&gt;&lt;strong&gt;Links:&lt;/strong&gt; 
 &lt;a href="https://www.kaggle.com/c/santander-customer-satisfaction"&gt;Competition Website&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
-&lt;p&gt;Predicted customer satisfaction for the multinational bank Santander.  The formal objective was to minimize the AUROC (area under the receiver operator curve) of the probability that a customer is dissatisfied with service.   Customized feature engineering appealed to statistical patterns in the anonymized data to create robust low-dimensional features.  These features helped to both increase accuracy and decrease variance in the model predictions.  The final model ranked in the top 0.2% and consisted of an ensemble of three xgboost models trained with different feature groupings and a stacked Extra Trees model.   &lt;/p&gt;
+&lt;p&gt;Predicted customer satisfaction for the multinational bank Santander.  The formal objective was to minimize the AUROC (area under the receiver operator curve) of the probability that a customer is dissatisfied with service.   Customized feature engineering appealed to statistical patterns in the anonymized data to create robust low-dimensional features.  These features helped to both increase accuracy and decrease variance in the model predictions.  The final model ranked in the top 0.2% and consisted of an ensemble of three XGBoost models trained with different feature groupings and a stacked Extra Trees model.   &lt;/p&gt;
 &lt;h2 id=toxic-comment-classification-challenge&gt;Toxic Comment Classification Challenge &lt;b&gt;&lt;a href="#toc"&gt;&amp;#8593;&lt;/a&gt;&lt;/b&gt;&lt;/h2&gt;
 
 &lt;ul&gt;
@@ -208,7 +208,7 @@ We found that the Bayesian target-encoded features outperformed the built-in Lig
 &lt;li&gt;&lt;strong&gt;Links:&lt;/strong&gt; 
 &lt;a href="https://www.kaggle.com/c/porto-seguro-safe-driver-prediction"&gt;Competition Website&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
-&lt;p&gt;Used robust modeling techniques to predict the probability of an insurance claim from noisy anonymized data.  Multiple implementations of gradient boosted decision tree libraries (including Xgboost, Catboost, and LightGBM) were blended to reduce the variance in predictions.  The evaluation metric was the Normalized Gini Coefficient.  My final submission ranked in the top 1.1%.  &lt;/p&gt;
+&lt;p&gt;Used robust modeling techniques to predict the probability of an insurance claim from noisy anonymized data.  Multiple implementations of gradient boosted decision tree libraries (including XGBoost, CatBoost, and LightGBM) were blended to reduce the variance in predictions.  The evaluation metric was the Normalized Gini Coefficient.  My final submission ranked in the top 1.1%.  &lt;/p&gt;
 &lt;h2 id=quora-question-pairs&gt;Quora Question Pairs &lt;b&gt;&lt;a href="#toc"&gt;&amp;#8593;&lt;/a&gt;&lt;/b&gt;&lt;/h2&gt;
 
 &lt;ul&gt;
@@ -218,7 +218,7 @@ We found that the Bayesian target-encoded features outperformed the built-in Lig
 &lt;li&gt;&lt;strong&gt;Links:&lt;/strong&gt; 
 &lt;a href="https://www.kaggle.com/c/quora-question-pairs"&gt;Competition Website&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
-&lt;p&gt;Partnered with a local data scientist to apply natural language processing (NLP) techniques to detect duplicate questions for the crowdsourcing question and answer company Quora. The metric used in this competition was the log loss and the data for the competition consisted of 300,000+ question pairs.  We constructed sentence features from variants of TF-IDF weightings, part-of-speech tags and string and word distances.  We created ensembles of recurrent neural networks (in particular LSTM) trained on learned and precomputed word embeddings.  We ranked in the top 2.9% using a blend of gradient boosted decision trees and recurrent neural networks. &lt;/p&gt;
+&lt;p&gt;Partnered with a Hawaii-based data scientist to apply natural language processing (NLP) techniques to detect duplicate questions for the crowdsourcing question and answer company Quora. The metric used in this competition was the log loss and the data for the competition consisted of 300,000+ question pairs.  We constructed sentence features from variants of TF-IDF weightings, part-of-speech tags, and string and word distances.  We created ensembles of recurrent neural networks (in particular LSTM) trained on learned and precomputed word embeddings.  We ranked in the top 2.9% using a blend of gradient boosted decision trees and recurrent neural networks. &lt;/p&gt;
 &lt;h2 id=corporación-favorita-grocery-sales-forecasting&gt;Corporación Favorita Grocery Sales Forecasting &lt;b&gt;&lt;a href="#toc"&gt;&amp;#8593;&lt;/a&gt;&lt;/b&gt;&lt;/h2&gt;
 
 &lt;ul&gt;
@@ -228,7 +228,7 @@ We found that the Bayesian target-encoded features outperformed the built-in Lig
 &lt;li&gt;&lt;strong&gt;Links:&lt;/strong&gt; 
 &lt;a href="https://www.kaggle.com/c/favorita-grocery-sales-forecasting"&gt;Competition Website&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
-&lt;p&gt;Created grocery sales forecast for a 16day horizon.  Feature engineering was an important part the final solution; features included lagged sales aggregated over multiple windows.   Features were fed into LightGBM for fast training and prediction.  Models were evaluated using the Normalized Weighted Root Mean Squared Logarithmic Error.  My final submission ranked in the top 4.5%.  &lt;/p&gt;
+&lt;p&gt;Created grocery sales forecast for a 16day horizon.  Feature engineering was an important part of the final solution; features included lagged sales aggregated over multiple windows.   Features were fed into LightGBM for fast training and prediction.  Models were evaluated using the Normalized Weighted Root Mean Squared Logarithmic Error.  My final submission ranked in the top 4.5%.  &lt;/p&gt;
 &lt;p&gt;&lt;h2 id=facebook-v-predicting-check-ins&gt;Facebook V: Predicting Check Ins &lt;b&gt;&lt;a href="#toc"&gt;&amp;#8593;&lt;/a&gt;&lt;/b&gt;&lt;/h2&gt;  &lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;strong&gt;Private Leaderboard Rank&lt;/strong&gt;: 85/1212 (top 7.0%)&lt;/li&gt;
@@ -252,9 +252,9 @@ We found that the Bayesian target-encoded features outperformed the built-in Lig
 &lt;li&gt;Almost 9 million products  &lt;/li&gt;
 &lt;li&gt;More than 15 million images at 180x180 resolution &lt;/li&gt;
 &lt;li&gt;More than 5000 categories &lt;/li&gt;
-&lt;li&gt;Over 62 GB of bson files (binary json) &lt;/li&gt;
+&lt;li&gt;Over 62 GB of BSON files (binary JSON) &lt;/li&gt;
 &lt;/ul&gt;
-&lt;p&gt;My final solution which was an ensemble of various DenseNet, Resnet, Inception, and Xception architectures ranked in the top 3.8%.  &lt;/p&gt;
+&lt;p&gt;My final solution, which was an ensemble of various DenseNet, Resnet, Inception, and Xception architectures, ranked in the top 3.8%&lt;/p&gt;
 &lt;h2 id=carvana-image-masking-challenge&gt;Carvana Image Masking Challenge &lt;b&gt;&lt;a href="#toc"&gt;&amp;#8593;&lt;/a&gt;&lt;/b&gt;&lt;/h2&gt;
 
 &lt;ul&gt;
@@ -273,7 +273,7 @@ We found that the Bayesian target-encoded features outperformed the built-in Lig
 &lt;li&gt;&lt;strong&gt;Links:&lt;/strong&gt; 
 &lt;a href="https://www.kaggle.com/c/grupo-bimbo-inventory-demand"&gt;Competition Website&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
-&lt;p&gt;Partnered with a local data analyst to provide a two week ahead forecast for client-product sales of the multinational company Grupo Bimbo. The metric used in this competition was the log RMSE and the data for the competition consisted of nearly one million clients each with a few thousand products to order. Our feature engineering consisted of mapping high cardinality categorical variables into a more readily usable form. The final submission ranked in the top 11.7%. &lt;/p&gt;
+&lt;p&gt;Partnered with a Hawaii-based data scientist to provide a two-week ahead forecast for client-product sales of the multinational company Grupo Bimbo. The metric used in this competition was the log RMSE and the data for the competition consisted of nearly one million clients each with a few thousand products to order. Our feature engineering consisted of mapping high cardinality categorical variables into a more readily usable form. The final submission ranked in the top 11.7%. &lt;/p&gt;
 &lt;h2 id=santa-gift-matching-challenge&gt;Santa Gift Matching Challenge &lt;b&gt;&lt;a href="#toc"&gt;&amp;#8593;&lt;/a&gt;&lt;/b&gt;&lt;/h2&gt;
 
 &lt;ul&gt;
@@ -283,7 +283,7 @@ We found that the Bayesian target-encoded features outperformed the built-in Lig
 &lt;li&gt;&lt;strong&gt;Links:&lt;/strong&gt; 
 &lt;a href="https://www.kaggle.com/c/santa-gift-matching"&gt;Competition Website&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
-&lt;p&gt;Teamed up with a Kaggle Grandmaster to find a near optimal solution to a large scale nonlinear optimization problem.  The task was to assign gifts to children, each assignment has a gift happiness and child happiness, the objective was to maximize the cube of the total gift happiness plus the cube of the total child happiness, the constraints were essentially linear.   The objective function—while nonlinear—is well modeled by a linear approximation.  The linearized problem was framed as a max-flow min-cost problem and solved exactly using Google’s OR-Tools.   The solution was then fine tuned using a greedy heuristic implemented in plain C for speed. Our final submission ranked in the top 20.6%. &lt;/p&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Matt Motoki</dc:creator><pubDate>Tue, 03 Jul 2018 01:40:00 -1000</pubDate><guid isPermaLink="false">tag:None,2018-07-03:/kaggle-archive.html</guid><category>Kaggle</category><category>Natural Language Processing</category><category>Computer Vision</category></item><item><title>Online Course Archive</title><link>/online-course-archive.html</link><description>&lt;h1 id="toc"&gt;Table Of Contents&lt;/h1&gt;
+&lt;p&gt;Teamed up with a Kaggle Grandmaster to find a near optimal solution to a large-scale nonlinear optimization problem.  The task was to assign gifts to children.  Each assignment has a gift happiness and child happiness.  The objective was to maximize the cube of the total gift happiness plus the cube of the total child happiness. The constraints of the problem were essentially linear.   The objective function—while nonlinear—is well modeled by a linear approximation.  The linearized problem was framed as a max-flow min-cost problem and solved exactly using Google’s OR-Tools.   The solution was then fine-tuned using a greedy heuristic implemented in plain C for speed. Our final submission ranked in the top 20.6%. &lt;/p&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Matt Motoki</dc:creator><pubDate>Tue, 03 Jul 2018 01:40:00 -1000</pubDate><guid isPermaLink="false">tag:None,2018-07-03:/kaggle-archive.html</guid><category>Kaggle</category><category>Natural Language Processing</category><category>Computer Vision</category></item><item><title>Online Course Archive</title><link>/online-course-archive.html</link><description>&lt;h1 id="toc"&gt;Table Of Contents&lt;/h1&gt;
 
 &lt;p&gt;This is an archive of online courses that I have taken and certificates that I have achieved. &lt;/p&gt;
 &lt;p&gt;&lt;a href="#machine-learning"&gt;&lt;strong&gt;Machine Learning&lt;/strong&gt;&lt;/a&gt;&lt;/p&gt;
@@ -430,7 +430,7 @@ We found that the Bayesian target-encoded features outperformed the built-in Lig
 &lt;p&gt;My Master’s thesis was on approximate dynamic programming methods for control of a water heater.  &lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;Problem has simple but non-trivial non-Markovian dynamics. &lt;/li&gt;
-&lt;li&gt;Solved a simplified problem and proved that it's solution is at least as good the current state-of-the-art methods.&lt;/li&gt;
+&lt;li&gt;Solved a simplified problem and proved that its solution is at least as good the current state-of-the-art methods.&lt;/li&gt;
 &lt;li&gt;Developed an aggregation scheme to handle continuous state-space and showed that it is unbiased and has minimal variance. &lt;/li&gt;
 &lt;li&gt;Approximated a solution to the full problem and showed that the cost achieved was near to the theoretical prescient lower bound.&lt;/li&gt;
 &lt;li&gt;Applied optimized water heaters for derivative applications such as load shifting. &lt;/li&gt;
@@ -443,8 +443,8 @@ We found that the Bayesian target-encoded features outperformed the built-in Lig
 
 &lt;p&gt;&lt;br&gt; &lt;/p&gt;
 &lt;h1&gt;Introduction&lt;/h1&gt;
-&lt;p&gt;Cell Division is a strategy-based board game. Player take turns placing their cells. A player's cells divide when they connect with each other; vertical, horizontal and diagonal connections are allowed.  Your score is equal to the total number of cell that you have on the board.  The game ends when the board is full and the winner is the player with the most cells. &lt;/p&gt;
-&lt;p&gt;Cell Division has a few properties that make it a great test bed for reinforcement learning algorithms&lt;/p&gt;
+&lt;p&gt;Cell Division is a strategy-based board game. Players take turns placing their cells. A player's cells divide when they connect with each other; vertical, horizontal and diagonal connections are allowed.  Your score is equal to the total number of cells that you have on the board.  The game ends when the board is full and the winner is the player with the most cells. &lt;/p&gt;
+&lt;p&gt;Cell Division has a few properties that make it a great test bed for reinforcement learning algorithms:&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;
 &lt;p&gt;Scoring mechanism is visually intuitive. &lt;/p&gt;
@@ -456,10 +456,15 @@ We found that the Bayesian target-encoded features outperformed the built-in Lig
 &lt;p&gt;Interesting long-term and short-term strategies. &lt;/p&gt;
 &lt;/li&gt;
 &lt;li&gt;
-&lt;p&gt;Easily generalizes to multi-agent games&lt;/p&gt;
+&lt;p&gt;Easily generalizes to multi-agent games.&lt;/p&gt;
 &lt;/li&gt;
 &lt;/ul&gt;
-&lt;p&gt;The current implementation of the game is written in plAIn HTML, CSS and Javascript.  The code is avAIlable &lt;a href="https://github.com/mattmotoki/cell-division"&gt;here&lt;/a&gt;.  &lt;/p&gt;
+&lt;p&gt;The current implementation of the game is written in plain HTML, CSS and Javascript. &lt;/p&gt;
+&lt;h1 style="text-align: center; letter-spacing: 1px; font-size: 20px;"&gt; &lt;a href="https://github.com/mattmotoki/cell-division"&gt; 
+ The code is available here. &lt;/a&gt; &lt;/h1&gt;
+
+&lt;!-- The code is available &lt;a href="https://github.com/mattmotoki/cell-division"&gt;here&lt;/a&gt;.   --&gt;
+
 &lt;h1&gt;Implementation&lt;/h1&gt;
 &lt;p&gt;In the production implementation of the game, there are three fixed-difficulty AI opponents.  AI opponents are designed to be completely deterministic so that games are reproducible.  &lt;/p&gt;
 &lt;p&gt;The AI opponents implement a greedy strategy with a strong base heuristic. The quality of the heuristic determines the difficulty of the opponent.  Since the objective is to maximize your score, it makes sense to approximate the long term benefit of a move with its immediate increase in score.  It turns out that the increase in score can be decomposed in the a function of the following four variables: &lt;/p&gt;
@@ -477,23 +482,22 @@ We found that the Bayesian target-encoded features outperformed the built-in Lig
 &amp;amp;\quad + 2\cdot\big[  \text{overlap}_p(\text{move})  - \text{extensions}_p(\text{move}) \big],
 \end{split}$$&lt;/div&gt;
 &lt;p&gt;
-where &lt;span class="math"&gt;\(p\)&lt;/span&gt; denotes the player playing the move.  By convention, define the first player (&lt;span class="math"&gt;\(p=1\)&lt;/span&gt;) to be you and the second player (&lt;span class="math"&gt;\(p=2\)&lt;/span&gt;) to be the AI&lt;br&gt;
-One benefit of this decomposition is that each of the variables can be updated in an online fashion.   &lt;/p&gt;
+where &lt;span class="math"&gt;\(p\)&lt;/span&gt; denotes the player playing the move.  By convention, define the first player (&lt;span class="math"&gt;\(p=1\)&lt;/span&gt;) to be you and the second player (&lt;span class="math"&gt;\(p=2\)&lt;/span&gt;) to be the AI.  One benefit of this decomposition is that each of the variables can be updated in an online fashion.   &lt;/p&gt;
 &lt;p&gt;Additional player-independent variables that have intuitive value are:&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;span class="math"&gt;\(\text{openness}(\text{move})\)&lt;/span&gt; is move number of open positions adjacent to a move,&lt;/li&gt;
 &lt;li&gt;&lt;span class="math"&gt;\(\text{centrality}(\text{move})\)&lt;/span&gt; measures how close a move is to the center of the board.&lt;/li&gt;
 &lt;/ul&gt;
 &lt;p&gt;To calculate a value of a move, the AI opponent uses a weighted sum of the above variables.&lt;/p&gt;
-&lt;h2&gt;Easy, Medium and Hard Opponents&lt;/h2&gt;
-&lt;p&gt;Cell Addition is a zero sum game and so your gAIn is the same as the AI's loss.  Thus, when designing the AI, it will be beneficial to take this into account. &lt;/p&gt;
+&lt;h2&gt;Easy, Medium, and Hard Opponents&lt;/h2&gt;
+&lt;p&gt;Cell Addition is a zero sum game and so your gain is the same as the AI's loss.  Thus, when designing the AI, it will be beneficial to take this into account. &lt;/p&gt;
 &lt;p&gt;The easy AI's value function is simply
 &lt;/p&gt;
 &lt;div class="math"&gt;$$
 \text{easy}(\text{move}) = \text{centrality}(\text{move});
 $$&lt;/div&gt;
 &lt;p&gt;
-that is, the easy AI just places it's move in the center most position of the board with ties broken arbitrarily.&lt;/p&gt;
+that is, the easy AI just places its move in the center-most position of the board with ties broken arbitrarily.&lt;/p&gt;
 &lt;p&gt;The hard AI's value function is 
 &lt;/p&gt;
 &lt;div class="math"&gt;$$
@@ -536,7 +540,7 @@ $$&lt;/div&gt;
 &lt;h1 style="text-align: center; letter-spacing: 1px; font-size: 20px;"&gt; &lt;a href="https://mmotoki.shinyapps.io/cell_division/"&gt; Play the Prototype &lt;span class="glyphicon glyphicon-play"&gt;&lt;/span&gt; &lt;/a&gt; &lt;/h1&gt;
 
 &lt;h2&gt;Adaptive AI&lt;/h2&gt;
-&lt;p&gt;The prototype implementation has an adaptive opponent that plays whose difficulty is affected by the win/lose rate. The adaptive AI has a skill level which determines the overall strategy in a game.  The Adaptive AI adapts to your play in two ways: &lt;/p&gt;
+&lt;p&gt;The prototype implementation has an adaptive opponent whose difficulty is affected by the win/lose rate. The adaptive AI has a skill level which determines the overall strategy in a game.  The Adaptive AI adapts to your play in two ways: &lt;/p&gt;
 &lt;ol&gt;
 &lt;li&gt;It adapts to your play within a game.&lt;/li&gt;
 &lt;li&gt;It adapts its entire strategy after a game.&lt;/li&gt;
@@ -549,7 +553,7 @@ $$&lt;/div&gt;
 + (1 - \text{skill}') \cdot  \text{easy}(\text{move}),
 $$&lt;/div&gt;
 &lt;p&gt;
-where &lt;span class="math"&gt;\(\text{skill}'\)&lt;/span&gt; is modified (within-game) skill parameter&lt;/p&gt;
+where &lt;span class="math"&gt;\(\text{skill}'\)&lt;/span&gt; is the modified (within-game) skill parameter&lt;/p&gt;
 &lt;div class="math"&gt;$$
 \text{skill}' = \text{skill} + 0.01\cdot ( \text{your_score} - \text{AI_score} ).
 $$&lt;/div&gt;
@@ -562,20 +566,20 @@ Notice that if you are winning, then the effective skill of the AI goes up.  Mor
 $$&lt;/div&gt;
 &lt;p&gt;
 Hence, if you beat the AI, then its skill goes up by the score difference; if you lose, then its skill goes down in proportion to half the absolute score difference.  If the game is a draw, then the skill level stays the same.&lt;/p&gt;
-&lt;p&gt;Ignoring within-game adaptivity, when &lt;span class="math"&gt;\(\text{skill}=0\)&lt;/span&gt; you are essentially playing agAInst the easy AI, when &lt;span class="math"&gt;\(\text{skill}=1\)&lt;/span&gt; you are playing agAInst the hard AI, and when &lt;span class="math"&gt;\(\text{skill}=0.5\)&lt;/span&gt; you are playing agAInst the medium AI.&lt;/p&gt;
+&lt;p&gt;Ignoring within-game adaptivity, when &lt;span class="math"&gt;\(\text{skill}=0\)&lt;/span&gt; you are essentially playing against the easy AI, when &lt;span class="math"&gt;\(\text{skill}=1\)&lt;/span&gt; you are playing against the hard AI, and when &lt;span class="math"&gt;\(\text{skill}=0.5\)&lt;/span&gt; you are playing against the medium AI.&lt;/p&gt;
 &lt;h2&gt;Alternative Game Boards and Mechanics&lt;/h2&gt;
 &lt;p&gt;The prototype implementation has different layouts and game mechanics. In the break and flask layouts, gravity applies to moves played (cells fall to the lowest open row).&lt;/p&gt;
 &lt;h1&gt;Future Add-Ons&lt;/h1&gt;
 &lt;p&gt;There are many variations on this game that can be played.  What follows is an unordered list of possible improvements/variants of the game.&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;
-&lt;p&gt;&lt;strong&gt;Stem Cells&lt;/strong&gt;: Undifferentiated cell that can become partially colored once fully surrounded.  If fully surrounded, the center of the stem cells can also be colored, resulting in a cell with a total of nine divisions.  &lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Stem Cells&lt;/strong&gt;: Undifferentiated cells that can become partially colored once fully surrounded.  If fully surrounded, the center of the stem cells can also be colored, resulting in a cell with a total of nine divisions.  &lt;/p&gt;
 &lt;/li&gt;
 &lt;li&gt;
-&lt;p&gt;&lt;strong&gt;Time Limit&lt;/strong&gt;: Getting the first move can be an advantage, especially on the medium board configuration.  To mitigate this, the game can stop a few rounds early.  For example, in the medium board configuration, if the game stops one round early then both players will get have an equal number o moves.  &lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Time Limit&lt;/strong&gt;: Getting the first move can be an advantage, especially on the medium board configuration.  To mitigate this, the game can stop a few rounds early.  For example, in the medium board configuration, if the game stops one round early, then both players will have an equal number of moves.  &lt;/p&gt;
 &lt;/li&gt;
 &lt;li&gt;
-&lt;p&gt;&lt;strong&gt;Attack/Defense Moves&lt;/strong&gt;: Give players access to the strong acid HCl and the strong base NaOH.  Each acid/base will destroy the other player's cells while leaving their cells intact.  Similarly, isopropyl alcohol can be played to destroy any cell.  Let players enforce their cells with cell walls (or membranes) to guard agAInst HCl/NaOH/Alcohol attacks. &lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Attack/Defense Moves&lt;/strong&gt;: Give players access to the strong acid HCl and the strong base NaOH.  Each acid/base will destroy the other player's cells while leaving their cells intact.  Similarly, isopropyl alcohol can be played to destroy any cell.  Let players enforce their cells with cell walls (or membranes) to guard against HCl/NaOH/alcohol attacks. &lt;/p&gt;
 &lt;/li&gt;
 &lt;li&gt;
 &lt;p&gt;&lt;strong&gt;Triangular and Hexagonal Grids&lt;/strong&gt;: Storing a board defined over these grids can be done by modifying what it means to be adjacent to another cell.  Thus, boards can be stored and analyzed in a similar way to the rectangular grid.  The approximations that the AI opponents use will most likely generalize well to these types of grids. &lt;/p&gt;

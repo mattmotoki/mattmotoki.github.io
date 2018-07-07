@@ -19,10 +19,10 @@ Status: published
 
 
 
-Cell Division is a strategy-based board game. Player take turns placing their cells. A player's cells divide when they connect with each other; vertical, horizontal and diagonal connections are allowed.  Your score is equal to the total number of cell that you have on the board.  The game ends when the board is full and the winner is the player with the most cells. 
+Cell Division is a strategy-based board game. Players take turns placing their cells. A player's cells divide when they connect with each other; vertical, horizontal and diagonal connections are allowed.  Your score is equal to the total number of cells that you have on the board.  The game ends when the board is full and the winner is the player with the most cells. 
 
 
-Cell Division has a few properties that make it a great test bed for reinforcement learning algorithms
+Cell Division has a few properties that make it a great test bed for reinforcement learning algorithms:
 
 * Scoring mechanism is visually intuitive. 
 
@@ -30,9 +30,15 @@ Cell Division has a few properties that make it a great test bed for reinforceme
 
 * Interesting long-term and short-term strategies. 
 
-* Easily generalizes to multi-agent games
+* Easily generalizes to multi-agent games.
 
-The current implementation of the game is written in plAIn HTML, CSS and Javascript.  The code is avAIlable [here](https://github.com/mattmotoki/cell-division).  
+The current implementation of the game is written in plain HTML, CSS and Javascript. 
+
+
+<h1 style="text-align: center; letter-spacing: 1px; font-size: 20px;"> <a href="https://github.com/mattmotoki/cell-division"> 
+ The code is available here. </a> </h1>
+
+ <!-- The code is available [here](https://github.com/mattmotoki/cell-division).   -->
 
 # Implementation
 
@@ -54,8 +60,7 @@ $$\begin{split}
 &\quad + 2\cdot \big[\text{overlap}_p(\text{move}) - \text{interlap}_p(\text{move})\big] \\
 &\quad + 2\cdot\big[  \text{overlap}_p(\text{move})  - \text{extensions}_p(\text{move}) \big],
 \end{split}$$
-where $p$ denotes the player playing the move.  By convention, define the first player ($p=1$) to be you and the second player ($p=2$) to be the AI  
-One benefit of this decomposition is that each of the variables can be updated in an online fashion.   
+where $p$ denotes the player playing the move.  By convention, define the first player ($p=1$) to be you and the second player ($p=2$) to be the AI.  One benefit of this decomposition is that each of the variables can be updated in an online fashion.   
 
 
 Additional player-independent variables that have intuitive value are:
@@ -65,14 +70,14 @@ Additional player-independent variables that have intuitive value are:
 
 To calculate a value of a move, the AI opponent uses a weighted sum of the above variables.
 
-## Easy, Medium and Hard Opponents
-Cell Addition is a zero sum game and so your gAIn is the same as the AI's loss.  Thus, when designing the AI, it will be beneficial to take this into account. 
+## Easy, Medium, and Hard Opponents
+Cell Addition is a zero sum game and so your gain is the same as the AI's loss.  Thus, when designing the AI, it will be beneficial to take this into account. 
 
 The easy AI's value function is simply
 $$
 \text{easy}(\text{move}) = \text{centrality}(\text{move});
 $$
-that is, the easy AI just places it's move in the center most position of the board with ties broken arbitrarily.
+that is, the easy AI just places its move in the center-most position of the board with ties broken arbitrarily.
 
 The hard AI's value function is 
 $$
@@ -114,7 +119,7 @@ $$
 
 ## Adaptive AI
 
-The prototype implementation has an adaptive opponent that plays whose difficulty is affected by the win/lose rate. The adaptive AI has a skill level which determines the overall strategy in a game.  The Adaptive AI adapts to your play in two ways: 
+The prototype implementation has an adaptive opponent whose difficulty is affected by the win/lose rate. The adaptive AI has a skill level which determines the overall strategy in a game.  The Adaptive AI adapts to your play in two ways: 
 
 1. It adapts to your play within a game.
 2. It adapts its entire strategy after a game.
@@ -126,7 +131,7 @@ $$
 = \text{skill}' \cdot \text{hard}(\text{move})
 + (1 - \text{skill}') \cdot  \text{easy}(\text{move}),
 $$
-where $\text{skill}'$ is modified (within-game) skill parameter
+where $\text{skill}'$ is the modified (within-game) skill parameter
 
 $$
 \text{skill}' = \text{skill} + 0.01\cdot ( \text{your_score} - \text{AI_score} ).
@@ -139,7 +144,7 @@ $$
 $$
 Hence, if you beat the AI, then its skill goes up by the score difference; if you lose, then its skill goes down in proportion to half the absolute score difference.  If the game is a draw, then the skill level stays the same.
 
-Ignoring within-game adaptivity, when $\text{skill}=0$ you are essentially playing agAInst the easy AI, when $\text{skill}=1$ you are playing agAInst the hard AI, and when $\text{skill}=0.5$ you are playing agAInst the medium AI.
+Ignoring within-game adaptivity, when $\text{skill}=0$ you are essentially playing against the easy AI, when $\text{skill}=1$ you are playing against the hard AI, and when $\text{skill}=0.5$ you are playing against the medium AI.
 
 
 
@@ -154,11 +159,11 @@ Ignoring within-game adaptivity, when $\text{skill}=0$ you are essentially playi
 # Future Add-Ons
 There are many variations on this game that can be played.  What follows is an unordered list of possible improvements/variants of the game.
 
-* **Stem Cells**: Undifferentiated cell that can become partially colored once fully surrounded.  If fully surrounded, the center of the stem cells can also be colored, resulting in a cell with a total of nine divisions.  
+* **Stem Cells**: Undifferentiated cells that can become partially colored once fully surrounded.  If fully surrounded, the center of the stem cells can also be colored, resulting in a cell with a total of nine divisions.  
 
-* **Time Limit**: Getting the first move can be an advantage, especially on the medium board configuration.  To mitigate this, the game can stop a few rounds early.  For example, in the medium board configuration, if the game stops one round early then both players will get have an equal number o moves.  
+* **Time Limit**: Getting the first move can be an advantage, especially on the medium board configuration.  To mitigate this, the game can stop a few rounds early.  For example, in the medium board configuration, if the game stops one round early, then both players will have an equal number of moves.  
 
-* **Attack/Defense Moves**: Give players access to the strong acid HCl and the strong base NaOH.  Each acid/base will destroy the other player's cells while leaving their cells intact.  Similarly, isopropyl alcohol can be played to destroy any cell.  Let players enforce their cells with cell walls (or membranes) to guard agAInst HCl/NaOH/Alcohol attacks. 
+* **Attack/Defense Moves**: Give players access to the strong acid HCl and the strong base NaOH.  Each acid/base will destroy the other player's cells while leaving their cells intact.  Similarly, isopropyl alcohol can be played to destroy any cell.  Let players enforce their cells with cell walls (or membranes) to guard against HCl/NaOH/alcohol attacks. 
 
 
 * **Triangular and Hexagonal Grids**: Storing a board defined over these grids can be done by modifying what it means to be adjacent to another cell.  Thus, boards can be stored and analyzed in a similar way to the rectangular grid.  The approximations that the AI opponents use will most likely generalize well to these types of grids. 
