@@ -358,33 +358,67 @@ area under the receiver operator curve.  The data consisted of categorical varia
 &lt;/ul&gt;
 &lt;p&gt;Used deep learning to create high-quality image masks for the online car dealership company Carvana. The metric used in this competition was the dice coefficient and the data for the competition consisted of 5,000+ high resolution images of showroom car.  A very deep neural network architecture called U-Net quickly achieved greater than 99.5% accuracy.  My final submission of an ensemble of U-Nets ranked in the top 9.8%. &lt;/p&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Matt Motoki</dc:creator><pubDate>Tue, 03 Jul 2018 01:40:00 -1000</pubDate><guid isPermaLink="false">tag:None,2018-07-03:/kaggle-archive.html</guid><category>Kaggle</category><category>Natural Language Processing</category><category>Computer Vision</category></item><item><title>Online Course Archive</title><link>/online-course-archive.html</link><description>&lt;h1 id="toc"&gt;Table Of Contents&lt;/h1&gt;
 
-&lt;p&gt;This is an archive of online courses that I have taken and certificates that I have achieved. &lt;/p&gt;
+&lt;p&gt;This is an archive of online courses that I have taken and certificates that I have achieved.  The courses are grouped by category and sorted in reverse chronological order. A &amp;#10003; next to the course title indicates that the course has a certificate of achievement. &lt;/p&gt;
 &lt;p&gt;&lt;a href="#machine-learning"&gt;&lt;strong&gt;Machine Learning&lt;/strong&gt;&lt;/a&gt;&lt;/p&gt;
 &lt;ul&gt;
-&lt;li&gt;&lt;a href="#policy-analysis-using-interrupted-time-series"&gt;Policy Analysis using Interrupted Time Series &lt;/a&gt; &lt;/li&gt;
-&lt;li&gt;&lt;a href="#the-analytics-edge"&gt;The Analytics Edge&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href="#artificial-intelligence"&gt;Artificial Intelligence&lt;/a&gt; &lt;/li&gt;
+&lt;li&gt;&lt;a href="#probabilistic-graphical-models-specialization"&gt;Probabilistic Graphical Models Specialization &amp;#10003;&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="#text-mining-and-analytics"&gt;Text Mining and Analytics &amp;#10003;&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="#policy-analysis-using-interrupted-time-series"&gt;Policy Analysis using Interrupted Time Series &amp;#10003;&lt;/a&gt; &lt;/li&gt;
+&lt;li&gt;&lt;a href="#the-analytics-edge"&gt;The Analytics Edge &amp;#10003;&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="#artificial-intelligence"&gt;Artificial Intelligence &amp;#10003;&lt;/a&gt; &lt;/li&gt;
 &lt;/ul&gt;
 &lt;p&gt;&lt;a href="#big-data"&gt;&lt;strong&gt;Big Data&lt;/strong&gt;&lt;/a&gt;&lt;/p&gt;
 &lt;ul&gt;
-&lt;li&gt;&lt;a href="#scalable-machine-learning"&gt;Scalable Machine Learning&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href="#introduction-to-big-data-with-apache-spark"&gt;Introduction to Big Data with Apache Spark&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="#google-cloud-platform-big-data-and-machine-learning-fundamentals"&gt;Google Cloud Platform Big Data and Machine Learning Fundamentals &amp;#10003;&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="#introduction-to-big-data"&gt;Introduction to Big Data &amp;#10003;&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="#scalable-machine-learning"&gt;Scalable Machine Learning &amp;#10003;&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="#introduction-to-big-data-with-apache-spark"&gt;Introduction to Big Data with Apache Spark &amp;#10003;&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;p&gt;&lt;a href="#web-development"&gt;&lt;strong&gt;Web Development&lt;/strong&gt;&lt;/a&gt;&lt;/p&gt;
 &lt;ul&gt;
-&lt;li&gt;&lt;a href="#html5-part-2"&gt;HTML5 Part 2: Advanced Techniques for Designing HTML5 Apps&lt;/a&gt;    &lt;/li&gt;
-&lt;li&gt;&lt;a href="#advanced-css-concepts"&gt;Advanced CSS Concepts&lt;/a&gt;    &lt;/li&gt;
-&lt;li&gt;&lt;a href="#html5-part-1"&gt;HTML5 Part 1: HTML5 Coding Essentials and Best Practices&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href="#html5-introduction"&gt;HTML5 Introduction&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="#html5-part-2"&gt;HTML5 Part 2: Advanced Techniques for Designing HTML5 Apps &amp;#10003;&lt;/a&gt;    &lt;/li&gt;
+&lt;li&gt;&lt;a href="#advanced-css-concepts"&gt;Advanced CSS Concepts &amp;#10003;&lt;/a&gt;    &lt;/li&gt;
+&lt;li&gt;&lt;a href="#html5-part-1"&gt;HTML5 Part 1: HTML5 Coding Essentials and Best Practices &amp;#10003;&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="#html5-introduction"&gt;HTML5 Introduction &amp;#10003;&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;p&gt;&lt;a href="#miscellaneous"&gt;&lt;strong&gt;Miscellaneous&lt;/strong&gt;&lt;/a&gt;&lt;/p&gt;
 &lt;ul&gt;
-&lt;li&gt;&lt;a href="#becoming-an-entrepreneur"&gt;MIT Launch X – Becoming an Entrepreneur&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href="#video-game-design-history"&gt;Video Game Design History&lt;/a&gt;    &lt;/li&gt;
+&lt;li&gt;&lt;a href="#image-and-video-processing-from-mars-to-hollywood-with-a-stop-at-the-hospital"&gt;Image and Video Processing: From Mars to Hollywood with a Stop at the Hospital &amp;#10003;&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="#game-theory-1"&gt;Game Theory 1 &amp;#10003;&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="#becoming-an-entrepreneur"&gt;MIT Launch X – Becoming an Entrepreneur &amp;#10003;&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="#video-game-design-history"&gt;Video Game Design History &amp;#10003;&lt;/a&gt;    &lt;/li&gt;
 &lt;/ul&gt;
 &lt;p&gt;&lt;br&gt;
 &lt;hr&gt;
 &lt;h1 id="machine-learning"&gt;Machine Learning&lt;/h1&gt; &lt;/p&gt;
+&lt;h2 id="probabilistic-graphical-models-specialization"&gt;Probabilistic Graphical Models Specialization &lt;b&gt;&lt;a href="#toc"&gt;&amp;#8593;&lt;/a&gt;&lt;/b&gt;&lt;/h2&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Institution&lt;/strong&gt;: Stanford University&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Date Completed&lt;/strong&gt;:  November 11, 2017&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Links:&lt;/strong&gt; 
+&lt;a href="https://www.coursera.org/specializations/probabilistic-graphical-models"&gt;Course Website&lt;/a&gt;, 
+&lt;a href="https://www.coursera.org/account/accomplishments/specialization/certificate/DV4FZ455QT94"&gt;Certificate of Achievement&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Completed the three course specialization on probabilistic graphical models.  The course was taught by Daphne Koller who is a Professor at Stanford University and an expert in the subject. &lt;/p&gt;
+&lt;p&gt;Probabilistic Graphical Models (PGMs) are a rich framework for encoding probability distributions over complex domains: joint (multivariate) distributions over large numbers of random variables that interact with each other. These representations sit at the intersection of statistics and computer science, relying on concepts from probability theory, graph algorithms, machine learning, and more. They are the basis for the state-of-the-art methods in a wide variety of applications, such as medical diagnosis, image understanding, speech recognition, natural language processing, and many, many more. They are also a foundational tool in formulating many machine learning problems.  &lt;/p&gt;
+&lt;p&gt;The specialization consisted of three courses: Representation, Inference, and Learning. &lt;/p&gt;
+&lt;p&gt;&lt;strong&gt; Representation &lt;/strong&gt;
+covered Bayesian Networks, which rely on a directed graph; and Markov networks, which use an undirected graph. The course discussed both the theoretical properties of these representations as well as their use in practice.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt; Inference &lt;/strong&gt;
+addressed how a PGM can be used to answer questions. Even though a PGM generally describes a very high dimensional distribution, its structure is designed so as to allow questions to be answered efficiently. The course presented both exact and approximate algorithms for different types of inference tasks, and discusses where each could best be applied.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt; Learning &lt;/strong&gt;
+addressed how a PGM can be learned from a data set of examples. The course discussed the key problems of parameter estimation in both directed and undirected models, as well as the structure learning task for directed models.&lt;/p&gt;
+&lt;h2 id="text-mining-and-analytics"&gt;Text Mining and Analytics &lt;b&gt;&lt;a href="#toc"&gt;&amp;#8593;&lt;/a&gt;&lt;/b&gt;&lt;/h2&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Institution&lt;/strong&gt;: University of Illinois at Urbana-Champaign&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Date Completed&lt;/strong&gt;:  April 01, 2017&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Links:&lt;/strong&gt; 
+&lt;a href="https://d37djvu3ytnwxt.cloudfront.net/assets/courseware/v1/edb6888857978fc5b00f4db0d2e1bc06/asset-v1:UBCx+ITSx+1T2017+type@asset+block/Syllabus_ITSx_Handouts.pdf"&gt;Course Website&lt;/a&gt;, 
+&lt;a href="https://www.coursera.org/account/accomplishments/certificate/9VZ9X7B53UPU"&gt;Certificate of Achievement&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;This course covered the major techniques for mining and analyzing text data.  Some of the techniques that we covered are: Latent Semantic Analysis, Latent Dirichlet Allocation, and Latent Aspect Rating Analysis. &lt;/p&gt;
 &lt;h2 id="policy-analysis-using-interrupted-time-series"&gt;Policy Analysis using Interrupted Time Series &lt;b&gt;&lt;a href="#toc"&gt;&amp;#8593;&lt;/a&gt;&lt;/b&gt;&lt;/h2&gt;
 
 &lt;ul&gt;
@@ -418,6 +452,32 @@ area under the receiver operator curve.  The data consisted of categorical varia
 &lt;p&gt;&lt;br&gt;
 &lt;hr&gt;
 &lt;h1 id="big-data"&gt;Big Data&lt;/h1&gt; &lt;/p&gt;
+&lt;h2 id="google-cloud-platform-big-data-and-machine-learning-fundamentals"&gt;Google Cloud Platform Big Data and Machine Learning Fundamentals &lt;b&gt;&lt;a href="#toc"&gt;&amp;#8593;&lt;/a&gt;&lt;/b&gt;&lt;/h2&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Institution&lt;/strong&gt;: Google Cloud&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Date Completed&lt;/strong&gt;: October 05, 2017&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Links:&lt;/strong&gt; 
+&lt;a href="https://www.coursera.org/learn/gcp-big-data-ml-fundamentals"&gt;Course Website&lt;/a&gt;, 
+&lt;a href="https://www.coursera.org/account/accomplishments/certificate/HU8DBBFSUVJN"&gt;Certificate of Achievement&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;This course was a high-level overview to the technologies available on the Google Cloud Platform.  In particular, we were introduced to: CloudSQL, Cloud Dataproc, BigQuery, Cloud Datalab, Datastore, and TensorFlow. &lt;/p&gt;
+&lt;h2 id="introduction-to-big-data"&gt;Introduction to Big Data &lt;b&gt;&lt;a href="#toc"&gt;&amp;#8593;&lt;/a&gt;&lt;/b&gt;&lt;/h2&gt;
+
+&lt;p&gt;&lt;/h2&gt; &lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Institution&lt;/strong&gt;: University of California San Diego&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Date Completed&lt;/strong&gt;:  February 14, 2017&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Links:&lt;/strong&gt; 
+&lt;a href="https://www.coursera.org/learn/big-data-introduction"&gt;Course Website&lt;/a&gt;, 
+&lt;a href="https://www.coursera.org/account/accomplishments/certificate/P2XRQXWYVRTA"&gt;Certificate of Achievement&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;This course high-level overview of the terminology and the core concepts behind big data problems, applications, and systems.  Some of the core concepts included: &lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Sources of big data: people, organizations, and sensors. &lt;/li&gt;
+&lt;li&gt;The Five V’s of Big Data: volume, velocity, variety, veracity, valence, and value&lt;/li&gt;
+&lt;li&gt;Hadoop, YARN, HDFS, and MapReduce&lt;/li&gt;
+&lt;/ul&gt;
 &lt;h2 id="scalable-machine-learning"&gt;Scalable Machine Learning &lt;b&gt;&lt;a href="#toc"&gt;&amp;#8593;&lt;/a&gt;&lt;/b&gt;&lt;/h2&gt;
 
 &lt;ul&gt;
@@ -481,6 +541,26 @@ area under the receiver operator curve.  The data consisted of categorical varia
 &lt;p&gt;&lt;br&gt;
 &lt;hr&gt;
 &lt;h1 id="miscellaneous"&gt;Miscellaneous&lt;/h1&gt; &lt;/p&gt;
+&lt;h2 id="image-and-video-processing-from-mars-to-hollywood-with-a-stop-at-the-hospital"&gt;Image and Video Processing: From Mars to Hollywood with a Stop at the Hospital &lt;b&gt;&lt;a href="#toc"&gt;&amp;#8593;&lt;/a&gt;&lt;/b&gt;&lt;/h2&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Institution&lt;/strong&gt;: Duke University&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Date Completed&lt;/strong&gt;:  June 20, 2017&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Links:&lt;/strong&gt; 
+&lt;a href="https://www.coursera.org/learn/image-processing"&gt;Course Website&lt;/a&gt;, 
+&lt;a href="https://www.coursera.org/account/accomplishments/certificate/X2WV6YK98LFG"&gt;Certificate of Achievement&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;In this course, we learned about the science behind how digital images and video are made, altered, stored, and used. In particular, we covered: Image and Video Compression (JPEG and MPEG), Spatial Processing (median filtering and histogram equalization), Image Restoration, Image Segmentation (graph cuts and active contours), Image and Video Inpainting (geometric PDEs), Sparse Modeling and Compressed Sensing, and Medical Imaging. &lt;/p&gt;
+&lt;h2 id="game-theory-1"&gt;Game Theory 1&lt;b&gt;&lt;a href="#toc"&gt;&amp;#8593;&lt;/a&gt;&lt;/b&gt;&lt;/h2&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Institution&lt;/strong&gt;: Stanford University and the University of British Columbia&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Date Completed&lt;/strong&gt;: November 13, 2016&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Links:&lt;/strong&gt; 
+&lt;a href="https://www.coursera.org/learn/game-theory-1"&gt;Course Website&lt;/a&gt;, 
+&lt;a href="https://www.coursera.org/account/accomplishments/certificate/S5SC9HEQK3SW"&gt;Certificate of Achievement&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;This course provided an introduction to game theory. Game theory is the mathematical modeling of strategic interaction among rational (and irrational) agents. We covered the following formalization of games: Extensive-Form Games, Repeated Games, Bayesian Games, Coalitional Games. We also studied strategies and concepts such as: Pure and Mixed-Strategy Nash Equilibrium, Iterative Removal of Strictly Dominated Strategies, Minimax strategies, Subgame Perfect Equilibrium. &lt;/p&gt;
 &lt;h2 id="becoming-an-entrepreneur"&gt;MIT Launch X – Becoming an Entrepreneur &lt;b&gt;&lt;a href="#toc"&gt;&amp;#8593;&lt;/a&gt;&lt;/b&gt;&lt;/h2&gt;
 
 &lt;ul&gt;
