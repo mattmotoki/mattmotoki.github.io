@@ -361,9 +361,11 @@ area under the receiver operator curve.  The data consisted of categorical varia
 &lt;p&gt;This is an archive of online courses that I have taken and certificates that I have achieved.  The courses are grouped by category and sorted in reverse chronological order. A &amp;#10003; next to the course title indicates that the course has a certificate of achievement. &lt;/p&gt;
 &lt;p&gt;&lt;a href="#machine-learning"&gt;&lt;strong&gt;Machine Learning&lt;/strong&gt;&lt;/a&gt;&lt;/p&gt;
 &lt;ul&gt;
-&lt;li&gt;&lt;a href="#probabilistic-graphical-models-specialization"&gt;Probabilistic Graphical Models Specialization &amp;#10003;&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="#probabilistic-graphical-models-3-learning"&gt;Probabilistic Graphical Models 3: Learning &amp;#10003;&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="#probabilistic-graphical-models-2-inference"&gt;Probabilistic Graphical Models 2: Inference &amp;#10003;&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href="#text-mining-and-analytics"&gt;Text Mining and Analytics &amp;#10003;&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href="#policy-analysis-using-interrupted-time-series"&gt;Policy Analysis using Interrupted Time Series &amp;#10003;&lt;/a&gt; &lt;/li&gt;
+&lt;li&gt;&lt;a href="#probabilistic-graphical-models-1-representation"&gt;Probabilistic Graphical Models 1: Representation &amp;#10003;&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href="#the-analytics-edge"&gt;The Analytics Edge &amp;#10003;&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href="#artificial-intelligence"&gt;Artificial Intelligence &amp;#10003;&lt;/a&gt; &lt;/li&gt;
 &lt;/ul&gt;
@@ -373,6 +375,7 @@ area under the receiver operator curve.  The data consisted of categorical varia
 &lt;li&gt;&lt;a href="#introduction-to-big-data"&gt;Introduction to Big Data &amp;#10003;&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href="#scalable-machine-learning"&gt;Scalable Machine Learning &amp;#10003;&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href="#introduction-to-big-data-with-apache-spark"&gt;Introduction to Big Data with Apache Spark &amp;#10003;&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="#tackling-the-challenges-of-big-data"&gt;Tackling the Challenges of Big Data &amp;#10003;&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;p&gt;&lt;a href="#web-development"&gt;&lt;strong&gt;Web Development&lt;/strong&gt;&lt;/a&gt;&lt;/p&gt;
 &lt;ul&gt;
@@ -384,31 +387,35 @@ area under the receiver operator curve.  The data consisted of categorical varia
 &lt;p&gt;&lt;a href="#miscellaneous"&gt;&lt;strong&gt;Miscellaneous&lt;/strong&gt;&lt;/a&gt;&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;a href="#image-and-video-processing-from-mars-to-hollywood-with-a-stop-at-the-hospital"&gt;Image and Video Processing: From Mars to Hollywood with a Stop at the Hospital &amp;#10003;&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href="#game-theory-1"&gt;Game Theory 1 &amp;#10003;&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="#json-data"&gt;JSON Data &amp;#10003;&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href="#becoming-an-entrepreneur"&gt;MIT Launch X – Becoming an Entrepreneur &amp;#10003;&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href="#video-game-design-history"&gt;Video Game Design History &amp;#10003;&lt;/a&gt;    &lt;/li&gt;
+&lt;li&gt;&lt;a href="#game-theory-1"&gt;Game Theory 1 &amp;#10003;&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="#relational-algebra"&gt;Relational Algebra &amp;#10003;&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;p&gt;&lt;br&gt;
 &lt;hr&gt;
 &lt;h1 id="machine-learning"&gt;Machine Learning&lt;/h1&gt; &lt;/p&gt;
-&lt;h2 id="probabilistic-graphical-models-specialization"&gt;Probabilistic Graphical Models Specialization &lt;b&gt;&lt;a href="#toc"&gt;&amp;#8593;&lt;/a&gt;&lt;/b&gt;&lt;/h2&gt;
+&lt;h2 id="probabilistic-graphical-models-3-learning"&gt;Probabilistic Graphical Models 3: Learning &lt;b&gt;&lt;a href="#toc"&gt;&amp;#8593;&lt;/a&gt;&lt;/b&gt;&lt;/h2&gt;
 
 &lt;ul&gt;
 &lt;li&gt;&lt;strong&gt;Institution&lt;/strong&gt;: Stanford University&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Date Completed&lt;/strong&gt;:  November 11, 2017&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Date Completed&lt;/strong&gt;:  November 15, 2017&lt;/li&gt;
 &lt;li&gt;&lt;strong&gt;Links:&lt;/strong&gt; 
-&lt;a href="https://www.coursera.org/specializations/probabilistic-graphical-models"&gt;Course Website&lt;/a&gt;, 
-&lt;a href="https://www.coursera.org/account/accomplishments/specialization/certificate/DV4FZ455QT94"&gt;Certificate of Achievement&lt;/a&gt;&lt;/li&gt;
+&lt;a href="https://www.coursera.org/learn/probabilistic-graphical-models-3-learning"&gt;Course Website&lt;/a&gt;, 
+&lt;a href="https://www.coursera.org/account/accomplishments/certificate/6JN6GHGFFQTS"&gt;Certificate of Achievement&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
-&lt;p&gt;Completed the three course specialization on probabilistic graphical models.  The course was taught by Daphne Koller who is a Professor at Stanford University and an expert in the subject. &lt;/p&gt;
-&lt;p&gt;Probabilistic Graphical Models (PGMs) are a rich framework for encoding probability distributions over complex domains: joint (multivariate) distributions over large numbers of random variables that interact with each other. These representations sit at the intersection of statistics and computer science, relying on concepts from probability theory, graph algorithms, machine learning, and more. They are the basis for the state-of-the-art methods in a wide variety of applications, such as medical diagnosis, image understanding, speech recognition, natural language processing, and many, many more. They are also a foundational tool in formulating many machine learning problems.  &lt;/p&gt;
-&lt;p&gt;The specialization consisted of three courses: Representation, Inference, and Learning. &lt;/p&gt;
-&lt;p&gt;&lt;strong&gt; Representation &lt;/strong&gt;
-covered Bayesian Networks, which rely on a directed graph; and Markov networks, which use an undirected graph. The course discussed both the theoretical properties of these representations as well as their use in practice.&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt; Inference &lt;/strong&gt;
-addressed how a PGM can be used to answer questions. Even though a PGM generally describes a very high dimensional distribution, its structure is designed so as to allow questions to be answered efficiently. The course presented both exact and approximate algorithms for different types of inference tasks, and discusses where each could best be applied.&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt; Learning &lt;/strong&gt;
-addressed how a PGM can be learned from a data set of examples. The course discussed the key problems of parameter estimation in both directed and undirected models, as well as the structure learning task for directed models.&lt;/p&gt;
+&lt;p&gt;This course addressed how a PGM can be learned from a data set of examples. The course discussed the key problems of parameter estimation in both directed and undirected models, as well as the structure learning task for directed models.&lt;/p&gt;
+&lt;h2 id="probabilistic-graphical-models-2-inference"&gt;Probabilistic Graphical Models 2: Inference &lt;b&gt;&lt;a href="#toc"&gt;&amp;#8593;&lt;/a&gt;&lt;/b&gt;&lt;/h2&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Institution&lt;/strong&gt;: Stanford University&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Date Completed&lt;/strong&gt;:  October 25, 2017&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Links:&lt;/strong&gt; 
+&lt;a href="https://www.coursera.org/learn/probabilistic-graphical-models-2-inference"&gt;Course Website&lt;/a&gt;, 
+&lt;a href="https://www.coursera.org/account/accomplishments/certificate/EHVUST53PHN9"&gt;Certificate of Achievement&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;This course addressed how a PGM can be used to answer questions. Even though a PGM generally describes a very high dimensional distribution, its structure is designed so as to allow questions to be answered efficiently. The course presented both exact and approximate algorithms for different types of inference tasks, and discusses where each could best be applied.&lt;/p&gt;
 &lt;h2 id="text-mining-and-analytics"&gt;Text Mining and Analytics &lt;b&gt;&lt;a href="#toc"&gt;&amp;#8593;&lt;/a&gt;&lt;/b&gt;&lt;/h2&gt;
 
 &lt;ul&gt;
@@ -428,6 +435,17 @@ addressed how a PGM can be learned from a data set of examples. The course discu
 &lt;a href="https://d37djvu3ytnwxt.cloudfront.net/assets/courseware/v1/edb6888857978fc5b00f4db0d2e1bc06/asset-v1:UBCx+ITSx+1T2017+type@asset+block/Syllabus_ITSx_Handouts.pdf"&gt;Course Website&lt;/a&gt;, 
 &lt;a href="https://courses.edx.org/certificates/e1e2b440be3f4830acb6706e6b2c81ea"&gt;Certificate of Achievement&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
+&lt;p&gt;This course comprehensively introduced interrupted time series analysis and regression discontinuity designs.  These study designs allow rigorous analysis of the effect of policy changes, and are especially useful where setting up an experiment is not practical or feasible. &lt;/p&gt;
+&lt;h2 id="probabilistic-graphical-models-1-representation"&gt;Probabilistic Graphical Models 1: Representation &lt;b&gt;&lt;a href="#toc"&gt;&amp;#8593;&lt;/a&gt;&lt;/b&gt;&lt;/h2&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Institution&lt;/strong&gt;: Stanford University&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Date Completed&lt;/strong&gt;:  February 15, 2017&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Links:&lt;/strong&gt; 
+&lt;a href="https://www.coursera.org/learn/probabilistic-graphical-models"&gt;Course Website&lt;/a&gt;, 
+&lt;a href="https://www.coursera.org/account/accomplishments/certificate/UZPZTZY8YJ6W"&gt;Certificate of Achievement&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;This course addressed how a PGM can be learned from a data set of examples. The course discussed the key problems of parameter estimation in both directed and undirected models, as well as the structure learning task for directed models.&lt;/p&gt;
 &lt;h2 id="the-analytics-edge"&gt;The Analytics Edge &lt;b&gt;&lt;a href="#toc"&gt;&amp;#8593;&lt;/a&gt;&lt;/b&gt;&lt;/h2&gt;
 
 &lt;ul&gt;
@@ -472,12 +490,7 @@ addressed how a PGM can be learned from a data set of examples. The course discu
 &lt;a href="https://www.coursera.org/learn/big-data-introduction"&gt;Course Website&lt;/a&gt;, 
 &lt;a href="https://www.coursera.org/account/accomplishments/certificate/P2XRQXWYVRTA"&gt;Certificate of Achievement&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
-&lt;p&gt;This course high-level overview of the terminology and the core concepts behind big data problems, applications, and systems.  Some of the core concepts included: &lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;Sources of big data: people, organizations, and sensors. &lt;/li&gt;
-&lt;li&gt;The Five V’s of Big Data: volume, velocity, variety, veracity, valence, and value&lt;/li&gt;
-&lt;li&gt;Hadoop, YARN, HDFS, and MapReduce&lt;/li&gt;
-&lt;/ul&gt;
+&lt;p&gt;This course high-level overview of the terminology and the core concepts behind big data problems, applications, and systems.  Some of the core concepts included: Sources of big data: people, organizations, and sensors; The Five V’s of Big Data: volume, velocity, variety, veracity, valence, and value; and Hadoop, YARN, HDFS, and MapReduce.&lt;/p&gt;
 &lt;h2 id="scalable-machine-learning"&gt;Scalable Machine Learning &lt;b&gt;&lt;a href="#toc"&gt;&amp;#8593;&lt;/a&gt;&lt;/b&gt;&lt;/h2&gt;
 
 &lt;ul&gt;
@@ -499,6 +512,17 @@ addressed how a PGM can be learned from a data set of examples. The course discu
 &lt;a href="https://s3.amazonaws.com/verify.edx.org/downloads/ba01a98edcf045b096ad77c6d9b51e50/Certificate.pdf"&gt;Certificate of Achievement&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;p&gt;This was the first course in a series of courses that I took on Apache Spark and big data.  This course covered advanced undergraduate-level statistics and data analysis.  The course assignments used PySpark (the Python API for Spark) to manipulate data sets in parallel.  In particular, we covered log mining, textual entity recognition and collaborative filtering techniques. &lt;/p&gt;
+&lt;h2 id="tackling-the-challenges-of-big-data"&gt;Tackling the Challenges of Big Data&lt;b&gt;&lt;a href="#toc"&gt;&amp;#8593;&lt;/a&gt;&lt;/b&gt;&lt;/h2&gt;
+
+&lt;p&gt;&lt;/h2&gt; &lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Institution&lt;/strong&gt;: MIT&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Date Completed&lt;/strong&gt;:  March 17, 2015&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Links:&lt;/strong&gt; 
+&lt;a href="https://mitxpro.mit.edu/courses/MITProfessionalX/6.BD_2X/3T2015/about"&gt;Course Website&lt;/a&gt;, 
+&lt;a href="https://s3.amazonaws.com/verify.edx.org/downloads/0a430827415448dfa676c896f7f6bec2/Certificate.pdf"&gt;Certificate of Achievement&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;This was the first online course I ever took. It surveyed state-of-the-art topics in Big Data including data collection (smartphones, sensors, the Web), data storage and processing (scalable relational databases, Hadoop, Spark, etc.), extracting structured data from unstructured data, systems issues (exploiting multicore, security), analytics (machine learning, data compression, efficient algorithms), visualization, and a range of applications.&lt;/p&gt;
 &lt;p&gt;&lt;br&gt;
 &lt;hr&gt;
 &lt;h1 id="web-development"&gt;Web Development&lt;/h1&gt; &lt;/p&gt;
@@ -511,6 +535,7 @@ addressed how a PGM can be learned from a data set of examples. The course discu
 &lt;a href="https://courses.edx.org/courses/course-v1:W3Cx+HTML5.2x+2T2016/course/"&gt;Course Website&lt;/a&gt;, 
 &lt;a href="https://courses.edx.org/certificates/61149abe704147ebaa553ed506924ba8"&gt;Certificate of Achievement&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
+&lt;p&gt;This course covered advanced HTML5 techniques.  We covered single game framework, time-based animation, animation of multiple objects, sprite sheets, collision detection, how to deal with gamepad events, Ajax/XHR2 and IndexedDB, and Orientation API. &lt;/p&gt;
 &lt;h2 id="advanced-css-concepts"&gt;Advanced CSS Concepts &lt;b&gt;&lt;a href="#toc"&gt;&amp;#8593;&lt;/a&gt;&lt;/b&gt;&lt;/h2&gt;
 
 &lt;ul&gt;
@@ -520,6 +545,7 @@ addressed how a PGM can be learned from a data set of examples. The course discu
 &lt;a href="https://courses.edx.org/courses/course-v1:Microsoft+DEV218x+3T2016/course/"&gt;Course Website&lt;/a&gt;, 
 &lt;a href="https://courses.edx.org/certificates/429c9a4bac0e403d9ea2810e6d94427c"&gt;Certificate of Achievement&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
+&lt;p&gt;This course covered advanced CSS concepts such as Responsive Layout using Media Queries; CSS Modules and High Fidelity Designs; Sass/Less and Preprocessing; and Web App Testing and Support for Browsers and Devices.&lt;/p&gt;
 &lt;h2 id="html5-part-1"&gt;HTML5 Part 1: HTML5 Coding Essentials and Best Practices &lt;b&gt;&lt;a href="#toc"&gt;&amp;#8593;&lt;/a&gt;&lt;/b&gt;&lt;/h2&gt;
 
 &lt;ul&gt;
@@ -529,6 +555,7 @@ addressed how a PGM can be learned from a data set of examples. The course discu
 &lt;a href="https://courses.edx.org/courses/course-v1:W3Cx+HTML5.1x+3T2016/course/"&gt;Course Website&lt;/a&gt;, 
 &lt;a href="https://courses.edx.org/certificates/906abb031c4740f89a73d1aab5ac054a"&gt;Certificate of Achievement&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
+&lt;p&gt;This course covered elements and attributes that were introduced by HTML5.  We covered, the  &lt;code&gt;&amp;lt;video&amp;gt;&lt;/code&gt; and &lt;code&gt;&amp;lt;audio&amp;gt;&lt;/code&gt; elements, the HTML5 Canvas, animation, HTML5 Forms, Web Storage API, the File API, and the Geolocation API. &lt;/p&gt;
 &lt;h2 id="html5-introduction"&gt;HTML5 Introduction &lt;b&gt;&lt;a href="#toc"&gt;&amp;#8593;&lt;/a&gt;&lt;/b&gt;&lt;/h2&gt;
 
 &lt;ul&gt;
@@ -538,6 +565,7 @@ addressed how a PGM can be learned from a data set of examples. The course discu
 &lt;a href="https://courses.edx.org/courses/course-v1:W3Cx+HTML5.0x+2T_2016/course/"&gt;Course Website&lt;/a&gt;, 
 &lt;a href="https://courses.edx.org/certificates/0bf5fb9f5fc04f7c9824cf46f35f7dbb"&gt;Certificate of Achievement&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
+&lt;p&gt;This course covered the fundamental HTML5 element and how to use CSS to style them.  &lt;/p&gt;
 &lt;p&gt;&lt;br&gt;
 &lt;hr&gt;
 &lt;h1 id="miscellaneous"&gt;Miscellaneous&lt;/h1&gt; &lt;/p&gt;
@@ -551,6 +579,36 @@ addressed how a PGM can be learned from a data set of examples. The course discu
 &lt;a href="https://www.coursera.org/account/accomplishments/certificate/X2WV6YK98LFG"&gt;Certificate of Achievement&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;p&gt;In this course, we learned about the science behind how digital images and video are made, altered, stored, and used. In particular, we covered: Image and Video Compression (JPEG and MPEG), Spatial Processing (median filtering and histogram equalization), Image Restoration, Image Segmentation (graph cuts and active contours), Image and Video Inpainting (geometric PDEs), Sparse Modeling and Compressed Sensing, and Medical Imaging. &lt;/p&gt;
+&lt;h2 id="json-data"&gt;JSON Data &lt;b&gt;&lt;a href="#toc"&gt;&amp;#8593;&lt;/a&gt;&lt;/b&gt;&lt;/h2&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Institution&lt;/strong&gt;: Stanford Online&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Date Completed&lt;/strong&gt;: February 28, 2017&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Links:&lt;/strong&gt; 
+&lt;a href="https://lagunita.stanford.edu/courses/DB/JSON/SelfPaced/about"&gt;Course Website&lt;/a&gt;, 
+&lt;a href="https://prod-cert-bucket.s3.amazonaws.com/downloads/f97f6698e9d04f838ff23112951a6226/Statement.pdf"&gt;Certificate of Achievement&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;This course introduced the JSON model for human-readable structured or semistructured data.  JSON has become the standard for serializing data objects. &lt;/p&gt;
+&lt;h2 id="becoming-an-entrepreneur"&gt;MIT Launch X – Becoming an Entrepreneur &lt;b&gt;&lt;a href="#toc"&gt;&amp;#8593;&lt;/a&gt;&lt;/b&gt;&lt;/h2&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Institution&lt;/strong&gt;: MITx&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Date Completed&lt;/strong&gt;: February 21, 2017&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Links:&lt;/strong&gt; 
+&lt;a href="https://courses.edx.org/courses/course-v1:MITx+Launch.x_3+1T2017/course/"&gt;Course Website&lt;/a&gt;, 
+&lt;a href="https://courses.edx.org/certificates/85bddd3a20cb4fdfab4c5f7c52586097"&gt;Certificate of Achievement&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;This course covered the basics of what an entrepreneurship is: How to come up with ideas; Doing market research and finding your customer; Creating value for your customer; Knowing how to capture and sustain value; and Selling and pitching.&lt;/p&gt;
+&lt;h2 id="video-game-design-history"&gt;Video Game Design History &lt;b&gt;&lt;a href="#toc"&gt;&amp;#8593;&lt;/a&gt;&lt;/b&gt;&lt;/h2&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Institution&lt;/strong&gt;: RITx&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Date Completed&lt;/strong&gt;: January 4, 2017&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Links:&lt;/strong&gt; 
+&lt;a href="https://courses.edx.org/courses/course-v1:RITx+GAME101x+3T2016/898702cdaee44383bab13784a4a13bac/"&gt;Course Website&lt;/a&gt;, 
+&lt;a href="https://courses.edx.org/certificates/14b79eae6f364bcabbbbaf6cb5015398"&gt;Certificate of Achievement&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;This course covered the history of video games.  Some of the topics that were covered are: Where the first video games came from; How video games connect to pinball; Why the industry crashed in the 1980s; When Virtual Reality (VR) first appeared in the industry; and How the games of the past chart a path to the future of gaming. &lt;/p&gt;
 &lt;h2 id="game-theory-1"&gt;Game Theory 1&lt;b&gt;&lt;a href="#toc"&gt;&amp;#8593;&lt;/a&gt;&lt;/b&gt;&lt;/h2&gt;
 
 &lt;ul&gt;
@@ -560,25 +618,17 @@ addressed how a PGM can be learned from a data set of examples. The course discu
 &lt;a href="https://www.coursera.org/learn/game-theory-1"&gt;Course Website&lt;/a&gt;, 
 &lt;a href="https://www.coursera.org/account/accomplishments/certificate/S5SC9HEQK3SW"&gt;Certificate of Achievement&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
-&lt;p&gt;This course provided an introduction to game theory. Game theory is the mathematical modeling of strategic interaction among rational (and irrational) agents. We covered the following formalization of games: Extensive-Form Games, Repeated Games, Bayesian Games, Coalitional Games. We also studied strategies and concepts such as: Pure and Mixed-Strategy Nash Equilibrium, Iterative Removal of Strictly Dominated Strategies, Minimax strategies, Subgame Perfect Equilibrium. &lt;/p&gt;
-&lt;h2 id="becoming-an-entrepreneur"&gt;MIT Launch X – Becoming an Entrepreneur &lt;b&gt;&lt;a href="#toc"&gt;&amp;#8593;&lt;/a&gt;&lt;/b&gt;&lt;/h2&gt;
+&lt;p&gt;The course will provided an introduction to game theory: representing games and strategies, the extensive form , Bayesian games , repeated and stochastic games. &lt;/p&gt;
+&lt;h2 id="relational-algebra"&gt;Relational Algebra &lt;b&gt;&lt;a href="#toc"&gt;&amp;#8593;&lt;/a&gt;&lt;/b&gt;&lt;/h2&gt;
 
 &lt;ul&gt;
-&lt;li&gt;&lt;strong&gt;Institution&lt;/strong&gt;: MITx&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Date Completed&lt;/strong&gt;: February 21, 2017&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Institution&lt;/strong&gt;: Stanford Online&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Date Completed&lt;/strong&gt;: August 5, 2015&lt;/li&gt;
 &lt;li&gt;&lt;strong&gt;Links:&lt;/strong&gt; 
-&lt;a href="https://courses.edx.org/courses/course-v1:MITx+Launch.x_3+1T2017/course/"&gt;Course Website&lt;/a&gt;, 
-&lt;a href="https://courses.edx.org/certificates/14b79eae6f364bcabbbbaf6cb5015398"&gt;Certificate of Achievement&lt;/a&gt;&lt;/li&gt;
+&lt;a href="https://lagunita.stanford.edu/courses/DB/RA/SelfPaced/about"&gt;Course Website&lt;/a&gt;, 
+&lt;a href="https://prod-cert-bucket.s3.amazonaws.com/downloads/86e4db430dcf43af829bc239e0bd2e36/Statement.pdf"&gt;Certificate of Achievement&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
-&lt;h2 id="video-game-design-history"&gt;Video Game Design History &lt;b&gt;&lt;a href="#toc"&gt;&amp;#8593;&lt;/a&gt;&lt;/b&gt;&lt;/h2&gt;
-
-&lt;ul&gt;
-&lt;li&gt;&lt;strong&gt;Institution&lt;/strong&gt;: RITx&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Date Completed&lt;/strong&gt;: February 21, 2017&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Links:&lt;/strong&gt; 
-&lt;a href="https://courses.edx.org/courses/course-v1:RITx+GAME101x+3T2016/898702cdaee44383bab13784a4a13bac/"&gt;Course Website&lt;/a&gt;, 
-&lt;a href="https://courses.edx.org/certificates/85bddd3a20cb4fdfab4c5f7c52586097"&gt;Certificate of Achievement&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Matt Motoki</dc:creator><pubDate>Mon, 02 Jul 2018 11:42:00 -1000</pubDate><guid isPermaLink="false">tag:None,2018-07-02:/online-course-archive.html</guid><category>Online Courses</category><category>Big Data</category><category>Machine Learning</category><category>Data Science</category><category>Artificial Intelligence</category><category>Web Development</category></item><item><title>Master's Thesis</title><link>/masters-thesis.html</link><description>&lt;h1&gt;Master's Thesis Summary&lt;/h1&gt;
+&lt;p&gt;This course taught the algebraic query language that provides the formal foundations of SQL.  In particular, we thoroughly studied the &lt;code&gt;Select&lt;/code&gt;, &lt;code&gt;Project&lt;/code&gt;, and &lt;code&gt;Join&lt;/code&gt; operations. &lt;/p&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Matt Motoki</dc:creator><pubDate>Mon, 02 Jul 2018 11:42:00 -1000</pubDate><guid isPermaLink="false">tag:None,2018-07-02:/online-course-archive.html</guid><category>Online Courses</category><category>Big Data</category><category>Machine Learning</category><category>Data Science</category><category>Artificial Intelligence</category><category>Web Development</category></item><item><title>Master's Thesis</title><link>/masters-thesis.html</link><description>&lt;h1&gt;Master's Thesis Summary&lt;/h1&gt;
 &lt;p&gt;&lt;a href="./pdfs/matt-motoki-masters-thesis.pdf"&gt; Read the full thesis here.&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;My Master’s thesis was on approximate dynamic programming methods for control of a water heater.  Here are some of the key results. &lt;/p&gt;
 &lt;ul&gt;
