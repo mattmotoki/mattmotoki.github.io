@@ -44,7 +44,7 @@ LINKS = (
 # Social widget
 SOCIAL = (
 	('GitHub', 'https://github.com/mattmotoki/'),
-    ('LinkedIn', 'https://www.linkedin.com/in/matt-motoki-9b7884a2/'),
+    ('LinkedIn', 'https://www.linkedin.com/in/mattmotoki/'),
 )
 
 

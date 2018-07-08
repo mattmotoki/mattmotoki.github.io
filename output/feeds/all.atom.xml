@@ -153,19 +153,72 @@ We found that the Bayesian target-encoded features outperformed the built-in Lig
 &lt;/script&gt;</content><category term="Bayesian Statistics"></category><category term="Feature Engineering"></category><category term="Kaggle"></category></entry><entry><title>Kaggle Competition Archive</title><link href="/kaggle-archive.html" rel="alternate"></link><published>2018-07-03T01:40:00-10:00</published><updated>2018-07-03T01:40:00-10:00</updated><author><name>Matt Motoki</name></author><id>tag:None,2018-07-03:/kaggle-archive.html</id><summary type="html">&lt;p&gt;Summary of Methods Used In Kaggle Competitions&lt;/p&gt;</summary><content type="html">&lt;h1 id="toc"&gt;Table Of Contents&lt;/h1&gt;
 
 &lt;p&gt;This is an archive of Kaggle competitions that I have done. &lt;/p&gt;
+&lt;p&gt;&lt;a href="#regression"&gt;&lt;strong&gt;Regression&lt;/strong&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href="#avito-demand-prediction-challenge"&gt;Avito Demand Prediction Challenge&lt;/a&gt; &lt;/li&gt;
+&lt;li&gt;&lt;a href="#corporación-favorita-grocery-sales-forecasting"&gt;Corporación Favorita Grocery Sales Forecasting&lt;/a&gt; &lt;/li&gt;
+&lt;li&gt;&lt;a href="#grupo-bimbo-inventory-demand"&gt;Grupo Bimbo Inventory Demand&lt;/a&gt; &lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;a href="#binary-classification"&gt;&lt;strong&gt;Binary Classification&lt;/strong&gt;&lt;/a&gt;&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;a href="#santander-customer-satisfaction"&gt;Santander Customer Satisfaction&lt;/a&gt; &lt;/li&gt;
-&lt;li&gt;&lt;a href="#toxic-comment-classification-challenge"&gt;Toxic Comment Classification Challenge&lt;/a&gt; &lt;/li&gt;
-&lt;li&gt;&lt;a href="#instacart-market-basket-analysis"&gt;Instacart Market Basket Analysis&lt;/a&gt; &lt;/li&gt;
 &lt;li&gt;&lt;a href="#porto-seguros-safe-driver-prediction"&gt;Porto Seguro’s Safe Driver Prediction&lt;/a&gt; &lt;/li&gt;
 &lt;li&gt;&lt;a href="#quora-question-pairs"&gt;Quora Question Pairs&lt;/a&gt; &lt;/li&gt;
-&lt;li&gt;&lt;a href="#corporación-favorita-grocery-sales-forecasting"&gt;Corporación Favorita Grocery Sales Forecasting&lt;/a&gt; &lt;/li&gt;
+&lt;li&gt;&lt;a href="#talkingData-adtracking-fraud-detection-challenge"&gt;TalkingData AdTracking Fraud Detection Challenge&lt;/a&gt; &lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;a href="#multiclass-multilabel-classification"&gt;&lt;strong&gt;Multiclass &amp;amp; Multilabel Classification&lt;/strong&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href="#toxic-comment-classification-challenge"&gt;Toxic Comment Classification Challenge&lt;/a&gt; &lt;/li&gt;
+&lt;li&gt;&lt;a href="#instacart-market-basket-analysis"&gt;Instacart Market Basket Analysis&lt;/a&gt; &lt;/li&gt;
 &lt;li&gt;&lt;a href="#facebook-v-predicting-check-ins"&gt;Facebook V: Predicting Check Ins&lt;/a&gt; &lt;/li&gt;
 &lt;li&gt;&lt;a href="#cdiscounts-image-classification-challenge"&gt;Cdiscount’s Image Classification Challenge&lt;/a&gt; &lt;/li&gt;
-&lt;li&gt;&lt;a href="#carvana-image-masking-challenge"&gt;Carvana Image Masking Challenge&lt;/a&gt; &lt;/li&gt;
-&lt;li&gt;&lt;a href="#grupo-bimbo-inventory-demand"&gt;Grupo Bimbo Inventory Demand&lt;/a&gt; &lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;a href="#optimization"&gt;&lt;strong&gt;Optimization&lt;/strong&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href="#santas-uncertain-bags"&gt;Santa's Uncertain Bags&lt;/a&gt; &lt;/li&gt;
 &lt;li&gt;&lt;a href="#santa-gift-matching-challenge"&gt;Santa Gift Matching Challenge&lt;/a&gt; &lt;/li&gt;
 &lt;/ul&gt;
+&lt;p&gt;&lt;a href="#image-segmentation"&gt;&lt;strong&gt;Image Segmentation&lt;/strong&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href="#carvana-image-masking-challenge"&gt;Carvana Image Masking Challenge&lt;/a&gt; &lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;br&gt;
+&lt;hr&gt;
+&lt;h1 id="regression"&gt;Regression&lt;/h1&gt; &lt;/p&gt;
+&lt;h2 id=avito-demand-prediction-challenge&gt;Avito Demand Prediction Challenge &lt;b&gt;&lt;a href="#toc"&gt;&amp;#8593;&lt;/a&gt;&lt;/b&gt;&lt;/h2&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Private Leaderboard Rank&lt;/strong&gt;: 14/1917 (top 0.7%)&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Date Completed&lt;/strong&gt;:  June 27, 2018&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Competition Host&lt;/strong&gt;: Avitio&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Links:&lt;/strong&gt; 
+&lt;a href="https://www.kaggle.com/c/avito-demand-prediction"&gt;Competition Website&lt;/a&gt;,
+&lt;a href="https://www.kaggle.com/c/avito-demand-prediction/discussion/60059"&gt;Discussion Post&lt;/a&gt;,
+&lt;a href="https://mattmotoki.github.io/beta-target-encoding.html"&gt;Blog Post&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Joined a team of data scientists to predict demand for an online advertisement based on its full description (title, description, images, etc.), its context (geographically where it was posted, similar ads already posted), and historical demand for similar ads in similar contexts. The competition metric was the root mean squared error between our prediction and the probability of a deal.  My main contribution to my team's solution was a feature encoding technique called Beta Target Encoding.  The beta target encoded features outperformed the built-in LightGBM categorical encoding.  Our final submission which ranked in the top 0.7% consisted of a large ensemble of gradient boosted decision trees and neural networks. &lt;/p&gt;
+&lt;h2 id=corporación-favorita-grocery-sales-forecasting&gt;Corporación Favorita Grocery Sales Forecasting &lt;b&gt;&lt;a href="#toc"&gt;&amp;#8593;&lt;/a&gt;&lt;/b&gt;&lt;/h2&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Private Leaderboard Rank&lt;/strong&gt;: 76/1675 (top 4.5%)&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Date Completed&lt;/strong&gt;:  January 15, 2018&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Competition Host&lt;/strong&gt;: Corporación Favorita&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Links:&lt;/strong&gt; 
+&lt;a href="https://www.kaggle.com/c/favorita-grocery-sales-forecasting"&gt;Competition Website&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Created grocery sales forecast for a 16day horizon.  Feature engineering was an important part of the final solution; features included lagged sales aggregated over multiple windows.   Features were fed into LightGBM for fast training and prediction.  Models were evaluated using the Normalized Weighted Root Mean Squared Logarithmic Error.  My final submission ranked in the top 4.5%.  &lt;/p&gt;
+&lt;p&gt;&lt;h2 id=grupo-bimbo-inventory-demand&gt;Grupo Bimbo Inventory Demand &lt;b&gt;&lt;a href="#toc"&gt;&amp;#8593;&lt;/a&gt;&lt;/b&gt;&lt;/h2&gt;  &lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Private Leaderboard Rank&lt;/strong&gt;: 231/1969 (top 11.7%)&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Date Completed&lt;/strong&gt;:  August 30, 2016&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Competition Host&lt;/strong&gt;: Grupo Bimbo&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Links:&lt;/strong&gt; 
+&lt;a href="https://www.kaggle.com/c/grupo-bimbo-inventory-demand"&gt;Competition Website&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Partnered with a Hawaii-based data scientist to provide a two-week ahead forecast for client-product sales of the multinational company Grupo Bimbo. The metric used in this competition was the log RMSE and the data for the competition consisted of nearly one million clients each with a few thousand products to order. Our feature engineering consisted of mapping high cardinality categorical variables into a more readily usable form. The final submission ranked in the top 11.7%. &lt;/p&gt;
+&lt;p&gt;&lt;br&gt;
+&lt;hr&gt;
+&lt;h1 id="binary-classification"&gt;Binary Classification&lt;/h1&gt; &lt;/p&gt;
 &lt;h2 id=santander-customer-satisfaction&gt;Santander Customer Satisfaction &lt;b&gt;&lt;a href="#toc"&gt;&amp;#8593;&lt;/a&gt;&lt;/b&gt;&lt;/h2&gt;
 
 &lt;ul&gt;
@@ -175,7 +228,41 @@ We found that the Bayesian target-encoded features outperformed the built-in Lig
 &lt;li&gt;&lt;strong&gt;Links:&lt;/strong&gt; 
 &lt;a href="https://www.kaggle.com/c/santander-customer-satisfaction"&gt;Competition Website&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
-&lt;p&gt;Predicted customer satisfaction for the multinational bank Santander.  The formal objective was to minimize the AUROC (area under the receiver operator curve) of the probability that a customer is dissatisfied with service.   Customized feature engineering appealed to statistical patterns in the anonymized data to create robust low-dimensional features.  These features helped to both increase accuracy and decrease variance in the model predictions.  The final model ranked in the top 0.2% and consisted of an ensemble of three XGBoost models trained with different feature groupings and a stacked Extra Trees model.   &lt;/p&gt;
+&lt;p&gt;Predicted customer satisfaction for the multinational bank Santander.  The formal objective was to minimize the area under the receiver operator curve of the probability that a customer is dissatisfied with service.   Customized feature engineering appealed to statistical patterns in the anonymized data to create robust low-dimensional features.  These features helped to both increase accuracy and decrease variance in the model predictions.  The final model ranked in the top 0.2% and consisted of an ensemble of three XGBoost models trained with different feature groupings and a stacked Extra Trees model.   &lt;/p&gt;
+&lt;h2 id=porto-seguros-safe-driver-prediction&gt;Porto Seguro’s Safe Driver Prediction &lt;b&gt;&lt;a href="#toc"&gt;&amp;#8593;&lt;/a&gt;&lt;/b&gt;&lt;/h2&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Private Leaderboard Rank&lt;/strong&gt;: 58/5169 (top 1.1%)&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Date Completed&lt;/strong&gt;:  November 29, 2017 &lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Competition Host&lt;/strong&gt;: Porto Seguro&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Links:&lt;/strong&gt; 
+&lt;a href="https://www.kaggle.com/c/porto-seguro-safe-driver-prediction"&gt;Competition Website&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Used robust modeling techniques to predict the probability of an insurance claim from noisy anonymized data.  Multiple implementations of gradient boosted decision tree libraries (including XGBoost, CatBoost, and LightGBM) were blended to reduce the variance in predictions.  The evaluation metric was the Normalized Gini Coefficient.  My final submission ranked in the top 1.1%.  &lt;/p&gt;
+&lt;h2 id=quora-question-pairs&gt;Quora Question Pairs &lt;b&gt;&lt;a href="#toc"&gt;&amp;#8593;&lt;/a&gt;&lt;/b&gt;&lt;/h2&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Private Leaderboard Rank&lt;/strong&gt;: 95/3307 (top 2.9%)&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Date Completed&lt;/strong&gt;:  June 6, 2017 &lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Competition Host&lt;/strong&gt;: Quora&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Links:&lt;/strong&gt; 
+&lt;a href="https://www.kaggle.com/c/quora-question-pairs"&gt;Competition Website&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Partnered with a Hawaii-based data scientist to apply natural language processing (NLP) techniques to detect duplicate questions for the crowdsourcing question and answer company Quora. The metric used in this competition was the log loss and the data for the competition consisted of 300,000+ question pairs.  We constructed sentence features from variants of TF-IDF weightings, part-of-speech tags, and string and word distances.  We created ensembles of recurrent neural networks (in particular LSTM) trained on learned and precomputed word embeddings.  We ranked in the top 2.9% using a blend of gradient boosted decision trees and recurrent neural networks. &lt;/p&gt;
+&lt;h2 id=talkingData-adtracking-fraud-detection-challenge&gt;TalkingData AdTracking Fraud Detection Challenge &lt;b&gt;&lt;a href="#toc"&gt;&amp;#8593;&lt;/a&gt;&lt;/b&gt;&lt;/h2&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Private Leaderboard Rank&lt;/strong&gt;: 119/3967 (top 3.0%)&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Date Completed&lt;/strong&gt;:  May 7, 2018&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Competition Host&lt;/strong&gt;: TalkingData&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Links:&lt;/strong&gt; 
+&lt;a href="https://www.kaggle.com/c/talkingdata-adtracking-fraud-detection"&gt;Competition Website&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Partnered with a team of data scientists to predict the probability that an ad is fraudulent or not. The competition metric was the 
+area under the receiver operator curve.  The data consisted of categorical variables such as the device type, app id, os id, and the timestamp of the click.  Our feature engineering consisted of target encoding the categorical variables and their interactions.  Our team relied on factorization machines, neural networks, and gradient boosted decision trees to finish in the top 3.0%. &lt;/p&gt;
+&lt;p&gt;&lt;br&gt;
+&lt;hr&gt;
+&lt;h1 id="multiclass-multilabel-classification"&gt;Multiclass &amp;amp; Multilabel Classification&lt;/h1&gt; &lt;/p&gt;
 &lt;h2 id=toxic-comment-classification-challenge&gt;Toxic Comment Classification Challenge &lt;b&gt;&lt;a href="#toc"&gt;&amp;#8593;&lt;/a&gt;&lt;/b&gt;&lt;/h2&gt;
 
 &lt;ul&gt;
@@ -199,37 +286,8 @@ We found that the Bayesian target-encoded features outperformed the built-in Lig
 &lt;a href="https://www.kaggle.com/mmotoki/markov-chain-tutorial"&gt;Markov Chain Tutorial&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;p&gt;Applied forecasting techniques to predict customer reorders for grocery delivery company Instacart. The metric used in this competition was the mean F1 score and the data for the competition consisted of order histories of 300,000+ members for 50,000+ products.  Features were derived from Markov Chains and ARIMA models.  A customized post-processing routine optimized predictions for the F1 metric.  The final model ranked in the top 1.1%. &lt;/p&gt;
-&lt;h2 id=porto-seguros-safe-driver-prediction&gt;Porto Seguro’s Safe Driver Prediction &lt;b&gt;&lt;a href="#toc"&gt;&amp;#8593;&lt;/a&gt;&lt;/b&gt;&lt;/h2&gt;
+&lt;h2 id=facebook-v-predicting-check-ins&gt;Facebook V: Predicting Check Ins &lt;b&gt;&lt;a href="#toc"&gt;&amp;#8593;&lt;/a&gt;&lt;/b&gt;&lt;/h2&gt;
 
-&lt;ul&gt;
-&lt;li&gt;&lt;strong&gt;Private Leaderboard Rank&lt;/strong&gt;: 58/5169 (top 1.1%)&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Date Completed&lt;/strong&gt;:  November 29, 2017 &lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Competition Host&lt;/strong&gt;: Porto Seguro&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Links:&lt;/strong&gt; 
-&lt;a href="https://www.kaggle.com/c/porto-seguro-safe-driver-prediction"&gt;Competition Website&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;Used robust modeling techniques to predict the probability of an insurance claim from noisy anonymized data.  Multiple implementations of gradient boosted decision tree libraries (including XGBoost, CatBoost, and LightGBM) were blended to reduce the variance in predictions.  The evaluation metric was the Normalized Gini Coefficient.  My final submission ranked in the top 1.1%.  &lt;/p&gt;
-&lt;h2 id=quora-question-pairs&gt;Quora Question Pairs &lt;b&gt;&lt;a href="#toc"&gt;&amp;#8593;&lt;/a&gt;&lt;/b&gt;&lt;/h2&gt;
-
-&lt;ul&gt;
-&lt;li&gt;&lt;strong&gt;Private Leaderboard Rank&lt;/strong&gt;: 95/3307 (top 2.9%)&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Date Completed&lt;/strong&gt;:  June 6, 2017 &lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Competition Host&lt;/strong&gt;: Quora&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Links:&lt;/strong&gt; 
-&lt;a href="https://www.kaggle.com/c/quora-question-pairs"&gt;Competition Website&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;Partnered with a Hawaii-based data scientist to apply natural language processing (NLP) techniques to detect duplicate questions for the crowdsourcing question and answer company Quora. The metric used in this competition was the log loss and the data for the competition consisted of 300,000+ question pairs.  We constructed sentence features from variants of TF-IDF weightings, part-of-speech tags, and string and word distances.  We created ensembles of recurrent neural networks (in particular LSTM) trained on learned and precomputed word embeddings.  We ranked in the top 2.9% using a blend of gradient boosted decision trees and recurrent neural networks. &lt;/p&gt;
-&lt;h2 id=corporación-favorita-grocery-sales-forecasting&gt;Corporación Favorita Grocery Sales Forecasting &lt;b&gt;&lt;a href="#toc"&gt;&amp;#8593;&lt;/a&gt;&lt;/b&gt;&lt;/h2&gt;
-
-&lt;ul&gt;
-&lt;li&gt;&lt;strong&gt;Private Leaderboard Rank&lt;/strong&gt;: 76/1675 (top 4.5%)&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Date Completed&lt;/strong&gt;:  January 15, 2018&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Competition Host&lt;/strong&gt;: Corporación Favorita&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Links:&lt;/strong&gt; 
-&lt;a href="https://www.kaggle.com/c/favorita-grocery-sales-forecasting"&gt;Competition Website&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;Created grocery sales forecast for a 16day horizon.  Feature engineering was an important part of the final solution; features included lagged sales aggregated over multiple windows.   Features were fed into LightGBM for fast training and prediction.  Models were evaluated using the Normalized Weighted Root Mean Squared Logarithmic Error.  My final submission ranked in the top 4.5%.  &lt;/p&gt;
-&lt;p&gt;&lt;h2 id=facebook-v-predicting-check-ins&gt;Facebook V: Predicting Check Ins &lt;b&gt;&lt;a href="#toc"&gt;&amp;#8593;&lt;/a&gt;&lt;/b&gt;&lt;/h2&gt;  &lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;strong&gt;Private Leaderboard Rank&lt;/strong&gt;: 85/1212 (top 7.0%)&lt;/li&gt;
 &lt;li&gt;&lt;strong&gt;Date Completed&lt;/strong&gt;:  July 6, 2016&lt;/li&gt;
@@ -255,25 +313,27 @@ We found that the Bayesian target-encoded features outperformed the built-in Lig
 &lt;li&gt;Over 62 GB of BSON files (binary JSON) &lt;/li&gt;
 &lt;/ul&gt;
 &lt;p&gt;My final solution, which was an ensemble of various DenseNet, Resnet, Inception, and Xception architectures, ranked in the top 3.8%&lt;/p&gt;
-&lt;h2 id=carvana-image-masking-challenge&gt;Carvana Image Masking Challenge &lt;b&gt;&lt;a href="#toc"&gt;&amp;#8593;&lt;/a&gt;&lt;/b&gt;&lt;/h2&gt;
+&lt;p&gt;&lt;br&gt;
+&lt;hr&gt;
+&lt;h1 id="optimization"&gt;Optimization&lt;/h1&gt; &lt;/p&gt;
+&lt;h2 id=santas-uncertain-bags&gt;Santa's Uncertain Bags &lt;b&gt;&lt;a href="#toc"&gt;&amp;#8593;&lt;/a&gt;&lt;/b&gt;&lt;/h2&gt;
 
 &lt;ul&gt;
-&lt;li&gt;&lt;strong&gt;Private Leaderboard Rank&lt;/strong&gt;: 72/735 (top 9.8%)&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Date Completed&lt;/strong&gt;:  September 27, 2017 &lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Competition Host&lt;/strong&gt;: Carvana&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Private Leaderboard Rank&lt;/strong&gt;: 65/694 (top 9.4%)&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Date Completed&lt;/strong&gt;:  January 30, 2017&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Competition Host&lt;/strong&gt;: Kaggle&lt;/li&gt;
 &lt;li&gt;&lt;strong&gt;Links:&lt;/strong&gt; 
-&lt;a href="https://www.kaggle.com/c/carvana-image-masking-challenge"&gt;Competition Website&lt;/a&gt;&lt;/li&gt;
+&lt;a href="https://www.kaggle.com/c/santas-uncertain-bags"&gt;Competition Website&lt;/a&gt;
+&lt;a href="https://www.kaggle.com/mmotoki/from-little-bags-of-joy-to-big-bags-of-toys"&gt;Kernel&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
-&lt;p&gt;Used deep learning to create high-quality image masks for the online car dealership company Carvana. The metric used in this competition was the dice coefficient and the data for the competition consisted of 5,000+ high resolution images of showroom car.  A very deep neural network architecture called U-Net quickly achieved greater than 99.5% accuracy.  My final submission of an ensemble of U-Nets ranked in the top 9.8%. &lt;/p&gt;
-&lt;p&gt;&lt;h2 id=grupo-bimbo-inventory-demand&gt;Grupo Bimbo Inventory Demand &lt;b&gt;&lt;a href="#toc"&gt;&amp;#8593;&lt;/a&gt;&lt;/b&gt;&lt;/h2&gt;  &lt;/p&gt;
+&lt;p&gt;Teamed up with friends to solve a stochastic optimization problem.  The problem setup was as follows: &lt;/p&gt;
 &lt;ul&gt;
-&lt;li&gt;&lt;strong&gt;Private Leaderboard Rank&lt;/strong&gt;: 231/1969 (top 11.7%)&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Date Completed&lt;/strong&gt;:  August 30, 2016&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Competition Host&lt;/strong&gt;: Grupo Bimbo&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Links:&lt;/strong&gt; 
-&lt;a href="https://www.kaggle.com/c/grupo-bimbo-inventory-demand"&gt;Competition Website&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Santa has 1000 bags to fill to fill with 9 types of gifts.  &lt;/li&gt;
+&lt;li&gt;Each gift had an unknown weight drawn from a given probability distribution.  &lt;/li&gt;
+&lt;li&gt;Each bag has a capacity of 50 pounds.  &lt;/li&gt;
+&lt;li&gt;The score was equal to the total weight of the gifts not included in overloaded bags. &lt;/li&gt;
 &lt;/ul&gt;
-&lt;p&gt;Partnered with a Hawaii-based data scientist to provide a two-week ahead forecast for client-product sales of the multinational company Grupo Bimbo. The metric used in this competition was the log RMSE and the data for the competition consisted of nearly one million clients each with a few thousand products to order. Our feature engineering consisted of mapping high cardinality categorical variables into a more readily usable form. The final submission ranked in the top 11.7%. &lt;/p&gt;
+&lt;p&gt;The problem could be framed as a variant of the multiple knapsack problem by assuming each gift had a weight equal to its expected value. We devised a technique to glean more information about the weights of the gifts.  The technique consisted of probing the leaderboard and calculating conditional probabilities based on the feedback (we contacted Kaggle and determined that this was within the rules).  Our final submission ranked in the op 9.4%. &lt;/p&gt;
 &lt;h2 id=santa-gift-matching-challenge&gt;Santa Gift Matching Challenge &lt;b&gt;&lt;a href="#toc"&gt;&amp;#8593;&lt;/a&gt;&lt;/b&gt;&lt;/h2&gt;
 
 &lt;ul&gt;
@@ -283,7 +343,20 @@ We found that the Bayesian target-encoded features outperformed the built-in Lig
 &lt;li&gt;&lt;strong&gt;Links:&lt;/strong&gt; 
 &lt;a href="https://www.kaggle.com/c/santa-gift-matching"&gt;Competition Website&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
-&lt;p&gt;Teamed up with a Kaggle Grandmaster to find a near optimal solution to a large-scale nonlinear optimization problem.  The task was to assign gifts to children.  Each assignment has a gift happiness and child happiness.  The objective was to maximize the cube of the total gift happiness plus the cube of the total child happiness. The constraints of the problem were essentially linear.   The objective function—while nonlinear—is well modeled by a linear approximation.  The linearized problem was framed as a max-flow min-cost problem and solved exactly using Google’s OR-Tools.   The solution was then fine-tuned using a greedy heuristic implemented in plain C for speed. Our final submission ranked in the top 20.6%. &lt;/p&gt;</content><category term="Kaggle"></category><category term="Natural Language Processing"></category><category term="Computer Vision"></category></entry><entry><title>Online Course Archive</title><link href="/online-course-archive.html" rel="alternate"></link><published>2018-07-02T11:42:00-10:00</published><updated>2018-07-02T11:42:00-10:00</updated><author><name>Matt Motoki</name></author><id>tag:None,2018-07-02:/online-course-archive.html</id><summary type="html">&lt;p&gt;Online Course Archive&lt;/p&gt;</summary><content type="html">&lt;h1 id="toc"&gt;Table Of Contents&lt;/h1&gt;
+&lt;p&gt;Teamed up with a Kaggle Grandmaster to find a near optimal solution to a large-scale nonlinear optimization problem.  The task was to assign gifts to children.  Each assignment has a gift happiness and child happiness.  The objective was to maximize the cube of the total gift happiness plus the cube of the total child happiness. The constraints of the problem were essentially linear.   The objective function—while nonlinear—is well modeled by a linear approximation.  The linearized problem was framed as a max-flow min-cost problem and solved exactly using Google’s OR-Tools.   The solution was then fine-tuned using a greedy heuristic implemented in plain C for speed. Our final submission ranked in the top 20.6%. &lt;/p&gt;
+&lt;p&gt;&lt;br&gt;
+&lt;hr&gt;
+&lt;h1 id="image-segmentation"&gt;Image Segmentation&lt;/h1&gt; &lt;/p&gt;
+&lt;h2 id=carvana-image-masking-challenge&gt;Carvana Image Masking Challenge &lt;b&gt;&lt;a href="#toc"&gt;&amp;#8593;&lt;/a&gt;&lt;/b&gt;&lt;/h2&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Private Leaderboard Rank&lt;/strong&gt;: 72/735 (top 9.8%)&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Date Completed&lt;/strong&gt;:  September 27, 2017 &lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Competition Host&lt;/strong&gt;: Carvana&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Links:&lt;/strong&gt; 
+&lt;a href="https://www.kaggle.com/c/carvana-image-masking-challenge"&gt;Competition Website&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Used deep learning to create high-quality image masks for the online car dealership company Carvana. The metric used in this competition was the dice coefficient and the data for the competition consisted of 5,000+ high resolution images of showroom car.  A very deep neural network architecture called U-Net quickly achieved greater than 99.5% accuracy.  My final submission of an ensemble of U-Nets ranked in the top 9.8%. &lt;/p&gt;</content><category term="Kaggle"></category><category term="Natural Language Processing"></category><category term="Computer Vision"></category></entry><entry><title>Online Course Archive</title><link href="/online-course-archive.html" rel="alternate"></link><published>2018-07-02T11:42:00-10:00</published><updated>2018-07-02T11:42:00-10:00</updated><author><name>Matt Motoki</name></author><id>tag:None,2018-07-02:/online-course-archive.html</id><summary type="html">&lt;p&gt;Online Course Archive&lt;/p&gt;</summary><content type="html">&lt;h1 id="toc"&gt;Table Of Contents&lt;/h1&gt;
 
 &lt;p&gt;This is an archive of online courses that I have taken and certificates that I have achieved. &lt;/p&gt;
 &lt;p&gt;&lt;a href="#machine-learning"&gt;&lt;strong&gt;Machine Learning&lt;/strong&gt;&lt;/a&gt;&lt;/p&gt;
