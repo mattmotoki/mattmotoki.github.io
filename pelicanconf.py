@@ -14,7 +14,7 @@ TIMEZONE = 'Pacific/Honolulu'
 DEFAULT_METADATA = {'status': 'draft'}
 DEFAULT_LANG = 'en'
 
-NEST_HEADER_IMAGES = 'bg0.png'
+NEST_HEADER_IMAGES = 'white_and_black.png'
 
 NEST_CSS_MINIFY = True
 
