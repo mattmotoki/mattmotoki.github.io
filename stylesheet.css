@@ -50,6 +50,8 @@ h2 {
   color: #22ff22;
 }
 
+
+
 .competition-item {
   margin-top: 10px;
 }
@@ -100,32 +102,19 @@ h2 {
 
 /* Mobile Styles */
 @media screen and (max-width: 768px) {
-  .section-image {
-    display: none;  /* Hide the section image */
-  }
-  .project-text {
-    display: none;  /* Hide the project text */
-  }
 
-  .header {
-    flex-direction: column;  /* Stack the header text and image vertically */
-    align-items: center;
+  ul, ol {
+    padding-left: 20px;  
   }
-
-  .header-text, .header-image {
-    margin: 0 auto;
-  }
-
-  /* Reverse order of header text and profile pic */
-  .header-text {
-    order: 1; 
-  }
-  .header-image {
-    order: 0;  
-  }  
 
   footer {
     text-align: center;
   }
+
+  .large-screen-only {
+    display: none;
+  }
+
+
 }
 
