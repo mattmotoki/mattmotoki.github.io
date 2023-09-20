@@ -40,6 +40,11 @@
             <a href="files/Matt Motoki Resume 2022-09-25.pdf" target="_blank">Resume</a> 
             <!-- <a href="https://twitter.com/mattmotoki" target="_blank">Twitter</a> -->
           </p>
+          <div class="dark-mode-toggle">
+            <input type="checkbox" id="darkModeToggle" />
+            <label for="darkModeToggle"></label>
+            Dark Mode
+          </div>          
         </div>
       </div>
       
@@ -171,6 +176,26 @@
       </footer>
 
     </div>
+
+    <script>
+      document.getElementById('darkModeToggle').addEventListener('change', function(event) {
+          if (event.target.checked) {
+              document.documentElement.setAttribute('data-theme', 'dark');
+              localStorage.setItem('theme', 'dark'); // Store user preference in local storage
+          } else {
+              document.documentElement.removeAttribute('data-theme');
+              localStorage.removeItem('theme'); // Remove user preference from local storage
+          }
+      });
+
+      // On page load, check user's preference
+      window.addEventListener('load', function() {
+          if (localStorage.getItem('theme') === 'dark') {
+              document.getElementById('darkModeToggle').checked = true;
+              document.documentElement.setAttribute('data-theme', 'dark');
+          }
+      });
+    </script>
     
   </body>
 </html>
