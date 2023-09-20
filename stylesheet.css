@@ -36,6 +36,7 @@ a:hover {
 .header {
   display: flex;  
   justify-content: space-between;
+  flex-direction: column;  /* Stack the header text and image vertically */
   align-items: center;
 }
 
@@ -51,6 +52,7 @@ h2 {
 
 
 .header-text, .header-image {
+  margin: 0 auto;
   padding: 2.5%;
 }
 
@@ -92,6 +94,7 @@ h2 {
 }
 
 
+
 /* Mobile Styles */
 @media screen and (max-width: 768px) {
   .section-image {
@@ -122,3 +125,4 @@ h2 {
     text-align: center;
   }
 }
+
