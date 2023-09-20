@@ -50,6 +50,9 @@ h2 {
   color: #22ff22;
 }
 
+.competition-item {
+  margin-top: 10px;
+}
 
 .header-text, .header-image {
   margin: 0 auto;
@@ -88,7 +91,7 @@ h2 {
   margin-right: 20px;
 }
 
-.papertitle {
+.highlight {
   font-weight: 700;
   color: #22ff22;
 }
