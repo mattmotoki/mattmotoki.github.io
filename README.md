@@ -1,1 +1,1 @@
-This is the source code to my personal website: https://mattmotoki.github.io/. 
+This is the source code for my personal website: https://mattmotoki.github.io/. 
