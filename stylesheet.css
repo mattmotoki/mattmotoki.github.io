@@ -60,6 +60,9 @@ h2 {
   color: var(--section-color);
 }
 
+.project-description {
+  text-align: justify;
+}
 
 .competition-item {
   margin-top: 10px;
@@ -68,6 +71,7 @@ h2 {
 .header-text, .header-image {
   margin: 0 auto;
   padding: 2.5%;
+  text-align: justify;
 }
 
 .social-links {
@@ -142,7 +146,7 @@ h2 {
 
 /* Style switch when it's checked (on) */
 .dark-mode-toggle input:checked + label {
-  background-color: #1772d0; /* Background color of the switch when on */
+  background-color: #966bca; /* Background color of the switch when on */
 }
 
 /* Move the knob to the other side when the switch is on */
@@ -174,6 +178,17 @@ h2 {
     display: none;
   }
 
+  .profile-photo {
+    max-width: 200px;
+  }
+
+  .header-text {
+    text-align: left;
+  }
+
+  .project-description {
+    text-align: left;
+  }
 
 }
 
