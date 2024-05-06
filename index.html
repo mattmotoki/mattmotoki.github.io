@@ -116,7 +116,7 @@
         <ul>
 
           <li class="competition-item">
-            <span class="highlight">6th Place in the Enefit - Predict Energy Behavior of Prosumers challenge (2024)</span>
+            <span class="highlight">6th Place in the Enefit - Predict Energy Behavior of Prosumers Challenge (2024)</span>
             <a href="https://www.kaggle.com/competitions/predict-energy-behavior-of-prosumers/discussion/499397" target="_blank" onclick="trackOutboundLink(event, 'competition', 'enefit-write-up');">Write-Up</a> /
             <a href="https://www.kaggle.com/competitions/predict-energy-behavior-of-prosumers" target="_blank" onclick="trackOutboundLink(event, 'competition', 'enefit-website');">Website</a>              
             &nbsp; <br class="large-screen-only">
@@ -205,28 +205,43 @@
         <h2>Generative Art</h2>
         If I had more time, I'd like to create more generative art. Here are a few pieces I've made:
 
+
         <div class="section-item">
-          <a href="files/light-rain.html" target="_blank" onclick="trackOutboundLink(event, 'generative-art', 'light-rain');">
+          <a href="files/silhouette.html" onclick="trackOutboundLink(event, 'generative-art', 'silhouette');">
+            <img src="images/silhouette.png" alt="silhouette" class="section-image large-screen-only">
+          </a>
+          <div class="project-description">
+            <span class="highlight">Silhouette</span> 
+            <br>
+            <a href="files/silhouette.html" onclick="trackOutboundLink(event, 'generative-art', 'silhouette');">Code</a>
+            &nbsp; 
+            <br class="large-screen-only">
+            The code combines Perlin noise to create a mountain-like silhouette and a color gradient using the viridis palette. The points are created within a grid system with their color determined by position. The silhouette is formed by calculating the intersection of polygons.
+          </div>
+        </div>
+
+        <div class="section-item">
+          <a href="files/light-rain.html" onclick="trackOutboundLink(event, 'generative-art', 'light-rain');">
             <img src="images/light-rain.png" alt="light-rain" class="section-image large-screen-only">
           </a>
           <div class="project-description">
             <span class="highlight">Light Rain</span> 
             <br>
-            <a href="files/light-rain.html" target="_blank" onclick="trackOutboundLink(event, 'generative-art', 'light-rain');">Code</a>
+            <a href="files/light-rain.html" onclick="trackOutboundLink(event, 'generative-art', 'light-rain');">Code</a>
             &nbsp; 
             <br class="large-screen-only">
-            Vertical lines of color fall softly, resembling the delicate, shimmering appearance of light rain. This piece was inspired by Marius Watz's <a href="https://mariuswatz.com/2010/04/22/blocker/" target="_blank">Blocker series</a>. The code draws semi-transparent rectangles with colors determined by Perlin noise and a blend of two color palettes.
+            This piece was inspired by Marius Watz's <a href="https://mariuswatz.com/2010/04/22/blocker/" target="_blank">Blocker series</a>. The code draws semi-transparent rectangles with colors and positions determined by Perlin noise. The final color palette is a blend from separate noise patterns.
           </div>
         </div>
 
         <div class="section-item">
-          <a href="files/shell.html" target="_blank" onclick="trackOutboundLink(event, 'generative-art', 'shell');">
+          <a href="files/shell.html" onclick="trackOutboundLink(event, 'generative-art', 'shell');">
             <img src="images/shell.png" alt="shell" class="section-image large-screen-only">
           </a>
           <div class="project-description">
             <span class="highlight">Shell</span> 
             <br>
-            <a href="files/shell.html" target="_blank" onclick="trackOutboundLink(event, 'generative-art', 'shell');">Code</a>
+            <a href="files/shell.html" onclick="trackOutboundLink(event, 'generative-art', 'shell');">Code</a>
             &nbsp; 
             <br class="large-screen-only">
             This is likely the first generative art piece I created. It's a simple connect-the-dots program that generates a spiral pattern resembling a shell.
