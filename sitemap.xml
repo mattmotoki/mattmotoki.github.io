@@ -7,12 +7,6 @@
     <priority>1.0</priority>
   </url>
   <url>
-    <loc>https://mattmotoki.github.io/files/Matt%20Motoki%20-%20CityLearn%202023%20Challenge%20-%20Forecast%20Track.pdf</loc>
-    <lastmod>2024-02-01</lastmod>
-    <changefreq>never</changefreq>
-    <priority>0.5</priority>
-  </url>    
-  <url>
     <loc>https://mattmotoki.github.io/cell-division/</loc>
     <lastmod>2023-09-26</lastmod>
     <changefreq>monthly</changefreq>
@@ -23,6 +17,30 @@
     <lastmod>2023-09-26</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
+  </url>  
+  <url>
+    <loc>https://mattmotoki.github.io/files/Matt%20Motoki%20-%20CityLearn%202023%20Challenge%20-%20Forecast%20Track.pdf</loc>
+    <lastmod>2024-02-01</lastmod>
+    <changefreq>never</changefreq>
+    <priority>0.1</priority>
   </url>
+  <url>
+    <loc>https://mattmotoki.github.io/files/shell.html</loc>
+    <lastmod>2024-02-01</lastmod>
+    <changefreq>never</changefreq>
+    <priority>0.1</priority>
+  </url>
+  <url>
+    <loc>https://mattmotoki.github.io/files/light-rain.html</loc>
+    <lastmod>2024-02-01</lastmod>
+    <changefreq>never</changefreq>
+    <priority>0.1</priority>
+  </url>
+  <url>
+    <loc>https://mattmotoki.github.io/files/silhouette.html</loc>
+    <lastmod>2024-02-01</lastmod>
+    <changefreq>never</changefreq>
+    <priority>0.1</priority>
+  </url>          
 </urlset>
 
