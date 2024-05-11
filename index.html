@@ -310,25 +310,25 @@
     <script>
       // Change theme on toggle 
       document.getElementById("darkModeToggle").addEventListener("change", function(event) {
-          if (event.target.checked) {
-              document.documentElement.setAttribute("data-theme", "dark");
-              localStorage.setItem("theme", "dark");
-          } else {
-              document.documentElement.removeAttribute("data-theme");
-              localStorage.removeItem("theme");
-          }
+        if (event.target.checked) {
+          document.documentElement.setAttribute("data-theme", "dark");
+          localStorage.setItem("theme", "dark");
+        } else {
+          document.documentElement.setAttribute("data-theme", "light");
+          localStorage.setItem("theme", "light");
+        }
       });
 
-      // On page load, check user's preference
       window.addEventListener("load", function() {
-        if (!localStorage.getItem("theme")) {
-          document.getElementById("darkModeToggle").checked = true;
-          document.documentElement.setAttribute("data-theme", "dark");
-        } else if (localStorage.getItem("theme") === "dark") {
+        const savedTheme = localStorage.getItem("theme");
+        if (savedTheme === "light") {
+          document.getElementById("darkModeToggle").checked = false;
+          document.documentElement.setAttribute("data-theme", "light");
+        } else {
           document.getElementById("darkModeToggle").checked = true;
           document.documentElement.setAttribute("data-theme", "dark");
         }
-      });      
+      });    
     </script>
     
     <!-- Google Analytics event tracking -->
