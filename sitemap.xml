@@ -29,11 +29,18 @@
   </url>
   
   <url>
+    <loc>https://mattmotoki.github.io/files/fractal-tree.html</loc>
+    <lastmod>2024-05-17</lastmod>
+    <changefreq>never</changefreq>
+    <priority>0.1</priority>
+  </url>  
+  
+  <url>
     <loc>https://mattmotoki.github.io/files/city-lights.html</loc>
     <lastmod>2024-05-11</lastmod>
     <changefreq>never</changefreq>
     <priority>0.1</priority>
-  </url>  
+  </url>    
 
   <url>
     <loc>https://mattmotoki.github.io/files/streamlines.html</loc>
@@ -71,7 +78,7 @@
   </url>
 
   <url>
-    <loc>https://mattmotoki.github.io/files/perspective-grid.html</loc>
+    <loc>https://mattmotoki.github.io/files/perspective.html</loc>
     <lastmod>2024-05-11</lastmod>
     <changefreq>never</changefreq>
     <priority>0.1</priority>
