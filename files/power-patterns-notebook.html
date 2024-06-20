@@ -7530,7 +7530,7 @@ a.anchor-link {
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
 <p><a id="eda"></a></p>
-<h1 id="Exploratory-Data-Analysis">Exploratory Data Analysis<a href="#toc"><i class="fa fa-home"></i></a><a class="anchor-link" href="#Exploratory-Data-Analysis">¶</a></h1><p>In this analysis, we will begin by highlighting two buildings which we've selected which exhibit the prototypical patterns that we'd like to analyze. By examining these buildings in detail, we aim to gain valuable insights into the characteristics and patterns present in the data. These insights will guide us in the process of feature engineering, where we will extract meaningful and informative features from the raw data. First, we'll visualize the raw time series data.</p>
+<h1 id="Exploratory-Data-Analysis-(EDA)">Exploratory Data Analysis (EDA)<a href="#toc"><i class="fa fa-home"></i></a><a class="anchor-link" href="#Exploratory-Data-Analysis-(EDA)">¶</a></h1><p>In this analysis, we will begin by highlighting two buildings which we've selected which exhibit the prototypical patterns that we'd like to analyze. By examining these buildings in detail, we aim to gain valuable insights into the characteristics and patterns present in the data. These insights will guide us in the process of feature engineering, where we will extract meaningful and informative features from the raw data. First, we'll visualize the raw time series data.</p>
 </div>
 </div>
 </div>
@@ -7809,12 +7809,12 @@ Building 601
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
-<p>The subplot on the left shows the <code>total_yearly_energy_consumption</code> for all the buildings. Interestingly, buildings in the first half of the dataset have very low energy consumption compared to the buildings in of the second half. Roughly speaking, the buildings in the first half are about 1-3 orders of magnitude smaller than the buildings in the second half. Unfortunately, this building number based dichotomy is artificial and likely due to "data leakage" (not shuffling the building ids); that said, we could have derived the separation by looking at the distribution of consumption. The subplot on the right shows the distribution of <code>total_yearly_energy_consumption</code>. We can split the buildings into small and large using a single cutoff point. If choose the cutoff point to be the value at which the two densities are equal (~35000 kWh and shown as a dotted line in both subplots), we would allow us to arrive at a similar conclusion without needing to use the building number.</p>
+<p>The subplot on the left shows the <code>total_yearly_energy_consumption</code> for all the buildings. Interestingly, buildings in the first half of the dataset have very low energy consumption compared to the buildings in of the second half. Roughly speaking, the buildings in the first half are about 1-3 orders of magnitude smaller than the buildings in the second half. Unfortunately, this building number based dichotomy is artificial and likely due to "data leakage" (not shuffling the building ids); that said, we could have derived the separation by looking at the distribution of consumption. The subplot on the right shows the distribution of <code>total_yearly_energy_consumption</code>. We can split the buildings into small and large using a single cutoff point. If we choose the cutoff point to be the value at which the two densities are equal (~35,000 kWh annual consumption and shown as a dotted line in both subplots), we would allow us to arrive at a similar conclusion without needing to use the building number.</p>
 <p>As we'll see in the subsequent analysis, the smaller buildings are likely to be residential and the larger buildings are likely to be commercial. We'll refer to the buildings in the first half of the datset as "residential" buildings and the buildings in the second half as "commercial" buildings. Because the residential buildings are so much smaller, they will likely need to partner with an aggregator or a virtual power plant to get the most out of a DR program <a href="#ref2">[2]</a>, <a href="#ref3">[3]</a>.</p>
 <p><a id="temporal-features"></a></p>
 <h2 id="Temporal-Features--">Temporal Features  <a href="#feature-engineering"><i class="fa fa-arrow-up"></i></a><a class="anchor-link" href="#Temporal-Features--">¶</a></h2><p>To focus on the shape of these patterns rather than the absolute energy use (which is already captured by the <code>total_yearly_energy_consumption</code> feature), we first standardized the data. This involves subtracting the mean and dividing by the standard deviation. This standardization effectively removes the influence of building size <a href="#ref4">[4]</a>.</p>
 <p><a id="seasonality"></a></p>
-<h3 id="Seasonality--">Seasonality  <a href="#feature-engineering-toc"><i class="fa fa-arrow-up"></i></a><a class="anchor-link" href="#Seasonality--">¶</a></h3><p>During exploratory data analysis (EDA), we found that most insights could be derived without analyzing the raw time series directly. Instead, we summarize the data by calculating average energy consumption for each month, day of week, and time of day. This results in a <code>seasonality</code> vector of length 8064 (12 months × 7 days per week × 96 observations per day).</p>
+<h3 id="Seasonality--">Seasonality  <a href="#feature-engineering-toc"><i class="fa fa-arrow-up"></i></a><a class="anchor-link" href="#Seasonality--">¶</a></h3><p>During exploratory data analysis, we found that most insights could be derived without analyzing the raw time series directly. Instead, we summarize the data by calculating average energy consumption for each month, day of week, and time of day. This results in a <code>seasonality</code> vector of length 8064 (12 months × 7 days per week × 96 observations per day).</p>
 </div>
 </div>
 </div>
@@ -8341,7 +8341,7 @@ Building 601
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
 <p><a id="size-clusters"></a></p>
-<h2 id="Size-Based-Clusters--">Size-Based Clusters  <a href="#unsupervised-learning"><i class="fa fa-arrow-up"></i></a><a class="anchor-link" href="#Size-Based-Clusters--">¶</a></h2><p>During feature engineering, we found that a 35,000 kWh threshold effectively distinguished smaller (likely residential) buildings from larger (likely commercial) ones.  As discussed earlier, this distinction is important when designing demand response (DR) programs, as residential buildings may require aggregation to effectively participate due to their lower energy capacity.</p>
+<h2 id="Size-Based-Clusters--">Size-Based Clusters  <a href="#unsupervised-learning"><i class="fa fa-arrow-up"></i></a><a class="anchor-link" href="#Size-Based-Clusters--">¶</a></h2><p>During feature engineering, we found that a 35,000 kWh annual consumption threshold effectively distinguished smaller (likely residential) buildings from larger (likely commercial) ones.  As discussed earlier, this distinction is important when designing demand response (DR) programs, as residential buildings may require aggregation to effectively participate due to their lower energy capacity.</p>
 </div>
 </div>
 </div>
@@ -8615,7 +8615,7 @@ Building 601
 <tr>
 <td><strong>Summer Evening: 2 (blue)</strong></td>
 <td style="text-align:left">Summer (Jul, Aug)</td>
-<td style="text-align:left">Large evening peaks throughout the year. Small winter morning peaks.</td>
+<td style="text-align:left">Large evening peaks throughout the year.</td>
 <td style="text-align:left">Similar</td>
 </tr>
 </tbody>
