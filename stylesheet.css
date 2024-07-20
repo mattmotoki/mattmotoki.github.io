@@ -54,6 +54,7 @@ footer {
   padding: 10px 0;
   margin-top: 40px;
   font-size: 0.9em;
+  text-align: center;
 }
 
 
@@ -104,8 +105,8 @@ h2 {
 .section-image {
   float: left; 
   margin: 2px 10px 3px 0;
-  width: 90px;
-  height: 90px;
+  width: 70px;
+  height: 70px;
 }
 
 .highlight {
@@ -164,16 +165,32 @@ h2 {
   position: absolute;     /* Take it out of the normal flow */
 }
 
+/* Creative coding images */
+.art-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+}
+
+.art-image {
+  width: 160px;
+  height: 160px;
+  object-fit: cover;
+  border-radius: 10px;
+  transition: transform 0.3s ease;
+}
+
+.art-image:hover {
+  transform: scale(1.05);
+}
+
 
 /* Mobile Styles */
 @media screen and (max-width: 768px) {
 
   ul, ol {
     padding-left: 20px;  
-  }
-
-  footer {
-    text-align: center;
   }
 
   .name {
@@ -194,3 +211,9 @@ h2 {
 
 }
 
+@media (max-width: 600px) {
+  .art-image {
+    width: 100px;
+    height: 100px;
+  }
+}

@@ -14,6 +14,8 @@
     <meta name="author" content="Matt Motoki">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" type="text/css" href="stylesheet.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
     <link rel="apple-touch-icon" sizes="57x57" href="favicons/apple-icon-57x57.png">
     <link rel="apple-touch-icon" sizes="60x60" href="favicons/apple-icon-60x60.png">
     <link rel="apple-touch-icon" sizes="72x72" href="favicons/apple-icon-72x72.png">
@@ -31,6 +33,7 @@
   </head>
   <body>
     <div class="container">
+
       <!-- Header  -->
       <div class="header">
         <div class="header-image">
@@ -39,11 +42,11 @@
         <div class="header-text">
           <h1 class="name">Matt Motoki</h1>
           <p>I am a second-year Ph.D. student in the Electrical & Computer Engineering Department at the University of Washington, advised by 
-            <a href="https://zhangbaosen.github.io/" target="_blank">Baosen Zhang</a>. My research interests lie at the intersection of machine learning, power systems, and sustainability. In the past, I’ve worked in industry as a data scientist.
+            <a href="https://zhangbaosen.github.io/" target="_blank">Baosen Zhang</a>. My research interests lie at the intersection of machine learning, power systems, and sustainability. I also currently work as a data scientist at <a href="https://www.shiftedenergy.com/" target="_blank">Shifted Energy</a>.
           </p>
           <p class="social-links">
-            <a href="https://scholar.google.com/citations?user=fOWhQ3AAAAAJ&hl=en" target="_blank">Google Scholar</a> &nbsp;/&nbsp;
-            <a href="https://github.com/mattmotoki/" target="_blank">GitHub</a> &nbsp;/&nbsp;
+            <a href="https://scholar.google.com/citations?user=fOWhQ3AAAAAJ&hl=en" target="_blank">Google Scholar <i class="ai ai-google-scholar"></i></a> &nbsp; &bull; &nbsp;
+            <a href="https://github.com/mattmotoki/" target="_blank">GitHub <i class="fab fa-github"></i></a> &nbsp; &bull; &nbsp;
             <a href="https://kaggle.com/mmotoki/" target="_blank">Kaggle</a> 
             <!-- <a href="files/Matt Motoki Resume.pdf" target="_blank">Resume</a> -->
             <!-- <a href="https://twitter.com/mattmotoki" target="_blank">Twitter</a> -->
@@ -57,21 +60,19 @@
       </div>
 
 
-
       <!-- Projects -->
       <div class="section" id="projects">
         <h2>Projects</h2>                
                 
         <div class="section-item">
-          <a href="https://mattmotoki.github.io/cell-division" target="_blank">
+          <a href="https://mattmotoki.github.io/cell-division" target="_blank" title="Play the game">
             <img src="images/cell-division.png" alt="cell-division" class="section-image">
           </a>
           <div class="project-description">
             <span class="highlight">Cell Division: A Biology-Inspired Board Game with an AI Opponent</span>
             &nbsp; 
-            <br class="large-screen-only">
-            <a href="https://mattmotoki.github.io/cell-division" target="_blank">Game</a> /
-            <a href="https://github.com/mattmotoki/cell-division" target="_blank">GitHub</a>
+            <a href="https://mattmotoki.github.io/cell-division" target="_blank" title="Play the game"> <i class="fas fa-play-circle"></i></a> &nbsp;
+            <a href="https://github.com/mattmotoki/cell-division" target="_blank" title="GitHub"><i class="fab fa-github"></i></a>            
             &nbsp; 
             <br class="large-screen-only">
             Cell Division is a strategy-based board game. Players take turns placing their cells. A player’s cells divide when they connect with each other. The score is equal to the total number of cells. The game ends when the board is full. The winner is the player with the most cells.  
@@ -79,15 +80,14 @@
         </div>
 
         <div class="section-item">
-          <a href="https://mattmotoki.github.io/cell-extension" target="_blank">
+          <a href="https://mattmotoki.github.io/cell-extension" target="_blank" title="Play the game">
             <img src="images/cell-extension.svg" alt="cell-collection" class="section-image">
           </a>
           <div class="project-description">
             <span class="highlight">Cell Collection: Variations of Cell Division</span>
             &nbsp; 
-            <br class="large-screen-only">
-            <a href="https://mattmotoki.github.io/cell-extension" target="_blank">Game</a> /
-            <a href="https://github.com/mattmotoki/cell-extension" target="_blank">GitHub</a>
+            <a href="https://mattmotoki.github.io/cell-extension" target="_blank" title="Play the game"> <i class="fas fa-play-circle"></i></a> &nbsp;
+            <a href="https://github.com/mattmotoki/cell-extension" target="_blank" title="GitHub"><i class="fab fa-github"></i></a>
             &nbsp; 
             <br class="large-screen-only">
             This is a collection of games inspired by Cell Division. If a player places a new cell adjacent to one or more of their existing cells, then their existing cell(s) extend to include the new cell. This is a work in progress and I plan to implement various scoring mechanisms.       
@@ -95,14 +95,13 @@
         </div>
 
         <div class="section-item">
-          <a href="https://www.meetup.com/hawaii-machine-learning-meetup/" target="_blank">
+          <a href="https://www.meetup.com/hawaii-machine-learning-meetup/" target="_blank" title="Meetup website">
             <img src="images/hml.jpeg" alt="hawaii-machine-learning-meetup" class="section-image">
           </a>
           <div class="project-description">
             <span class="highlight">Hawaii Machine Learning Meetup</span>
             &nbsp; 
-            <br class="large-screen-only">
-            <a href="https://www.meetup.com/hawaii-machine-learning-meetup/" target="_blank">Website</a>
+            <a href="https://www.meetup.com/hawaii-machine-learning-meetup/" target="_blank" title="Meetup website"><i class="fas fa-external-link-alt"></i></a>
             &nbsp; 
             <br class="large-screen-only">
             I helped to create the Hawaii Machine Learning Meetup with the goal of increasing ML adoption in Hawaii. As an organizer, I grew the community to 250+ members and helped to lead networking events and ML study groups.
@@ -119,234 +118,130 @@
         <ul>
 
           <li class="competition-item">
-            <span class="highlight">1st Place in Power Patterns: Harnessing Electricity for Innovation
-              (2024)</span>
+            <span class="highlight">1st Place in Power Patterns: Harnessing Electricity for Innovation (2024)</span>
             &nbsp; 
-            <a href="https://thinkonward.com/app/c/challenges/power-patterns/leaderboard" target="_blank">Website</a> /
-            <a href="files/power-patterns-notebook.html" target="_blank">Code</a>
+            <a href="files/power-patterns-notebook.html" target="_blank" target="_blank" title="Code"><i class="fas fa-code"></i></a> &nbsp;
+            <a href="https://thinkonward.com/app/c/challenges/power-patterns/leaderboard" target="_blank" title="Competition website"><i class="fas fa-external-link-alt"></i></a>
             &nbsp; <br class="large-screen-only">
-            Team Members: Matt Motoki, Elaine Hsu.
-            Prize Money: $3,000
+            Prize Money: $3,000. 
+            Team Members: Elaine Hsu
           </li>
 
           <li class="competition-item">
-            <span class="highlight">6th Place in the Enefit - Predict Energy Behavior of Prosumers Challenge (2024)</span>
+            <span class="highlight">6th Place in Enefit - Predict Energy Behavior of Prosumers Challenge (2024)</span>
             &nbsp; 
-            <a href="https://www.kaggle.com/competitions/predict-energy-behavior-of-prosumers/discussion/499397" target="_blank">Write-Up</a> /
-            <a href="https://www.kaggle.com/competitions/predict-energy-behavior-of-prosumers" target="_blank">Website</a>              
+            <a href="https://www.kaggle.com/competitions/predict-energy-behavior-of-prosumers/discussion/499397" target="_blank" title="Summary"><i class="fas fa-file-lines"></i></a> &nbsp;
+            <a href="https://www.kaggle.com/competitions/predict-energy-behavior-of-prosumers" target="_blank" title="Competition website"><i class="fas fa-external-link-alt"></i></a>
             &nbsp; <br class="large-screen-only">
-            Team Members: Matt Motoki.
-            Prize Money: $5,000
+            Prize Money: $5,000.
           </li>
 
           <li class="competition-item">
             <span class="highlight">1st Place in the NeurIPS CityLearn Challenge - Forecasting Track (2023)</span>
             &nbsp; 
-            <a href="files/Matt Motoki - CityLearn 2023 Challenge - Forecast Track.pdf" target="_blank">Slides</a> /
-            <a href="https://github.com/mattmotoki/1st-place-solution-neurips-citylearn2023-forecasting" target="_blank">Code</a> /
-            <a href="https://www.aicrowd.com/challenges/neurips-2023-citylearn-challenge/problems/forecasting-track-citylearn-challenge" target="_blank">Website</a>  
+            <a href="https://github.com/mattmotoki/1st-place-solution-neurips-citylearn2023-forecasting" target="_blank" title="GitHub"><i class="fab fa-github"></i></a> &nbsp;
+            <a href="files/Matt Motoki - CityLearn 2023 Challenge - Forecast Track.pdf" target="_blank" title="Summary"><i class="fas fa-file-lines"></i></a> &nbsp;
+            <a href="https://www.aicrowd.com/challenges/neurips-2023-citylearn-challenge/problems/forecasting-track-citylearn-challenge" target="_blank" title="Competition website"><i class="fas fa-external-link-alt"></i></a> 
             &nbsp; <br class="large-screen-only">
-            Team Members: Matt Motoki.
-            Prize Money: $1,000
+            Prize Money: $1,000.
           </li>
           
           <li class="competition-item">
             <span class="highlight">2nd Place in the Net Load Forecasting Prize (2023)</span>
             &nbsp; 
-            <a href="https://www.energy.gov/eere/solar/articles/us-department-energy-announces-solar-prize-round-6-and-net-load-forecasting" target="_blank">Website</a>   
+            <a href="https://www.energy.gov/eere/solar/articles/us-department-energy-announces-solar-prize-round-6-and-net-load-forecasting" target="_blank" title="Competition website"><i class="fas fa-external-link-alt"></i></a>  
             &nbsp; <br class="large-screen-only">
-            Team Members: Matt Motoki.
-            Prize Money: $150,000
+            Prize Money: $150,000.
           </li>
 
           <li class="competition-item">
             <span class="highlight">Phase 1 Winner in the Digitizing Utilities Prize (2023)</span>
             &nbsp; 
-            <a href="https://occamai.shinyapps.io/digitizing-utilities-prize/" target="_blank">Demo</a> /  
-            <a href="https://www.energy.gov/oe/articles/us-department-energy-announces-winners-inaugural-american-made-digitizing-utilities" target="_blank">Website</a> 
+            <a href="https://occamai.shinyapps.io/digitizing-utilities-prize/" title="Web app"><i class="fas fa-laptop-code"></i></a> &nbsp;
+            <a href="https://www.energy.gov/oe/articles/us-department-energy-announces-winners-inaugural-american-made-digitizing-utilities" title="Competition website"><i class="fas fa-external-link-alt"></i></a> 
             &nbsp; <br class="large-screen-only">
-            Team Members: Matt Motoki, Sorapong Khongnawang, Daniel Tabas, Baosen Zhang, Olin Lagon.
-            Prize Money: $75,000
+            Prize Money: $75,000. 
+            Team Members: Sorapong Khongnawang, Olin Lagon, Daniel Tabas, Baosen Zhang
           </li>
 
           <li class="competition-item">
             <span class="highlight">2nd Place in the NeurIPS CityLearn Challenge (2022)</span>
             &nbsp; 
-            <a href="https://proceedings.mlr.press/v220/nweye23a.html" target="_blank">Paper</a> /
-            <a href="https://github.com/mattmotoki/2nd-place-solution-neurips-citylearn2022" target="_blank">Code</a> /
-            <a href="https://youtu.be/Yel5zybmvwg?t=2314" target="_blank">Presentation</a> /
-            <a href="https://www.aicrowd.com/challenges/neurips-2022-citylearn-challenge" target="_blank">Website</a>  
+            <a href="https://scholar.google.com/citations?view_op=view_citation&hl=en&user=fOWhQ3AAAAAJ&citation_for_view=fOWhQ3AAAAAJ:zYLM7Y9cAGgC" target="_blank" title="Google scholar"><i class="ai ai-google-scholar"></i></a> &nbsp;            
+            <a href="https://youtu.be/Yel5zybmvwg?t=2314" target="_blank" title="Presentation"><i class="fab fa-youtube"></i></a> &nbsp;
+            <a href="https://github.com/mattmotoki/2nd-place-solution-neurips-citylearn2022" target="_blank" title="GitHub"><i class="fab fa-github"></i></a> &nbsp;
+            <a href="https://www.aicrowd.com/challenges/neurips-2022-citylearn-challenge" target="_blank" title="Competition website"><i class="fas fa-external-link-alt"></i></a> 
             &nbsp; <br class="large-screen-only">
-            Team Members: Matt Motoki, Sorapong Khongnawang.
-            Prize Money: $5,000
+            Prize Money: $5,000. 
+            Team Members: Sorapong Khongnawang
           </li>
 
           <li class="competition-item">
             <span class="highlight">Runner Up in the Solar Forecasting Prize (2022)</span>
             &nbsp; 
-            <a href="https://www.energy.gov/eere/solar/american-made-solar-forecasting-prize" target="_blank">Website</a>  
+            <a href="https://www.energy.gov/eere/solar/american-made-solar-forecasting-prize" target="_blank" title="Competition website"><i class="fas fa-external-link-alt"></i></a> 
             &nbsp; <br class="large-screen-only">
-            Team Members: Matt Motoki.
-            Prize Money: $25,000
+            Prize Money: $25,000.
           </li>
 
           <li class="competition-item">
             <span class="highlight">Winner in the Recidivism Forecasting Challenge (2021)</span>
             &nbsp; 
-            <a href="https://www.ojp.gov/ncjrs/virtual-library/abstracts/team-mattmarifelsora-nij-recidivism-forecasting-challenge-report" target="_blank">Write-Up</a> /
-            <a href="https://nij.ojp.gov/funding/awards/2021-nij-rec-ch-0020" target="_blank">Website</a>
+            <a href="https://www.ojp.gov/ncjrs/virtual-library/abstracts/team-mattmarifelsora-nij-recidivism-forecasting-challenge-report" target="_blank" title="Summary"><i class="fas fa-file-lines"></i></a> &nbsp;
+            <a href="https://nij.ojp.gov/funding/awards/2021-nij-rec-ch-0020" target="_blank" title="Competition website"><i class="fas fa-external-link-alt"></i></a> 
             &nbsp; <br class="large-screen-only">
-            Team Members: Matt Motoki, Marifel Barbasa, Sorapong Khongnawang.
-            Prize Money: $48,500
+            Prize Money: $48,500. 
+            Team Members: Marifel Barbasa, Sorapong Khongnawang
           </li>
 
           <li class="competition-item">
             <span class="highlight">1st Place in the Great Energy Predictor III (2019)</span>
             &nbsp; 
-            <a href="https://www.youtube.com/watch?v=ZVX9EbHnH0E" target="_blank">Presentation</a> /
-            <a href="https://www.kaggle.com/competitions/ashrae-energy-prediction/discussion/124709" target="_blank">Write-Up</a> /
-            <a href="https://www.kaggle.com/c/ashrae-energy-prediction" target="_blank">Website</a>  
+            <a href="https://www.youtube.com/watch?v=ZVX9EbHnH0E" target="_blank" title="Presentation"><i class="fab fa-youtube"></i></a> &nbsp;
+            <a href="https://www.kaggle.com/competitions/ashrae-energy-prediction/discussion/124709" target="_blank" title="Summary"><i class="fas fa-file-lines"></i></a> &nbsp;
+            <a href="https://www.kaggle.com/c/ashrae-energy-prediction" target="_blank" title="Competition website"><i class="fas fa-external-link-alt"></i></a> 
             &nbsp; <br class="large-screen-only">
-            Team Members: Isamu Yamashita, Matt Motoki.
-            Prize Money: $10,000
+            Prize Money: $10,000. 
+            Team Members: Isamu Yamashita
           </li>
         </ul>
       </div>
       <br>
 
 
-      <!-- art -->
+      <!-- Art -->
       <div class="section" id="art">
-        <h2>Creative Coding Experiments</h2>
-        I think creative coding and generative art is pretty interesting. I've been playing with different techniques and ideas. These pieces are still rough, but they were fun to make.
-
-        <div class="section-item">
-          <a href="files/shell.html" target="_blank">
-            <img src="images/shell.png" alt="shell" class="section-image">
+        <h2>Creative Coding</h2>
+        <div class="art-grid">
+          <a href="files/shell.html" target="_blank" title="Shell: A simple connect-the-dots program that generates a spiral pattern resembling a shell.">
+            <img src="images/shell.png" alt="Shell" class="art-image">
           </a>
-          <div class="project-description">
-            <span class="highlight">Shell</span> 
-            &nbsp; 
-            <br class="large-screen-only">
-            <a href="files/shell.html" target="_blank">Code</a>
-            &nbsp; 
-            <br class="large-screen-only">
-            This is likely my first creative coding experiment. It's a simple connect-the-dots program that generates a spiral pattern resembling a shell.
-          </div>
-        </div>          
-
-        <div class="section-item">
-          <a href="files/fractal-tree.html" target="_blank">
-            <img src="images/fractal-tree.png" alt="fractal-tree" class="section-image">
+          <a href="files/fractal-tree.html" target="_blank" title="Fractal Tree: A recursive function generating a tree with natural variations in branch angles and lengths.">
+            <img src="images/fractal-tree.png" alt="Fractal Tree" class="art-image">
           </a>
-          <div class="project-description">
-            <span class="highlight">Fractal Tree</span> 
-            &nbsp; 
-            <br class="large-screen-only">
-            <a href="files/fractal-tree.html" target="_blank">Code</a>
-            &nbsp; 
-            <br class="large-screen-only">
-            The code generates a fractal tree using a recursive function. Slight variations in branch angles and lengths give the tree a more natural look. The colors of the branches are influenced by their recursive depth. 
-          </div>
-        </div>
-
-        <div class="section-item">
-          <img src="images/faces.png" alt="perspective" class="section-image">
-          <!-- <a href="files/perspective.html">
-            <img src="images/faces.png" alt="perspective" class="section-image">            
-          </a> -->
-          <div class="project-description">
-            <span class="highlight">Perspective (WIP)</span> 
-            &nbsp; 
-            <!-- <br class="large-screen-only"> -->
-            <!-- <a href="files/perspective.html">Code</a> -->
-            <!-- &nbsp;  -->
-            <br class="large-screen-only">
-            The code visualizes the intersection of 2D planes in 3D space. A perspective transformation is applied to create the illusion of depth. The result is an abstract composition of interlocking blue, gray, and orange planes.
-          </div>
-        </div>
-
-        <div class="section-item">
-          <a href="files/light-rain.html" target="_blank">
-            <img src="images/light-rain.png" alt="light-rain" class="section-image">
+          <img src="images/faces.png" alt="Perspective (WIP)" class="art-image" title="Perspective (WIP): Visualizes the intersection of 2D planes in 3D space with a perspective transformation.">
+          <a href="files/light-rain.html" target="_blank" title="Light Rain: Semi-transparent rectangles with colors determined by Perlin noise.">
+            <img src="images/light-rain.png" alt="Light Rain" class="art-image">
           </a>
-          <div class="project-description">
-            <span class="highlight">Light Rain</span> 
-            &nbsp; 
-            <br class="large-screen-only">
-            <a href="files/light-rain.html" target="_blank">Code</a>
-            &nbsp; 
-            <br class="large-screen-only">
-            This piece was inspired by Marius Watz's <a href="https://mariuswatz.com/2010/04/22/blocker/" target="_blank">Blocker series</a>. The code draws semi-transparent rectangles with colors and positions determined by Perlin noise. The final color palette is a blend from separate noise patterns.
-          </div>
-        </div>
-        
-        <div class="section-item">
-          <a href="files/city-lights.html" target="_blank">
-            <img src="images/city-lights.png" alt="city-lights" class="section-image">
+          <a href="files/city-lights.html" target="_blank" title="City Lights: A stylized skyline with randomly placed buildings and illuminated windows.">
+            <img src="images/city-lights.png" alt="City Lights" class="art-image">
           </a>
-          <div class="project-description">
-            <span class="highlight">City Lights</span> 
-            &nbsp; 
-            <br class="large-screen-only">
-            <a href="files/city-lights.html" target="_blank">Code</a>
-            &nbsp; 
-            <br class="large-screen-only">
-            The code creates a stylized city skyline with randomly placed and sized buildings. The buildings have windows with varying yellow hues, giving the impression of a cityscape at night with illuminated windows.
-          </div>
-        </div>
-
-        <div class="section-item">
-          <a href="files/streamlines.html" target="_blank">
-            <img src="images/streamlines.png" alt="streamlines" class="section-image">
+          <a href="files/streamlines.html" target="_blank" title="StreamLines: A dynamic flow field visualization.">
+            <img src="images/streamlines.png" alt="StreamLines" class="art-image">
           </a>
-          <div class="project-description">
-            <span class="highlight">StreamLines</span> 
-            &nbsp; 
-            <br class="large-screen-only">
-            <a href="files/streamlines.html" target="_blank">Code</a>
-            &nbsp; 
-            <br class="large-screen-only">
-            The code generates a dynamic flow field visualization by creating a grid of points and calculating gradient vectors. These vectors are used to plot streamlines with a gradient color scheme, resulting in a smooth and organic pattern.
-          </div>
-        </div>
-
-        <div class="section-item">
-          <a href="files/silhouette.html" target="_blank">
-            <img src="images/silhouette.png" alt="silhouette" class="section-image">
+          <a href="files/silhouette.html" target="_blank" title="Silhouette: A landscape-like image of a mountain silhouette.">
+            <img src="images/silhouette.png" alt="Silhouette" class="art-image">
           </a>
-          <div class="project-description">
-            <span class="highlight">Silhouette</span> 
-            &nbsp; 
-            <br class="large-screen-only">
-            <a href="files/silhouette.html" target="_blank">Code</a>
-            &nbsp; 
-            <br class="large-screen-only">
-            The code creates a grid of points with colors that vary based on their position, and then filters out points that fall within a mountain-like silhouette. The result resembles a landscape, with the colors that smoothly transitioning from one hue to another.
-          </div>
-        </div>
-
-        <div class="section-item">
-          <a href="files/diffusion.html" target="_blank">
-            <img src="images/diffusion.png" alt="diffusion" class="section-image">
+          <a href="files/diffusion.html" target="_blank" title="Diffusion: The heat diffusion process in a 1D rod visualized.">
+            <img src="images/diffusion.png" alt="Diffusion" class="art-image">
           </a>
-          <div class="project-description">
-            <span class="highlight">Diffusion</span> 
-            &nbsp; 
-            <br class="large-screen-only">
-            <a href="files/diffusion.html" target="_blank">Code</a>
-            &nbsp; 
-            <br class="large-screen-only">
-            The code simulates the heat diffusion process in a 1D rod using the finite difference method. It visualizes the temperature distribution at different time points, with the colors of the lines representing the maximum temperature at each time.
-          </div>
         </div>        
-     
+      </div>
 
       <!-- Footer -->
       <footer>
         Feel free to use this website's <a href="https://github.com/mattmotoki/mattmotoki.github.io" target="_blank">source code</a>. 
       </footer>
-
     </div>
 
     <!-- Dark mode switch logic -->
