@@ -186,6 +186,14 @@ h2 {
 }
 
 
+
+/* Blog */
+.date {
+  color: var(--text-color);
+  font-style: italic;
+}
+
+
 /* Mobile Styles */
 @media screen and (max-width: 768px) {
 
