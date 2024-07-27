@@ -68,7 +68,7 @@ h2 {
 }
 
 .competition-item {
-  margin-top: 10px;
+  margin-top: 5px;
 }
 
 .header-text, .header-image {
@@ -124,45 +124,45 @@ h2 {
 .dark-mode-toggle label {
   position: relative;
   display: inline-block;
-  width: 50px; /* Width of the switch */
-  height: 24px; /* Height of the switch */
-  background-color: #ccc; /* Background color of the switch when off */
-  border-radius: 12px; /* Rounded corners */
+  width: 50px; 
+  height: 24px; 
+  background-color: #ccc; 
+  border-radius: 12px;
   cursor: pointer;
-  margin-right: 10px; /* Some space between the switch and the text */
-  vertical-align: middle; /* To align the switch and the text vertically */
-  transition: background-color 0.3s; /* Smooth transition for background color */
+  margin-right: 10px;
+  vertical-align: middle;
+  transition: background-color 0.3s;
 }
 
 /* Styles for the knob of the switch */
 .dark-mode-toggle label::before {
   content: '';
   position: absolute;
-  top: 2px; /* Small space from the top to simulate a border */
-  left: 2px; /* Start position (switch is off) */
-  width: 20px; /* Width of the knob */
-  height: 20px; /* Height of the knob */
-  background-color: #fff; /* Color of the knob */
-  border-radius: 50%; /* Round knob */
-  transition: left 0.3s; /* Smooth transition for left property */
+  top: 2px; 
+  left: 2px; 
+  width: 20px; 
+  height: 20px; 
+  background-color: #fff; 
+  border-radius: 50%;
+  transition: left 0.3s; 
 }
 
 /* Style switch when it's checked (on) */
 .dark-mode-toggle input:checked + label {
-  background-color: #966bca; /* Background color of the switch when on */
+  background-color: #966bca;
 }
 
 /* Move the knob to the other side when the switch is on */
 .dark-mode-toggle input:checked + label::before {
-  left: 28px; /* End position (switch is on) */
-  background-color: #22ff22; /* Color of the knob (switch is on) */
+  left: 28px;
+  background-color: #22ff22; 
 }
 
 .dark-mode-toggle input {
-  opacity: 0;              /* Hide the checkbox */
+  opacity: 0;
   width: 0;
   height: 0;
-  position: absolute;     /* Take it out of the normal flow */
+  position: absolute; 
 }
 
 /* Creative coding images */
@@ -177,7 +177,6 @@ h2 {
   width: 160px;
   height: 160px;
   object-fit: cover;
-  border-radius: 10px;
   transition: transform 0.3s ease;
 }
 
@@ -219,9 +218,18 @@ h2 {
 
 }
 
-@media (max-width: 600px) {
+@media (max-width: 740px) {
+  .art-image {
+    width: 140px;
+    height: 140px;
+  }
+}
+
+@media (max-width: 500px) {
   .art-image {
     width: 100px;
     height: 100px;
   }
 }
+
+
