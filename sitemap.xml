@@ -1,10 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="https://www.sitemaps.org/schemas/sitemap/0.9">
+<urlset xmlns="https://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:image="https://www.google.com/schemas/sitemap-image/1.1">
   <url>
     <loc>https://mattmotoki.github.io/</loc>
-    <lastmod>2024-07-20</lastmod>
+    <lastmod>2024-07-27</lastmod>
     <changefreq>monthly</changefreq>
     <priority>1.0</priority>
+    <image:image>
+      <image:loc>https://mattmotoki.github.io/images/matt-motoki-profile-picture.png</image:loc>
+      <image:caption>Matt Motoki, Ph.D. student at University of Washington</image:caption>
+      <image:title>Matt Motoki Profile Picture</image:title>
+    </image:image>
   </url>
   
   <url>
