@@ -13,7 +13,7 @@
   --text-color: #000000;
   --link-color: #1772d0;
   --link-hover-color: #f09228;
-  --section-color: #0da348;
+  --section-color: #058638;
 }
 
 
@@ -113,6 +113,11 @@ h2 {
   font-weight: 700;
   color: var(--section-color);
 }
+
+.lowlight {
+  color: var(--link-color);
+}
+
 
 
 /* Base styles for the label (switch) */
