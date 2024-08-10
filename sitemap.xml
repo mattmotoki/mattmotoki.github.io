@@ -3,7 +3,7 @@
         xmlns:image="https://www.google.com/schemas/sitemap-image/1.1">
   <url>
     <loc>https://mattmotoki.github.io/</loc>
-    <lastmod>2024-07-27</lastmod>
+    <lastmod>2024-08-10</lastmod>
     <changefreq>monthly</changefreq>
     <priority>1.0</priority>
     <image:image>
@@ -28,12 +28,12 @@
   </url>  
 
   <url>
-    <loc>https://mattmotoki.github.io/files/Matt%20Motoki%20-%20CityLearn%202023%20Challenge%20-%20Forecast%20Track.pdf</loc>
-    <lastmod>2024-02-01</lastmod>
+    <loc>https://mattmotoki.github.io/files/dill.html</loc>
+    <lastmod>2024-08-10</lastmod>
     <changefreq>never</changefreq>
     <priority>0.1</priority>
-  </url>
-  
+  </url>  
+
   <url>
     <loc>https://mattmotoki.github.io/files/fractal-tree.html</loc>
     <lastmod>2024-05-17</lastmod>
