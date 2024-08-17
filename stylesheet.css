@@ -104,7 +104,7 @@ h2 {
 
 .section-image {
   float: left; 
-  margin: 2px 10px 3px 0;
+  margin: 2px 5px 0 0;
   width: 70px;
   height: 70px;
 }
@@ -197,6 +197,14 @@ h2 {
   font-style: italic;
 }
 
+.small-screen-only {
+  display: none;
+}
+
+.separator::before {
+  content: " \2014 "; /* Em dash */
+}
+
 
 /* Mobile Styles */
 @media screen and (max-width: 768px) {
@@ -211,6 +219,18 @@ h2 {
 
   .large-screen-only {
     display: none;
+  }
+
+  .small-screen-only {
+    display: revert;
+  }  
+
+  .separator::before {
+    content: " \2022 ";
+  }
+  
+  .separator:first-of-type::before {
+    content: " ";
   }
 
   .header-text {
