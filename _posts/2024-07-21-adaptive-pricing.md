@@ -3,34 +3,43 @@ layout: post
 title: "Adaptive Pricing"
 date: 2024-07-21
 image: /assets/images/adaptive-pricing.png
-description: "This post supplements our paper on coordinating agent behavior using adaptive pricing."
+description: "This post examines adaptive pricing, a technique for dynamically adjusting prices to maximize revenue."
+redirect_from:
+  - /blog/posts/adaptive-pricing.html
+  - /blog/2024/07/21/adaptive-pricing/
 ---
 
-This post supplements [our paper](https://scholar.google.com/citations?view_op=view_citation&hl=en&user=fOWhQ3AAAAAJ&citation_for_view=fOWhQ3AAAAAJ:Tyk-4Ss8FVUC) on coordinating agent behavior using adaptive pricing. I believe the best way to understand this concept is through an animation of the iterative process – it still surprises whenever I see it.
+Adaptive pricing is a technique for dynamically adjusting prices to maximize revenue. The technique is particularly useful in settings where the demand for a product is unknown and varies over time. In this post, I'll discuss the theory behind adaptive pricing and provide a simple implementation.
 
-## Introduction to Adaptive Pricing
+<!-- ## Theory
 
-Adaptive pricing is a mechanism for coordinating the behavior of multiple agents in a system to achieve a socially optimal outcome. The key idea is to iteratively adjust prices based on the agents' responses, guiding them toward behaviors that benefit the entire system.
+The theory behind adaptive pricing is based on the concept of price elasticity of demand. Price elasticity of demand is a measure of how responsive the quantity demanded of a good is to a change in its price. It is calculated as the percentage change in quantity demanded divided by the percentage change in price.
 
-## How It Works
+$$ \text{Price Elasticity of Demand} = \frac{\% \text{ Change in Quantity Demanded}}{\% \text{ Change in Price}} $$
 
-1. The system starts with an initial set of prices
-2. Agents optimize their behavior based on these prices
-3. The system observes the collective behavior and adjusts prices
-4. This process repeats until convergence
+If the price elasticity of demand is greater than 1, then the demand is said to be elastic. This means that a small change in price will result in a large change in quantity demanded. If the price elasticity of demand is less than 1, then the demand is said to be inelastic. This means that a small change in price will result in a small change in quantity demanded.
 
-The beauty of this approach is that it doesn't require agents to share their private information or preferences. Each agent simply responds to the current prices according to their own objectives.
+## Implementation
 
-## Applications in Energy Systems
+The implementation of adaptive pricing involves the following steps:
 
-In energy systems, adaptive pricing can be used to coordinate the charging and discharging of batteries, the operation of flexible loads, and the dispatch of distributed energy resources. By properly designing the pricing mechanism, we can ensure that the system operates efficiently while respecting the autonomy of individual agents.
+1. Set an initial price
+2. Observe the demand at that price
+3. Adjust the price based on the observed demand
+4. Repeat steps 2 and 3
 
-## Visualization
+The key to adaptive pricing is the algorithm used to adjust the price in step 3. There are many different algorithms that can be used, but one simple approach is to use a gradient descent algorithm. The gradient descent algorithm adjusts the price in the direction that is expected to increase revenue.
 
-The animation below shows how adaptive pricing works in a simple system with multiple agents. Each agent has its own objective function and constraints, but through the iterative adjustment of prices, they collectively converge to a solution that is optimal for the entire system.
+$$ \text{Revenue} = \text{Price} \times \text{Quantity Demanded} $$
 
-![Adaptive Pricing Animation](/assets/images/adaptive-pricing.png)
+$$ \frac{\partial \text{Revenue}}{\partial \text{Price}} = \text{Quantity Demanded} + \text{Price} \times \frac{\partial \text{Quantity Demanded}}{\partial \text{Price}} $$
+
+The gradient descent algorithm adjusts the price in the direction of the gradient of the revenue function.
+
+$$ \text{Price}_{t+1} = \text{Price}_t + \alpha \times \frac{\partial \text{Revenue}}{\partial \text{Price}} $$
+
+where $\alpha$ is the learning rate.
 
 ## Conclusion
 
-Adaptive pricing provides a powerful framework for coordinating decentralized decision-making in complex systems. By leveraging economic principles, we can design mechanisms that align individual incentives with system-wide objectives, leading to more efficient and sustainable outcomes. 
+Adaptive pricing is a powerful technique for maximizing revenue in settings where the demand for a product is unknown and varies over time. By dynamically adjusting prices based on observed demand, adaptive pricing can help businesses optimize their pricing strategies.  -->
