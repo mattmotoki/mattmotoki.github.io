@@ -104,9 +104,11 @@ layout: default
   I play around with creative coding for fun.<br> <br>
   <div class="art-grid">
     {% for art in site.art %}
-    <a href="{{ art.art_url }}" title="{{ art.title }}: {{ art.description }}">
-      <img src="{{ art.image | relative_url }}" alt="{{ art.title }}" class="art-image">
-    </a>
+      {% if art.visible != false %}
+        <a href="{{ art.url | relative_url }}" title="{{ art.tagline | default: art.title }}">
+          <img src="{{ art.image | relative_url }}" alt="{{ art.title }}" class="art-image">
+        </a>
+      {% endif %}
     {% endfor %}
   </div>
 </div> 

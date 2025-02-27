@@ -1,8 +1,14 @@
 ---
 title: "StreamLines"
-description: "A dynamic flow field visualization."
-art_url: "/assets/files/streamlines.html"
 image: "/assets/images/streamlines.png"
+description: "A dynamic flow field visualization with elegant particle movements."
 ---
 
-This creative coding project creates a dynamic visualization of flow fields using streamlines. The animation shows particles moving through a vector field, creating mesmerizing patterns as they follow the underlying mathematical currents. The result is both aesthetically pleasing and informative, offering insight into how particles behave in complex flow systems. 
+This creative coding project visualizes a vector field using streamlines. Particles move through the field following the flow direction at each point, creating beautiful patterns that reveal the underlying structure of the field.
+
+## Technical Implementation
+
+- Vector field mathematics for particle movement
+- Dynamic flow visualization techniques
+- Particle system with thousands of individual elements
+- Color mapping based on velocity and position 

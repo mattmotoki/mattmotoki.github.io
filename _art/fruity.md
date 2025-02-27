@@ -1,8 +1,14 @@
 ---
 title: "Fruity"
-description: "A mosaic of fruit-inspired circles."
-art_url: "/assets/files/fruity.html"
 image: "/assets/images/fruity.svg"
+description: "A mosaic of fruit-inspired circles with vibrant colors."
 ---
 
-This creative coding project generates a colorful mosaic of circles inspired by fruit. The visualization uses vibrant colors and varying circle sizes to create a playful, abstract pattern that evokes the appearance of different fruits arranged in a visually pleasing composition. 
+This creative coding project generates a colorful mosaic of circles inspired by various fruits. The algorithm creates a visually appealing pattern with overlapping circles in bright, fruit-like colors.
+
+## Design Elements
+
+- Overlapping circular patterns
+- Vibrant fruit-inspired color palette
+- Randomized placement and sizing
+- SVG-based rendering for crisp visuals 

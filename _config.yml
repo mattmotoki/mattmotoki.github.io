@@ -83,6 +83,9 @@ defaults:
       type: "art"
     values:
       layout: "art"
+      visible: true
+      # display_image defaults to image if not specified
+      # tagline defaults to title if not specified
   - scope:
       path: ""
     values:

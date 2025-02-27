@@ -3,21 +3,36 @@ layout: default
 ---
 
 <div class="art">
-  <h1 class="art-title">{{ page.title }}</h1>
+  <div class="art-header">
+    <h1 class="art-title">{{ page.title }}</h1>
+    <a href="{{ '/' | relative_url }}#art" class="back-link"><span class="back-link-arrow">&larr; </span>Back to Creative Coding</a>
+  </div>
   
+
+  {% if page.tagline %}
+  <div class="art-tagline">
+    {{ page.tagline | markdownify }}
+  </div>
+  {% endif %}
+
+
+
   <div class="art-image-container">
-    <img src="{{ page.image | relative_url }}" alt="{{ page.title }}" class="art-detail-image">
+    <img src="{{ page.display_image | default: page.image | relative_url }}" alt="{{ page.title }}" class="art-detail-image">
   </div>
   
+  {% if page.description %}
   <div class="art-description">
-    <p>{{ page.description }}</p>
+    {{ page.description | markdownify }}
   </div>
-  
+  {% endif %}
+
+
   <div class="art-content">
     {{ content }}
   </div>
   
-  <div class="art-navigation">
+  <div class="art-navigation bottom-navigation">
     <a href="{{ '/' | relative_url }}#art" class="back-link">&larr; Back to Creative Coding</a>
   </div>
 </div> 

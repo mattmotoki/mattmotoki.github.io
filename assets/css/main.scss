@@ -304,6 +304,28 @@ h2 {
   margin-bottom: 10px;
 }
 
+.art-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-bottom: 20px;
+  border-bottom: 1px solid rgba(128, 128, 128, 0.3);
+}
+
+.art-header .art-title {
+  margin: 0;
+}
+
+.art-header .back-link {
+  margin: 0;
+}
+
+@media (max-width: 768px) {
+  .art-header .back-link-arrow {
+    display: none; 
+  }
+}
+
 .art-image-container {
   margin: 20px 0;
   text-align: center;
@@ -314,8 +336,22 @@ h2 {
   max-height: 500px;
 }
 
+.art-tagline {
+  margin-bottom: 20px;
+  font-size: 1.1em;
+  line-height: 1.5;
+  font-style: italic;
+  color: var(--text-color);
+  border-left: 3px solid var(--section-color);
+  padding-left: 15px;
+}
+
+
 .art-description {
   margin-bottom: 20px;
+  font-size: 1em;
+  line-height: 1.6;
+  color: var(--text-color);
 }
 
 .art-content {
@@ -323,6 +359,21 @@ h2 {
 }
 
 .art-navigation {
+  margin-top: 30px;
+  padding-top: 20px;
+  border-top: 1px solid rgba(128, 128, 128, 0.3);
+}
+
+.art-navigation.top-navigation {
+  margin-top: 0;
+  margin-bottom: 20px;
+  padding-top: 0;
+  padding-bottom: 20px;
+  border-top: none;
+  border-bottom: 1px solid rgba(128, 128, 128, 0.3);
+}
+
+.art-navigation.bottom-navigation {
   margin-top: 30px;
   padding-top: 20px;
   border-top: 1px solid rgba(128, 128, 128, 0.3);
@@ -362,7 +413,16 @@ h2 {
   .project-description {
     text-align: left;
   }
-
+  
+  .art-header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  
+  .art-header .art-title {
+    margin-top: 10px;
+    text-align: left;
+  }
 }
 
 @media (max-width: 740px) {
@@ -377,4 +437,52 @@ h2 {
     width: 120px;
     height: 120px;
   }
+}
+
+/* Interactive button for art pages */
+.interactive-button {
+  display: inline-block;
+  background-color: var(--link-color);
+  color: var(--bg-color);
+  padding: 10px 20px;
+  border-radius: 5px;
+  text-decoration: none;
+  font-weight: bold;
+  margin: 20px 0;
+  transition: background-color 0.3s ease;
+}
+
+.interactive-button:hover {
+  background-color: var(--link-hover-color);
+  color: var(--bg-color);
+  text-decoration: none;
+}
+
+/* Code block styling */
+pre {
+  background-color: #2d2d2d;
+  border-radius: 5px;
+  padding: 15px;
+  overflow-x: auto;
+  margin: 20px 0;
+}
+
+code {
+  font-family: 'Consolas', 'Monaco', 'Andale Mono', 'Ubuntu Mono', monospace;
+  font-size: 0.9em;
+}
+
+/* Art content styling */
+.art-content {
+  margin: 20px 0;
+  line-height: 1.6;
+}
+
+.art-content h2 {
+  margin-top: 30px;
+  color: var(--section-color);
+}
+
+.art-content ul {
+  margin-left: 20px;
 } 
