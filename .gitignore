@@ -1,4 +1,3 @@
-
 #Jekyll
 _site/
 .sass-cache/
@@ -9,3 +8,7 @@ vendor/
 *.log
 .DS_Store
 archive/
+
+# Environment variables and local configs
+.env
+*.local

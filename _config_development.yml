@@ -1,0 +1,8 @@
+# Development configuration
+# This file overrides settings in _config.yml for development environments
+
+# Disable Google Analytics in development
+google_analytics: ""
+
+# Other development-specific settings can be added here
+url: "http://localhost:4000" 

@@ -4,6 +4,8 @@ title: "Beta Target Encoding"
 date: 2024-07-21
 image: /assets/images/beta.svg
 description: "This post examines Beta Target Encoding, a technique for converting categorical variables to numeric features for binary classification tasks."
+redirect_from:
+  - /blog/posts/beta-target-encoding.html
 ---
 
 Bayesian Target Encoding is a feature engineering technique used to map categorical variables into numeric variables. The Bayesian framework requires only minimal updates as new data is acquired and is thus well-suited for online learning. Furthermore, the Bayesian approach makes choosing and interpreting hyperparameters intuitive. I developed this technique in the recent Avito Kaggle Competition, where my team and I took 14th place out of 1,917 teams. We found that the Bayesian target encoding outperforms the built-in categorical encoding provided by the LightGBM package.

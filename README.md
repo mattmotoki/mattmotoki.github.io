@@ -35,9 +35,9 @@ These instructions will get you a copy of the project up and running on your loc
    bundle install
    ```
 
-4. Run the site locally:
+4. Run the development server:
    ```
-   bundle exec jekyll serve
+   ./serve_dev.sh
    ```
 
 5. Open your browser and navigate to `http://localhost:4000`
@@ -115,7 +115,6 @@ Create a new file in the `_art` directory:
 ---
 title: "Art Title"
 description: "Brief description"
-art_url: "/assets/files/art-file.html"
 image: "/assets/images/art-image.png"
 ---
 
@@ -124,4 +123,39 @@ Detailed description here...
 
 ## Deployment
 
-The site is automatically deployed when changes are pushed to the main branch using GitHub Pages. 
+The site is automatically deployed when changes are pushed to the main branch using GitHub Pages.
+
+## Google Analytics Configuration
+
+This site uses Google Analytics for tracking visitor statistics. The Google Analytics ID is configured to be loaded from an environment variable to keep it secure in the public repository.
+
+### Development Mode
+
+In development mode, Google Analytics is disabled by default. To run the site in development mode:
+
+```
+./serve_dev.sh
+```
+
+This script uses the `_config_development.yml` file which sets the Google Analytics ID to an empty string.
+
+### Production Mode
+
+For production deployment, the Google Analytics ID is set as an environment variable. If you're using GitHub Actions for deployment, you need to set up a secret:
+
+1. Go to your GitHub repository
+2. Navigate to Settings > Secrets and variables > Actions
+3. Click "New repository secret"
+4. Name: `GOOGLE_ANALYTICS_ID`
+5. Value: Your Google Analytics ID (e.g., `G-XXXXXXXXXX`)
+6. Click "Add secret"
+
+The GitHub Actions workflow will automatically use this secret when deploying from the main branch.
+
+If you're building the site locally for production, you can use:
+
+```
+./deploy.sh
+```
+
+This script sets the environment variable and builds the site with production settings. 
