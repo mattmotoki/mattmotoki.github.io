@@ -1,0 +1,23 @@
+---
+layout: default
+---
+
+<div class="art">
+  <h1 class="art-title">{{ page.title }}</h1>
+  
+  <div class="art-image-container">
+    <img src="{{ page.image | relative_url }}" alt="{{ page.title }}" class="art-detail-image">
+  </div>
+  
+  <div class="art-description">
+    <p>{{ page.description }}</p>
+  </div>
+  
+  <div class="art-content">
+    {{ content }}
+  </div>
+  
+  <div class="art-navigation">
+    <a href="{{ '/' | relative_url }}#art" class="back-link">&larr; Back to Creative Coding</a>
+  </div>
+</div> 

@@ -1,1 +1,11 @@
-ga.json
+
+#Jekyll
+_site/
+.sass-cache/
+.jekyll-cache/
+.jekyll-metadata
+vendor/
+.bundle/
+*.log
+.DS_Store
+archive/

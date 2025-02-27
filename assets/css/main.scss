@@ -1,3 +1,6 @@
+---
+---
+
 /* Default dark theme */
 :root {
   --bg-color: #121212;
@@ -206,6 +209,125 @@ h2 {
 }
 
 
+/* Post styles */
+.post-title {
+  color: var(--section-color);
+  margin-bottom: 10px;
+}
+
+.post-date {
+  color: var(--text-color);
+  font-style: italic;
+  margin-bottom: 20px;
+}
+
+.post-content {
+  margin-bottom: 30px;
+}
+
+.post-content img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+  margin: 20px auto;
+}
+
+.post-navigation {
+  margin-top: 30px;
+  padding-top: 20px;
+  border-top: 1px solid rgba(128, 128, 128, 0.3);
+}
+
+.back-link {
+  display: inline-block;
+  margin-bottom: 20px;
+}
+
+/* Project styles */
+.project-title {
+  color: var(--section-color);
+  margin-bottom: 10px;
+}
+
+.project-links {
+  margin-bottom: 20px;
+}
+
+.project-link {
+  display: inline-block;
+  margin-right: 15px;
+}
+
+.project-content {
+  margin-bottom: 30px;
+}
+
+.project-navigation {
+  margin-top: 30px;
+  padding-top: 20px;
+  border-top: 1px solid rgba(128, 128, 128, 0.3);
+}
+
+/* Competition styles */
+.competition-title {
+  color: var(--section-color);
+  margin-bottom: 10px;
+}
+
+.competition-meta {
+  margin-bottom: 20px;
+}
+
+.competition-links {
+  margin-top: 15px;
+}
+
+.competition-link {
+  display: inline-block;
+  margin-right: 15px;
+  margin-bottom: 5px;
+}
+
+.competition-content {
+  margin-bottom: 30px;
+}
+
+.competition-navigation {
+  margin-top: 30px;
+  padding-top: 20px;
+  border-top: 1px solid rgba(128, 128, 128, 0.3);
+}
+
+/* Art styles */
+.art-title {
+  color: var(--section-color);
+  margin-bottom: 10px;
+}
+
+.art-image-container {
+  margin: 20px 0;
+  text-align: center;
+}
+
+.art-detail-image {
+  max-width: 100%;
+  max-height: 500px;
+}
+
+.art-description {
+  margin-bottom: 20px;
+}
+
+.art-content {
+  margin-bottom: 30px;
+}
+
+.art-navigation {
+  margin-top: 30px;
+  padding-top: 20px;
+  border-top: 1px solid rgba(128, 128, 128, 0.3);
+}
+
 /* Mobile Styles */
 @media screen and (max-width: 768px) {
 
@@ -252,9 +374,7 @@ h2 {
 
 @media (max-width: 500px) {
   .art-image {
-    width: 100px;
-    height: 100px;
+    width: 120px;
+    height: 120px;
   }
-}
-
-
+} 
