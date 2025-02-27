@@ -1,0 +1,32 @@
+---
+layout: default
+---
+
+<div class="project">
+  <div class="project-header">
+    <h1 class="project-title">{{ page.title }}</h1>
+    <a href="{{ '/' | relative_url }}#projects" class="back-link"><span class="back-link-arrow">&larr; </span>Back to Projects</a>
+  </div>
+  
+  <div class="project-links">
+    {% if page.project_url %}
+    <a href="{{ page.project_url }}" target="_blank" class="project-link">Project Website</a>
+    {% endif %}
+    
+    {% if page.demo_url %}
+    <a href="{{ page.demo_url }}" target="_blank" class="project-link">Demo</a>
+    {% endif %}
+    
+    {% if page.github_url %}
+    <a href="{{ page.github_url }}" target="_blank" class="project-link">GitHub</a>
+    {% endif %}
+  </div>
+  
+  <div class="project-content">
+    {{ content }}
+  </div>
+  
+  <div class="project-navigation">
+    <a href="{{ '/' | relative_url }}#projects" class="back-link">&larr; Back to Projects</a>
+  </div>
+</div> 

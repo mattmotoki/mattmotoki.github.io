@@ -1,0 +1,49 @@
+---
+layout: default
+---
+
+<div class="competition">
+  <h1 class="competition-title">{{ page.title }}</h1>
+  
+  <div class="competition-meta">
+    <p><strong>Result:</strong> {{ page.result }}</p>
+    
+    {% if page.teammates %}
+    <p><strong>Teammates:</strong> {{ page.teammates }}</p>
+    {% endif %}
+    
+    <div class="competition-links">
+      {% if page.competition_url %}
+      <a href="{{ page.competition_url }}" target="_blank" class="competition-link">Competition Website</a>
+      {% endif %}
+      
+      {% if page.code_url %}
+      <a href="{{ page.code_url }}" target="_blank" class="competition-link">Code</a>
+      {% endif %}
+      
+      {% if page.summary_url %}
+      <a href="{{ page.summary_url }}" target="_blank" class="competition-link">Summary</a>
+      {% endif %}
+      
+      {% if page.github_url %}
+      <a href="{{ page.github_url }}" target="_blank" class="competition-link">GitHub</a>
+      {% endif %}
+      
+      {% if page.presentation_url %}
+      <a href="{{ page.presentation_url }}" target="_blank" class="competition-link">Presentation</a>
+      {% endif %}
+      
+      {% if page.app_url %}
+      <a href="{{ page.app_url }}" target="_blank" class="competition-link">Web App</a>
+      {% endif %}
+    </div>
+  </div>
+  
+  <div class="competition-content">
+    {{ content }}
+  </div>
+  
+  <div class="competition-navigation">
+    <a href="{{ '/' | relative_url }}#competitions" class="back-link">&larr; Back to Competitions</a>
+  </div>
+</div> 
