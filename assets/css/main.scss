@@ -1,0 +1,525 @@
+---
+---
+
+/* Default dark theme */
+:root {
+  --bg-color: #121212;
+  --text-color: #e0e0e0;
+  --link-color: #bb86fc;
+  --link-hover-color: #f09228;
+  --section-color: #22ff22;
+}
+
+/* Dark theme overrides */
+[data-theme="light"] {
+  --bg-color: #ffffff;
+  --text-color: #000000;
+  --link-color: #1772d0;
+  --link-hover-color: #f09228;
+  --section-color: #058638;
+}
+
+
+body {
+  font-family: 'Lato', Verdana, Helvetica, sans-serif;
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  margin: 0;
+  padding: 0;
+}
+
+a {
+  text-decoration: none;
+  color: var(--link-color);
+}
+
+a:focus,
+a:hover {
+  text-decoration: underline;
+  color: var(--link-hover-color);
+}
+
+
+.container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.header {
+  display: flex;  
+  justify-content: space-between;
+  flex-direction: column;  /* Stack the header text and image vertically */
+  align-items: center;
+}
+
+footer {
+  padding: 10px 0;
+  margin-top: 40px;
+  font-size: 0.9em;
+  text-align: center;
+}
+
+
+h2 {
+  color: var(--section-color);
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+/* Remove top margin from elements that follow h2 */
+h2 + p, h2 + div, h2 + ul {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+
+.project-description {
+  text-align: justify;
+  margin-top: 0;
+}
+
+.project-description p {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+.competition-item {
+  margin-top: 5px;
+  margin-bottom: 0;
+}
+
+.header-text, .header-image {
+  margin: 0 auto;
+  padding: 2.5%;
+  text-align: justify;
+}
+
+.social-links {
+  text-align: center;
+}
+
+.name {
+  text-align: center;
+  margin: 0;
+  color: var(--section-color);
+  font-size: 32px;
+}
+
+.profile-photo {
+  width: 100%;
+  max-width: 200px;
+}
+
+.section {
+  margin-top: 40px;
+}
+
+.section-item {
+  overflow: auto; 
+  margin-top: 10px;
+}
+
+.section-image {
+  float: left; 
+  margin: 2px 5px 0 0;
+  width: 70px;
+  height: 70px;
+}
+
+.highlight {
+  font-weight: 700;
+  color: var(--section-color);
+}
+
+.lowlight {
+  color: var(--link-color);
+}
+
+
+
+/* Base styles for the label (switch) */
+.dark-mode-toggle {
+  margin-bottom: 20px;
+}
+
+
+.dark-mode-toggle label {
+  position: relative;
+  display: inline-block;
+  width: 50px; 
+  height: 24px; 
+  background-color: #ccc; 
+  border-radius: 12px;
+  cursor: pointer;
+  margin-right: 10px;
+  vertical-align: middle;
+  transition: background-color 0.3s;
+}
+
+/* Styles for the knob of the switch */
+.dark-mode-toggle label::before {
+  content: '';
+  position: absolute;
+  top: 2px; 
+  left: 2px; 
+  width: 20px; 
+  height: 20px; 
+  background-color: #fff; 
+  border-radius: 50%;
+  transition: left 0.3s; 
+}
+
+/* Style switch when it's checked (on) */
+.dark-mode-toggle input:checked + label {
+  background-color: #966bca;
+}
+
+/* Move the knob to the other side when the switch is on */
+.dark-mode-toggle input:checked + label::before {
+  left: 28px;
+  background-color: #22ff22; 
+}
+
+.dark-mode-toggle input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+  position: absolute; 
+}
+
+/* Creative coding images */
+.art-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+}
+
+.art-image {
+  width: 160px;
+  height: 160px;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+
+.art-image:hover {
+  transform: scale(1.05);
+}
+
+
+
+/* Blog */
+.date {
+  color: var(--text-color);
+  font-style: italic;
+}
+
+.small-screen-only {
+  display: none;
+}
+
+.separator::before {
+  content: " \2014 "; /* Em dash */
+}
+
+
+/* Post styles */
+.post-title {
+  color: var(--section-color);
+  margin-bottom: 10px;
+}
+
+.post-header, .project-header, .art-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.post-header .post-title, 
+.project-header .project-title,
+.art-header .art-title {
+  margin: 0;
+}
+
+.back-link-arrow {
+  font-weight: bold;
+}
+
+.post-date {
+  color: var(--text-color);
+  font-style: italic;
+  margin-bottom: 20px;
+}
+
+.post-content {
+  margin-bottom: 30px;
+}
+
+.post-content img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+  margin: 20px auto;
+}
+
+.post-navigation {
+  margin-top: 30px;
+  padding-top: 20px;
+  border-top: 1px solid rgba(128, 128, 128, 0.3);
+}
+
+.back-link {
+  display: inline-block;
+  margin-bottom: 20px;
+}
+
+/* Project styles */
+.project-title {
+  color: var(--section-color);
+  margin-bottom: 10px;
+}
+
+.project-links {
+  margin-bottom: 20px;
+}
+
+.project-link {
+  display: inline-block;
+  margin-right: 15px;
+}
+
+.project-content {
+  margin-bottom: 30px;
+}
+
+.project-content p {
+  margin-top: 0;
+  margin-bottom: 10px;
+}
+
+.project-navigation {
+  margin-top: 30px;
+  padding-top: 20px;
+  border-top: 1px solid rgba(128, 128, 128, 0.3);
+}
+
+/* Competition styles */
+.competition-title {
+  color: var(--section-color);
+  margin-bottom: 10px;
+}
+
+.competition-meta {
+  margin-bottom: 20px;
+}
+
+.competition-links {
+  margin-top: 15px;
+}
+
+.competition-link {
+  display: inline-block;
+  margin-right: 15px;
+  margin-bottom: 5px;
+}
+
+.competition-content {
+  margin-bottom: 30px;
+}
+
+.competition-navigation {
+  margin-top: 30px;
+  padding-top: 20px;
+  border-top: 1px solid rgba(128, 128, 128, 0.3);
+}
+
+/* Art styles */
+.art-title {
+  color: var(--section-color);
+  margin-bottom: 10px;
+}
+
+.art-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-bottom: 20px;
+  border-bottom: 1px solid rgba(128, 128, 128, 0.3);
+}
+
+.art-header .art-title {
+  margin: 0;
+}
+
+.art-header .back-link {
+  margin: 0;
+}
+
+@media (max-width: 768px) {
+  .art-header .back-link-arrow {
+    display: none; 
+  }
+}
+
+.art-image-container {
+  margin: 20px 0;
+  text-align: center;
+}
+
+.art-detail-image {
+  max-width: 100%;
+  max-height: 500px;
+}
+
+.art-tagline {
+  margin-bottom: 20px;
+  font-size: 1.1em;
+  line-height: 1.5;
+  font-style: italic;
+  color: var(--text-color);
+  border-left: 3px solid var(--section-color);
+  padding-left: 15px;
+}
+
+
+.art-description {
+  margin-bottom: 20px;
+  font-size: 1em;
+  line-height: 1.6;
+  color: var(--text-color);
+}
+
+.art-content {
+  margin-bottom: 30px;
+}
+
+.art-navigation {
+  margin-top: 30px;
+  padding-top: 20px;
+  border-top: 1px solid rgba(128, 128, 128, 0.3);
+}
+
+.art-navigation.top-navigation {
+  margin-top: 0;
+  margin-bottom: 20px;
+  padding-top: 0;
+  padding-bottom: 20px;
+  border-top: none;
+  border-bottom: 1px solid rgba(128, 128, 128, 0.3);
+}
+
+.art-navigation.bottom-navigation {
+  margin-top: 30px;
+  padding-top: 20px;
+  border-top: 1px solid rgba(128, 128, 128, 0.3);
+}
+
+/* Mobile Styles */
+@media screen and (max-width: 768px) {
+
+  ul, ol {
+    padding-left: 20px;  
+  }
+
+  .name {
+    padding-top: 20px;    
+  }
+
+  .large-screen-only {
+    display: none;
+  }
+
+  .small-screen-only {
+    display: revert;
+  }  
+
+  .separator::before {
+    content: " \2022 ";
+  }
+  
+  .separator:first-of-type::before {
+    content: " ";
+  }
+
+  .header-text {
+    text-align: left;
+  }
+
+  .project-description {
+    text-align: left;
+  }
+  
+  .art-header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  
+  .art-header .art-title {
+    margin-top: 10px;
+    text-align: left;
+  }
+}
+
+@media (max-width: 740px) {
+  .art-image {
+    width: 140px;
+    height: 140px;
+  }
+}
+
+@media (max-width: 500px) {
+  .art-image {
+    width: 120px;
+    height: 120px;
+  }
+}
+
+/* Interactive button for art pages */
+.interactive-button {
+  display: inline-block;
+  background-color: var(--link-color);
+  color: var(--bg-color);
+  padding: 10px 20px;
+  border-radius: 5px;
+  text-decoration: none;
+  font-weight: bold;
+  margin: 20px 0;
+  transition: background-color 0.3s ease;
+}
+
+.interactive-button:hover {
+  background-color: var(--link-hover-color);
+  color: var(--bg-color);
+  text-decoration: none;
+}
+
+/* Code block styling */
+pre {
+  background-color: #2d2d2d;
+  border-radius: 5px;
+  padding: 15px;
+  overflow-x: auto;
+  margin: 20px 0;
+}
+
+code {
+  font-family: 'Consolas', 'Monaco', 'Andale Mono', 'Ubuntu Mono', monospace;
+  font-size: 0.9em;
+}
+
+/* Art content styling */
+.art-content {
+  margin: 20px 0;
+  line-height: 1.6;
+}
+
+.art-content h2 {
+  margin-top: 30px;
+  color: var(--section-color);
+}
+
+.art-content ul {
+  margin-left: 20px;
+} 

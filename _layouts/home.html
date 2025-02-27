@@ -1,0 +1,114 @@
+---
+layout: default
+---
+
+<!-- Header  -->
+<div class="header">
+  <div class="header-image">
+    <img alt="Matt Motoki, Ph.D. student at University of Washington" src="{{ '/assets/images/matt-motoki-profile-picture.png' | relative_url }}" class="profile-photo">
+  </div>
+  <div class="header-text">
+    <h1 class="name">{{ site.title }}</h1>
+    <p>{{ page.bio }}</p>
+    <p class="social-links">
+      <a href="https://scholar.google.com/citations?user=fOWhQ3AAAAAJ&hl=en" target="_blank">Google Scholar <i class="ai ai-google-scholar"></i></a> &nbsp; / &nbsp;
+      <a href="https://github.com/mattmotoki/" target="_blank">GitHub <i class="fab fa-github"></i></a> &nbsp; / &nbsp;
+      <a href="https://kaggle.com/mmotoki/" target="_blank">Kaggle</a> &nbsp; / &nbsp;
+      <a href="https://X.com/mattmotoki" target="_blank">X</i></a>
+    </p>
+    <div class="dark-mode-toggle">
+      <input type="checkbox" id="darkModeToggle" checked />
+      <label for="darkModeToggle"></label>
+      Dark Mode
+    </div>
+  </div>
+</div>
+
+<!-- Blog -->
+<div id="blog" class="section">
+  <h2>Blog</h2>
+  {% for post in site.posts limit:5 %}
+  <div class="section-item">
+    <a href="{{ post.url | relative_url }}" title="{{ post.title }}">
+      <img src="{{ post.image | default: '/assets/images/default-post.png' | relative_url }}" alt="{{ post.title }}" class="section-image">
+    </a>
+    <div class="project-description">
+      <a href="{{ post.url | relative_url }}" title="{{ post.title }}"><span class="highlight">{{ post.title }}</span></a>
+      <span class="date"> {{ post.date | date: "%B %d, %Y" }}</span>
+      <br class="large-screen-only">
+      {{ post.excerpt | strip_html | truncatewords: 30 }}
+    </div>
+  </div>
+  {% endfor %}
+</div>
+
+<!-- Competitions -->
+<div id="competitions" class="section">
+  <h2>Competitions</h2>
+  <p>In my free time, I enjoy doing machine learning competitions. I am a <a href="https://www.kaggle.com/mmotoki" target="_blank">competitions grandmaster</a> on Kaggle.</p>
+  <ul>
+    {% assign sorted_competitions = site.competitions | sort: "title" | reverse %}
+    {% for competition in sorted_competitions %}
+    <li class="competition-item">
+      <a href="{{ competition.competition_url }}" target="_blank" title="Competition website"><span class="highlight">{{ competition.title }}</span></a>
+      {% if competition.code_url %}
+      <a href="{{ competition.code_url }}" title="Code"><i class="fas fa-code"></i></a>
+      {% endif %}
+      {% if competition.summary_url %}
+      <a href="{{ competition.summary_url }}" target="_blank" title="Summary"><i class="fas fa-file-lines"></i></a>
+      {% endif %}
+      {% if competition.github_url %}
+      <a href="{{ competition.github_url }}" target="_blank" title="GitHub"><i class="fab fa-github"></i></a>
+      {% endif %}
+      {% if competition.presentation_url %}
+      <a href="{{ competition.presentation_url }}" target="_blank" title="Presentation"><i class="fab fa-youtube"></i></a>
+      {% endif %}
+      {% if competition.web_app_url %}
+      <a href="{{ competition.web_app_url }}" title="Web app"><i class="fas fa-laptop-code"></i></a>
+      {% endif %}
+      {% if competition.teammates %}
+      <span class="separator"></span> Teammates: {{ competition.teammates }}
+      {% endif %}
+      <span class="separator"></span> <em>{{ competition.result }}</em>
+    </li>
+    {% endfor %}
+  </ul>
+</div>
+
+<!-- Projects -->
+<div id="projects" class="section">
+  <h2>Projects</h2>
+  {% for project in site.projects %}
+  <div class="section-item">
+    <a href="{{ project.project_url }}" target="_blank" title="{{ project.title }}">
+      <img src="{{ project.image | relative_url }}" alt="{{ project.title }}" class="section-image">
+    </a>
+    <div class="project-description">
+      <a href="{{ project.project_url }}" target="_blank" title="{{ project.title }}"><span class="highlight">{{ project.title }}</span></a>
+      {% if project.demo_url %}
+      <a href="{{ project.demo_url }}" target="_blank" title="Play the game"> <i class="fas fa-play-circle"></i></a>
+      {% endif %}
+      {% if project.github_url %}
+      <a href="{{ project.github_url }}" target="_blank" title="GitHub"><i class="fab fa-github"></i></a>
+      {% endif %}
+      <br class="large-screen-only">
+      {{ project.content }}
+    </div>
+  </div>
+  {% endfor %}
+</div>
+
+<!-- Art -->
+<div id="art" class="section">
+  <h2>Creative Coding</h2>
+  I play around with creative coding for fun.<br> <br>
+  <div class="art-grid">
+    {% for art in site.art %}
+      {% if art.visible != false %}
+        <a href="{{ art.url | relative_url }}" title="{{ art.tagline | default: art.title }}">
+          <img src="{{ art.image | relative_url }}" alt="{{ art.title }}" class="art-image">
+        </a>
+      {% endif %}
+    {% endfor %}
+  </div>
+</div> 

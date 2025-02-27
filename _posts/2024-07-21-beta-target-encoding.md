@@ -1,5 +1,12 @@
-# Beta Target Encoding
-
+---
+layout: post
+title: "Beta Target Encoding"
+date: 2024-07-21
+image: /assets/images/beta.svg
+description: "This post examines Beta Target Encoding, a technique for converting categorical variables to numeric features for binary classification tasks."
+redirect_from:
+  - /blog/posts/beta-target-encoding.html
+---
 
 Bayesian Target Encoding is a feature engineering technique used to map categorical variables into numeric variables. The Bayesian framework requires only minimal updates as new data is acquired and is thus well-suited for online learning. Furthermore, the Bayesian approach makes choosing and interpreting hyperparameters intuitive. I developed this technique in the recent Avito Kaggle Competition, where my team and I took 14th place out of 1,917 teams. We found that the Bayesian target encoding outperforms the built-in categorical encoding provided by the LightGBM package.
 
@@ -68,7 +75,7 @@ These equations show the simple update rules for the posterior parameters---all 
 
 $$ \mu_{posterior}^{(j)} = \lambda^{(j)} \cdot \mu_{prior} + \left( 1-\lambda^{(j)} \right) \cdot \frac{1}{N^{(j)}} \sum_{i=1}^N y_i \cdot \mathrm{I}\! \left\{x=x^{(j)}\right\}, $$
 
-where $\lambda^{(j)} = \tau \,\big/\!\left( N^{(j)}+\tau \right).$ Notice that this equation has the same functional form as $(2)$. We see that increasing $\tau$ brings the estimate closer to the prior mean and that decreasing $\tau$ brings it closer to the in-level sample average.
+where $\lambda^{(j)} = \tau \,\big/\!\left( N^{(j)}+\tau \right.$ Notice that this equation has the same functional form as $(2)$. We see that increasing $\tau$ brings the estimate closer to the prior mean and that decreasing $\tau$ brings it closer to the in-level sample average.
 
 Recall that when we use additive noise for regularization $(3)$, we need to specify the distribution of the noise random variable $\epsilon^{(j)}$. This is natural to do when taking the Bayesian approach. In particular, we can set $\epsilon^{(j)} \sim \mathrm{Beta}\!\left(\alpha_{posterior}^{(j)}, \beta_{posterior}^{(j)} \right)$. The only hyperparameter left to tune is the noise strength $\eta$. Notice that from $(5)$, the variance of the noise distribution will shrink as we obtain more observations. What this means is that as the number of observations increases, the noise distribution will converge to a delta function centered at $\mu_{posterior}^{(j)}$. Thus, we have the nice property that the amount of regularization decreases as the number of observations increases.
 
@@ -76,7 +83,7 @@ Recall that when we use additive noise for regularization $(3)$, we need to spec
 
 My team and I used Bayesian target encoding in the recent Kaggle competition [Avito Demand Prediction Challenge](https://www.kaggle.com/c/avito-demand-prediction) where we placed 14th out of 1,917 teams. For a more detailed write-up about our team's solution, see [Peter Hurford's post](https://www.kaggle.com/c/avito-demand-prediction/discussion/60059). The task was to predict demand for an online advertisement based on its full description (title, description, images, etc.), its context (geographically where it was posted, similar ads already posted), and historical demand for similar ads in similar contexts. The competition metric was the root mean squared error between our prediction and the probability of a deal. We found that the Bayesian target-encoded features outperformed the built-in LightGBM categorical variable encoding. The graph below shows the performance of a LightGBM model using target encoding for various values of $\tau$ relative to a baseline LightGBM model using built-in categorical encoding. The best model uses Bayesian target-encoded features with a hyperparameter setting of $\tau=10$.
 
-![alt text](/images/bayesian-mean-target-encoding.svg "LightGBM with target encoding compared to built-in categorical variable encoding.")
+![alt text](/assets/images/bayesian-mean-target-encoding.svg "LightGBM with target encoding compared to built-in categorical variable encoding.")
 *The figure above shows the relative improvement of the beta target-encoded features compared to the built-in LightGBM encodings. We see that the beta target encodings are better than the baseline for a wide range of hyperparameter settings.*
 
 ---
@@ -85,4 +92,4 @@ My team and I used Bayesian target encoding in the recent Kaggle competition [Av
 
 - *[1] A more comprehensive list of statistics for the Beta distribution.*
 - *[2] Information about Bayesian statistics and conjugate priors.*
-- *[3] Code for implementing the Bayesian target encoding.*
+- *[3] Code for implementing the Bayesian target encoding.* 
