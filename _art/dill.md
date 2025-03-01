@@ -3,37 +3,30 @@ title: "Dill"
 image: "/assets/images/dill.png"
 display_image: "/assets/images/dill-large.png"
 tagline: "A fractal-like visualization resembling the dill herb."
-description: "This code generates a fractal-like pattern that resembles the delicate, feathery structure of dill. The algorithm uses recursive branching patterns to create the organic, plant-like appearance."
+description: ""
 ---
 
+## Technical Implementation
+The algorithm uses recursive branching patterns to create a natural-looking tree structure, with each branch splitting into smaller branches at varying angles.
 
 ```python
 import numpy as np
 import matplotlib.pyplot as plt
 
-def create_branch(start, angle, length, depth, max_depth):
-    if depth > max_depth:
-        return
-    
-    end = start + length * np.array([np.cos(angle), np.sin(angle)])
-    plt.plot([start[0], end[0]], [start[1], end[1]], color='green', alpha=0.3)
-    
-    if depth < max_depth:
-        num_branches = np.random.randint(1, 4)
-        for _ in range(num_branches):
-            new_angle = angle + np.random.uniform(-0.5, 0.5)
-            new_length = length*np.random.uniform(0.75, 0.9)
-            create_branch(end, new_angle, new_length, depth + 1, max_depth)
+def create_branch(i, d, t, L, d_max=8):
+    if d >= d_max: return
+    j = i + L*np.array([np.cos(t), np.sin(t)])
+    plt.plot(*list(zip(i,j)), 'g', alpha=0.3)
+    for _ in range(np.random.randint(1, 4)):
+        t_new = t - np.random.rand() + 0.5
+        L_new = L*np.random.uniform(0.75, 0.9)
+        create_branch(j, d+1, t_new, L_new)
 
 np.random.seed(0)
-
 _, ax = plt.subplots(figsize=(5, 5))
 for i in range(10):
-    angle = 0.01*np.pi*i + 0.45*np.pi
-    length = np.random.uniform(0.1, 0.25)
-    create_branch([0, 0], angle, length, 0, max_depth=8)
-
-ax.set_aspect('equal'); plt.axis('off'); plt.tight_layout()
-plt.savefig("dill-large.png", transparent=True, dpi=300)
+    t = 0.01*np.pi*i + 0.45*np.pi
+    L = np.random.uniform(0.1, 0.25)
+    create_branch([0, 0], 0, t, L)
 plt.show()
 ```
