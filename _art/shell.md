@@ -7,8 +7,7 @@ description: "This was my first creative coding experiment. It's a simple connec
 ---
 
 
-
-## Mathematical Background
+## Technical Implementation
 
 The visualization is based on the [logarithmic spiral](https://en.wikipedia.org/wiki/Logarithmic_spiral). The equation for the logarithmic spiral is:
 

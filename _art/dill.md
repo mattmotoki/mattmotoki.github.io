@@ -3,9 +3,11 @@ title: "Dill"
 image: "/assets/images/dill.png"
 display_image: "/assets/images/dill-large.png"
 tagline: "A fractal-like visualization resembling the dill herb."
-description: "This code generates a fractal-like pattern that resembles the delicate, feathery structure of dill. The algorithm uses recursive branching patterns to create the organic, plant-like appearance."
+description: ""
 ---
 
+## Technical Implementation
+The algorithm uses recursive branching patterns to create a natural-looking tree structure, with each branch splitting into smaller branches at varying angles.
 
 ```python
 import numpy as np
