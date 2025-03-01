@@ -2,11 +2,11 @@
 title: "Diffusion"
 image: "/assets/images/diffusion.png"
 tagline: "The heat diffusion process in a 1D rod visualized."
-description: "This code is based on the heat equation. In my undergrad research, I used the heat equation for geophysics simulations, and during my master’s research, I applied it to modeling water heaters."
+description: ""
 ---
 
-
-## Physics Behind the Visualization
+## Technical Implementation
+This code is based on the heat equation. In my undergrad research, I used the heat equation for geophysics simulations, and during my master’s research, I applied it to modeling water heaters. 
 
 The heat equation, a partial differential equation that describes how the distribution of heat evolves over time in a given space. In this case, we're looking at a 1D rod and so the equation is:
 
