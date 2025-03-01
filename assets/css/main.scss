@@ -341,23 +341,8 @@ h2 + p, h2 + div, h2 + ul {
   margin-bottom: 10px;
 }
 
-.art-header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding-bottom: 20px;
-  border-bottom: 1px solid rgba(128, 128, 128, 0.3);
-}
-
-.art-header .art-title {
-  margin: 0;
-}
-
-.art-header .back-link {
-  margin: 0;
-}
-
 @media (max-width: 768px) {
+  .post-header .back-link-arrow,
   .art-header .back-link-arrow {
     display: none; 
   }
@@ -451,11 +436,12 @@ h2 + p, h2 + div, h2 + ul {
     text-align: left;
   }
   
-  .art-header {
+  .post-header, .art-header {
     flex-direction: column;
     align-items: flex-start;
   }
   
+  .post-header .post-title,
   .art-header .art-title {
     margin-top: 10px;
     text-align: left;
