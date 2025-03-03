@@ -18,7 +18,12 @@ layout: default
 
 
   <div class="art-image-container">
-    <img src="{{ page.display_image | default: page.image | relative_url }}" alt="{{ page.title }}" class="art-detail-image">
+    {% assign display_img = page.display_image | default: page.image %}
+    {% if display_img contains '.html' %}
+      <iframe src="{{ display_img | relative_url }}" frameborder="0" class="art-iframe" allowfullscreen></iframe>
+    {% else %}
+      <img src="{{ display_img | relative_url }}" alt="{{ page.title }}" class="art-detail-image">
+    {% endif %}
   </div>
   
   {% if page.description %}
