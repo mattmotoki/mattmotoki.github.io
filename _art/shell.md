@@ -3,9 +3,10 @@ title: "Shell"
 image: "/assets/images/shell.png"
 display_image: "/assets/images/shell-large.png"
 tagline: "A spiral pattern resembling a nautilus shell."
-description: "This was my first creative coding experiment. It's a simple connect-the-dots program that generates a spiral pattern resembling a shell. The visualization is based on the logarithmic spiral, a pattern that appears frequently in natural structures like shells, hurricanes, and galaxies."
+description: ""
 ---
 
+This was my first creative coding experiment. It's a simple connect-the-dots program that generates a spiral pattern resembling a shell. The visualization is based on the logarithmic spiral, a pattern that appears frequently in natural structures like shells, hurricanes, and galaxies.
 
 ## Technical Implementation
 
