@@ -1,7 +1,7 @@
 ---
 title: "Shell"
-image: "/assets/images/shell.png"
-display_image: "/assets/images/shell-large.png"
+image: "/assets/images/shell-thumbnail.svg"
+display_image: "/assets/images/shell.svg"
 tagline: "A spiral pattern resembling a nautilus shell."
 description: ""
 ---
@@ -18,17 +18,15 @@ where $r$ is the distance from the origin, $\theta$ is the angle from the positi
 
 
 
-
-
 ```r
-# create points
 n <- 20
 t <- seq(-pi, pi, length=n)
 r <- exp(0.3*t); x <- r*cos(t); y <- r*sin(t)
 
-# plot
-plot(x, y, asp=1, axes=F, xlab='', ylab='') 
-for (i in 1:n) for (j in 1:n) 
-    lines(x[c(i, j)], y[c(i, j)], lwd=5, 
-          col=rgb(1/6, 1, 1/6, alpha=0.25))
+plot(x, y, type='n', asp=1, axes=F, xlab='', ylab='') 
+for (i in 1:n) for (j in 1:n) {
+    xij <- x[c(i, j)]; yij <- y[c(i, j)]
+    lines(xij, yij, lwd=2, col='#FF00FF40')
+}
 ```
+
