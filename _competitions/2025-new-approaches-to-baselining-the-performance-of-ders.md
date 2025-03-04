@@ -1,7 +1,7 @@
 ---
 title: "2025 New Approaches to Baselining the Performance of DERs"
 competition_url: "https://miso.community.wazoku.com/challenge/100798d2fdba4d31bd4b4cd864ef0985"
-summary_url: "assests/files/adaptive-sampling-for-der-baseline-estimation.pdf"
+summary_url: "/assets/files/adaptive-sampling-for-der-baseline-estimation.pdf"
 result: "Top Prize $7,000"
 ---
 
