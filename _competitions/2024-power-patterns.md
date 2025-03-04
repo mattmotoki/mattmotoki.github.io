@@ -1,7 +1,7 @@
 ---
 title: "2024 Power Patterns Challenge"
 competition_url: "https://thinkonward.com/app/c/challenges/power-patterns/leaderboard"
-code_url: "/assets/files/power-patterns-notebook.html"
+summary_url: "/assets/files/power-patterns-notebook.html"
 teammates: "Elaine Hsu"
 result: "1st Place $3,000"
 ---

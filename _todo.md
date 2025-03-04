@@ -1,5 +1,8 @@
 # To-Do List
 
 * improve competition display
-* redirect old Bayesian Target Encoding blog post (https://mattmotoki.github.io/blog/posts/beta-target-encoding.html)
-* 
+* add new competitions results
+* update about page and make it reachable
+* blog on incremental updates to statistics
+
+

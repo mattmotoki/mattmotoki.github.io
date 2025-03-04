@@ -1,4 +1,4 @@
-# Matt Motoki's Personal Website
+# Personal Website
 
 Source code for my website: https://mattmotoki.github.io/
 
@@ -54,6 +54,20 @@ These instructions will get you a copy of the project up and running on your loc
 - `_sass/` - SCSS files
 
 ## Adding Content
+
+### Updating Biographical Information
+
+Your biographical information is stored in the `_config.yml` file and the homepage:
+
+1. **Basic Information** - Edit the `_config.yml` file to update:
+   - Name (title)
+   - Email
+   - Site description
+   - Social media handles (Twitter, GitHub)
+
+2. **Homepage Bio** - Edit the `index.html` file to update your brief bio that appears on the homepage.
+
+After making changes to `_config.yml`, you'll need to restart the Jekyll server for the changes to take effect.
 
 ### Blog Posts
 
