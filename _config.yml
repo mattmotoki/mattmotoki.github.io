@@ -26,7 +26,7 @@ baseurl: "" # the subpath of your site, e.g. /blog
 url: "https://mattmotoki.github.io" # the base hostname & protocol for your site
 twitter_username: mattmotoki
 github_username:  mattmotoki
-google_analytics: <%= ENV['GOOGLE_ANALYTICS_ID'] %>
+google_analytics: G-9PREHWYS4F
 
 # Build settings
 markdown: kramdown
