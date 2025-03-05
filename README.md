@@ -155,21 +155,4 @@ This script uses the `_config_development.yml` file which sets the Google Analyt
 
 ### Production Mode
 
-For production deployment, the Google Analytics ID is set as an environment variable. If you're using GitHub Actions for deployment, you need to set up a secret:
-
-1. Go to your GitHub repository
-2. Navigate to Settings > Secrets and variables > Actions
-3. Click "New repository secret"
-4. Name: `GOOGLE_ANALYTICS_ID`
-5. Value: Your Google Analytics ID (e.g., `G-XXXXXXXXXX`)
-6. Click "Add secret"
-
-The GitHub Actions workflow will automatically use this secret when deploying from the main branch.
-
-If you're building the site locally for production, you can use:
-
-```
-./deploy.sh
-```
-
-This script sets the environment variable and builds the site with production settings. 
+The GitHub Actions workflow will automatically use _config.yml when deploying from the main branch.
