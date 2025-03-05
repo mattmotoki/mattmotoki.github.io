@@ -1,0 +1,175 @@
+---
+layout: default
+---
+
+<div class="art-gallery-page">
+  <div class="art-header">
+    <h1 class="art-title">Art Gallery</h1>
+    <a href="{{ '/' | relative_url }}#art" class="back-link"><span class="back-link-arrow">&larr; </span>Back to Home</a>
+  </div>
+
+  <div class="art-gallery-description">
+    <p>A collection of my creative coding experiments and digital art. Scroll down to load more pieces.</p>
+  </div>
+
+  <!-- Hidden container with art data -->
+  <div id="art-data" style="display: none;">
+    {% for art in site.art %}
+      {% if art.visible != false %}
+        <div 
+          data-url="{{ art.url | relative_url }}"
+          data-title="{{ art.tagline | default: art.title }}"
+          data-image="{{ art.display_image | default: art.image | relative_url }}"
+          data-is-html="{% if art.display_image contains '.html' or art.image contains '.html' %}true{% else %}false{% endif %}"
+          data-art-title="{{ art.title }}"
+        ></div>
+      {% endif %}
+    {% endfor %}
+  </div>
+
+  <div class="art-grid" id="art-gallery-grid">
+    <div class="art-column" id="column-0"></div>
+    <div class="art-column" id="column-1"></div>
+    <div class="art-column" id="column-2"></div>
+  </div>
+
+  <div id="loading-indicator" class="loading-indicator">
+    <div class="loading-spinner"></div>
+    <p>Loading more art...</p>
+  </div>
+
+  <div class="art-navigation bottom-navigation">
+    <a href="{{ '/' | relative_url }}#art" class="back-link">&larr; Back to Home</a>
+  </div>
+</div>
+
+<script>
+  document.addEventListener('DOMContentLoaded', function() {
+    // Parse art items from data attributes
+    const artDataElements = document.querySelectorAll('#art-data > div');
+    const artItems = Array.from(artDataElements).map(el => ({
+      url: el.getAttribute('data-url'),
+      title: el.getAttribute('data-title'),
+      displayImage: el.getAttribute('data-image'),
+      isHtml: el.getAttribute('data-is-html') === 'true',
+      artTitle: el.getAttribute('data-art-title')
+    }));
+    
+    const columns = [
+      document.getElementById('column-0'),
+      document.getElementById('column-1'),
+      document.getElementById('column-2')
+    ];
+    
+    const loadingIndicator = document.getElementById('loading-indicator');
+    
+    // Initial setup - show only the first 9 items (3 per column)
+    const itemsPerLoad = 9;
+    let loadedItems = 0;
+    
+    // Function to create an art item element
+    function createArtItem(item) {
+      const artItem = document.createElement('div');
+      artItem.className = 'art-item';
+      
+      const link = document.createElement('a');
+      link.href = item.url;
+      link.title = item.title;
+      
+      if (item.isHtml) {
+        const container = document.createElement('div');
+        container.className = 'html-container';
+        
+        const iframe = document.createElement('iframe');
+        iframe.src = item.displayImage;
+        iframe.frameBorder = '0';
+        iframe.className = 'art-iframe-thumb';
+        
+        container.appendChild(iframe);
+        link.appendChild(container);
+      } else {
+        const img = document.createElement('img');
+        img.src = item.displayImage;
+        img.alt = item.artTitle;
+        img.className = 'art-image';
+        
+        link.appendChild(img);
+      }
+      
+      artItem.appendChild(link);
+      
+      const titleDiv = document.createElement('div');
+      titleDiv.className = 'art-item-title';
+      titleDiv.textContent = item.artTitle;
+      
+      artItem.appendChild(titleDiv);
+      
+      return artItem;
+    }
+    
+    // Function to load more items
+    function loadMoreItems(count) {
+      if (loadedItems >= artItems.length) {
+        loadingIndicator.style.display = 'none';
+        return;
+      }
+      
+      const itemsToLoad = Math.min(count, artItems.length - loadedItems);
+      
+      for (let i = 0; i < itemsToLoad; i++) {
+        const columnIndex = loadedItems % 3;
+        const item = artItems[loadedItems];
+        
+        const artItemElement = createArtItem(item);
+        columns[columnIndex].appendChild(artItemElement);
+        
+        loadedItems++;
+      }
+      
+      // Hide loading indicator if all items are loaded
+      if (loadedItems >= artItems.length) {
+        loadingIndicator.style.display = 'none';
+      }
+      
+      // Preload next batch of images
+      preloadImages(loadedItems, loadedItems + itemsPerLoad);
+    }
+    
+    // Load images properly
+    function preloadImages(startIndex, endIndex) {
+      for (let i = startIndex; i < endIndex && i < artItems.length; i++) {
+        if (!artItems[i].isHtml) {
+          const img = new Image();
+          img.src = artItems[i].displayImage;
+        }
+      }
+    }
+    
+    // Check if scrolled to bottom and load more items
+    function checkScroll() {
+      if (loadingIndicator.style.display === 'none') return;
+      
+      const rect = loadingIndicator.getBoundingClientRect();
+      const isVisible = rect.top <= window.innerHeight && rect.bottom >= 0;
+      
+      if (isVisible && loadedItems < artItems.length) {
+        // Show loading indicator
+        loadingIndicator.classList.add('loading');
+        
+        // Simulate loading delay for smoother UX
+        setTimeout(() => {
+          loadMoreItems(itemsPerLoad);
+          loadingIndicator.classList.remove('loading');
+        }, 500);
+      }
+    }
+    
+    // Initialize with first batch of items
+    loadMoreItems(itemsPerLoad);
+    
+    // Attach scroll event
+    window.addEventListener('scroll', checkScroll);
+    // Check on load too
+    checkScroll();
+  });
+</script> 
