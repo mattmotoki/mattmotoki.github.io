@@ -31,7 +31,7 @@ for i, j in product(range(3), range(4)):
     for k in range(i + 2):
         r = np.cos(k*(k + j + 1)*t) + k
         x, y = r*np.sin(t), r*np.cos(t)
-        ax.plot(x, y, colors[(i+j+k) % 6])
+        ax.plot(x, y, colors[(i+j+k)%6])
 
 plt.tight_layout()
 plt.show()
