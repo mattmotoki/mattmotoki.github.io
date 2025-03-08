@@ -21,12 +21,15 @@ where $r$ is the distance from the origin, $\theta$ is the angle from the positi
 ```r
 n <- 20
 t <- seq(-pi, pi, length=n)
-r <- exp(0.3*t); x <- r*cos(t); y <- r*sin(t)
+r <- exp(0.3*t)
+x <- r*cos(t)
+y <- r*sin(t)
 
-plot(x, y, type='n', asp=1, axes=F, xlab='', ylab='') 
+plot(x, y, type='n', asp=1, axes=F) 
 for (i in 1:n) for (j in 1:n) {
-    xij <- x[c(i, j)]; yij <- y[c(i, j)]
-    lines(xij, yij, lwd=2, col='#FF00FF40')
+    xij <- x[c(i, j)]
+    yij <- y[c(i, j)]
+    lines(xij, yij, lwd=2, col='#F0F5')
 }
 ```
 
