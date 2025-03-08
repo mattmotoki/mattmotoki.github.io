@@ -10,22 +10,22 @@ This was my first creative coding experiment. It's a simple connect-the-dots pro
 
 ## Technical Implementation
 
-The visualization is based on the [logarithmic spiral](https://en.wikipedia.org/wiki/Logarithmic_spiral). The equation for the logarithmic spiral is:
+The visualization is based on the <a href="https://en.wikipedia.org/wiki/Logarithmic_spiral" target="_blank">logarithmic spiral</a>. The equation for the logarithmic spiral is:
 
 $$ r = a e^{k\theta} $$
 
-where $r$ is the distance from the origin, $\theta$ is the angle from the positive x-axis, $a$ is the starting radius, and $k$ is the growth factor. In this case, I used $a = 1$ and $k = 0.3$.
+where $r$ is the distance from the origin, $\theta$ is the angle from the positive x-axis, $a$ is the starting radius, and $k$ is the growth factor. In this case, I used $a = 1$ and $k = 1/\pi$.
 
 
 
 ```r
 n <- 20
 t <- seq(-pi, pi, length=n)
-r <- exp(0.3*t)
+r <- exp(t/pi)
 x <- r*cos(t)
 y <- r*sin(t)
 
-plot(x, y, type='n', asp=1, axes=F) 
+plot(x, y, type='n', asp=1, axes=F, xlab='', ylab='') 
 for (i in 1:n) for (j in 1:n) {
     xij <- x[c(i, j)]
     yij <- y[c(i, j)]
