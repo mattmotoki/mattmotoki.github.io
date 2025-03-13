@@ -25,11 +25,11 @@ r <- exp(t/pi)
 x <- r*cos(t)
 y <- r*sin(t)
 
-plot(x, y, type='n', asp=1, axes=F, xlab='', ylab='') 
+plot(x, y, type='n', asp=1) 
 for (i in 1:n) for (j in 1:n) {
     xij <- x[c(i, j)]
     yij <- y[c(i, j)]
-    lines(xij, yij, lwd=2, col='#F0F5')
+    lines(xij, yij, col='#F0F5')
 }
 ```
 

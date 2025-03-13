@@ -8,7 +8,7 @@ redirect_from:
   - /blog/posts/beta-target-encoding.html
 ---
 
-Bayesian Target Encoding is a Bayesian approach to feature engineering that transforms categorical variables into numeric representations. This post explores Beta Target Encoding which applies to binary classification tasks. By leveraging Bayesian principles, Beta Target Encoding provides a systematic way to regularize target encoding, reducing overfitting and enabling efficient updates in online learning settings.
+Bayesian Target Encoding is a feature engineering method that leverages Bayesian principles to convert categorical variables into numeric representations. Beta Target Encoding is a specialized variant designed specifically for binary classification tasks. Beta Target Encoding provides a systematic way to regularize target encoding, reducing overfitting and enabling efficient updates in online learning settings.
 
 
 ## Target Encoding

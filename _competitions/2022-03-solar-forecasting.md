@@ -1,7 +1,6 @@
 ---
 title: "2022 Solar Forecasting Prize"
 competition_url: "https://www.energy.gov/eere/solar/american-made-solar-forecasting-prize"
-summary_url: ""
 result: "Runner Up $25,000"
 ---
 

@@ -1,7 +1,6 @@
 ---
 title: "2023 Digitizing Utilities Prize"
 competition_url: "https://www.energy.gov/oe/articles/us-department-energy-announces-winners-inaugural-american-made-digitizing-utilities"
-summary_url: ""
 web_app_url: "https://occamai.shinyapps.io/digitizing-utilities-prize/"
 teammates: "Sorapong Khongnawang, Daniel Tabas, Baosen Zhang, and Olin Lagon"
 result: "Phase 1 Winner $75,000"

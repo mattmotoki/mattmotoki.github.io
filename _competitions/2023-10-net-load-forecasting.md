@@ -1,7 +1,6 @@
 ---
 title: "2023 Net Load Forecasting Prize"
 competition_url: "https://www.energy.gov/eere/solar/articles/us-department-energy-announces-solar-prize-round-6-and-net-load-forecasting"
-summary_url: ""
 result: "2nd Place $150,000"
 ---
 
