@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Countdown Timer</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            background-color: #f5f5f5;
+        }
+        
+        .container {
+            background-color: white;
+            border-radius: 10px;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+            padding: 30px;
+            text-align: center;
+            width: 90%;
+            max-width: 500px;
+        }
+        
+        h1 {
+            color: #333;
+            margin-top: 0;
+        }
+        
+        .input-group {
+            margin: 20px 0;
+            text-align: left;
+        }
+        
+        label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: bold;
+            color: #555;
+        }
+        
+        input {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            font-size: 16px;
+            box-sizing: border-box;
+        }
+        
+        button {
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            padding: 12px 24px;
+            font-size: 16px;
+            cursor: pointer;
+            border-radius: 5px;
+            margin-top: 10px;
+            transition: background-color 0.3s;
+        }
+        
+        button:hover {
+            background-color: #45a049;
+        }
+        
+        .countdown {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 30px;
+        }
+        
+        .time-block {
+            flex: 1;
+            margin: 0 5px;
+            background-color: #f8f8f8;
+            padding: 15px 0;
+            border-radius: 5px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+        
+        .time-value {
+            font-size: 36px;
+            font-weight: bold;
+            color: #333;
+        }
+        
+        .time-label {
+            font-size: 14px;
+            color: #777;
+            margin-top: 5px;
+        }
+        
+        .hidden {
+            display: none;
+        }
+        
+        #message {
+            margin-top: 20px;
+            font-size: 20px;
+            color: #4CAF50;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Countdown Timer</h1>
+        
+        <div id="input-section">
+            <div class="input-group">
+                <label for="datetime-input">Set Target Date and Time:</label>
+                <input type="datetime-local" id="datetime-input" name="datetime-input">
+            </div>
+            <div class="input-group">
+                <label for="event-name">Event Name (optional):</label>
+                <input type="text" id="event-name" name="event-name" placeholder="e.g., New Year, Birthday, etc.">
+            </div>
+            <button id="start-button">Start Countdown</button>
+        </div>
+        
+        <div id="countdown-section" class="hidden">
+            <h2 id="event-title">Countdown</h2>
+            <div class="countdown">
+                <div class="time-block">
+                    <div id="days" class="time-value">0</div>
+                    <div class="time-label">Days</div>
+                </div>
+                <div class="time-block">
+                    <div id="hours" class="time-value">0</div>
+                    <div class="time-label">Hours</div>
+                </div>
+                <div class="time-block">
+                    <div id="minutes" class="time-value">0</div>
+                    <div class="time-label">Minutes</div>
+                </div>
+                <div class="time-block">
+                    <div id="seconds" class="time-value">0</div>
+                    <div class="time-label">Seconds</div>
+                </div>
+            </div>
+            <div id="message"></div>
+            <button id="reset-button" style="margin-top: 30px; background-color: #f44336;">Reset Timer</button>
+        </div>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // Set default date to tomorrow
+            const tomorrow = new Date();
+            tomorrow.setDate(tomorrow.getDate() + 1);
+            tomorrow.setHours(0, 0, 0, 0);
+            
+            // Format for datetime-local input
+            const tomorrowStr = tomorrow.toISOString().slice(0, 16);
+            document.getElementById('datetime-input').value = tomorrowStr;
+            
+            // Elements
+            const startButton = document.getElementById('start-button');
+            const resetButton = document.getElementById('reset-button');
+            const inputSection = document.getElementById('input-section');
+            const countdownSection = document.getElementById('countdown-section');
+            const eventTitle = document.getElementById('event-title');
+            const daysEl = document.getElementById('days');
+            const hoursEl = document.getElementById('hours');
+            const minutesEl = document.getElementById('minutes');
+            const secondsEl = document.getElementById('seconds');
+            const messageEl = document.getElementById('message');
+            
+            let countdownInterval;
+            let targetDate;
+            
+            // Start countdown
+            startButton.addEventListener('click', function() {
+                const datetimeInput = document.getElementById('datetime-input').value;
+                const eventName = document.getElementById('event-name').value;
+                
+                if (!datetimeInput) {
+                    alert('Please set a date and time!');
+                    return;
+                }
+                
+                targetDate = new Date(datetimeInput).getTime();
+                const now = new Date().getTime();
+                
+                if (targetDate <= now) {
+                    alert('Please set a future date and time!');
+                    return;
+                }
+                
+                // Hide input section and show countdown
+                inputSection.classList.add('hidden');
+                countdownSection.classList.remove('hidden');
+                
+                // Set event title
+                if (eventName) {
+                    eventTitle.textContent = `Countdown to ${eventName}`;
+                } else {
+                    eventTitle.textContent = 'Countdown';
+                }
+                
+                // Start the countdown
+                updateCountdown();
+                countdownInterval = setInterval(updateCountdown, 1000);
+            });
+            
+            // Reset button
+            resetButton.addEventListener('click', function() {
+                clearInterval(countdownInterval);
+                countdownSection.classList.add('hidden');
+                inputSection.classList.remove('hidden');
+                messageEl.textContent = '';
+            });
+            
+            // Update countdown timer
+            function updateCountdown() {
+                const now = new Date().getTime();
+                const distance = targetDate - now;
+                
+                if (distance < 0) {
+                    clearInterval(countdownInterval);
+                    daysEl.textContent = '0';
+                    hoursEl.textContent = '0';
+                    minutesEl.textContent = '0';
+                    secondsEl.textContent = '0';
+                    messageEl.textContent = 'Countdown Complete!';
+                    return;
+                }
+                
+                // Calculate time units
+                const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+                const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+                const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+                const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+                
+                // Update the display
+                daysEl.textContent = days;
+                hoursEl.textContent = hours.toString().padStart(2, '0');
+                minutesEl.textContent = minutes.toString().padStart(2, '0');
+                secondsEl.textContent = seconds.toString().padStart(2, '0');
+            }
+        });
+    </script>
+</body>
+</html>
