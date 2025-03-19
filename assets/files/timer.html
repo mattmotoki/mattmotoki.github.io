@@ -108,7 +108,6 @@
 </head>
 <body>
     <div class="container">
-        <h1>Countdown Timer</h1>
         
         <div id="input-section">
             <div class="input-group">
@@ -172,11 +171,67 @@
             
             let countdownInterval;
             let targetDate;
+            let eventName;
+            
+            // Load saved countdown from localStorage
+            function loadSavedCountdown() {
+                const savedTargetDate = localStorage.getItem('countdownTargetDate');
+                const savedEventName = localStorage.getItem('countdownEventName');
+                
+                if (savedTargetDate) {
+                    targetDate = parseInt(savedTargetDate);
+                    eventName = savedEventName || '';
+                    
+                    const now = new Date().getTime();
+                    
+                    // Check if the saved date is still in the future
+                    if (targetDate > now) {
+                        // Set event title
+                        if (eventName) {
+                            eventTitle.textContent = `Countdown to ${eventName}`;
+                        } else {
+                            eventTitle.textContent = 'Countdown';
+                        }
+                        
+                        // Hide input section and show countdown
+                        inputSection.classList.add('hidden');
+                        countdownSection.classList.remove('hidden');
+                        
+                        // Start the countdown
+                        updateCountdown();
+                        countdownInterval = setInterval(updateCountdown, 1000);
+                        return true;
+                    } else {
+                        // Clear localStorage if the date is in the past
+                        clearSavedCountdown();
+                    }
+                }
+                return false;
+            }
+            
+            // Save countdown to localStorage
+            function saveCountdown(targetDate, eventName) {
+                localStorage.setItem('countdownTargetDate', targetDate.toString());
+                localStorage.setItem('countdownEventName', eventName || '');
+            }
+            
+            // Clear saved countdown
+            function clearSavedCountdown() {
+                localStorage.removeItem('countdownTargetDate');
+                localStorage.removeItem('countdownEventName');
+            }
+            
+            // Try to load saved countdown
+            if (!loadSavedCountdown()) {
+                // No valid saved countdown, show input section
+                inputSection.classList.remove('hidden');
+                countdownSection.classList.add('hidden');
+            }
             
             // Start countdown
             startButton.addEventListener('click', function() {
                 const datetimeInput = document.getElementById('datetime-input').value;
-                const eventName = document.getElementById('event-name').value;
+                eventName = document.getElementById('event-name').value;
                 
                 if (!datetimeInput) {
                     alert('Please set a date and time!');
@@ -190,6 +245,9 @@
                     alert('Please set a future date and time!');
                     return;
                 }
+                
+                // Save to localStorage
+                saveCountdown(targetDate, eventName);
                 
                 // Hide input section and show countdown
                 inputSection.classList.add('hidden');
@@ -210,9 +268,20 @@
             // Reset button
             resetButton.addEventListener('click', function() {
                 clearInterval(countdownInterval);
+                clearSavedCountdown();
                 countdownSection.classList.add('hidden');
                 inputSection.classList.remove('hidden');
                 messageEl.textContent = '';
+                
+                // Reset input fields
+                document.getElementById('event-name').value = '';
+                
+                // Set default date to tomorrow again
+                const tomorrow = new Date();
+                tomorrow.setDate(tomorrow.getDate() + 1);
+                tomorrow.setHours(0, 0, 0, 0);
+                const tomorrowStr = tomorrow.toISOString().slice(0, 16);
+                document.getElementById('datetime-input').value = tomorrowStr;
             });
             
             // Update countdown timer
@@ -222,6 +291,7 @@
                 
                 if (distance < 0) {
                     clearInterval(countdownInterval);
+                    clearSavedCountdown();
                     daysEl.textContent = '0';
                     hoursEl.textContent = '0';
                     minutesEl.textContent = '0';
