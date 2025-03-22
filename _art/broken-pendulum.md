@@ -2,15 +2,19 @@
 title: "Broken Pendulum"
 image: "/assets/images/broken-pendulum-thumbnail.svg"
 display_image: "/assets/images/broken-pendulum-wide.svg"
-tagline: "Improper harmonic motion"
+tagline: "Distorted harmonic motion"
 priority: 3
 description: ""
 ---
 
-The idea came when nephew showed me some art that he made at the Oregon Museum of Science and Industry. I didn't know how he made it, but I guessed it was from a pen attached to some sort of pendulum. A simple pendulum would trace elliptical orbits so to create more complex patterns I fudged the physics a bit.
+The idea came when nephew showed me some art that he made at the Oregon Museum of Science and Industry. I didn't know how he made it, but I guessed it was from a pen attached to some sort of pendulum. A simple pendulum would trace elliptical orbits so to create more complex patterns I fudged the physics a bit. Here's a picture of what he made:
+
+<div class="art-image-container">
+  <img src="/assets/images/luke's-art.jpg" alt="Luke's Art" class="art-detail-image">
+</div>
 
 ## Technical Implementation
-The code creates abstract line-based artworks using a physics-inspired system. The curves come from a dampled pendulum with modified equations of motions.
+The code uses metaprogramming to create abstract line-based artworks using a physics-inspired system. The curves come from a dampled pendulum with distorted equations of motions.
 
 
 ```python
@@ -26,15 +30,15 @@ def derivatives(state, t):
 
 plt.figure(figsize=(8, 3))
 for idx, params in enumerate([
-    [0, "*", 2, 0, "-", 2, (1, 0, 3, 1), 5, 2],
-    [2, "-", 1, 2, "*", 1, (0, 1, 0, 1), 5, 5],
-    [1, "+", 2, 0, "-", 2, (0, 1, 3, 5), 2, 1],
+    [0, '*', 2, 0, '-', 2, (1, 0, 3, 1), 5, 2],
+    [2, '-', 1, 2, '*', 1, (0, 1, 0, 1), 5, 5],
+    [1, '+', 2, 0, '-', 2, (0, 1, 3, 5), 2, 1],
 ]):
 
     dimx0, opx, dimx1, dimy0, opy, dimy1, init_cond, eta, c = params
     sol = odeint(derivatives, init_cond, np.linspace(0, 100, 10000))    
-    x = eval(f"np.sin(sol[:,{dimx0}]) {opx} np.cos(sol[:,{dimx1}])")
-    y = eval(f"np.sin(sol[:,{dimy0}]) {opy} np.sin(sol[:,{dimy1}])")
+    x = eval(f'np.sin(sol[:,{dimx0}]) {opx} np.cos(sol[:,{dimx1}])')
+    y = eval(f'np.sin(sol[:,{dimy0}]) {opy} np.sin(sol[:,{dimy1}])')
 
     plt.subplot(1, 3, idx+1)
     plt.plot(x, y, '#0809', linewidth=0.75)
