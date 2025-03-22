@@ -1,7 +1,7 @@
 ---
 title: "Fruity"
 image: "/assets/images/fruity.svg"
-tagline: "A mosaic of fruit-inspired circles with vibrant colors."
+tagline: "A mosaic of fruit-inspired circles"
 description: ""
 visible: false
 ---

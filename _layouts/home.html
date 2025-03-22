@@ -104,7 +104,7 @@ layout: default
   <div class="art-grid">
     {% for art in site.art %}
       {% if art.visible != false %}
-        <a href="{{ art.url | relative_url }}" title="{{ art.tagline | default: art.title }}">
+        <a href="{{ art.url | relative_url }}" title="{{ art.title }}">
           {% if art.image contains '.html' %}
             <div class="art-image html-container">
               <iframe src="{{ art.image | relative_url }}" frameborder="0" class="art-iframe-thumb"></iframe>

@@ -2,7 +2,7 @@
 title: "Pew Pew Pew"
 image: "/assets/files/pewpewpew.html"
 display_image: "/assets/files/pewpewpew.html"
-tagline: "A radiant display of neon lines shooting through the void."
+tagline: "Neon lines shooting through the void"
 description: ""
 ---
 

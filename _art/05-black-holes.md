@@ -3,7 +3,7 @@ title: "Black Holes"
 
 image: "/assets/images/black-holes-thumbnail.svg"
 display_image: "/assets/images/black-holes-wide.svg"
-tagline: "Spiral patterns representing black holes."
+tagline: "Sketches from the event horizon"
 description: ""
 ---
 
