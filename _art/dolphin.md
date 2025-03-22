@@ -19,20 +19,18 @@ import numpy as np
 import matplotlib.pyplot as plt
 
 t = np.linspace(0, 2*np.pi, 1000)
-f0x = 4*np.sin(t + 2)
-f0y = 2*np.sin(2*t + 3)
-f1x = 3*np.sin(t + 2)
-f1y = 4*np.sin(t + 2)
+x0 = 4*np.sin(t + 2)
+y0 = 2*np.sin(2*t + 3)
+x1 = 3*np.sin(t + 2)
+y1 = 4*np.sin(t + 2)
 
-cx, cy = (f0x + f1x)/2, (f0y + f1y)/2
-dx, dy = f1x - f0x, f1y - f0y
+dx, dy = x1 - x0, y1 - y0
+b = 4 - (dx**2 + dy**2) / 4
+b = np.sqrt(np.maximum(0, b))
+x, y = 2*np.cos(t), b*np.sin(t)
 
-a = 2
-c = np.sqrt(dx*2 + dy**2) / 2
-b = np.sqrt(np.maximum(0, a**2-c**2))
 phi = np.arctan2(dy, dx)
-
-x, y = a*np.cos(t), b*np.sin(t)
+cx, cy = (x0 + x1)/2, (y0 + y1)/2
 cx += x*np.cos(phi) - y*np.sin(phi)
 cy += x*np.sin(phi) + y*np.cos(phi)
 
