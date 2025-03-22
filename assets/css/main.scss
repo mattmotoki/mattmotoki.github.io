@@ -139,7 +139,8 @@ h2 + p, h2 + div, h2 + ul {
 
 /* Base styles for the label (switch) */
 .dark-mode-toggle {
-  margin-bottom: 20px;
+  display: inline-block;
+  vertical-align: middle;
 }
 
 

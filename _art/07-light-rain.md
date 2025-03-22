@@ -1,7 +1,7 @@
 ---
 title: "Light Rain"
 image: "/assets/images/light-rain.png"
-tagline: "Vertical lines of color fall softly, resembling the delicate, shimmering appearance of light rain."
+tagline: "Vertical lines of color fall softly, resembling the delicate, shimmering appearance of light rain"
 description: ""
 ---
 

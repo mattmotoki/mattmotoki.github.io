@@ -11,16 +11,15 @@ layout: default
     <h1 class="name">{{ site.title }}</h1>
     <p>{{ page.bio }}</p>
     <p class="social-links">
-      <a href="https://scholar.google.com/citations?user=fOWhQ3AAAAAJ&hl=en" target="_blank">Google Scholar <i class="ai ai-google-scholar"></i></a> &nbsp; / &nbsp;
       <a href="https://github.com/mattmotoki/" target="_blank">GitHub <i class="fab fa-github"></i></a> &nbsp; / &nbsp;
       <a href="https://kaggle.com/mmotoki/" target="_blank">Kaggle</a> &nbsp; / &nbsp;
-      <a href="https://X.com/mattmotoki" target="_blank">X</i></a>
+      <a href="https://scholar.google.com/citations?user=fOWhQ3AAAAAJ&hl=en" target="_blank">Google Scholar <i class="ai ai-google-scholar"></i></a> &nbsp; / &nbsp;      
+      <a href="https://X.com/mattmotoki" target="_blank">X</i></a> &nbsp; &nbsp; &nbsp;
+      <span class="dark-mode-toggle">
+        <input type="checkbox" id="darkModeToggle" checked />
+        <label for="darkModeToggle"></label> Dark Mode
+      </span>
     </p>
-    <div class="dark-mode-toggle">
-      <input type="checkbox" id="darkModeToggle" checked />
-      <label for="darkModeToggle"></label>
-      Dark Mode
-    </div>
   </div>
 </div>
 
@@ -105,7 +104,7 @@ layout: default
   <div class="art-grid">
     {% for art in site.art %}
       {% if art.visible != false %}
-        <a href="{{ art.url | relative_url }}" title="{{ art.tagline | default: art.title }}">
+        <a href="{{ art.url | relative_url }}" title="{{ art.title }}">
           {% if art.image contains '.html' %}
             <div class="art-image html-container">
               <iframe src="{{ art.image | relative_url }}" frameborder="0" class="art-iframe-thumb"></iframe>

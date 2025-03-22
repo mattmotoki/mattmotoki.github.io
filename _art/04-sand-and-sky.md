@@ -1,7 +1,8 @@
 ---
 title: "Sand and Sky"
-image: "/assets/images/sand-and-sky.png"
-tagline: "A fading horizon where sand meets skys."
+image: "/assets/images/sand-and-sky-thumbnail.png"
+display_image: "/assets/images/sand-and-sky-wide.png"
+tagline: "A fading horizon where sand meets skys"
 description: ""
 ---
 
