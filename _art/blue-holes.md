@@ -1,9 +1,9 @@
 ---
-title: "Black Holes"
+title: "Blue Holes"
 
-image: "/assets/images/black-holes-thumbnail.svg"
-display_image: "/assets/images/black-holes.svg"
-tagline: "A visualization of the gravitational pull of black holes"
+image: "/assets/images/blue-holes-thumbnail.svg"
+display_image: "/assets/images/blue-holes-wide.svg"
+tagline: "Sketches from the event horizon"
 priority: 5
 description: ""
 ---

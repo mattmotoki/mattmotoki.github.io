@@ -2,7 +2,7 @@
 title: "Digital Dill"
 image: "/assets/images/dill.png"
 display_image: "/assets/images/dill-large.png"
-tagline: "A fractal-like visualization resembling the dill herb."
+tagline: "A fractal-like visualization resembling the dill herb"
 priority: 4
 description: ""
 ---

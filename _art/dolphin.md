@@ -1,17 +1,17 @@
 ---
 title: "Dolphin"
 image: "/assets/images/dolphin-thumbnail.svg"
-display_image: "/assets/images/dolphin.svg"
-tagline: "A dolphin created with particles bouncing in a box"
+display_image: "/assets/images/dolphin-wide.svg"
+tagline: "An unexpected Lissajous curve of a dolphin"
 priority: 2
-description: "A dolphin image recreated using particles bouncing within a box."
+description: ""
 ---
 
 
 
 ## Technical Implementation
 
-I was playing around with Lissajous curves and this popped out. 
+I was playing around with [Lissajous curves](https://en.wikipedia.org/wiki/Lissajous_curve) and this popped out. 
 
 
 ```python
