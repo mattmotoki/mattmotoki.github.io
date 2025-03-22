@@ -28,14 +28,14 @@ dx, dy = f1x - f0x, f1y - f0y
 
 a = 2
 c = np.sqrt(dx*2 + dy**2) / 2
-b = np.sqrt(np.maximum(0, a**2 - c**2))
+b = np.sqrt(np.maximum(0, a**2-c**2))
 phi = np.arctan2(dy, dx)
 
 x, y = a*np.cos(t), b*np.sin(t)
-rx = cx + x*np.cos(phi) - y*np.sin(phi)
-ry = cy + x*np.sin(phi) + y*np.cos(phi)
+cx += x*np.cos(phi) - y*np.sin(phi)
+cy += x*np.sin(phi) + y*np.cos(phi)
 
-plt.plot(rx, -ry, linewidth=2)
+plt.plot(cx, -cy, linewidth=2)
 plt.axis('off')
 plt.show()    
 ```
