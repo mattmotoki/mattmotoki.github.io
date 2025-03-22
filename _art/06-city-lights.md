@@ -1,7 +1,7 @@
 ---
 title: "City Lights"
 image: "/assets/images/city-lights.png"
-tagline: "A stylized skyline with randomly placed buildings and illuminated windows."
+tagline: "A stylized skyline with randomly placed buildings and illuminated windows"
 description: ""
 ---
 

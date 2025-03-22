@@ -1,8 +1,8 @@
 ---
-title: "Shell"
+title: "Logarithmic Seashell"
 image: "/assets/images/shell-thumbnail.svg"
 display_image: "/assets/images/shell.svg"
-tagline: "A spiral pattern resembling a nautilus shell."
+tagline: "A spiral pattern resembling a nautilus shell"
 description: ""
 ---
 

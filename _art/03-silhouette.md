@@ -1,7 +1,7 @@
 ---
-title: "Silhouette"
+title: "Sprinkled Silhouette"
 image: "/assets/images/silhouette.png"
-tagline: "A landscape-like image of a mountain silhouette against a gradient sky."
+tagline: "A landscape-like silhouette against a colorful gradient sky"
 description: ""
 ---
 

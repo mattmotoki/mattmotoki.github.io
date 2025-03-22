@@ -1,7 +1,7 @@
 ---
-title: "StreamLines"
+title: "Perlin Streamlines"
 image: "/assets/images/streamlines.png"
-tagline: "A smooth, organic pattern created using Perlin noise."
+tagline: "A smooth, organic pattern created using Perlin noise"
 description: ""
 ---
 
