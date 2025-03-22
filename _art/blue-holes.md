@@ -9,7 +9,7 @@ description: ""
 ---
 
 ## Technical Implementation
-The code creates an abstract representation of black holes by first generating a Voronoi diagram (which partitions space into regions based on random points) and then drawing spiraling patterns within each region by repeatedly interpolating between consecutive vertices.
+The code creates an abstract representation of black holes by first generating a <a href="https://en.wikipedia.org/wiki/Voronoi_diagram" target="_blank">Voronoi diagram</a> (which partitions space into regions based on random points) and then drawing spiraling patterns within each region by repeatedly interpolating between consecutive vertices.
 
 ```python
 import numpy as np

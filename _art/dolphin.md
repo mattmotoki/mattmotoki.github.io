@@ -11,7 +11,7 @@ description: ""
 
 ## Technical Implementation
 
-I was playing around with [Lissajous curves](https://en.wikipedia.org/wiki/Lissajous_curve) and this popped out. 
+I was playing around with <a href="https://en.wikipedia.org/wiki/Lissajous_curve" target="_blank">Lissajous curves</a> and this popped out. 
 
 
 ```python

@@ -7,7 +7,7 @@ description: ""
 ---
 
 ## Technical Implementation
-This piece was inspired by [Marius Watz’s Blocker series](https://mariuswatz.com/2010/04/22/blocker/). The code draws semi-transparent rectangles with colors and positions determined by Perlin noise. The final color palette is a blend from separate noise patterns.
+This piece was inspired by <a href="https://mariuswatz.com/2010/04/22/blocker/" target="_blank">Marius Watz’s Blocker series</a>. The code draws semi-transparent rectangles with colors and positions determined by Perlin noise. The final color palette is a blend from separate noise patterns.
 
 ```r
 library(ambient)
