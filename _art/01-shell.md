@@ -1,5 +1,5 @@
 ---
-title: "Logarithmic Seashell"
+title: "Logarithmic Shell"
 image: "/assets/images/shell-thumbnail.svg"
 display_image: "/assets/images/shell.svg"
 tagline: "A spiral pattern resembling a nautilus shell"
