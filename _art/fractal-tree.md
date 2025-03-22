@@ -2,6 +2,7 @@
 title: "Fractal Tree"
 image: "/assets/images/fractal-tree.png"
 tagline: "An autumnal, branching fractal tree with recursive patterns."
+priority: 9
 description: ""
 visible: false
 ---

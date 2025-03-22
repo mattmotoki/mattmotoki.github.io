@@ -2,8 +2,9 @@
 title: "Black Holes"
 
 image: "/assets/images/black-holes-thumbnail.svg"
-display_image: "/assets/images/black-holes-wide.svg"
-tagline: "Sketches from the event horizon"
+display_image: "/assets/images/black-holes.svg"
+tagline: "A visualization of the gravitational pull of black holes"
+priority: 5
 description: ""
 ---
 

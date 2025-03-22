@@ -2,6 +2,7 @@
 title: "Triangulation"
 image: "/assets/images/triangulation.png"
 tagline: "A low-poly approximation of an image using Delaunay triangulation and Poisson disk sampling"
+priority: 7
 description: ""
 ---
 

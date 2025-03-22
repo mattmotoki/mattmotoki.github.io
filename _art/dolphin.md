@@ -1,9 +1,10 @@
 ---
-title: "Dolphin Doodle"
+title: "Dolphin"
 image: "/assets/images/dolphin-thumbnail.svg"
-display_image: "/assets/images/dolphin-wide.svg"
-tagline: "An unexpected Lissajous curve of a dolphin"
-description: ""
+display_image: "/assets/images/dolphin.svg"
+tagline: "A dolphin created with particles bouncing in a box"
+priority: 2
+description: "A dolphin image recreated using particles bouncing within a box."
 ---
 
 

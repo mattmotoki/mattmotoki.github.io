@@ -84,8 +84,10 @@ defaults:
     values:
       layout: "art"
       visible: true
+      priority: 999
       # display_image defaults to image if not specified
       # tagline defaults to title if not specified
+      # priority: controls the order (lower numbers first, unspecified priority shows last)
   - scope:
       path: ""
     values:

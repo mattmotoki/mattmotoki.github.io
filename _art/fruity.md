@@ -1,7 +1,9 @@
 ---
 title: "Fruity"
-image: "/assets/images/fruity.svg"
-tagline: "A mosaic of fruit-inspired circles"
+image: "/assets/images/fruity-thumbnail.svg"
+display_image: "/assets/images/fruity.svg"
+tagline: "A colorful maze-like pattern with fruit-inspired shapes"
+priority: 9
 description: ""
 visible: false
 ---

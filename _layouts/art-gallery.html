@@ -14,7 +14,8 @@ layout: default
 
   <!-- Hidden container with art data -->
   <div id="art-data" style="display: none;">
-    {% for art in site.art %}
+    {% assign sorted_art = site.art | sort: "priority", "last" %}
+    {% for art in sorted_art %}
       {% if art.visible != false %}
         <div 
           data-url="{{ art.url | relative_url }}"
@@ -22,6 +23,7 @@ layout: default
           data-image="{{ art.display_image | default: art.image | relative_url }}"
           data-is-html="{% if art.display_image contains '.html' or art.image contains '.html' %}true{% else %}false{% endif %}"
           data-art-title="{{ art.title }}"
+          data-priority="{{ art.priority | default: 999 }}"
         ></div>
       {% endif %}
     {% endfor %}
@@ -52,7 +54,8 @@ layout: default
       title: el.getAttribute('data-title'),
       displayImage: el.getAttribute('data-image'),
       isHtml: el.getAttribute('data-is-html') === 'true',
-      artTitle: el.getAttribute('data-art-title')
+      artTitle: el.getAttribute('data-art-title'),
+      priority: el.getAttribute('data-priority')
     }));
     
     const columns = [

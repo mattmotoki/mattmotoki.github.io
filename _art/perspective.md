@@ -1,6 +1,7 @@
 ---
 title: "Perspective"
 image: "/assets/images/faces.png"
+priority: 6
 description: ""
 ---
 

@@ -102,7 +102,8 @@ layout: default
   <h2>Creative Coding</h2>
   I play around with creative coding for fun.<br> <br>
   <div class="art-grid">
-    {% for art in site.art %}
+    {% assign sorted_art = site.art | sort: "priority", "last" %}
+    {% for art in sorted_art %}
       {% if art.visible != false %}
         <a href="{{ art.url | relative_url }}" title="{{ art.title }}">
           {% if art.image contains '.html' %}

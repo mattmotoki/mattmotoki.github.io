@@ -2,6 +2,7 @@
 title: "Sprinkled Silhouette"
 image: "/assets/images/silhouette.png"
 tagline: "A landscape-like silhouette against a colorful gradient sky"
+priority: 3
 description: ""
 ---
 

@@ -18,10 +18,15 @@ image: "/path/to/thumbnail.png"  # Required - Used in the grid on homepage
 display_image: "/path/to/large-image.png"  # Optional - Used on the individual page
 tagline: "A short, catchy phrase that appears as a quote."  # Optional - Also used as hover text
 description: "A longer description that appears below the tagline."  # Optional
+priority: 1  # Optional - Used for ordering items (lower numbers appear first)
 ---
 ```
 
 ## Content Fields
+
+### Priority Field
+
+The `priority` field is used to control the order in which art items appear on the website. Items with lower priority numbers are displayed first. If the priority field is not specified, the item will be displayed after all items with priority.
 
 ### Tagline Field
 

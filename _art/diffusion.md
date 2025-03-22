@@ -2,6 +2,7 @@
 title: "Diffusion"
 image: "/assets/images/diffusion.png"
 tagline: "The heat diffusion process in a 1D rod visualized"
+priority: 6
 description: ""
 ---
 

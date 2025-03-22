@@ -3,6 +3,7 @@ title: "Pew Pew Pew"
 image: "/assets/files/pewpewpew.html"
 display_image: "/assets/files/pewpewpew.html"
 tagline: "Neon lines shooting through the void"
+priority: 6
 description: ""
 ---
 

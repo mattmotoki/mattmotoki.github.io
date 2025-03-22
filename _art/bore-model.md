@@ -3,6 +3,7 @@ title: "The Bore Model"
 image: "/assets/images/bore-atom.svg"
 display_image: "/assets/images/bore-atoms.svg"
 tagline: "A playful take on the Bohr model"
+priority: 6
 description: ""
 ---
 

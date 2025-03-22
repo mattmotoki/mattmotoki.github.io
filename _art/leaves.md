@@ -3,6 +3,7 @@ title: "Tree Confetti"
 image: "/assets/images/leaves-thumbnail.png"
 display_image: "/assets/images/leaves-wide.png"
 tagline: "A collection of seasonal leaves"
+priority: 2
 description: ""
 ---
 
