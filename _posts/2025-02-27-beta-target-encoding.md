@@ -16,21 +16,21 @@ Bayesian Target Encoding is a feature engineering method that leverages Bayesian
 
 Most machine learning algorithms require numeric input data. Target encoding is a common technique used to convert categorical variables into numeric variables. When done properly, target encoding can be very effective.
 
-In supervised learning, we are given $N$ data points $(x_i, y_i)$ and tasked with learning a mapping from input variable $x$ to the target variable $y$. Suppose $x$ is categorical and takes on one of $l$ possible (non-numeric) levels $x\in \left\\{ x^{(1)}, x^{(2)}, \dots, x^{(l)} \right\\}$. Target encoding maps each level of $x$ into a feature $\phi\in \left\\{ \phi^{(1)}, \phi^{(2)}, \dots, \phi^{(l)} \right\\}$ in the following way:
+In supervised learning, we are given $N$ data points $(x_i, y_i)$ and tasked with learning a mapping from input variable $x$ to the target variable $y$. Suppose $x$ is categorical and takes on one of $l$ possible (non-numeric) levels $x\in \left\\{ x^{(1)}, x^{(2)}, \dots, x^{(l)} \right\\}$. Standard target encoding maps each level of $x$ into a feature $\phi\in \left\\{ \phi^{(1)}, \phi^{(2)}, \dots, \phi^{(l)} \right\\}$ in the following way:
 
-$$ \phi^{(j)} = \frac{1}{N^{(j)}} \sum_{i=1}^N y_i \cdot \mathrm{I} \! \left\{ x_i = x^{(j)} \right\} \tag{1} $$
+$$ \phi^{(j)} = \frac{1}{N^{(j)}} \sum_{i=1}^N y_i \cdot \mathrm{I} \left\{ x_i = x^{(j)} \right\} \tag{1} $$
 
-where $N^{(j)} = \sum_{i=1}^N \mathrm{I} \! \left\\{ x_i = x^{(j)} \right\\}$ and $\mathrm{I}\\{\cdot\\}$ is the indicator function. In other words, $\phi^{(j)}$ is the average $y$-value in level $j$ and $N^{(j)}$ is the total number of observations in level $j$.
+where $N^{(j)} = \sum_{i=1}^N \mathrm{I} \left\\{ x_i = x^{(j)} \right\\}$ and $\mathrm{I}\\{\cdot\\}$ is the indicator function. In other words, $\phi^{(j)}$ is the average $y$-value in level $j$ and $N^{(j)}$ is the total number of observations in level $j$.
 
 ### Overfitting and Regularization
 
 Target-encoded variables are inherently leaky; that is, their construction requires information that we will not have when we make predictions. To see why this can be a problem, consider the case when $N^{(j)} = 1$. In this case, the summation in $(1)$ involves only one non-zero term when $x_i = x^{(j)}$. Thus, we have $\phi_i = y_i$; that is, $\phi_i$ is encoded with exactly the value we are trying to predict. Using these target-encoded features as is will lead to overfitting of the training set and poor generalization of our models. This problem is acute when dealing with high cardinality categorical variables. We can combat the data leakage problem by smoothing the estimate of the average $y$-value in level $j$. In particular,
 
-$$ \phi^{(j)} = \lambda^{(j)} \cdot \frac{1}{N} \sum_{i=1}^N y_i + \left( 1 - \lambda^{(j)} \right) \cdot \frac{ 1 }{N^{(j)}} \sum_{i=1}^N y_i \cdot \mathrm{I} \! \left\{ x_i = x^{(j)} \right\}, \tag{2} $$
+$$ \phi^{(j)} = \lambda^{(j)} \cdot \frac{1}{N} \sum_{i=1}^N y_i + \left( 1 - \lambda^{(j)} \right) \cdot \frac{ 1 }{N^{(j)}} \sum_{i=1}^N y_i \cdot \mathrm{I} \left\{ x_i = x^{(j)} \right\}, \tag{2} $$
 
 which is just a weighted average of the estimate in $(1)$ and the average $y$-value value over the entire training set. The $\lambda^{(j)}$ is a hyperparameter that controls the amount of smoothing in the estimate. Alternatively, we could address data leakage by adding noise to the estimate
 
-$$ \phi^{(j)} = \eta \cdot \epsilon^{(j)} + (1- \eta) \cdot \frac{1}{N^{(j)}} \sum_{i=1}^N y_i \cdot \mathrm{I} \! \left\{ x_i = x^{(j)} \right\}. \tag{3} $$
+$$ \phi^{(j)} = \eta \cdot \epsilon^{(j)} + (1- \eta) \cdot \frac{1}{N^{(j)}} \sum_{i=1}^N y_i \cdot \mathrm{I} \left\{ x_i = x^{(j)} \right\}. \tag{3} $$
 
 The hyperparameters $\lambda^{(j)}$, $\eta$, and the distribution of the random variable $\epsilon^{(j)}$ need to be chosen carefully for target encoding to perform well. By adopting a Bayesian framework, we can handle regularization in a systematic yet intuitive way. Furthermore, the Bayesian framework is well-suited for online learning requiring only minimal updates as new data is acquired. In the next section, we will discuss target encoding in the context of binary classification.
 
@@ -47,7 +47,7 @@ The analysis here considers target encoding for binary classification where the 
 
 ### The Beta Distribution 
 
-It is convenient to model binary target variables using the Bernoulli distribution, which has the Beta distribution as its conjugate prior, see these [course notes](https://people.eecs.berkeley.edu/~jordan/courses/260-spring10/other-readings/chapter9.pdf) on conjugate priors for more details. The Beta distribution is parameterized by $\alpha$ and $\beta$, which can respectively be thought of as the number of positive and negative examples in a repeated Binomial experiment. Many [useful statistics of the Beta distribution](https://en.wikipedia.org/wiki/Beta_distribution) can written in terms of $\alpha$ and $\beta$; for example, the mean
+It is convenient to model binary target variables using the Bernoulli distribution, which has the Beta distribution as its conjugate prior, see these <a href="https://people.eecs.berkeley.edu/~jordan/courses/260-spring10/other-readings/chapter9.pdf" target="_blank">course notes</a> on conjugate priors for more details. The Beta distribution is parameterized by $\alpha$ and $\beta$, which can respectively be thought of as the number of positive and negative examples in a repeated Binomial experiment. Many <a href="https://en.wikipedia.org/wiki/Beta_distribution" target="_blank">useful statistics of the Beta distribution</a> can written in terms of $\alpha$ and $\beta$; for example, the mean
 
 $$ \mu = \frac{\alpha}{\alpha + \beta}, \tag{4} $$
 
@@ -67,19 +67,27 @@ $$ \alpha_{prior} = \tau \cdot \mu_{prior} \quad\text{and}\quad \beta_{prior} = 
 
 The parameters of the posterior distribution are given by
 
-$$ \alpha_{posterior}^{(j)} = \alpha_{prior}+ \sum_{i=1}^N y_i \cdot \mathrm{I}\! \left\{x=x^{(j)}\right\} $$
+$$ 
+\alpha_{posterior}^{(j)} = \alpha_{prior} + \sum_{i=1}^N y_i \cdot \mathrm{I} \left\{x=x^{(j)}\right\} 
+$$
 
 and
 
-$$ \beta_{posterior}^{(j)} = \beta_{prior} + N^{(j)} - \alpha_{posterior}^{(j)}. $$
+$$ 
+\beta_{posterior}^{(j)} = \beta_{prior} + N^{(j)} - \sum_{i=1}^N y_i \cdot \mathrm{I} \left\{x=x^{(j)}\right\}.
+$$
 
-These equations show the simple update rules for the posterior parameters---all we need to keep track of is the sum of the $y$-values in a level and the total number of observations in that level. When the posterior parameters are known, we can use them to calculate other statistics, such as those in $(4)$, $(5)$, and $(6)$. To see how $\tau$ controls complexity let's rewrite the posterior mean as
+These equations show the simple update rules for the posterior parameters:
+* $\alpha_{posterior}$ is the count of postive examples in the level inflated by $\alpha_{prior}$
+* $\beta_{posterior}$ is the count of negative examples in the level inflated by $\beta_{prior}$
 
-$$ \mu_{posterior}^{(j)} = \lambda^{(j)} \cdot \mu_{prior} + \left( 1-\lambda^{(j)} \right) \cdot \frac{1}{N^{(j)}} \sum_{i=1}^N y_i \cdot \mathrm{I}\! \left\{x=x^{(j)}\right\}, $$
+To calculate the posterior parameters, all we need to keep track of is the sum of the $y$-values in a level and the total number of observations in that level. When the posterior parameters are known, we can use them to calculate other statistics, such as those in $(4)$, $(5)$, and $(6)$. To see how $\tau$ controls complexity let's rewrite the posterior mean as
 
-where $\lambda^{(j)} = \tau \,\big/\!\left( N^{(j)}+\tau \right)$. Notice that this equation has the same functional form as $(2)$. We see that increasing $\tau$ brings the estimate closer to the prior mean and that decreasing $\tau$ brings it closer to the in-level sample average.
+$$ \mu_{posterior}^{(j)} = \lambda^{(j)} \cdot \mu_{prior} + \left( 1-\lambda^{(j)} \right) \cdot \frac{1}{N^{(j)}} \sum_{i=1}^N y_i \cdot \mathrm{I} \left\{x=x^{(j)}\right\}, $$
 
-Recall that when we use additive noise for regularization $(3)$, we need to specify the distribution of the noise random variable $\epsilon^{(j)}$. This is natural to do when taking the Bayesian approach. In particular, we can set $\epsilon^{(j)} \sim \mathrm{Beta}\!\left(\alpha_{posterior}^{(j)}, \beta_{posterior}^{(j)} \right)$. The only hyperparameter left to tune is the noise strength $\eta$. Notice that from $(5)$, the variance of the noise distribution will shrink as we obtain more observations. What this means is that as the number of observations increases, the noise distribution will converge to a delta function centered at $\mu_{posterior}^{(j)}$. Thus, we have the nice property that the amount of regularization decreases as the number of observations increases.
+where $\lambda^{(j)} = \tau \,\big/\left( N^{(j)}+\tau \right)$. Notice that this equation has the same functional form as $(2)$. We see that increasing $\tau$ brings the estimate closer to the prior mean and that decreasing $\tau$ brings it closer to the in-level sample average.
+
+Recall that when we use additive noise for regularization $(3)$, we need to specify the distribution of the noise random variable $\epsilon^{(j)}$. This is natural to do when taking the Bayesian approach. In particular, we can set the noise to be $\epsilon^{(j)} \sim \mathrm{Beta}\big(\alpha_{posterior}^{(j)},\, \beta_{posterior}^{(j)} \big)$. The only hyperparameter left to tune is the noise strength $\eta$. Notice that from $(5)$, the variance of the noise distribution will shrink as we obtain more observations. What this means is that as the number of observations increases, the noise distribution will converge to a delta function centered at $\mu_{posterior}^{(j)}$. Thus, we have the nice property that the amount of regularization decreases as the number of observations increases.
 
 ## Conclusion
 The Bayesian target encoding framework is highly flexible and extends beyond binary classification. For instance, the Beta distribution can be replaced with the Dirichlet distribution for categorical targets or the Normal distribution for regression tasks. Additionally, it can be adapted for hierarchical encoding, where prior means are set based on higher-level group statistics. For example, in location-based modeling, the target mean for counties could be regularized toward the state-level average, improving robustness for low-data regions.

@@ -33,7 +33,8 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
   <!-- Prism.js for syntax highlighting -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism-tomorrow.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism-tomorrow.min.css" id="prism-dark-theme">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism-coy.min.css" id="prism-light-theme" disabled>
   <link rel="apple-touch-icon" sizes="57x57" href="{{ '/assets/favicons/apple-icon-57x57.png' | relative_url }}">
   <link rel="apple-touch-icon" sizes="60x60" href="{{ '/assets/favicons/apple-icon-60x60.png' | relative_url }}">
   <link rel="apple-touch-icon" sizes="72x72" href="{{ '/assets/favicons/apple-icon-72x72.png' | relative_url }}">
@@ -80,25 +81,48 @@
   </div>
 
   <script>
-    // Dark mode toggle functionality
+    // Dark mode toggle functionality - with error handling
     document.addEventListener('DOMContentLoaded', function() {
-      const darkModeToggle = document.getElementById('darkModeToggle');
-      
-      // Check for saved theme preference or use default
-      const currentTheme = localStorage.getItem('theme') || 'dark';
-      document.documentElement.setAttribute('data-theme', currentTheme);
-      darkModeToggle.checked = currentTheme === 'dark';
-      
-      // Add event listener for theme toggle
-      darkModeToggle.addEventListener('change', function() {
-        if (this.checked) {
-          document.documentElement.setAttribute('data-theme', 'dark');
-          localStorage.setItem('theme', 'dark');
-        } else {
-          document.documentElement.setAttribute('data-theme', 'light');
-          localStorage.setItem('theme', 'light');
+      try {
+        // Apply the theme from localStorage
+        const currentTheme = localStorage.getItem('theme') || 'dark';
+        document.documentElement.setAttribute('data-theme', currentTheme);
+        
+        // Find elements
+        const darkModeToggle = document.getElementById('darkModeToggle');
+        const prismDarkTheme = document.getElementById('prism-dark-theme');
+        const prismLightTheme = document.getElementById('prism-light-theme');
+        
+        // Set initial theme state
+        if (prismDarkTheme) prismDarkTheme.disabled = currentTheme !== 'dark';
+        if (prismLightTheme) prismLightTheme.disabled = currentTheme === 'dark';
+        
+        // Only manipulate the toggle if it exists (it won't on some pages)
+        if (darkModeToggle) {
+          darkModeToggle.checked = currentTheme === 'dark';
+          
+          // Add event listener for theme toggle
+          darkModeToggle.addEventListener('change', function() {
+            try {
+              if (this.checked) {
+                document.documentElement.setAttribute('data-theme', 'dark');
+                localStorage.setItem('theme', 'dark');
+                if (prismDarkTheme) prismDarkTheme.disabled = false;
+                if (prismLightTheme) prismLightTheme.disabled = true;
+              } else {
+                document.documentElement.setAttribute('data-theme', 'light');
+                localStorage.setItem('theme', 'light');
+                if (prismDarkTheme) prismDarkTheme.disabled = true;
+                if (prismLightTheme) prismLightTheme.disabled = false;
+              }
+            } catch (err) {
+              console.error('Error changing theme:', err);
+            }
+          });
         }
-      });
+      } catch (err) {
+        console.error('Error setting up dark mode:', err);
+      }
     });
   </script>
   

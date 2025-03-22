@@ -58,10 +58,16 @@ layout: default
 </div>
 
 <script>
-  // Check the current theme from localStorage
+  // Check the current theme from localStorage - with error handling
   document.addEventListener('DOMContentLoaded', function() {
-    // This script is kept to ensure the theme is properly applied
-    const currentTheme = localStorage.getItem('theme') || 'dark';
-    document.documentElement.setAttribute('data-theme', currentTheme);
+    try {
+      // Apply the saved theme or default to dark
+      const currentTheme = localStorage.getItem('theme') || 'dark';
+      document.documentElement.setAttribute('data-theme', currentTheme);
+      
+      // No need to manipulate the Prism themes - CSS will handle it
+    } catch (err) {
+      console.error('Error setting theme on 404 page:', err);
+    }
   });
 </script>

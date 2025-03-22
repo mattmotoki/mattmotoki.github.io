@@ -8,6 +8,7 @@
   --link-color: #bb86fc;
   --link-hover-color: #f09228;
   --section-color: #22ff22;
+  --code-bg: #2d2d2d;
 }
 
 /* Dark theme overrides */
@@ -17,6 +18,7 @@
   --link-color: #1772d0;
   --link-hover-color: #f09228;
   --section-color: #058638;
+  --code-bg: #f5f5f5;
 }
 
 
@@ -507,16 +509,26 @@ h2 + p, h2 + div, h2 + ul {
 
 /* Code block styling */
 pre {
-  background-color: #2d2d2d;
   border-radius: 5px;
   padding: 15px;
   overflow-x: auto;
   margin: 20px 0;
 }
 
+pre:not([class*="language-"]) {
+  background-color: var(--code-bg);
+}
+
 code {
   font-family: 'Consolas', 'Monaco', 'Andale Mono', 'Ubuntu Mono', monospace;
   font-size: 0.9em;
+}
+
+/* For inline code */
+:not(pre) > code {
+  background-color: var(--code-bg);
+  padding: 2px 4px;
+  border-radius: 3px;
 }
 
 /* Art content styling */

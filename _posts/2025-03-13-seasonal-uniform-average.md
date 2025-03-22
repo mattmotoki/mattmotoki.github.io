@@ -82,7 +82,7 @@ The current implementation can be improved in several ways
 
 
 ## Case Study: NeurIPS 2023 CityLearn Challenge
-The efficacy of the seasonal uniform average was put to the test in the [NeurIPS 2023 CityLearn Challenge](https://www.aicrowd.com/challenges/neurips-2023-citylearn-challenge/problems/forecasting-track-citylearn-challenge). In this challenge, participants were tasked with developing models to forecast energy demand in a simulated urban environment. The cyclical nature of energy demand over the course of a day presented an ideal scenario for employing the seasonal uniform average.
+The efficacy of the seasonal uniform average was put to the test in the <a href="https://www.aicrowd.com/challenges/neurips-2023-citylearn-challenge/problems/forecasting-track-citylearn-challenge" target="_blank">NeurIPS 2023 CityLearn Challenge</a>. In this challenge, participants were tasked with developing models to forecast energy demand in a simulated urban environment. The cyclical nature of energy demand over the course of a day presented an ideal scenario for employing the seasonal uniform average.
 
 Remarkably, the straightforward approach of employing a seasonal uniform average outpaced 75% of the more complex machine learning models submitted to the challenge. This not only underscores the effectiveness of the seasonal uniform average but also highlights the importance of establishing a strong, simple baseline before venturing into more complex modeling techniques.
 
