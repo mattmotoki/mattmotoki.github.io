@@ -21,7 +21,7 @@ np.random.seed(1)
 def spiral(ax, p):
     for i in range(5000):
         p.append(p[i] + 0.05*(p[i+1] - p[i]))
-    ax.plot(*zip(*p), 'm', lw=0.5, alpha=0.7)
+    ax.plot(*zip(*p), 'b', lw=0.5, alpha=0.7)
 
 w, h, b, n = 10, 5, 10, 7
 V = Voronoi(np.vstack([
@@ -34,6 +34,6 @@ _, ax = plt.subplots(figsize=(w, h))
 for i in V.point_region:
     if -1 in (r := V.regions[i]): continue
     spiral(ax, [V.vertices[i] for i in r])
-plt.xlim(0, w); plt.ylim(0, h); 
+plt.xlim(0, w); plt.ylim(0, h)
 ax.axis('off'); plt.show()
 ```

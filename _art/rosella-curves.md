@@ -16,17 +16,16 @@ The image is created using a variant of <a href="https://en.wikipedia.org/wiki/R
 import numpy as np
 import matplotlib.pyplot as plt
     
-fig, ax = plt.subplots()
-fig.set_facecolor('k')
-ax.set_aspect('equal')
-ax.axis('off')
-
 x, y = [], []
 t = np.linspace(2*np.pi, 0, 999)
 for i in range(8):
-    r = np.cos((i+1/2)*t)+2*i+2
+    r = np.cos((i+1/2)*t) + 2*i + 2
     x.extend(+r*np.sin(t))
     y.extend(-r*np.cos(t))
-ax.plot(x, y, '#90f', linewidth=2)
+
+plt.figure(facecolor=None)    
+plt.plot(x, y, '#90f', linewidth=2)
+plt.axis('equal')
+plt.axis('off')
 plt.show()
 ```
