@@ -7,7 +7,7 @@ priority: 5.1
 description: ""
 ---
 
-I wanted to make something for my mom's birthday. Her name is Rosella and her favorite color is purple, so I thought it would be fun to make a purple rose-inspired image. 
+I wanted to create something for my mom's birthday. Her name is Rosella, and her favorite color is purple, which inspired me to design an image with a rose motif.
 
 ## Technical Implementation
 The image is created using a variant of <a href="https://en.wikipedia.org/wiki/Rose_(mathematics)" target="_blank">rose curves</a> where the radius is also a function of the angle. The image uses 8 curves with radii chosen so that the curves are connected. The result is a single curve resembling an abstract rose. Another rose-inspired image is [here](https://mattmotoki.github.io/art/planet-rosella.html).

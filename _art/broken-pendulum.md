@@ -34,15 +34,14 @@ for idx, params in enumerate([
     [2, '-', 1, 2, '*', 1, (0, 1, 0, 1), 5, 5],
     [1, '+', 2, 0, '-', 2, (0, 1, 3, 5), 2, 1],
 ]):
-
     dimx0, opx, dimx1, dimy0, opy, dimy1, init_cond, eta, c = params
     sol = odeint(derivatives, init_cond, np.linspace(0, 100, 10000))    
     x = eval(f'np.sin(sol[:,{dimx0}]) {opx} np.cos(sol[:,{dimx1}])')
     y = eval(f'np.sin(sol[:,{dimy0}]) {opy} np.sin(sol[:,{dimy1}])')
 
     plt.subplot(1, 3, idx+1)
-    plt.plot(x, y, '#0809', linewidth=0.75)
-    plt.title(str(params).replace(' ', ''), color='#080')
+    plt.plot(x, y, 'g', linewidth=1)
+    plt.title(str(params).replace(' ', ''), color='g')
     plt.axis('off')
 plt.tight_layout()
 plt.show()

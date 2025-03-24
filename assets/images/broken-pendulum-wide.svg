@@ -6,7 +6,7 @@
   <rdf:RDF xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:cc="http://creativecommons.org/ns#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
    <cc:Work>
     <dc:type rdf:resource="http://purl.org/dc/dcmitype/StillImage"/>
-    <dc:date>2025-03-22T03:05:44.810451</dc:date>
+    <dc:date>2025-03-24T11:11:09.958759</dc:date>
     <dc:format>image/svg+xml</dc:format>
     <dc:creator>
      <cc:Agent>
@@ -1613,11 +1613,11 @@ L 102.610985 106.424026
 L 101.014109 108.308034 
 L 99.707256 109.599655 
 L 99.707256 109.599655 
-" clip-path="url(#p0af4eac1d3)" style="fill: none; stroke: #008800; stroke-opacity: 0.6; stroke-width: 0.75; stroke-linecap: square"/>
+" clip-path="url(#p0d538c4df4)" style="fill: none; stroke: #008000; stroke-linecap: square"/>
    </g>
    <g id="text_1">
     <!-- [0,'*',2,0,'-',2,(1,0,3,1),5,2] -->
-    <g style="fill: #008800" transform="translate(8.524687 9.118125) scale(0.12 -0.12)">
+    <g style="fill: #008000" transform="translate(8.524687 9.118125) scale(0.12 -0.12)">
      <defs>
       <path id="DejaVuSans-5b" d="M 550 4863 
 L 1875 4863 
@@ -4216,11 +4216,11 @@ L 269.035829 106.050219
 L 267.417293 105.833858 
 L 265.479698 105.444766 
 L 265.479698 105.444766 
-" clip-path="url(#pd70e92be91)" style="fill: none; stroke: #008800; stroke-opacity: 0.6; stroke-width: 0.75; stroke-linecap: square"/>
+" clip-path="url(#p936609aea5)" style="fill: none; stroke: #008000; stroke-linecap: square"/>
    </g>
    <g id="text_2">
     <!-- [2,'-',1,2,'*',1,(0,1,0,1),5,5] -->
-    <g style="fill: #008800" transform="translate(196.924688 9.118125) scale(0.12 -0.12)">
+    <g style="fill: #008000" transform="translate(196.924688 9.118125) scale(0.12 -0.12)">
      <use xlink:href="#DejaVuSans-5b"/>
      <use xlink:href="#DejaVuSans-32" x="39.013672"/>
      <use xlink:href="#DejaVuSans-2c" x="102.636719"/>
@@ -7296,11 +7296,11 @@ L 473.199496 137.635219
 L 469.438553 140.420274 
 L 466.321316 142.551881 
 L 466.321316 142.551881 
-" clip-path="url(#pc108dff209)" style="fill: none; stroke: #008800; stroke-opacity: 0.6; stroke-width: 0.75; stroke-linecap: square"/>
+" clip-path="url(#pc0cd83bbc0)" style="fill: none; stroke: #008000; stroke-linecap: square"/>
    </g>
    <g id="text_3">
     <!-- [1,'+',2,0,'-',2,(0,1,3,5),2,1] -->
-    <g style="fill: #008800" transform="translate(383.296875 9.118125) scale(0.12 -0.12)">
+    <g style="fill: #008000" transform="translate(383.296875 9.118125) scale(0.12 -0.12)">
      <defs>
       <path id="DejaVuSans-2b" d="M 2944 4013 
 L 2944 2272 
@@ -7354,13 +7354,13 @@ z
   </g>
  </g>
  <defs>
-  <clipPath id="p0af4eac1d3">
+  <clipPath id="p0d538c4df4">
    <rect x="0" y="15.118125" width="177.6" height="179.76"/>
   </clipPath>
-  <clipPath id="pd70e92be91">
+  <clipPath id="p936609aea5">
    <rect x="188.4" y="15.118125" width="177.6" height="179.76"/>
   </clipPath>
-  <clipPath id="pc108dff209">
+  <clipPath id="pc0cd83bbc0">
    <rect x="376.8" y="15.118125" width="177.6" height="179.76"/>
   </clipPath>
  </defs>
