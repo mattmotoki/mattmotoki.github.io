@@ -11,7 +11,7 @@ description: ""
 
 
 ## Technical Implementation
-I like minimalist geometric art and was inspired by [Vulfpeck's Thrill of the Arts album art](https://vulfpeck.bandcamp.com/album/thrill-of-the-arts). The idea is simple, basically lines with an increasing vertical offset at around 75% between the endpoints.
+I like minimalist geometric art and was inspired by [Vulfpeck's Thrill of the Arts album art](https://vulfpeck.bandcamp.com/album/thrill-of-the-arts). The idea is simple, basically just lines with an increasing vertical offset at 75% between the endpoints. A related idea is [here](https://mattmotoki.github.io/art/instant-ramen.html).
 
 
 ```python
