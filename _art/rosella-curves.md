@@ -16,8 +16,9 @@ The image is created using a variant of <a href="https://en.wikipedia.org/wiki/R
 import numpy as np
 import matplotlib.pyplot as plt
     
-x, y = [], []
 t = np.linspace(2*np.pi, 0, 999)
+    
+x, y = [], []
 for i in range(8):
     r = np.cos((i+1/2)*t) + 2*i + 2
     x.extend(+r*np.sin(t))
