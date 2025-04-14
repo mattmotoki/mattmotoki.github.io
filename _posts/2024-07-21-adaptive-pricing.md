@@ -4,6 +4,7 @@ title: "Adaptive Pricing"
 date: 2024-07-21
 image: /assets/images/adaptive-pricing.png
 description: "This post examines adaptive pricing, a technique for dynamically adjusting prices to maximize revenue."
+visible: false
 ---
 
 Adaptive pricing is a technique for dynamically adjusting prices to maximize revenue. The technique is particularly useful in settings where the demand for a product is unknown and varies over time. In this post, I'll discuss the theory behind adaptive pricing and provide a simple implementation.

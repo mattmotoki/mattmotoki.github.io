@@ -26,18 +26,22 @@ layout: default
 <!-- Blog -->
 <div id="blog" class="section">
   <h2>Blog</h2>
-  {% for post in site.posts limit:5 %}
-  <div class="section-item">
-    <a href="{{ post.url | relative_url }}" title="{{ post.title }}">
-      <img src="{{ post.image | default: '/assets/images/default-post.png' | relative_url }}" alt="{{ post.title }}" class="section-image">
-    </a>
-    <div class="project-description">
-      <a href="{{ post.url | relative_url }}" title="{{ post.title }}"><span class="highlight">{{ post.title }}</span></a>
-      <span class="date"> {{ post.date | date: "%B %d, %Y" }}</span>
-      <br class="large-screen-only">
-      {{ post.excerpt | strip_html | truncatewords: 40 }}
-    </div>
-  </div>
+  {% assign post_count = 0 %}
+  {% for post in site.posts %}
+    {% if post.visible != false and post_count < 5 %}
+      {% assign post_count = post_count | plus: 1 %}
+      <div class="section-item">
+        <a href="{{ post.url | relative_url }}" title="{{ post.title }}">
+          <img src="{{ post.image | default: '/assets/images/default-post.png' | relative_url }}" alt="{{ post.title }}" class="section-image">
+        </a>
+        <div class="project-description">
+          <a href="{{ post.url | relative_url }}" title="{{ post.title }}"><span class="highlight">{{ post.title }}</span></a>
+          <span class="date"> {{ post.date | date: "%B %d, %Y" }}</span>
+          <br class="large-screen-only">
+          {{ post.excerpt | strip_html | truncatewords: 40 }}
+        </div>
+      </div>
+    {% endif %}
   {% endfor %}
 </div>
 
